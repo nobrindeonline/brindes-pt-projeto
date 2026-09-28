@@ -2,6 +2,18 @@
 
 Estado: versão local para revisão. Não houve publicação na Internet.
 
+## Materiais — atualização de 28 de setembro de 2026
+
+Entrada e sete famílias desenvolvidas: plásticos, metais, madeira/bambu,
+têxteis, pele/imitação, vidro/cerâmica e papel/cartão. Fontes e âmbito por tema
+em [fontes-materiais.md](fontes-materiais.md).
+
+Confirmar por referência: composição de cada componente e acabamento, peso,
+ensaios de resistência, utilização alimentar e temperaturas quando aplicável,
+cuidados do artigo personalizado, área e técnica após prova, e documentação
+de origem, conteúdo reciclado ou certificação antes de usar essas alegações.
+Não foram publicadas garantias para substituir os dados em falta.
+
 ## Prontos para revisão da equipa
 
 Tampografia, serigrafia, gravação a laser, impressão digital UV, bordado,

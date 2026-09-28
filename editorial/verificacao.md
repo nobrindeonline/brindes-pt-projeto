@@ -75,6 +75,32 @@ artigos históricos ou notícias sem fontes suficientes. Não houve publicação
 - Cronologia com lista ordenada de 11 etapas; cartões e esquemas com regras responsivas, colunas flexíveis e uma coluna em ecrãs pequenos. Reutilizados cabeçalho, rodapé e menu móvel.
 - **Limitação:** não foi possível inspecionar o resultado renderizado em computador ou telemóvel: a ferramenta de navegador devolveu zero navegadores disponíveis. A revisão foi estrutural e de CSS; a inspeção visual continua pendente.
 - Fontes técnicas/históricas e confirmações operacionais em `fontes-industria.md`; imagens e características do catálogo em `fontes-catalogo.md`.
+# Materiais — 28 de setembro de 2026
+
+- Entrada com sete cartões ligados a sete guias completos; fotografias existentes
+  em quatro famílias. Âncoras antigas preservadas e sete artigos na pesquisa.
+- `python gerar.py`: geração e Prettier concluídos.
+- `python verificar.py`: 61 páginas e 2170 ligações/recursos locais válidos.
+- `node --test testes/pesquisa.test.cjs`: quatro testes aprovados.
+- `.venv/Scripts/python.exe testes/verificar_imagens.py`: 172 utilizações,
+  25 ficheiros válidos, dimensões e textos alternativos verificados.
+- `python testes/verificar_materiais.py`: sete cartões e destinos, fontes,
+  produtos/técnicas relacionados e ausência de referências ao catálogo no texto
+  público e nos alt de Materiais.
+- `npm.cmd run format:check`: todos os HTML conformes.
+- Imagens inspecionadas na folha de contacto existente; composição conferida
+  no registo de recursos. Nenhuma fotografia externa acrescentada.
+- CSS revisto: grelha com três, duas e uma coluna pelos pontos de quebra existentes;
+  leitura passa a uma coluna até 750 px, imagens contidas e índice sem posição
+  fixa em telemóvel. Esta revisão estrutural não comprova a renderização.
+- **Limitação visual:** `cua.getBrowser` devolveu “No browser is available” e
+  `cua.getState()` devolveu `apps: []` e `browsers: []`. Não foi possível fazer
+  inspeção renderizada em computador/telemóvel. Rever 360, 390, 768 e 1440 px
+  quando houver navegador: cartões, índice, menu, foco e deslocamento horizontal.
+- Entrada servida localmente com HTTP 200. Sem publicação na Internet.
+- Fontes reproduzíveis em `gerar_fontes_materiais.py`; confirmações da Nobrinde
+  registadas em `fontes-materiais.md` e `validacoes.md`.
+
 # Correção de acesso às quatro áreas de Indústria
 
 - História preservada em `industria/historia-dos-brindes.html`, sem reposição de versões antigas.

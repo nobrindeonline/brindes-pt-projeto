@@ -52,40 +52,31 @@ Para completar novos artigos: Propriedades e composição; acabamentos; técnica
 
 ### Plásticos
 
-- **ABS**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **PP**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **PVC**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **PET**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Tritan**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Plásticos**: Pronto para revisão local — `/materiais/plasticos.html`.
 
 ### Metais
 
-- **Alumínio**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Aço inoxidável**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Ferro**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Zamak**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Metais**: Pronto para revisão local — `/materiais/metais.html`.
 
 ### Madeira e bambu
 
-- **Madeira**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Bambu**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Madeira e bambu**: Pronto para revisão local — `/materiais/madeira-e-bambu.html`.
 
 ### Têxteis
 
-- **Algodão**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Poliéster**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Softshell**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Canvas**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Têxteis**: Pronto para revisão local — `/materiais/materiais-texteis.html`.
 
 ### Pele e imitação de pele
 
-- **Pele**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Imitação de pele**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Pele e imitação de pele**: Pronto para revisão local — `/materiais/pele-e-imitacao-de-pele.html`.
 
 ### Vidro e cerâmica
 
-- **Vidro**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Cerâmica**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Vidro e cerâmica**: Pronto para revisão local — `/materiais/vidro-e-ceramica.html`.
+
+### Papel e cartão
+
+- **Papel e cartão**: Pronto para revisão local — `/materiais/papel-e-cartao.html`.
 
 ## Produtos
 
@@ -239,6 +230,6 @@ Para completar novos artigos: Data de publicação; acontecimento ou questão co
 
 ### Tecnologia e novidades
 
-- **Tecnologia**: Pronto para revisão local — `/produtos/tecnologia.html`.
+- **Tecnologia**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
 - **Novidades do setor**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
 - **Tendências anuais**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.

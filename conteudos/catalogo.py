@@ -190,3 +190,10 @@ sec_industria['grupos'] = [
 for guia in INDUSTRIA:
     if guia.get("foto_tecnica"):
         next(a for a in ARTIGOS if a["id"] == guia["foto_tecnica"])["relacionados"].append(guia["id"])
+
+from conteudos.materiais import MATERIAIS, FONTES_MATERIAIS
+ARTIGOS.extend(MATERIAIS)
+FONTES.update(FONTES_MATERIAIS)
+sec_materiais = next(s for s in SECCOES if s['id'] == 'materiais')
+sec_materiais['grupos'] = [(a['ancora'], a['titulo'], a['resumo'], a['titulo']) for a in MATERIAIS]
+next(a for a in ARTIGOS if a['id'] == 'como-escolher-o-material')['relacionados'] += [a['id'] for a in MATERIAIS]

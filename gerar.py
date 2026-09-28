@@ -15,6 +15,7 @@ from conteudos.tampografia import PASSOS as PASSOS_TAMPOGRAFIA, IMAGENS as IMAGE
 from conteudos.serigrafia import PASSOS as PASSOS_SERIGRAFIA
 from conteudos.impressao_uv import PASSOS as PASSOS_UV, IMAGENS as IMAGENS_UV
 from conteudos.guias import GRUPOS_GUIAS
+from conteudos.materiais import MATERIAIS
 
 ROOT = Path(__file__).resolve().parent
 BY_ID = {a['id']: a for a in ARTIGOS}
@@ -143,7 +144,39 @@ def guide_article(a):
     content=f'<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Guias</a> / <span>{escape(a["titulo"])}</span></nav><div class="page-intro"><span class="eyebrow">{a["tema"]}</span><h1>{escape(a["titulo"])}</h1><p>{escape(a["resumo"])}</p><div class="review">Revisão editorial: <time datetime="2026-09-25">25 de setembro de 2026</time> · Guia permanente</div></div><div class="reading-layout"><aside class="contents"><strong>Neste guia</strong><nav aria-label="Índice do artigo">{toc}</nav></aside><article class="reading">{body}</article></div><section><h2>Continue a explorar</h2><div class="context-links"><a href="../materiais/index.html">Conhecer os materiais</a><a href="../produtos/index.html">Conhecer os produtos</a></div><div class="article-grid">{related}</div></section>'
     write(url(a),shell(a['titulo'],a['resumo'],content,'../','guias'))
 
+def material_media(a, caption=True):
+    if not a.get('imagem'):
+        return ''
+    product_id, description = a['imagem']
+    p = POR_ID[product_id]
+    size = next(p for p in json.loads((ROOT/'assets/produtos/manifesto.json').read_text(encoding='utf-8')) if p['id'] == product_id)
+    legend = f'<figcaption>{escape(description)}</figcaption>' if caption else ''
+    return f'<figure class="idea-media material-media"><div class="idea-images"><img src="../assets/produtos/{p["ficheiro"]}" alt="{escape(description, quote=True)}" width="{size["width"]}" height="{size["height"]}" loading="lazy" decoding="async"></div>{legend}</figure>'
+
+def material_listing(s):
+    cards = ''
+    for a in MATERIAIS:
+        cards += f'<article class="idea-card material-card" id="{a["ancora"]}">{material_media(a, False)}<div class="idea-card-copy"><span class="eyebrow">Família de materiais</span><h2>{escape(a["titulo"])}</h2><p>{escape(a["resumo"])}</p><a class="link idea-read-more" href="{a["id"]}.html" aria-label="Explorar materiais: {escape(a["titulo"], quote=True)}">Explorar materiais <span aria-hidden="true">→</span></a></div></article>'
+    intro = '<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / Materiais</nav><div class="page-intro"><span class="eyebrow">Escolher pelo uso</span><h1>Materiais para brindes</h1><p>Conheça sete famílias de materiais e compare o que importa para o seu brinde: utilização, aspeto, peso, resistência e manutenção. O acabamento e a construção do artigo também contam.</p></div>'
+    criteria = '<section class="material-criteria"><h2>Como comparar duas opções</h2><div class="guide-grid"><div class="topic guide-card"><h3>Comece pelo dia a dia</h3><p>Vai transportar o artigo, usá-lo numa secretária ou lavá-lo frequentemente? Compare a capacidade, o peso completo, a pega e as instruções de manutenção.</p></div><div class="topic guide-card"><h3>Observe uma amostra</h3><p>Compare textura, brilho, espessura e construção. Defina a posição do logótipo e peça uma prova na referência e no acabamento escolhidos.</p></div></div><div class="context-links"><a href="metais.html#parte-4">Alumínio ou aço inoxidável?</a><a href="materiais-texteis.html#parte-4">Algodão ou poliéster?</a><a href="../guias/como-escolher-o-material.html">Guia de escolha do material</a></div></section>'
+    note = '<aside class="note"><h2>O material é um ponto de partida</h2><p>Não há uma família universalmente superior. As propriedades gerais não comprovam o desempenho de um artigo, a compatibilidade de personalização ou uma vantagem ambiental. Confirme os dados da referência escolhida.</p></aside>'
+    write('materiais/index.html', shell('Materiais para brindes', s['resumo'], intro + '<div class="ideas-grid materials-grid">' + cards + '</div>' + criteria + note, '../', 'materiais'))
+
+def material_article(a):
+    toc = ''.join(link('#parte-' + str(n), title) for n, (title, _) in enumerate(a['seccoes']))
+    body = material_media(a) + ''.join(f'<section id="parte-{n}"><h2>{escape(title)}</h2><p>{prose(p)}</p></section>' for n, (title, p) in enumerate(a['seccoes']))
+    sources = ''.join(f'<li id="fonte-{key}">{link(FONTES[key][1], FONTES[key][0])}</li>' for key in a['fontes'])
+    methods = [BY_ID[id] for id in a['relacionados'] if BY_ID[id]['sec'] in ('tecnicas', 'industria')]
+    sources += ''.join('<li>' + link('../' + url(method), method['titulo'] + ' — processo e fontes técnicas') + '</li>' for method in methods)
+    body += '<section id="fontes"><h2>Fontes e âmbito</h2><p>As fontes sustentam propriedades gerais ou exemplos específicos dos respetivos autores. Não certificam os artigos apresentados nem as capacidades da Nobrinde. As propostas de comparação e as perguntas de escolha são orientação editorial; confirme composição, acabamento, cuidados e personalização para a referência concreta.</p><ul class="sources">' + sources + '</ul></section><a class="back-to-ideas" href="index.html">← Voltar aos materiais</a>'
+    related = ''.join(card(BY_ID[id], '../') for id in a['relacionados'])
+    content = f'<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Materiais</a> / <span>{escape(a["titulo"])}</span></nav><div class="page-intro"><span class="eyebrow">Materiais · Guia de escolha</span><h1>{escape(a["titulo"])}</h1><p>{escape(a["resumo"])}</p><div class="review">Revisão documental: <time datetime="2026-09-28">28 de setembro de 2026</time> · Guia permanente</div></div><div class="reading-layout"><aside class="contents"><strong>Neste guia</strong><nav aria-label="Índice do artigo">{toc}{link("#fontes", "Fontes e âmbito")}</nav></aside><article class="reading">{body}</article></div><section><h2>Produtos e técnicas para aprofundar</h2><div class="article-grid">{related}</div></section>'
+    write(url(a), shell(a['titulo'], a['resumo'], content, '../', 'materiais'))
+
 def page_article(a):
+    if a['sec']=='materiais':
+        material_article(a)
+        return
     if a['sec']=='guias' and a.get('esquema_guia'):
         guide_article(a)
         return
@@ -263,6 +296,9 @@ def industry_listing(s):
     write('industria/index.html',shell('Indústria',s['resumo'],intro+'<div class="industry-areas">'+cards+'</div>','../','industria'))
 
 def page_section(s):
+    if s['id']=='materiais':
+        material_listing(s)
+        return
     if s['id']=='guias':
         guide_listing(s)
         return

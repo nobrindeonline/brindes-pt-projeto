@@ -22,7 +22,7 @@ for s in SECCOES:
     for _,group,_,topics in s['grupos']:
         lines+=['### '+group,'']
         for topic in topics.split('|'):
-            article=next((a for a in ARTIGOS if a['titulo']==topic),None)
+            article=next((a for a in ARTIGOS if a['titulo']==topic and a['sec']==s['id']),None)
             state=f"Pronto para revisão local — `/{article['sec']}/{article['id']}.html`" if article else ('Pronto para revisão local — `/industria/index.html#fluxo`' if s['id']=='industria' and topic=='O percurso de uma encomenda' else 'Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página')
             lines += [f'- **{topic}**: {state}.']
         lines += ['']

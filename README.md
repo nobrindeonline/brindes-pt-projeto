@@ -90,6 +90,16 @@ editorial/verificacao.md      Resultados e limitações da verificação
 
 ## Alterar uma página
 
+A secção **Materiais** tem uma entrada e sete guias completos, mantidos em
+`conteudos/materiais.py`. As funções `material_listing`, `material_article` e
+`material_media` de `gerar.py` reutilizam os cartões, navegação e leitura do site.
+As âncoras antigas da entrada são preservadas. As fotografias reutilizam
+`assets/produtos/` e têm legendas descritivas, sem referências ao catálogo.
+O registo interno é reproduzível com `python editorial/gerar_fontes_materiais.py`;
+execute também `python editorial/gerar_fontes_catalogo.py` e
+`python testes/verificar_materiais.py` depois de gerar. Consulte
+`editorial/fontes-materiais.md` para fontes por tema e confirmações por artigo.
+
 A secção Guias tem sete artigos completos. Os seis novos guias e os seus
 esquemas/listas estão em `conteudos/guias.py`; o guia «Como escolher a técnica»
 conserva o texto inicial em `conteudos/catalogo.py`, com complementos do mesmo
