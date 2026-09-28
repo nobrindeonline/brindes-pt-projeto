@@ -4,6 +4,25 @@ Versão local para revisão. Site estático em português de Portugal, sem loja,
 chatbot, base de dados ou recolha de pesquisas. Não foi publicado na Internet.
 A maquete aprovada mantém-se como base: Poppins, branco, azul e cartões arredondados.
 
+## Tendências — integração de 28 de setembro de 2026
+
+A listagem `tendencias/index.html` reúne quatro artigos do pacote editorial recebido
+mais as três ideias existentes. Os novos textos, fontes, data editorial, classificação
+e confirmações pendentes são mantidos em `conteudos/novidades.py`, integrado em
+`ARTIGOS` por `conteudos/catalogo.py`. `novelty_article` em `gerar.py` reutiliza o
+cabeçalho, rodapé, leitura e navegação comuns; `idea_listing` constrói os sete cartões.
+A geração e a pesquisa não dependem dos Markdown originais fora do projeto.
+
+Os três produtos estão identificados como novidades nas fontes dos fornecedores;
+a SMART collection fica como coleção em destaque enquanto a página original da
+PF Concept não puder ser reconfirmada. As propostas visuais dos Markdown são notas
+editoriais, não fotografias disponíveis: foram usados painéis tipográficos próprios.
+As instruções de integração do pacote não constituem autorização para publicar.
+
+Gerar com `python3 gerar.py` após `npm ci`. Verificar com `python3 verificar.py`
+e `node --test testes/pesquisa.test.cjs`. Consultar
+`editorial/integracao-tendencias.md` para evidências, ficheiros e validações pendentes.
+
 ## Artigos e fotografias — atualização
 
 A secção **Para quem** está em `publicos/index.html`, com seis guias próprios:
@@ -194,3 +213,14 @@ passaram para páginas próprias. As âncoras antigas da entrada continuam váli
 Abra `industria/index.html` no navegador para consultar o percurso e os 13 guias.
 Os textos e as 11 etapas são mantidos em `conteudos/industria.py`; a apresentação é gerada por `gerar.py` e `styles.css`.
 As fontes técnicas e históricas estão em `editorial/fontes-industria.md`, reproduzíveis com `python editorial/gerar_fontes_industria.py`. O registo do catálogo continua em `editorial/fontes-catalogo.md`.
+
+## Sublimação — técnica de personalização
+
+O guia `tecnicas/tecnica-sublimacao.html` usa o modelo comum das técnicas e é mantido
+em `conteudos/sublimacao.py`. O ID é distinto do guia de equipamentos já existente
+em `industria/sublimacao.html`. As relações são registadas em `conteudos/catalogo.py`;
+a listagem de Técnicas e a pesquisa são atualizadas pelo gerador habitual.
+As quatro imagens em `assets/tecnicas/Sublimacao/` foram incluídas após autorização
+expressa do utilizador em 28/09/2026, com legendas e créditos. A origem/autoria
+continua por documentar; os originais não foram alterados. Consultar
+`editorial/fontes-sublimacao.md` e `editorial/imagens-por-confirmar.md`.

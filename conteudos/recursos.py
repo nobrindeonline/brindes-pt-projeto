@@ -11,6 +11,10 @@ FOTOS_TECNICAS = {
  'bordado': {'titulo':'Máquina de bordado','autor':'Srini297','licenca':'CC BY-SA 4.0','licenca_url':'https://creativecommons.org/licenses/by-sa/4.0/','fonte':'https://commons.wikimedia.org/wiki/File:Embroidery_machine.jpg','width':900,'height':1600,'alt':'Máquina de bordado industrial com várias cabeças sobre tecido rosa com motivos dourados.'},
 }
 
+# Fotografias documentadas movidas de pasta, sem alteração dos ficheiros.
+for _id, _pasta in [('tampografia', 'Tampografia'), ('serigrafia', 'Serigrafia'), ('impressao-uv', 'ImpressaoUV')]:
+    FOTOS_TECNICAS[_id]['ficheiro'] = f'{_pasta}/{_id}.webp'
+
 PRODUTOS = [
  {'id':'synex-20673','nome':'Synex','ref':'20673','categoria':'canetas','pdf':414,'impressa':412,'bloco':25,'ficheiro':'esferografica-synex-20673-abs-reciclado.webp','alt':'Esferográfica Synex vermelha, com clip branco e botão prateado.',
   'factos':['Esferográfica em ABS reciclado.','Dimensões indicadas: Ø 1 × 14,5 cm.'],

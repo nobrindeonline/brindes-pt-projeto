@@ -48,3 +48,32 @@ ou produção à Nobrinde. Apresentação sem ampliação, esticamento ou recort
 Os nomes não identificam modelos, materiais ou capacidades confirmadas.
 A licença da fotografia principal `assets/tecnicas/impressao-uv.webp`
 não se estende aos quatro JPG. Página mantida apenas na versão local de revisão.
+
+# Sublimação — origem pendente; utilização autorizada pelo utilizador
+
+Revisão de 28/09/2026. A pasta encontrada é `assets/tecnicas/Sublimacao/`,
+não `assets/sublimação/`. Não foi encontrado documento de autoria, fonte ou
+licença/autorização para qualquer um dos quatro ficheiros. Os campos de metadados
+`artist` e `copyright` estão vazios. O nome «Imagem ChatGPT» não comprova a origem,
+a titularidade nem as condições de utilização.
+
+| Ficheiro | Dimensões | Origem | Autorização | Decisão |
+| --- | --- | --- | --- | --- |
+| Imagem ChatGPT 28_09_2026, 16_21_23.jpg | 474 × 490 | Não documentada | Autorização expressa do utilizador em 28/09/2026 | Incluída com legenda |
+| Imagem ChatGPT 28_09_2026, 16_21_32.jpg | 474 × 474 | Não documentada | Autorização expressa do utilizador em 28/09/2026 | Incluída com legenda |
+| Imagem ChatGPT 28_09_2026, 16_21_36.jpg | 474 × 404 | Não documentada | Autorização expressa do utilizador em 28/09/2026 | Incluída com legenda |
+| Imagem ChatGPT 28_09_2026, 16_21_39.jpg | 474 × 355 | Não documentada | Autorização expressa do utilizador em 28/09/2026 | Incluída com legenda |
+
+Atualização: o utilizador autorizou expressamente a utilização das quatro imagens
+neste projeto. Foram incluídas sem edição, com legendas que não inferem tecnologia
+nem compatibilidade a partir da imagem. Falta identificar a fonte original ou registo de criação,
+o titular e a licença/autorização aplicável, incluindo eventuais referências de
+terceiros. A inspeção visual, as legendas, os textos alternativos e os créditos foram
+registados nesta integração. Os quatro originais foram preservados;
+a integridade foi conferida por SHA-256 antes/depois. Não foram copiados,
+redimensionados, recortados ou convertidos. Estão ligados na página da técnica,
+com dimensões proporcionais e sem ampliação acima da largura original.
+
+O novo guia usa o esquema textual HTML/CSS já existente no projeto. Não reutiliza
+a fotografia Farnes: o registo atual do catálogo não documenta autorização de
+reutilização dessa fotografia para a nova página.

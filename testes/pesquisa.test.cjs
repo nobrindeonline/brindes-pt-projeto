@@ -23,3 +23,10 @@ test('DTF conduz ao guia publicado de processos', () => {
   assert.ok(found.length > 0);
   assert.ok(found.some(e => e.url === 'industria/dtf-e-prensas-termicas.html'));
 });
+test('sublimação encontra a técnica e preserva o guia de equipamentos', () => {
+  for (const query of ['sublimação', 'SUBLIMACAO']) {
+    const urls = find(entries, query).map(entry => entry.url);
+    assert.ok(urls.includes('tecnicas/tecnica-sublimacao.html'));
+    assert.ok(urls.includes('industria/sublimacao.html'));
+  }
+});

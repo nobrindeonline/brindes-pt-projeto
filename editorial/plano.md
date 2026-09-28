@@ -32,7 +32,7 @@ Para completar novos artigos: Descrição e fontes do processo; equipamento; com
 
 - **Bordado**: Pronto para revisão local — `/tecnicas/bordado.html`.
 - **DTF**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Sublimação**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Sublimação**: Pronto para revisão local — `/tecnicas/tecnica-sublimacao.html`.
 - **Transfer serigráfico**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
 - **Transfer digital**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
 - **Transfer digital com base branca**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.

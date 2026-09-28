@@ -1,12 +1,14 @@
 """Verifica ficheiros decodificáveis, proporções declaradas, alt e preços em HTML."""
 from pathlib import Path
 from html.parser import HTMLParser
+from urllib.parse import unquote
 import sys
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from conteudos.catalogo import ARTIGOS,SECCOES
 from conteudos.ideias import IDEIAS
+from conteudos.novidades import NOVIDADES
 from conteudos.publicos import PUBLICOS, PAGINAS_PRODUTOS
 from conteudos.recursos import POR_ID
 paths=[ROOT/'index.html',ROOT/'pesquisa.html',ROOT/'creditos-imagens.html']
@@ -23,14 +25,14 @@ for path in paths:
     parser=Images();parser.feed(html)
     for img in parser.images:
         assert img.get('alt','').strip(),f'Alt em falta: {path}'
-        file=(path.parent/img['src']).resolve()
+        file=(path.parent/unquote(img['src'])).resolve()
         assert file.is_relative_to(ROOT) and file.is_file(),file
         with Image.open(file) as image:
             assert image.size==(int(img['width']),int(img['height'])),f'Dimensões: {file}'
             image.verify()
         count+=1;unique.add(file)
 listing=(ROOT/'tendencias/index.html').read_text(encoding='utf-8')
-assert listing.count('class="idea-card"')==3
+assert listing.count('class="idea-card"')==len(IDEIAS)+len(NOVIDADES)
 for a in IDEIAS:
     assert f'href="{a["id"]}.html"' in listing
     html=(ROOT/'tendencias'/(a['id']+'.html')).read_text(encoding='utf-8')

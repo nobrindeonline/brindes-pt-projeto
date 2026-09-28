@@ -1,5 +1,6 @@
 """Gera HTML e pesquisa; formata as páginas com o Prettier local (npm ci)."""
 from pathlib import Path
+from urllib.parse import quote
 from html import escape
 import json
 import re
@@ -9,6 +10,8 @@ from conteudos.catalogo import ARTIGOS, SECCOES, FONTES, DATA_REVISAO
 from conteudos.recursos import FOTOS_TECNICAS, ARTIGO_PRODUTOS, GRUPO_PRODUTOS, POR_ID
 from conteudos.apresentacao_recursos import tecnica, exemplos, creditos
 from conteudos.ideias import IDEIAS
+from conteudos.novidades import NOVIDADES
+from conteudos.sublimacao import IMAGENS_SUBLIMACAO
 from conteudos.publicos import PUBLICOS, PAGINAS_PRODUTOS
 from conteudos.industria import INDUSTRIA, ETAPAS
 from conteudos.tampografia import PASSOS as PASSOS_TAMPOGRAFIA, IMAGENS as IMAGENS_TAMPOGRAFIA
@@ -76,15 +79,45 @@ def idea_media(a,caption=True):
         figcaption=f'<figcaption>Fotografias do catálogo. {source}.{note} <a href="../creditos-imagens.html#catalogo">Créditos das imagens</a></figcaption>'
     return f'<figure class="idea-media"><div class="idea-images idea-images-{len(a["imagens"])}">{images}</div>{figcaption}</figure>'
 
+def editorial_text(text):
+    """Parágrafos, listas e destaque dos textos recebidos; HTML é escapado."""
+    def inline(value):
+        return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', escape(value))
+    blocks = []
+    for block in text.split('\n\n'):
+        lines = block.splitlines()
+        if all(line.startswith('- ') for line in lines):
+            blocks.append('<ul>' + ''.join('<li>' + inline(line[2:]) + '</li>' for line in lines) + '</ul>')
+        else:
+            blocks.append('<p>' + inline(' '.join(lines)) + '</p>')
+    return ''.join(blocks)
+
+
+def novelty_visual(a):
+    return f'<div class="novelty-visual"><span>{escape(a["fornecedor"])}</span><strong>{escape(a["referencia"])}</strong><span>Design e utilidade quotidiana</span></div>'
+
+
+def novelty_article(a):
+    body = ''.join(f'<section id="parte-{n}"><h2>{escape(title)}</h2>{editorial_text(text)}</section>' for n, (title, text) in enumerate(a['seccoes']))
+    sources = ''.join('<li>' + link(source['url'], source['titulo']) + ' — Consulta registada no dossier: <time datetime="' + source['consulta'] + '">28 de setembro de 2026</time>.</li>' for source in a['fontes_editoriais'])
+    body += '<section id="fontes"><h2>Fontes e âmbito</h2><ul class="sources">' + sources + '</ul><p>As características são atribuídas aos fornecedores. Os contextos de utilização são sugestões editoriais; não comprovam procura ou disponibilidade comercial.</p></section>'
+    body += '<section id="confirmar"><h2>Antes de uma proposta comercial</h2><ul>' + ''.join('<li>' + escape(item) + '</li>' for item in a['pendentes']) + '</ul></section>'
+    toc = ''.join(link('#parte-' + str(n), title) for n, (title, _) in enumerate(a['seccoes'])) + link('#fontes', 'Fontes e âmbito') + link('#confirmar', 'Antes de uma proposta comercial')
+    intro = f'<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Tendências e novidades</a></nav><div class="page-intro"><span class="eyebrow">{escape(a["categoria"])} · {escape(a["fornecedor"])}</span><h1>{escape(a["titulo"])}</h1><p>{escape(a["resumo"])}</p><div class="review">Data editorial: <time datetime="{a["data"]}">28 de setembro de 2026</time></div></div>'
+    note = '<aside class="note"><p>' + escape(a['nota_editorial']) + '</p></aside>'
+    content = intro + '<div class="reading-layout"><aside class="contents"><strong>Neste artigo</strong><nav aria-label="Índice do artigo">' + toc + '</nav></aside><article class="reading novelty-reading">' + novelty_visual(a) + note + body + '<a class="back-to-ideas" href="index.html">← Voltar a Tendências e novidades</a></article></div><section><h2>Guias para aprofundar</h2><div class="article-grid">' + ''.join(card(BY_ID[k], '../') for k in a['relacionados']) + '</div></section>'
+    write(url(a), shell(a['titulo'], a['resumo'], content, '../', 'tendencias'))
+
+
 def idea_listing(s):
-    cards=''
+    cards = ''.join(f'<article class="idea-card">{novelty_visual(a)}<div class="idea-card-copy"><span class="eyebrow">{escape(a["categoria"])}</span><h2>{escape(a["titulo"])}</h2><p>{escape(a["resumo"])}</p><a class="link idea-read-more" href="{a["id"]}.html" aria-label="Ler mais: {escape(a["titulo"], quote=True)}">Ler mais <span aria-hidden="true">→</span></a></div></article>' for a in NOVIDADES)
     for a in IDEIAS:
         cards+=f'<article class="idea-card">{idea_media(a,False)}<div class="idea-card-copy"><span class="eyebrow">{a["categoria"]}</span><h2>{a["titulo"]}</h2><p>{a["resumo"]}</p><a class="link idea-read-more" href="{a["id"]}.html" aria-label="Ler mais: {escape(a["titulo"],quote=True)}">Ler mais <span aria-hidden="true">→</span></a></div></article>'
-    intro='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / Artigos e ideias</nav><div class="page-intro"><span class="eyebrow">Inspiração para escolher</span><h1>Artigos e ideias</h1><p>Produtos, ocasiões e conselhos práticos para pensar a sua próxima oferta. Explore sugestões apoiadas em exemplos do catálogo.</p></div>'
-    content=intro+'<div class="ideas-grid">'+cards+'</div><aside class="note"><strong>Ideias para adaptar ao seu contexto</strong><p>Estes conteúdos são propostas editoriais, sem data de notícia nem alegações de tendências de mercado comprovadas.</p></aside>'
+    intro='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / Tendências e novidades</nav><div class="page-intro"><span class="eyebrow">Inspiração para escolher</span><h1>Tendências e novidades</h1><p>Novidades identificadas pelos fornecedores, produtos em destaque e ideias para pensar a sua próxima oferta.</p></div>'
+    content=intro+'<div class="ideas-grid">'+cards+'</div><aside class="note"><strong>Ideias para adaptar ao seu contexto</strong><p>Os cartões distinguem novidades confirmadas nas fontes, destaques editoriais e ideias de utilização. Uma novidade de fornecedor não comprova uma tendência de mercado nem disponibilidade na Nobrinde.</p></aside>'
     # Conserva os destinos de âncoras da versão anterior.
     content+='<section id="sustentabilidade"><h2>Reutilização com contexto</h2><p class="catalogue-intro">Ao escolher um artigo, pense no uso que terá. Uma composição ou um material, por si só, não demonstra uma vantagem ambiental.</p></section><section id="novidades"><h2>Continue a explorar</h2><div class="context-links"><a href="../produtos/index.html">Conhecer os produtos</a><a href="../guias/como-escolher-a-tecnica.html">Como escolher a técnica</a></div></section>'
-    write('tendencias/index.html',shell('Artigos e ideias',s['resumo'],content,'../','tendencias'))
+    write('tendencias/index.html',shell('Tendências e novidades',s['resumo'],content,'../','tendencias'))
 
 def idea_article(a):
     body=''.join(f'<section id="parte-{n}"><h2>{escape(t)}</h2><p>{escape(p)}</p></section>' for n,(t,p) in enumerate(a['seccoes']))
@@ -174,6 +207,9 @@ def material_article(a):
     write(url(a), shell(a['titulo'], a['resumo'], content, '../', 'materiais'))
 
 def page_article(a):
+    if a['tipo']=='novidade':
+        novelty_article(a)
+        return
     if a['sec']=='materiais':
         material_article(a)
         return
@@ -188,9 +224,17 @@ def page_article(a):
     if a['tipo']=='ideia':
         idea_article(a)
         return
-    ids=[f'parte-{n}' for n in range(len(a['seccoes']))]
+    ids=a.get('ids_seccoes', [f'parte-{n}' for n in range(len(a['seccoes']))])
     toc=''.join(link('#'+i,s[0]) for i,s in zip(ids,a['seccoes']))
     body=''.join(f'<section id="{i}"><h2>{escape(t)}</h2><p>{prose(p)}</p></section>' for i,(t,p) in zip(ids,a['seccoes']))
+    if a['id']=='tecnica-sublimacao':
+        body = ''
+        for i, (title, text) in zip(ids, a['seccoes']):
+            media = ''
+            for file, height, alt, caption in IMAGENS_SUBLIMACAO.get(title, []):
+                src = '../assets/tecnicas/Sublimacao/' + quote(file)
+                media += f'<figure class="pad-reference sublimacao-reference"><img src="{src}" width="474" height="{height}" alt="{escape(alt)}" loading="lazy" decoding="async"><figcaption>{escape(caption)} Não representa instalações da Nobrinde. <a href="../creditos-imagens.html#sublimacao-fornecidas">Origem e autorização de utilização</a></figcaption></figure>'
+            body += f'<section id="{i}"><h2>{escape(title)}</h2><p>{prose(text)}</p>{media}</section>'
     if a['id']=='tampografia':
         body='<section id="o-que-e"><h2>O que é a tampografia?</h2><p>'+prose(a['introducao'])+'</p></section>'
         toc=link('#o-que-e','O que é a tampografia?')+toc
@@ -200,7 +244,7 @@ def page_article(a):
                 extra='<ol class="pad-steps">'+''.join('<li><strong>'+escape(title)+'</strong><p>'+escape(text)+'</p></li>' for title,text in PASSOS_TAMPOGRAFIA)+'</ol><p>'+prose('Descrição do ciclo de copo fechado: [inkcups]. Secagem e cura dependem da tinta e dos auxiliares utilizados: [marabu].')+'</p>'
             if t in IMAGENS_TAMPOGRAFIA:
                 file,height,alt,caption=IMAGENS_TAMPOGRAFIA[t]
-                extra+=f'<figure class="pad-reference"><img src="../assets/tecnicas/tampografia/{file}" width="474" height="{height}" alt="{escape(alt)}" loading="lazy" decoding="async"><figcaption>{escape(caption)} <strong>Imagem provisória: origem e autorização de publicação por confirmar.</strong> <a href="../creditos-imagens.html#tampografia-provisoria">Estado dos créditos</a></figcaption></figure>'
+                extra+=f'<figure class="pad-reference"><img src="../assets/tecnicas/Tampografia/{file}" width="474" height="{height}" alt="{escape(alt)}" loading="lazy" decoding="async"><figcaption>{escape(caption)} <strong>Imagem provisória: origem e autorização de publicação por confirmar.</strong> <a href="../creditos-imagens.html#tampografia-provisoria">Estado dos créditos</a></figcaption></figure>'
             if t=='Equipamentos':
                 extra+='<p><a href="../creditos-imagens.html#tampografia">Consultar também a fotografia de equipamento anteriormente documentada e os seus créditos.</a></p>'
             body+=f'<section id="{i}"><h2>{escape(t)}</h2><p>{prose(p)}</p>{extra}</section>'
@@ -254,7 +298,7 @@ def page_article(a):
         return next((g[1] for g in sec['grupos'] if '#' in p and g[0]==p.split('#')[1]),sec['titulo'])
     context=''.join(link('../'+p,context_title(p)) for p in a['ancoras'])
     related=''.join(card(BY_ID[k],'../') for k in a['relacionados'])
-    content=f'''<nav class="crumb" aria-label="Percurso">{link('../index.html','Início')} / {link('index.html',SECS[a['sec']]['titulo'])} / <span>{a['titulo']}</span></nav><div class="page-intro"><span class="eyebrow">{SECS[a['sec']]['titulo']}</span><h1>{a['titulo']}</h1><p>{a['resumo']}</p><div class="review">Revisão documental: <time datetime="{DATA_REVISAO}">24 de setembro de 2026</time> · Guia permanente</div></div><div class="reading-layout"><aside class="contents"><strong>Neste guia</strong><nav aria-label="Índice do artigo">{toc}{link('#fontes','Fontes e âmbito')}</nav></aside><article class="reading">{body}</article></div><section><div class="section-head"><div><span class="eyebrow">Continue a explorar</span><h2>Assuntos relacionados</h2></div></div><div class="context-links">{context}</div><div class="article-grid">{related}</div></section>'''
+    content=f'''<nav class="crumb" aria-label="Percurso">{link('../index.html','Início')} / {link('index.html',SECS[a['sec']]['titulo'])} / <span>{a['titulo']}</span></nav><div class="page-intro"><span class="eyebrow">{SECS[a['sec']]['titulo']}</span><h1>{a['titulo']}</h1><p>{a['resumo']}</p><div class="review">Revisão documental: <time datetime="{a.get('data_revisao', DATA_REVISAO)}">{a.get('data_revisao_texto', '24 de setembro de 2026')}</time> · Guia permanente</div></div><div class="reading-layout"><aside class="contents"><strong>Neste guia</strong><nav aria-label="Índice do artigo">{toc}{link('#fontes','Fontes e âmbito')}</nav></aside><article class="reading">{body}</article></div><section><div class="section-head"><div><span class="eyebrow">Continue a explorar</span><h2>Assuntos relacionados</h2></div></div><div class="context-links">{context}</div><div class="article-grid">{related}</div></section>'''
     write(url(a),shell(a['titulo'],a['resumo'],content,'../',a['sec']))
 def industry_listing(s):
     intro='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / Indústria</nav><div class="page-intro"><span class="eyebrow">Da escolha à receção</span><h1>O percurso de uma encomenda</h1><p>Conheça as decisões que transformam um pedido num artigo personalizado, pronto a chegar ao destinatário.</p></div><aside class="note"><strong>Um percurso para compreender e adaptar</strong><p>A sequência pode variar com o produto e o tipo de encomenda, incluir regressos à aprovação e combinar etapas. É um guia editorial, não um procedimento interno ou uma promessa de serviços da Nobrinde.</p></aside>'

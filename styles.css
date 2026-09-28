@@ -139,3 +139,10 @@
 .guide-color span:nth-child(2){background:#bc126f;color:#fff}.guide-color span:nth-child(3){background:#ffdf37}.guide-color span:nth-child(4){background:#17202b;color:#fff}
 @media(max-width:750px){.guide-grid{grid-template-columns:minmax(0,1fr)}.guide-card h3{font-size:21px}}
 @media(max-width:590px){.guide-diagram{padding:16px}.guide-diagram ol{grid-template-columns:minmax(0,1fr)}.guide-diagram li{padding:14px}.guide-diagram li::before{margin-bottom:6px}}
+
+/* Cartões editoriais sem fotografias de produto não autorizadas. */
+.novelty-visual{min-height:240px;padding:32px;display:flex;flex-direction:column;justify-content:center;gap:18px;background:linear-gradient(145deg,#eaf4fc,#fff);color:var(--blue);border-bottom:1px solid var(--line)}
+.novelty-visual strong{font-size:30px;line-height:1.2;letter-spacing:-.6px;overflow-wrap:anywhere}.novelty-visual span{font-size:13px;line-height:1.6}.novelty-reading .novelty-visual{border:1px solid var(--line);border-radius:18px}.novelty-reading{min-width:0}.novelty-reading .sources a{overflow-wrap:anywhere}.novelty-reading li{line-height:1.8;margin-bottom:8px}
+@media(max-width:620px){.novelty-visual{min-height:200px;padding:24px}.novelty-visual strong{font-size:27px}}
+
+.reading .sublimacao-reference img{max-width:min(100%,474px)}

@@ -1,6 +1,8 @@
 """Conteúdo editorial em português de Portugal. Não contém dados internos."""
 from conteudos.produtos import NOVOS_ARTIGOS
+from conteudos.bordado import BORDADO, FONTES_BORDADO
 from conteudos.ideias import IDEIAS
+from conteudos.novidades import NOVIDADES
 from conteudos.publicos import PUBLICOS
 DATA_REVISAO = '2026-09-24'
 FONTES = {
@@ -66,7 +68,7 @@ SECCOES = [
 ]
 
 # Secções de texto: (título, texto). Problemas: (sinal, verificação sugerida).
-ARTIGOS = PUBLICOS + IDEIAS + NOVOS_ARTIGOS + [
+ARTIGOS = PUBLICOS + IDEIAS + NOVIDADES + NOVOS_ARTIGOS + [
  {'id':'tampografia','sec':'tecnicas','tipo':'tecnica','titulo':'Tampografia','resumo':'Um tampão de silicone transfere tinta para o objeto. Uma opção a considerar em pequenas áreas e formas que exigem adaptação à superfície.',
  'seccoes':[
  ('Como funciona','O desenho é preparado num cliché. O tampão recolhe a tinta e transfere-a para a peça; a impressão de várias cores envolve passagens e alinhamento próprios. [pad]'),
@@ -115,18 +117,7 @@ ARTIGOS = PUBLICOS + IDEIAS + NOVOS_ARTIGOS + [
  ('Comparar alternativas','Para cores diretas, consulte tampografia ou serigrafia. Para uma marca sem tinta, compare laser. Decida com base no desenho e numa amostra do artigo.')],
  'problemas':[('Aderência insuficiente','Pedir ensaio do conjunto superfície, tinta e primário. Um primário não garante compatibilidade universal. [primer]'),('Cor diferente da expectativa','Rever a referência aprovada e a prova no suporte; distinguir cor de ecrã e reprodução por CMYK. [uv]')],
  'fontes':['uv','roland','primer'],'relacionados':['tampografia','gravacao-a-laser','como-escolher-a-tecnica'],'ancoras':['materiais/index.html#plasticos','produtos/index.html#tecnologia'],'tags':'digital uv cmyk branco verniz fotografia degradês primer'},
- {'id':'bordado','sec':'tecnicas','tipo':'tecnica','titulo':'Bordado','resumo':'O desenho é construído com pontos de linha. A preparação do ficheiro e a estabilidade do tecido ajudam a definir o resultado.',
- 'seccoes':[
- ('Como funciona','O desenho é convertido num ficheiro de bordado com instruções para a máquina. Os pontos formam o emblema ou logótipo na peça. [emb]'),
- ('Equipamentos','A máquina trabalha com agulhas e linhas; o bastidor mantém a área de trabalho. A preparação também pode incluir estabilizadores escolhidos para o tecido. [emb] [stabilizer]'),
- ('Materiais e produtos','Bonés, vestuário e mochilas são aplicações possíveis. A estrutura da peça e o acesso à área pretendida precisam de avaliação. [emb]'),
- ('Cores e acabamentos','Escolhem-se linhas e a sua disposição no desenho. Peça comparação com uma amostra física de linha e confirme as cores disponíveis, sem presumir uma correspondência exata pelo ecrã.'),
- ('Preparação da arte','Envie o original e indique a dimensão final. Um ficheiro de imagem não substitui a programação de pontos; peça avaliação da legibilidade de letras e espaços pequenos. [emb]'),
- ('Condições a confirmar','Confirme tecido, posição, bastidor e estabilização. A Madeira explica que tecidos elásticos podem mover-se e originar enrugamento ou pontos desalinhados sem apoio adequado. [stabilizer]'),
- ('Limitações','Avalie o desenho como uma composição de pontos. Antes de manter todos os pormenores do original, peça uma amostra bordada na dimensão pretendida.'),
- ('Comparar alternativas','Compare com serigrafia se pretender uma imagem impressa sobre o tecido. Considere a textura, a posição e a leitura da mensagem, sem assumir que uma técnica é sempre superior.')],
- 'problemas':[('Tecido enrugado','Pedir revisão da estabilização, do bastidor e do programa de pontos. [madeira] [stabilizer]'),('Quebras de linha','Pedir verificação de agulha, passagem da linha e tensão; a causa deve ser identificada na máquina. [madeira]')],
- 'fontes':['emb','madeira','stabilizer'],'relacionados':['serigrafia','como-escolher-a-tecnica'],'ancoras':['materiais/index.html#texteis','produtos/index.html#texteis'],'tags':'bordado linha pontos boné mochila textil algodao poliester'},
+ BORDADO,
  {'id':'como-escolher-a-tecnica','sec':'guias','tipo':'guia','titulo':'Como escolher a técnica','resumo':'Comece pelo artigo e pelo resultado pretendido. Use estas perguntas para preparar uma escolha que a produção possa confirmar.',
  'seccoes':[
  ('1. Identifique o artigo','Registe a referência, o material, o revestimento, a cor e a forma. Junte uma fotografia e, quando possível, uma amostra. Evite decidir apenas com a indicação «plástico» ou «metal».'),
@@ -197,3 +188,16 @@ FONTES.update(FONTES_MATERIAIS)
 sec_materiais = next(s for s in SECCOES if s['id'] == 'materiais')
 sec_materiais['grupos'] = [(a['ancora'], a['titulo'], a['resumo'], a['titulo']) for a in MATERIAIS]
 next(a for a in ARTIGOS if a['id'] == 'como-escolher-o-material')['relacionados'] += [a['id'] for a in MATERIAIS]
+
+# Técnica e guia de equipamentos usam IDs distintos para preservar as ligações existentes.
+from conteudos.sublimacao import SUBLIMACAO, FONTES_SUBLIMACAO
+ARTIGOS.append(SUBLIMACAO)
+FONTES.update(FONTES_SUBLIMACAO)
+for artigo in ARTIGOS:
+    if artigo['id'] in ('sublimacao', 'como-escolher-a-tecnica', 'serigrafia', 'impressao-uv', 'materiais-texteis', 'vidro-e-ceramica', 'garrafas-copos-e-canecas', 'texteis'):
+        artigo['relacionados'].append(SUBLIMACAO['id'])
+
+FONTES.update(FONTES_BORDADO)
+for artigo in ARTIGOS:
+    if artigo["id"] in ("materiais-texteis", "texteis", "sacos-e-mochilas", "tecnica-sublimacao", "como-avaliar-uma-maquete") and "bordado" not in artigo["relacionados"]:
+        artigo["relacionados"].append("bordado")
