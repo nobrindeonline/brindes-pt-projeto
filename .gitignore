@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+tmp/
+node_modules/
+.env
+General Catalogue 2026 - Iberia Prices.pdf

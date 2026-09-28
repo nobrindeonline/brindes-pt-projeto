@@ -1,0 +1,26 @@
+"""Texto e imagens provisórias da tampografia; mantém as âncoras anteriores."""
+INTRO = 'A tampografia é uma técnica de impressão indireta: um tampão flexível de silicone recolhe a tinta do desenho gravado numa placa, chamada cliché, e transfere-a para o objeto. A flexibilidade permite alcançar certas superfícies curvas ou irregulares. [inkcups]'
+SECCOES = [
+ ('Como funciona','O ciclo abaixo descreve um sistema de copo fechado. Numa impressão com várias cores, cada cor exige aplicação e alinhamento próprios; uma cor fora da posição pode alterar a leitura do logótipo. [pad]'),
+ ('Equipamentos','O conjunto inclui a máquina, o cliché, o sistema de tinta, o tampão e um suporte que mantém o artigo na posição de impressão. A configuração precisa de ser escolhida para a forma da peça e para a área acessível. A imagem abaixo é ilustrativa de terceiros: não identifica uma máquina, capacidade ou instalação da Nobrinde.'),
+ ('Materiais e produtos','É uma possibilidade para logótipos definidos, pormenores pequenos e áreas que não sejam totalmente planas. Canetas, porta-chaves e alguns dispositivos USB são exemplos a avaliar no modelo concreto. Não basta reconhecer a categoria do produto: uma curva apertada, um relevo ou um revestimento podem alterar a escolha. [pad]'),
+ ('Cores e acabamentos','Podem preparar-se cores com referência Pantone. A aparência deve ser validada no artigo, sobretudo sobre um fundo escuro: a referência de cor não substitui uma prova do resultado. [inkcups] Peça confirmação do contraste e da cobertura pretendidos antes da aprovação.'),
+ ('Preparação da arte','Envie o logótipo original, de preferência vetorial, a posição pretendida, as dimensões e as referências de cor. Confira a grafia e observe o desenho à escala final. Peça à produção que avalie letras pequenas, linhas finas e espaços vazios antes de simplificar a arte. A simulação serve para discutir a composição; a amostra física permite avaliar o aspeto no suporte.'),
+ ('Condições a confirmar','A compatibilidade depende do material, da tinta e do acabamento, podendo exigir tratamento prévio. A limpeza e a preparação do suporte influenciam a aderência; os auxiliares têm de ser escolhidos para o sistema de tinta. [marabu] Identifique o plástico, metal ou revestimento e a utilização prevista. Confirme como será validada a resistência necessária, sem presumir resistência à lavagem ou ao desgaste.'),
+ ('Limitações','É habitualmente mais indicada para áreas relativamente pequenas. Muitas cores tornam a preparação e o alinhamento mais exigentes. Fotografias e degradés requerem avaliação específica e podem beneficiar de outra técnica; não são aqui tratados como uma impossibilidade universal. O número de cores, a dimensão e o detalhe viáveis dependem do artigo e do equipamento. [pad]'),
+ ('Comparar alternativas','Para uma imagem com muitas cores, compare a impressão UV num suporte compatível. Para uma marca sem tinta, avalie a gravação a laser; a serigrafia é outra hipótese a discutir conforme a área e o artigo. Os guias relacionados ajudam a preparar a conversa, mas não confirmam compatibilidade nem serviços da Nobrinde.'),
+ ('Componentes: o papel do tampão','O cliché guarda o desenho; o copo contém tinta e o seu anel retira o excesso da placa. O tampão recolhe e deposita a imagem. Existem tampões de silicone com diferentes formas e durezas, escolhidos conforme a aplicação. [inkcups] Na fotografia, observam-se tampões montados sobre as placas; o suporte do artigo completa o posicionamento.'),
+ ('Uma ligação à relojoaria','O manual ICN-2200-PS da Inkcups associa a utilização inicial da tampografia à decoração de mostradores na relojoaria suíça. Esta referência sustenta a ligação histórica, sem estabelecer aqui uma data de invenção nem afirmar uma origem no século XVIII. [padmanual]')]
+PASSOS = [
+ ('Preparar a arte e o cliché','O desenho é preparado e gravado na placa.'),
+ ('Distribuir a tinta','A tinta preenche a gravação; o anel do copo retira o excesso da superfície.'),
+ ('Recolher a imagem','O tampão de silicone pressiona a placa e recolhe a tinta do desenho.'),
+ ('Transferir para o artigo','O tampão desloca-se até à peça, pressiona-a e deposita a imagem.'),
+ ('Secar ou curar','A tinta seca ou recebe a cura adequada ao sistema utilizado.')]
+IMAGENS = {
+ 'Como funciona': ('processo-tampografia-6-passos.jpg',394,'Esquema de seis movimentos: distribuição de tinta, passagem da lâmina, recolha pelo tampão, deslocação, impressão na peça e regresso.',
+ 'Esquema de um ciclo com tinteiro aberto e lâmina de raspagem. Os seis quadros mostram os movimentos da máquina; os cinco passos do texto incluem também a preparação e a secagem. As legendas originais estão em inglês.'),
+ 'Equipamentos': ('maquina-tampografia-exemplos.jpg',474,'Montagem ilustrativa com máquina de tampografia ao centro e exemplos de artigos à volta, incluindo canetas, relógio e capacete.',
+ 'Imagem ilustrativa de terceiros, com máquina e exemplos apresentados na própria imagem. Não demonstra compatibilidade de todos os artigos nem equipamentos da Nobrinde.'),
+ 'Componentes: o papel do tampão': ('tampoes-silicone-tampografia.jpg',316,'Dois tampões de silicone rosa montados sobre placas de impressão, junto de copos de tinta.',
+ 'Pormenor de tampões de silicone, placas e copos de tinta num equipamento de terceiros.')}

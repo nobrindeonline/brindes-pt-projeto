@@ -1,0 +1,186 @@
+# brindes.pt — biblioteca informativa da Nobrinde
+
+Versão local para revisão. Site estático em português de Portugal, sem loja,
+chatbot, base de dados ou recolha de pesquisas. Não foi publicado na Internet.
+A maquete aprovada mantém-se como base: Poppins, branco, azul e cartões arredondados.
+
+## Artigos e fotografias — atualização
+
+A secção **Para quem** está em `publicos/index.html`, com seis guias próprios:
+`empresas.html`, `camaras-municipais.html`, `escolas.html`,
+`clubes-desportivos.html`, `revendedores.html` e `eventos.html`.
+Edite as introduções, seleções e justificações em `conteudos/publicos.py`.
+Os factos e fotografias continuam centralizados em `conteudos/recursos.py`;
+a pesquisa inclui também as justificações e referências das escolhas.
+Após gerar, atualize o registo com `python editorial/gerar_fontes_catalogo.py`.
+
+Abra `tendencias/index.html` por duplo clique no Explorador de Ficheiros para ver
+a grelha editorial. Os três cartões abrem artigos próprios sobre garrafas,
+sacos para eventos e kits de boas-vindas. Pode também usar o servidor local
+descrito abaixo e abrir <http://127.0.0.1:8765/tendencias/index.html>.
+
+Os textos são artigos e ideias, sem data de notícia. Edite-os em
+`conteudos/ideias.py`; a listagem e os artigos usam as funções `idea_listing`
+e `idea_article` de `gerar.py`. Cada artigo identifica as fotografias em `imagens`
+e, quando necessário, uma lista adicional de `produtos` citados no texto.
+
+As cinco fotografias de técnicas estão em `assets/tecnicas/`. Foram extraídas
+12 fotografias individuais do catálogo para `assets/produtos/`. Os créditos
+estão em `creditos-imagens.html`, acessível em todos os rodapés; o registo
+editorial completo está em `editorial/fontes-catalogo.md`. As sete categorias
+de produtos têm agora páginas próprias, além dos guias existentes.
+
+Depois de alterar os conteúdos, execute `python gerar.py` e
+`python editorial/gerar_fontes_catalogo.py`. Para verificar também imagens,
+execute `.venv/Scripts/python.exe testes/verificar_imagens.py`. Este teste
+adicional usa Pillow; a extração usa PyMuPDF e Pillow, instalados no ambiente
+local `.venv`. A geração normal e a navegação não dependem desses pacotes.
+
+Os ficheiros em `tmp/pdfs/` são apenas material de inspeção local e podem conter
+páginas originais com preços; não são ligados nem carregados pelo site.
+
+## Abrir e rever
+
+Abra `index.html` no navegador. Os artigos, a navegação e a pesquisa funcionam
+também através de ficheiros locais. A fonte Poppins requer Internet; existe uma
+alternativa de sistema quando não está disponível.
+
+Para usar um servidor local, no terminal desta pasta:
+
+```powershell
+python -m http.server 8765 --bind 127.0.0.1
+```
+
+Abra <http://127.0.0.1:8765>. Termine o servidor com `Ctrl+C`.
+Este comando serve apenas o computador local. Não é um processo de publicação.
+
+## O que foi criado
+
+- Página inicial, pesquisa e índices das oito secções.
+- Guias de tampografia, serigrafia, gravação a laser, impressão digital UV e bordado.
+- Guia «Como escolher a técnica» e página «Canetas e escrita».
+- Percursos de navegação, índices dentro dos artigos, fontes e assuntos relacionados.
+- Pesquisa nos artigos e nos assuntos dos índices, sem distinguir acentos ou maiúsculas.
+- Menu adaptável com indicação de estado e fecho por Escape; foco visível e ligação para saltar para o conteúdo.
+- Planeamento dos restantes assuntos sem publicar artigos vazios.
+
+As páginas técnicas são sínteses iniciais para revisão. A data de revisão documental
+não equivale à aprovação da Nobrinde. Não há casos reais de produção porque ainda
+não foram fornecidos. Os exemplos da página inicial estão identificados como ilustrativos.
+
+## Organização
+
+```text
+index.html, pesquisa.html      Páginas geradas
+tecnicas/, materiais/, ...    Índices e artigos HTML gerados
+styles.css                   Estilos da maquete e da biblioteca
+script.js                    Menu e navegação
+pesquisa.js                  Pesquisa local
+assets/pesquisa-dados.js      Índice gerado, sem dados privados
+conteudos/catalogo.py         Conteúdos, relações, fontes e data de revisão
+conteudos/modelos.py          Modelos: técnica, material, produto e guia
+modelos/inicio.html           Corpo editável da página inicial
+gerar.py                     Cabeçalho, rodapé e renderização partilhada
+verificar.py                 Verificação de páginas, recursos e âncoras
+testes/pesquisa.test.cjs      Testes da pesquisa
+editorial/plano.md            Mapa completo e temas pendentes
+editorial/validacoes.md       Afirmações e dados por validar pela Nobrinde
+editorial/verificacao.md      Resultados e limitações da verificação
+```
+
+## Alterar uma página
+
+A secção Guias tem sete artigos completos. Os seis novos guias e os seus
+esquemas/listas estão em `conteudos/guias.py`; o guia «Como escolher a técnica»
+conserva o texto inicial em `conteudos/catalogo.py`, com complementos do mesmo
+módulo de guias. `guide_listing` e `guide_article` em `gerar.py` usam o cabeçalho
+e rodapé comuns. Consulte `editorial/fontes-guias.md` para fontes, resultados
+das verificações e pontos de validação. O registo por artigo no catálogo é
+reproduzível com `python editorial/gerar_fontes_catalogo.py`.
+
+1. Edite o artigo em `ARTIGOS`, dentro de `conteudos/catalogo.py`.
+2. Cada entrada tem título, resumo, secções de texto, fontes, problemas e ligações.
+3. Atualize a data de revisão documental quando voltar a verificar as fontes.
+4. Execute os comandos abaixo e recarregue a página no navegador.
+
+```powershell
+python gerar.py
+python editorial/gerar_plano.py
+python verificar.py
+node --test testes/pesquisa.test.cjs
+```
+
+Python 3 gera o site usando a biblioteca padrão. Node.js e a dependência de
+desenvolvimento Prettier são necessários para a formatação automática no fim
+da geração; Node.js também executa os testes JavaScript. O site gerado continua
+estático e não precisa destas ferramentas para ser navegado.
+
+### Formatação dos HTML
+
+Na primeira utilização (ou após atualizar as dependências), execute `npm ci`.
+Depois use normalmente `python gerar.py`: o comando gera as páginas e aplica
+automaticamente o Prettier a todos os HTML do projeto, incluindo o modelo inicial.
+Se Node.js ou Prettier estiverem em falta, a geração avisa antes de escrever páginas.
+
+Para formatar apenas, use `npm run format`. Para confirmar o estilo sem modificar
+ficheiros, use `npm run format:check`. Em PowerShell, se a política impedir `npm`,
+use `npm.cmd` nos mesmos comandos.
+
+O estilo está em `.prettierrc.json`: dois espaços, um atributo por linha quando
+há vários atributos, largura de referência de 100 caracteres e finais de linha LF.
+A opção `htmlWhitespaceSensitivity: css` conserva os espaços significativos dos
+elementos inline; CSS e JavaScript incorporados não são reformatados. A versão do
+Prettier está fixada em `package.json` e `package-lock.json`. `node_modules`,
+`.venv` e `tmp` ficam excluídos. As integrações de Prettier no editor usam a mesma
+configuração. Edite os conteúdos Python/modelos e volte a gerar, em vez de alterar
+diretamente as páginas geradas.
+
+Edite o corpo da página inicial em `modelos/inicio.html`. Os seus destaques são
+curadoria manual: ao trocar um artigo, atualize o respetivo cartão e destino.
+Cabeçalho, rodapé, páginas de secção e artigos partilham funções de `gerar.py`.
+Não altere diretamente HTML gerado se pretender conservar a alteração na próxima geração.
+
+## Acrescentar conteúdo
+
+1. Consulte `editorial/plano.md` e complete as fontes antes de publicar um artigo local.
+2. Use `novo('tecnica')`, `novo('material')`, `novo('produto')` ou `novo('guia')`
+   de `conteudos/modelos.py` como estrutura. Copie os campos para uma nova entrada de `ARTIGOS`.
+3. Escolha um `id` estável, em minúsculas e com hífen, sem acentos. Exemplo: `aluminio`.
+4. Preencha `sec`, `titulo`, `resumo`, `seccoes`, `problemas`, `fontes`,
+   `relacionados`, `ancoras` e `tags`. Use listas vazias apenas quando o campo não se aplica.
+5. Registe fontes públicas em `FONTES`; num parágrafo, `[chave]` cria uma referência à fonte.
+6. Em `relacionados`, use IDs de artigos existentes. Em `ancoras`, use destinos
+   existentes, como `materiais/index.html#metais`. Registe as relações inversas onde fizer sentido.
+7. Gere e verifique novamente. O novo artigo entra no índice da sua secção e na pesquisa.
+
+Não mude IDs de páginas já divulgadas sem prever redirecionamento. Não publique
+texto por validar como facto: registe-o em `editorial/validacoes.md`.
+Para um artigo de atualidade, acrescente primeiro um modelo com data de publicação
+visível e categoria de notícia; não o apresente como guia permanente.
+
+## Verificação e próximos passos
+
+Consulte `editorial/verificacao.md` para resultados exatos. O ambiente desta sessão
+não disponibilizou um navegador ligado às ferramentas: a inspeção visual em desktop
+e telemóvel continua pendente, embora os estilos responsivos estejam implementados.
+
+Antes de aprovar a apresentação, reveja larguras de 360, 390, 768 e 1440 px:
+menu, pesquisa, leitura dos artigos, navegação por teclado e ausência de deslocamento
+horizontal. Experimente «gravacao», «canetas», «DTF», pesquisa vazia e uma palavra inexistente.
+
+As páginas incluem `noindex, nofollow` por serem uma versão de revisão. Uma futura
+publicação deve ser preparada separadamente, com aprovação dos conteúdos e escolha
+explícita dos ficheiros públicos. Não envie `editorial/`, o brief ou os scripts internos
+para alojamento público. `noindex` não é um mecanismo de privacidade.
+# Secção indústria
+
+A entrada apresenta quatro cartões: História dos Brindes, Da ideia à entrega,
+Máquinas e processos e Montagem e acabamentos. Os destinos são
+`industria/historia-dos-brindes.html`, `industria/da-ideia-a-entrega.html`,
+`industria/maquinas-e-processos.html` e `industria/montagem-e-acabamentos.html`.
+A história anterior foi preservada integralmente; o percurso e a lista de máquinas
+passaram para páginas próprias. As âncoras antigas da entrada continuam válidas.
+
+Abra `industria/index.html` no navegador para consultar o percurso e os 13 guias.
+Os textos e as 11 etapas são mantidos em `conteudos/industria.py`; a apresentação é gerada por `gerar.py` e `styles.css`.
+As fontes técnicas e históricas estão em `editorial/fontes-industria.md`, reproduzíveis com `python editorial/gerar_fontes_industria.py`. O registo do catálogo continua em `editorial/fontes-catalogo.md`.
