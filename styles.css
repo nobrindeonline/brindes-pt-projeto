@@ -134,6 +134,7 @@
 .guide-diagram strong,.guide-diagram span{display:block}.guide-diagram span{font-size:13px;line-height:1.7;margin-top:8px;color:var(--body)}
 .guide-diagram figcaption,.guide-color figcaption{font-size:12px;line-height:1.7;color:var(--body);margin-top:16px}
 .guide-checklist{padding-left:22px;color:var(--body);line-height:1.8;font-size:14px}.guide-checklist li{padding:5px 0}
+.transfer-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:24px}.transfer-cards .content-card{min-width:0}.transfer-cards h3{overflow-wrap:break-word}@media(max-width:590px){.transfer-cards{grid-template-columns:minmax(0,1fr)}}
 .guide-color{margin:24px 0;padding:22px;border:1px solid var(--line);border-radius:18px}.guide-color>div{display:flex;gap:12px;flex-wrap:wrap}
 .guide-color span{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;font-weight:700;background:#00b7dc;color:#10243a}
 .guide-color span:nth-child(2){background:#bc126f;color:#fff}.guide-color span:nth-child(3){background:#ffdf37}.guide-color span:nth-child(4){background:#17202b;color:#fff}

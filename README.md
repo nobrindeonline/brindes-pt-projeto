@@ -1,5 +1,18 @@
 # brindes.pt — biblioteca informativa da Nobrinde
 
+## Transfers — 30 de setembro de 2026
+
+A entrada `tecnicas/transfers.html` liga os guias de Transfer Serigráfico,
+Transfer Digital, Transfer Digital com Base e DTF. O conteúdo está em
+`conteudos/transfers.py`; use `python gerar.py` para atualizar páginas e pesquisa.
+As definições comerciais de Digital e Digital com Base precisam de confirmação
+pela Nobrinde. A entrada de Técnicas apresenta apenas Transfers; as quatro
+modalidades são exploradas dentro dessa página. Cinco imagens de
+`assets/tecnicas/Transfers/` foram integradas após autorização expressa do
+utilizador, sem alterar os originais e com créditos e legendas factuais.
+Fontes, inventário e verificações em
+`editorial/fontes-transfers.md` e `editorial/imagens-por-confirmar.md`.
+
 Versão local para revisão. Site estático em português de Portugal, sem loja,
 chatbot, base de dados ou recolha de pesquisas. Não foi publicado na Internet.
 A maquete aprovada mantém-se como base: Poppins, branco, azul e cartões arredondados.

@@ -26,7 +26,7 @@ SECCOES = [
  {'id':'tecnicas','titulo':'Técnicas de personalização','curto':'Técnicas','icone':'✦','resumo':'Do logótipo ao objeto: conheça o processo, o acabamento e as condições de cada técnica.', 'grupos':[
  ('impressao','Impressão direta','Comece pela forma do objeto, pela superfície e pela imagem que pretende reproduzir. Compare os guias disponíveis antes de escolher.', 'Tampografia|Serigrafia|Serigrafia circular|Impressão digital UV|Impressão digital circular'),
  ('gravacao','Gravação e relevo','Confirme o efeito pretendido numa amostra do artigo: cor, textura e profundidade não são escolhas equivalentes.', 'Gravação a laser|Gravação circular|Termogravura|Baixo-relevo e relevo'),
- ('textil','Têxteis e transferências','Indique a composição da peça, a cor, o local de aplicação e os cuidados de lavagem previstos.', 'Bordado|DTF|Sublimação|Transfer serigráfico|Transfer digital|Transfer digital com base branca|Transferência cerâmica'),
+ ('textil','Têxteis e transferências','Indique a composição da peça, a cor, o local de aplicação e os cuidados de lavagem previstos.', 'Bordado|Transfers|Sublimação|Transferência cerâmica'),
  ('acabamentos','Outras aplicações','O formato final e os componentes do produto fazem parte da escolha do processo.', 'Doming|Troquelagem|Produção de crachás')]},
  {'id':'materiais','titulo':'Materiais','curto':'Materiais','icone':'▥','resumo':'O nome do material é o ponto de partida. O acabamento e a construção do artigo também contam.', 'grupos':[
  ('plasticos','Plásticos','Peça a identificação do polímero e do revestimento. ABS, PP, PVC, PET e Tritan não devem ser tratados como uma superfície única; confirme a tinta e o tratamento com quem vai produzir.', 'ABS|PP|PVC|PET|Tritan'),
@@ -201,6 +201,14 @@ for artigo in ARTIGOS:
 FONTES.update(FONTES_BORDADO)
 ARTIGOS.append(TERMOGRAVURA)
 FONTES.update(FONTES_TERMOGRAVURA)
+from conteudos.transfers import TRANSFERS, FONTES_TRANSFERS
+ARTIGOS.extend(TRANSFERS)
+FONTES.update(FONTES_TRANSFERS)
+for artigo in ARTIGOS:
+    if artigo['id'] in ('bordado', 'serigrafia', 'tecnica-sublimacao', 'materiais-texteis', 'texteis', 'sacos-e-mochilas', 'como-escolher-a-tecnica'):
+        artigo['relacionados'].append('transfers')
+    if artigo['id'] in ('dtf-e-prensas-termicas', 'serigrafia'):
+        artigo['relacionados'].append('dtf')
 for artigo in ARTIGOS:
     if artigo['id'] in ('gravacao-a-laser', 'impressao-uv', 'serigrafia', 'papel-e-cartao', 'pele-e-imitacao-de-pele', 'artigos-de-escritorio', 'como-escolher-a-tecnica', 'como-preparar-um-logotipo', 'como-avaliar-uma-maquete'):
         artigo['relacionados'].append('termogravura')

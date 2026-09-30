@@ -20,6 +20,7 @@ from conteudos.impressao_uv import PASSOS as PASSOS_UV, IMAGENS as IMAGENS_UV
 from conteudos.guias import GRUPOS_GUIAS
 from conteudos.materiais import MATERIAIS
 from conteudos.bordado import IMAGENS_BORDADO
+from conteudos.transfers import IDS as TRANSFER_IDS, IMAGENS_TRANSFERS
 
 ROOT = Path(__file__).resolve().parent
 BY_ID = {a['id']: a for a in ARTIGOS}
@@ -228,6 +229,22 @@ def page_article(a):
     ids=a.get('ids_seccoes', [f'parte-{n}' for n in range(len(a['seccoes']))])
     toc=''.join(link('#'+i,s[0]) for i,s in zip(ids,a['seccoes']))
     body=''.join(f'<section id="{i}"><h2>{escape(t)}</h2><p>{prose(p)}</p></section>' for i,(t,p) in zip(ids,a['seccoes']))
+    if a.get('transfer'):
+        body=''
+        if a['id']!='transfers':
+            body+='<a class="back-to-ideas" href="transfers.html">← Explorar todos os transfers</a>'
+        for i,(title,text) in zip(ids,a['seccoes']):
+            content=''.join('<p>'+prose(paragraph)+'</p>' for paragraph in text.split('\n\n'))
+            if i in IMAGENS_TRANSFERS.get(a['id'], {}):
+                file,width,height,alt,caption=IMAGENS_TRANSFERS[a['id']][i]
+                content+=f'<figure class="pad-reference"><img src="../assets/tecnicas/Transfers/{quote(file)}" width="{width}" height="{height}" alt="{escape(alt)}" loading="lazy" decoding="async"><figcaption>{escape(caption)} Não representa produção da Nobrinde. <a href="../creditos-imagens.html#transfers-fornecidas">Origem e autorização de utilização</a></figcaption></figure>'
+            if i=='modalidades':
+                content+='<div class="transfer-cards">'+''.join(card(BY_ID[k],'../') for k in TRANSFER_IDS)+'</div>'
+            if i=='confirmar':
+                content+='<ul class="guide-checklist">'+''.join('<li><strong>'+escape(label)+':</strong> '+prose(detail)+'</li>' for label,detail in a['checklist'])+'</ul>'
+            if i=='comparar':
+                content+='<div class="context-links">'+''.join(link(k+'.html',BY_ID[k]['titulo']) for k in TRANSFER_IDS if k!=a['id'])+'</div>'
+            body+=f'<section id="{i}"><h2>{escape(title)}</h2>{content}</section>'
     if a['id']=='termogravura':
         body=''
         for i,(title,text) in zip(ids,a['seccoes']):
@@ -377,7 +394,7 @@ def page_section(s):
     if s['id']=='tendencias':
         idea_listing(s)
         return
-    available=[a for a in ARTIGOS if a['sec']==s['id']]
+    available=[a for a in ARTIGOS if a['sec']==s['id'] and a['id'] not in TRANSFER_IDS]
     cards='<section class="available"><h2>Guias disponíveis</h2><div class="article-grid">'+''.join(card(a,'../') for a in available)+'</div></section>' if available else ''
     groups=''
     published={a['titulo']:a for a in available}

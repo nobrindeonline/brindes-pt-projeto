@@ -31,11 +31,12 @@ Para completar novos artigos: Descrição e fontes do processo; equipamento; com
 ### Têxteis e transferências
 
 - **Bordado**: Pronto para revisão local — `/tecnicas/bordado.html`.
-- **DTF**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Transfers**: Pronto para revisão local — `/tecnicas/transfers.html`.
+- **DTF**: Pronto para revisão local — `/tecnicas/dtf.html`.
 - **Sublimação**: Pronto para revisão local — `/tecnicas/tecnica-sublimacao.html`.
-- **Transfer serigráfico**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Transfer digital**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Transfer digital com base branca**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Transfer Serigráfico**: Pronto para revisão local — `/tecnicas/transfer-serigrafico.html`.
+- **Transfer Digital**: Guia local com exemplo documentado — `/tecnicas/transfer-digital.html`; definição do sistema Nobrinde por confirmar.
+- **Transfer Digital com Base**: Guia local — `/tecnicas/transfer-digital-com-base.html`; significado e construção da base por confirmar, sem assumir branco sob CMYK.
 - **Transferência cerâmica**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
 
 ### Outras aplicações

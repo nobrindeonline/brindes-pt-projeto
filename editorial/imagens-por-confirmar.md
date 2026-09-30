@@ -77,3 +77,33 @@ com dimensões proporcionais e sem ampliação acima da largura original.
 O novo guia usa o esquema textual HTML/CSS já existente no projeto. Não reutiliza
 a fotografia Farnes: o registo atual do catálogo não documenta autorização de
 reutilização dessa fotografia para a nova página.
+
+
+## Transfers — 30/09/2026
+
+**Atualização:** o utilizador autorizou expressamente o uso das fotografias
+neste projeto. Integradas `Transfer Serigrafico/unnamed.jpg`,
+`Transfer Serigrafico/unnamed (20).jpg`, `Transfer Digital/unnamed (23).jpg`,
+`DTF/unnamed (27).jpg` e `DTF/unnamed (28).jpg`, sem alteração dos originais.
+Créditos públicos em `creditos-imagens.html#transfers-fornecidas`.
+A decisão inicial de exclusão abaixo fica substituída por esta autorização;
+a documentação de autoria e fonte continua pendente. Os restantes ficheiros
+não foram selecionados por redundância ou falta de adequação técnica.
+
+Pastas reais: `assets/tecnicas/Transfers/DTF/`, `Transfer Digital/` e `Transfer Serigrafico/`. Não existe a pasta de Transfer Digital com Base. Não foi localizado registo de origem, licença ou autorização destes 11 ficheiros no projeto. Metadados, mesmo quando presentes, não substituem prova de direitos. Os originais não foram editados, copiados ou incluídos nos novos guias. Foram usados esquemas textuais HTML/CSS originais, com conteúdo legível sem imagens. Não se inventaram textos alternativos para fotografias excluídas.
+
+| Ficheiro | Dimensões (largura × altura) | Metadados de autoria | SHA-256 de controlo |
+| --- | --- | --- | --- |
+| `assets/tecnicas/Transfers/DTF/unnamed (27).jpg` | 474 x 469 | Sem autoria/copyright EXIF | `70c3af87ce140a5878034f6bec80dcefe47541852247ce4765ef04856f212eb5` |
+| `assets/tecnicas/Transfers/DTF/unnamed (28).jpg` | 474 x 474 | Sem autoria/copyright EXIF | `5f76581719e6c38e5c680b2b40d5f8722f86f7ce5525f4c6bf71740bfe81ad0e` |
+| `assets/tecnicas/Transfers/DTF/unnamed (29).jpg` | 474 x 474 | Sem autoria/copyright EXIF | `44609e3f14b83ec0b00625d81cf7ee973a0e8f8c5ccf35b381ebe59e09d63e2c` |
+| `assets/tecnicas/Transfers/DTF/unnamed (30).jpg` | 474 x 474 | Sem autoria/copyright EXIF | `feab95ac3598661cfe10d3e0df811a2513450d583532695e60b63c8f37f57d5b` |
+| `assets/tecnicas/Transfers/Transfer Digital/unnamed (23).jpg` | 474 x 266 | Sem autoria/copyright EXIF | `b23708fb1aad090b405a97e162d47df21048fdf2672f9a9143a0a0c218c48790` |
+| `assets/tecnicas/Transfers/Transfer Digital/unnamed (24).jpg` | 474 x 344 | Sem autoria/copyright EXIF | `42627552aa4af0ae720dc05b2426169138056a0fbe386f5d5a1c7f594cddda58` |
+| `assets/tecnicas/Transfers/Transfer Digital/unnamed (25).jpg` | 474 x 344 | Sem autoria/copyright EXIF | `42627552aa4af0ae720dc05b2426169138056a0fbe386f5d5a1c7f594cddda58` |
+| `assets/tecnicas/Transfers/Transfer Digital/unnamed (26).jpg` | 474 x 505 | Sem autoria/copyright EXIF | `2c3e98b614604de99e407032dcbdefcdccac8c40b3e62545bb6ddf2455c4b2a9` |
+| `assets/tecnicas/Transfers/Transfer Serigrafico/unnamed (20).jpg` | 474 x 474 | Sem autoria/copyright EXIF | `2617b38158730a6ba7c15f0f73f6318a21026590966631e2c10b445fd6007ff4` |
+| `assets/tecnicas/Transfers/Transfer Serigrafico/unnamed (21).jpg` | 474 x 474 | Sem autoria/copyright EXIF | `82861d8bda628d1b2183eb66481ed47ca04321fc293f35d382aa5a4403f2dcac` |
+| `assets/tecnicas/Transfers/Transfer Serigrafico/unnamed.jpg` | 474 x 438 | Sem autoria/copyright EXIF | `8efae7970af892d152c759033a2cf890a41db4eeee0fad74e4a4bcbca30118a4` |
+
+Pendência: obter fonte original, titular e licença/autorização para cada imagem antes da integração. URLs proxy Gmail/Bing não comprovam esses direitos.

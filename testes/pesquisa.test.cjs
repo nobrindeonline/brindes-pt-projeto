@@ -22,6 +22,19 @@ test('DTF conduz ao guia publicado de processos', () => {
   const found = find(entries, 'DTF');
   assert.ok(found.length > 0);
   assert.ok(found.some(e => e.url === 'industria/dtf-e-prensas-termicas.html'));
+  assert.ok(found.some(e => e.url === 'tecnicas/dtf.html'));
+});
+
+test('as designações dos transfers encontram os respetivos guias', () => {
+  for (const [query, slug] of [
+    ['transfers', 'transfers'],
+    ['transfer serigrafico', 'transfer-serigrafico'],
+    ['transfer digital', 'transfer-digital'],
+    ['transfer digital com base', 'transfer-digital-com-base'],
+    ['base branca', 'transfer-digital-com-base'],
+  ]) {
+    assert.ok(find(entries, query).some(e => e.url === `tecnicas/${slug}.html`), query);
+  }
 });
 test('sublimação encontra a técnica e preserva o guia de equipamentos', () => {
   for (const query of ['sublimação', 'SUBLIMACAO']) {
