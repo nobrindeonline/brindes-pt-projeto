@@ -19,6 +19,7 @@ from conteudos.serigrafia import PASSOS as PASSOS_SERIGRAFIA
 from conteudos.impressao_uv import PASSOS as PASSOS_UV, IMAGENS as IMAGENS_UV
 from conteudos.guias import GRUPOS_GUIAS
 from conteudos.materiais import MATERIAIS
+from conteudos.bordado import IMAGENS_BORDADO
 
 ROOT = Path(__file__).resolve().parent
 BY_ID = {a['id']: a for a in ARTIGOS}
@@ -227,6 +228,27 @@ def page_article(a):
     ids=a.get('ids_seccoes', [f'parte-{n}' for n in range(len(a['seccoes']))])
     toc=''.join(link('#'+i,s[0]) for i,s in zip(ids,a['seccoes']))
     body=''.join(f'<section id="{i}"><h2>{escape(t)}</h2><p>{prose(p)}</p></section>' for i,(t,p) in zip(ids,a['seccoes']))
+    if a['id']=='termogravura':
+        body=''
+        for i,(title,text) in zip(ids,a['seccoes']):
+            content=''.join('<p>'+prose(paragraph)+'</p>' for paragraph in text.split('\n\n'))
+            if i=='confirmar':
+                content+='<ul class="guide-checklist">'+''.join('<li><strong>'+escape(label)+':</strong> '+prose(detail)+'</li>' for label,detail in a['checklist'])+'</ul>'
+            if i=='comparar':
+                content+='<div class="context-links">'+''.join(link(id+'.html',BY_ID[id]['titulo']) for id in ['gravacao-a-laser','impressao-uv','serigrafia'])+'</div>'
+            body+=f'<section id="{i}"><h2>{escape(title)}</h2>{content}</section>'
+    if a['id']=='bordado':
+        body=''
+        for i,(title,text) in zip(ids,a['seccoes']):
+            content=''.join('<p>'+prose(paragraph)+'</p>' for paragraph in text.split('\n\n'))
+            if i in IMAGENS_BORDADO:
+                file,width,height,alt,caption=IMAGENS_BORDADO[i]
+                content+=f'<figure class="pad-reference"><img src="../assets/tecnicas/Bordado/{file}" width="{width}" height="{height}" alt="{escape(alt)}" loading="lazy" decoding="async"><figcaption>{escape(caption)} Não representa produção da Nobrinde. <a href="../creditos-imagens.html#bordado-fornecidas">Origem e autorização de utilização</a></figcaption></figure>'
+            if i=='parte-5':
+                content+='<ul class="guide-checklist">'+''.join('<li><strong>'+escape(label)+':</strong> '+prose(detail)+'</li>' for label,detail in a['confirmar_bordado'])+'</ul>'
+            if i=='parte-7':
+                content+='<div class="context-links">'+link('serigrafia.html','Comparar com serigrafia')+link('tecnica-sublimacao.html','Condições da sublimação')+'</div>'
+            body+=f'<section id="{i}"><h2>{escape(title)}</h2>{content}</section>'
     if a['id']=='tecnica-sublimacao':
         body = ''
         for i, (title, text) in zip(ids, a['seccoes']):
@@ -381,6 +403,10 @@ def search_page():
     for entry in entries:
         article_id=entry['url'].split('/')[-1].removesuffix('.html')
         guide=BY_ID.get(article_id,{})
+        if guide.get('checklist'):
+            entry['text']+=' '+' '.join(t+' '+p for t,p in guide['checklist'])+' '+' '.join(t+' '+p for t,p in guide['problemas'])
+        if guide.get('confirmar_bordado'):
+            entry['text']+=' '+' '.join(t+' '+p for t,p in guide['confirmar_bordado'])+' '+' '.join(t+' '+p for t,p in guide['problemas'])
         if guide.get('esquema_guia'):
             entry['text']+=' '+' '.join(guide['confirmar'])+' '+' '.join(t+' '+p for t,p in guide['problemas'])
             entry['text']+=' '+' '.join(POR_ID[id]['nome']+' '+POR_ID[id]['ref'] for id in guide.get('produtos_guia',[]))

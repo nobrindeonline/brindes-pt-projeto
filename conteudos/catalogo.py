@@ -1,6 +1,7 @@
 """Conteúdo editorial em português de Portugal. Não contém dados internos."""
 from conteudos.produtos import NOVOS_ARTIGOS
 from conteudos.bordado import BORDADO, FONTES_BORDADO
+from conteudos.termogravura import TERMOGRAVURA, FONTES_TERMOGRAVURA
 from conteudos.ideias import IDEIAS
 from conteudos.novidades import NOVIDADES
 from conteudos.publicos import PUBLICOS
@@ -198,6 +199,11 @@ for artigo in ARTIGOS:
         artigo['relacionados'].append(SUBLIMACAO['id'])
 
 FONTES.update(FONTES_BORDADO)
+ARTIGOS.append(TERMOGRAVURA)
+FONTES.update(FONTES_TERMOGRAVURA)
+for artigo in ARTIGOS:
+    if artigo['id'] in ('gravacao-a-laser', 'impressao-uv', 'serigrafia', 'papel-e-cartao', 'pele-e-imitacao-de-pele', 'artigos-de-escritorio', 'como-escolher-a-tecnica', 'como-preparar-um-logotipo', 'como-avaliar-uma-maquete'):
+        artigo['relacionados'].append('termogravura')
 for artigo in ARTIGOS:
     if artigo["id"] in ("materiais-texteis", "texteis", "sacos-e-mochilas", "tecnica-sublimacao", "como-avaliar-uma-maquete") and "bordado" not in artigo["relacionados"]:
         artigo["relacionados"].append("bordado")

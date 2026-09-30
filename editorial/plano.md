@@ -25,7 +25,7 @@ Para completar novos artigos: Descrição e fontes do processo; equipamento; com
 
 - **Gravação a laser**: Pronto para revisão local — `/tecnicas/gravacao-a-laser.html`.
 - **Gravação circular**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Termogravura**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Termogravura**: Pronto para revisão local — `/tecnicas/termogravura.html`.
 - **Baixo-relevo e relevo**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
 
 ### Têxteis e transferências

@@ -1,5 +1,7 @@
 """Guia de bordado: texto, fontes primárias e âncoras estáveis da página existente."""
 FONTES_BORDADO = {
+    'bordlinhas': ('Madeira — Escolher linhas de viscose ou poliéster: aspeto, toque e cuidados', 'https://www.madeira.com/en-in/service/support/faq/when-to-use-rayon/viscose-and-when-to-use-polyester-threads'),
+    'borddensidade': ('Madeira — Como evitar o enrugamento: desenho, tecido e montagem', 'https://www.madeira.com/en-in/service/support/embroidery-best-practice/how-to-avoid-puckering-during-embroidery'),
     'bordpontos': ('Wilcom — Embroidery Stitch Techniques: satin e tatami', 'https://wilcom.com/resources/blog/embroidery-stitch-techniques'),
     'bordprograma': ('Wilcom — Create fills with Auto-Digitizing: formas, preenchimentos e ponto corrido', 'https://docs.wilcom.com/embroiderystudio/28/en/OnlineHelp/Summary/summary_-_create/summary_-_create-75.htm'),
     'bordbrother': ('Brother — My Design Center: converter imagens em dados de bordado', 'https://prox.brother-usa.com/MyDesignCenter.aspx'),
@@ -10,8 +12,8 @@ FONTES_BORDADO = {
 }
 BORDADO = {
     'id': 'bordado', 'sec': 'tecnicas', 'tipo': 'tecnica', 'titulo': 'Bordado',
-    'resumo': 'Do logótipo ao ficheiro de pontos: conheça o satin, o tatami, a estabilização e as condições para bordar vestuário, bonés, mochilas e casacos.',
-    'data_revisao': '2026-09-28', 'data_revisao_texto': '28 de setembro de 2026',
+    'resumo': 'Como transformar um logótipo em pontos de linha: tipos de ponto, escolha do artigo, relevo, limitações e o que validar numa prova bordada.',
+    'data_revisao': '2026-09-29', 'data_revisao_texto': '29 de setembro de 2026',
     'passos': ['Avaliar a peça e o logótipo à escala final', 'Preparar pontos, cores e sequência', 'Escolher bastidor, agulha e estabilização', 'Bordar e avaliar uma amostra'],
     # Conserva o significado dos oito destinos parte-0 a parte-7 já existentes.
     'ids_seccoes': ['parte-0', 'parte-1', 'ponto-satin', 'ponto-tatami', 'outros-pontos', 'parte-2', 'parte-3', 'parte-4', 'parte-6', 'parte-5', 'parte-7'],
@@ -39,3 +41,34 @@ BORDADO = {
     'ancoras': ['materiais/index.html#texteis', 'produtos/index.html#texteis', 'produtos/index.html#sacos'],
     'tags': 'bordado digitização digitalização ficheiro pontos satin ponto cheio tatami preenchimento ponto corrido underlay bastidor estabilizador bonés mochilas casacos vestuário linhas tensão enrugamento',
 }
+
+IMAGENS_BORDADO = {
+    'parte-0': ('unnamed.jpg', 474, 474, 'Máquina de bordar branca com ecrã e tecido colocado num bastidor.', 'Exemplo de equipamento com bastidor.'),
+    'parte-1': ('unnamed-2.jpg', 474, 357, 'Duas máquinas sobre fundo turquesa; a da esquerda tem vários cones de linha e posições de agulha.', 'Configurações diferentes de equipamento. A imagem não permite confirmar as capacidades de cada modelo.'),
+    'parte-3': ('unnamed-3.jpg', 474, 474, 'Motivos florais em tons turquesa e laranja, com textura de fios e relevo sobre fundo claro.', 'Imagem ilustrativa de textura e relevo. Não comprova um tipo de ponto, execução à máquina ou resultado disponível para um logótipo.'),
+}
+
+# Complementos na fonte editorial; o gerador mantém os destinos anteriores.
+COMPLEMENTOS = {
+    'Máquina, agulhas, linhas e estabilização': '\n\nO apoio no avesso e uma película colocada sobre o tecido têm funções diferentes. Em superfícies com pelo ou laçadas, pode ser necessário um material de cobertura, ou topping, para ajudar a impedir que os pontos se afundem. O tipo de apoio, a sua remoção e a eventual utilização de água devem ser compatíveis com a peça; não se escolhem apenas pela facilidade de retirar o excedente. [bordapoio]',
+    'Ponto de preenchimento ou tatami': ' Em pormenores muito pequenos, as filas podem não ter espaço para definir a forma; nesses casos, é necessário rever a escala ou a construção do desenho.',
+    'Resultado visual e tátil': '\n\nA linha também faz parte da decisão: viscose e poliéster podem diferir no brilho, no toque e nos cuidados admitidos. A espessura da linha deve ser considerada com a agulha e o programa de pontos. Escolher uma linha mais fina, por si só, não resolve um logótipo demasiado pequeno. Registe a referência do fabricante e avalie a cor sobre o tecido escolhido. [bordlinhas]',
+    'Preparação do logótipo': '\n\nUma maquete ajuda a rever posição, proporção e grafia; não demonstra o relevo, a cobertura nem o comportamento do tecido. Uma prova bordada no artigo, ou num suporte representativo acordado, permite avaliar esses aspetos. Se mudar a composição, a cor da peça, a posição ou a dimensão do desenho, confirme se a prova anterior continua a ser representativa.',
+}
+BORDADO['seccoes'] = [(titulo, texto + COMPLEMENTOS.get(titulo, '')) for titulo, texto in BORDADO['seccoes']]
+BORDADO['confirmar_bordado'] = [
+    ('Artigo e tecido', 'Referência, composição, elasticidade, espessura, forro e acesso à zona; avaliar costuras e camadas numa peça real.'),
+    ('Dimensão e posição', 'Largura e altura finais, orientação e localização na peça; rever letras pequenas, espaços estreitos e adaptações da marca.'),
+    ('Linhas e pontos', 'Fabricante e referências de cor, tipo e espessura da linha, satin, tatami ou outros pontos adequados a cada elemento.'),
+    ('Montagem e estabilização', 'Bastidor, apoio no avesso e eventual cobertura; confirmar o toque e o acabamento das zonas em contacto com a pele.'),
+    ('Ficheiro e prova', 'Formato aceite pelo equipamento, versão do desenho e amostra aprovada; distinguir a maquete visual da prova bordada.'),
+    ('Utilização e lavagem', 'Uso previsto e cuidados indicados pelo fabricante do artigo e das linhas. Validar a peça já personalizada, sem transferir para o conjunto a resistência de um só componente. [bordlinhas]'),
+]
+BORDADO['seccoes'] = [
+    (titulo, 'Antes de aprovar, registe as decisões abaixo com quem prepara e executa o bordado. Esta lista orienta a avaliação do artigo concreto; não descreve capacidades ou procedimentos confirmados da Nobrinde.' if titulo == 'O que confirmar antes de avançar' else texto)
+    for titulo, texto in BORDADO['seccoes']
+]
+BORDADO['problemas'][0] = (
+    'Enrugamento ou distorção do tecido',
+    'Pode estar relacionado com tecido esticado no bastidor, apoio insuficiente ou programa demasiado denso para a peça. Peça revisão do bastidor, estabilizador e pontos; não conclua que basta aumentar a tensão ou acrescentar linha. [bordtecido] [borddensidade]',
+)

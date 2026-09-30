@@ -36,7 +36,8 @@ da revisão documental, não uma aprovação técnica pela Nobrinde.
 | UV: «HP 2 × 3 m», branco e verniz universais | Não publicadas essas capacidades | Inventário confirmado; os exemplos Roland são identificados como tal |
 | Sublimação: 180–200 °C, apenas poliéster, fundo branco obrigatório | Artigo adiado | Fichas do suporte, tinta, papel e equipamento; condições específicas |
 | Bordado: fotografias e linhas finas impossíveis | Não publicadas como absolutos | Amostras e limites de detalhe por tecido, linha e programação |
-| Termogravura e transferes: limites/custos/durabilidade | Artigos adiados | Ensaios, acabamentos, materiais e parâmetros documentados |
+| Termogravura: limites/custos/durabilidade | Guia de estampagem a quente com folha preparado; fontes em `fontes-termogravura.md` | Ensaio do artigo, folha, cunho, resistência, condições comerciais e direitos das imagens |
+| Transferes: limites/custos/durabilidade | Temas pendentes conforme plano editorial | Ensaios, acabamentos, materiais e parâmetros documentados |
 | DTF «ideal para qualquer têxtil» | Não publicado | Matriz de tecidos, tratamentos, migração e resistência validada |
 | Troquelagem «não ideal para pequenas quantidades» | Não publicada como regra | Processo, ferramenta e contexto da comparação |
 | Crachás «rápidos e consistentes» | Sem promessa de capacidade | Fluxo, equipamento, controlo e exemplos próprios |
