@@ -27,7 +27,8 @@ SECCOES = [
  ('impressao','Impressão direta','Comece pela forma do objeto, pela superfície e pela imagem que pretende reproduzir. Compare os guias disponíveis antes de escolher.', 'Tampografia|Serigrafia|Serigrafia circular|Impressão digital UV|Impressão digital circular'),
  ('gravacao','Gravação e relevo','Confirme o efeito pretendido numa amostra do artigo: cor, textura e profundidade não são escolhas equivalentes.', 'Gravação a laser|Gravação circular|Termogravura|Baixo-relevo e relevo'),
  ('textil','Têxteis e transferências','Indique a composição da peça, a cor, o local de aplicação e os cuidados de lavagem previstos.', 'Bordado|Transfers|Sublimação|Transferência cerâmica'),
- ('acabamentos','Outras aplicações','O formato final e os componentes do produto fazem parte da escolha do processo.', 'Doming|Troquelagem|Produção de crachás')]},
+ ('acabamentos','Outras aplicações','O formato final e os componentes do produto fazem parte da escolha do processo.', 'Doming|Troquelagem|Crachás tipo pin/botão'),
+ ('montagem','Costura, Argolagem e Encadernação','Explore os processos de união, montagem e acabamento conforme o produto e os materiais.', 'Costura, Argolagem e Encadernação|Costura Industrial|Argolagem|Encadernação')]},
  {'id':'materiais','titulo':'Materiais','curto':'Materiais','icone':'▥','resumo':'O nome do material é o ponto de partida. O acabamento e a construção do artigo também contam.', 'grupos':[
  ('plasticos','Plásticos','Peça a identificação do polímero e do revestimento. ABS, PP, PVC, PET e Tritan não devem ser tratados como uma superfície única; confirme a tinta e o tratamento com quem vai produzir.', 'ABS|PP|PVC|PET|Tritan'),
  ('metais','Metais','Distinga o metal de base do acabamento visível. Uma caneta pintada e uma superfície metálica sem revestimento podem exigir decisões diferentes.', 'Alumínio|Aço inoxidável|Ferro|Zamak'),
@@ -203,6 +204,18 @@ ARTIGOS.append(TERMOGRAVURA)
 FONTES.update(FONTES_TERMOGRAVURA)
 from conteudos.transfers import TRANSFERS, FONTES_TRANSFERS
 from conteudos.troquelagem import TROQUELAGEM, FONTES_TROQUELAGEM
+from conteudos.crachas import CRACHAS, FONTES_CRACHAS
+from conteudos.montagem import MONTAGEM, FONTES_MONTAGEM, HUB_ID
+ARTIGOS.extend(MONTAGEM)
+FONTES.update(FONTES_MONTAGEM)
+for artigo in ARTIGOS:
+    if artigo['id'] in ('costura-industrial', 'encadernacao-e-argolagem', 'montagem-e-acabamentos'):
+        artigo['relacionados'].append(HUB_ID)
+ARTIGOS.append(CRACHAS)
+FONTES.update(FONTES_CRACHAS)
+for artigo in ARTIGOS:
+    if artigo['id'] == 'producao-de-crachas':
+        artigo['relacionados'].append(CRACHAS['id'])
 ARTIGOS.append(TROQUELAGEM)
 FONTES.update(FONTES_TROQUELAGEM)
 for artigo in ARTIGOS:

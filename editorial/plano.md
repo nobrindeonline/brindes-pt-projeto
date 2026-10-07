@@ -43,7 +43,7 @@ Para completar novos artigos: Descrição e fontes do processo; equipamento; com
 
 - **Doming**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
 - **Troquelagem**: Pronto para revisão local — `/tecnicas/tecnica-troquelagem.html`.
-- **Produção de crachás**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Crachás tipo pin/botão**: Pronto para revisão local — `/tecnicas/crachas-automaticos.html`; alcance da automação e componentes dependem do sistema escolhido.
 
 ## Materiais
 
@@ -187,6 +187,7 @@ Para completar novos artigos: Descrição do processo/equipamento; fontes primá
 - **Troquelagem e preparação de embalagens**: Pronto para revisão local — `/industria/troquelagem.html`.
 - **Costura industrial e aplicação de acessórios**: Pronto para revisão local — `/industria/costura-industrial.html`.
 - **Encadernação e argolagem**: Pronto para revisão local — `/industria/encadernacao-e-argolagem.html`.
+- **Costura, Argolagem e Encadernação**: hub pronto para revisão local — `/tecnicas/costura-argolagem-e-encadernacao.html`, com três guias completos: `/tecnicas/tecnica-costura-industrial.html`, `/tecnicas/argolagem.html` e `/tecnicas/encadernacao.html`. Fontes e âmbito em `editorial/fontes-montagem.md`; serviços da Nobrinde sujeitos a confirmação.
 - **Prensas para crachás e emblemas**: Pronto para revisão local — `/industria/producao-de-crachas.html`.
 
 ### Montagem e acabamentos

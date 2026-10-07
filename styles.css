@@ -115,6 +115,7 @@
 .reading .pad-reference img{display:block;width:auto;max-width:100%;height:auto;max-height:none;border:1px solid var(--line);border-radius:8px}
 .reading .pad-reference figcaption{max-width:474px;font-size:12px;line-height:1.75;color:var(--body);margin-top:12px}
 .pad-reference figcaption strong{display:block;margin-top:8px}.pad-reference a{text-decoration:underline}
+.montagem-grid{align-items:stretch}.montagem-grid .montagem-media{margin:0;padding:20px;display:flex;align-items:center;justify-content:center;height:260px;background:var(--shade)}.montagem-grid .montagem-media img{display:block;width:auto;height:auto;max-width:100%;max-height:220px;object-fit:contain}.montagem-intro{max-width:850px}.montagem-intro p{font-size:15px;line-height:1.9;color:var(--body)}.montagem-credits{font-size:12px;line-height:1.75;color:var(--body)}.montagem-credits a{text-decoration:underline}
 .pad-steps{padding-left:25px}.pad-steps li{padding-left:6px;margin-bottom:18px}.pad-steps li::marker{color:var(--blue);font-weight:700}.pad-steps p{margin-top:5px}
 .screen-process{margin:24px 0 30px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--shade)}
 .screen-process ol{list-style:none;margin:0;padding:0;counter-reset:screen-step}

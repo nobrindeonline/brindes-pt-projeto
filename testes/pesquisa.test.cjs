@@ -52,3 +52,25 @@ test('troquelagem encontra a técnica, operações e o guia de indústria existe
     assert.ok(find(entries, query).some(entry => entry.url === 'tecnicas/tecnica-troquelagem.html'), query);
   }
 });
+
+test('crachás automáticos encontra o guia delimitado a pin/botão e preserva Indústria', () => {
+  for (const query of ['crachas automaticos', 'CRACHÁS', 'pin', 'gabarito', 'selagem']) {
+    assert.ok(find(entries, query).some(entry => entry.url === 'tecnicas/crachas-automaticos.html'), query);
+  }
+  assert.ok(find(entries, 'crachas').some(entry => entry.url === 'industria/producao-de-crachas.html'));
+});
+
+test('montagem encontra o hub e distingue os guias novos dos artigos de Indústria', () => {
+  for (const [query, slug] of [
+    ['costura argolagem encadernacao', 'costura-argolagem-e-encadernacao'],
+    ['COSTURA INDUSTRIAL', 'tecnica-costura-industrial'],
+    ['argolagem', 'argolagem'],
+    ['encadernacao', 'encadernacao'],
+    ['espiral', 'argolagem'],
+    ['lombada', 'encadernacao'],
+  ]) {
+    assert.ok(find(entries, query).some(e => e.url === `tecnicas/${slug}.html`), query);
+  }
+  assert.ok(find(entries, 'costura').some(e => e.url === 'industria/costura-industrial.html'));
+  assert.ok(find(entries, 'argolagem').some(e => e.url === 'industria/encadernacao-e-argolagem.html'));
+});

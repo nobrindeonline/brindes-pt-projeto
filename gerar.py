@@ -21,6 +21,8 @@ from conteudos.guias import GRUPOS_GUIAS
 from conteudos.materiais import MATERIAIS
 from conteudos.bordado import IMAGENS_BORDADO
 from conteudos.troquelagem import IMAGENS_TROQUELAGEM, OPERACOES as OPERACOES_TROQUELAGEM, PASSOS as PASSOS_TROQUELAGEM, FAQ as FAQ_TROQUELAGEM
+from conteudos.crachas import IMAGEM_CRACHAS, COMPONENTES as COMPONENTES_CRACHAS, PASSOS as PASSOS_CRACHAS, FAQ as FAQ_CRACHAS
+from conteudos.montagem import MONTAGEM, HUB_ID, BASE_IMAGENS, IMAGENS_MONTAGEM
 from conteudos.transfers import IDS as TRANSFER_IDS, IMAGENS_TRANSFERS
 
 ROOT = Path(__file__).resolve().parent
@@ -209,7 +211,27 @@ def material_article(a):
     content = f'<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Materiais</a> / <span>{escape(a["titulo"])}</span></nav><div class="page-intro"><span class="eyebrow">Materiais · Guia de escolha</span><h1>{escape(a["titulo"])}</h1><p>{escape(a["resumo"])}</p><div class="review">Revisão documental: <time datetime="2026-09-28">28 de setembro de 2026</time> · Guia permanente</div></div><div class="reading-layout"><aside class="contents"><strong>Neste guia</strong><nav aria-label="Índice do artigo">{toc}{link("#fontes", "Fontes e âmbito")}</nav></aside><article class="reading">{body}</article></div><section><h2>Produtos e técnicas para aprofundar</h2><div class="article-grid">{related}</div></section>'
     write(url(a), shell(a['titulo'], a['resumo'], content, '../', 'materiais'))
 
+def montagem_media(a, caption=True):
+    file, width, height, alt, description = IMAGENS_MONTAGEM[a['id']]
+    legend = '<figcaption>'+escape(description)+' Não representa produção da Nobrinde. <a href="../creditos-imagens.html#montagem-fornecidas">Origem das imagens</a></figcaption>' if caption else ''
+    return f'<figure class="pad-reference montagem-media"><img src="../{quote(BASE_IMAGENS + file)}" width="{width}" height="{height}" alt="{escape(alt, quote=True)}" loading="lazy" decoding="async">{legend}</figure>'
+
+def montagem_hub(a):
+    intro=f'<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Técnicas</a> / {escape(a["titulo"])}</nav><div class="page-intro"><span class="eyebrow">Montagem e acabamento</span><h1>{escape(a["titulo"])}</h1><p>{escape(a["resumo"])}</p></div>'
+    def section(n):
+        title, text = a['seccoes'][n]
+        return '<section><h2>'+escape(title)+'</h2>'+''.join('<p>'+prose(p)+'</p>' for p in text.split('\n\n'))+'</section>'
+    cards=''
+    for child in MONTAGEM[1:]:
+        cards+='<article class="idea-card">'+montagem_media(child, False)+'<div class="idea-card-copy"><h2>'+escape(child['titulo'])+'</h2><p>'+escape(child['resumo'])+'</p><a class="link idea-read-more" href="'+child['id']+'.html" aria-label="Explorar técnica: '+escape(child['titulo'])+'">Explorar técnica <span aria-hidden="true">→</span></a></div></article>'
+    sources=''.join(f'<li id="fonte-{k}">{link(FONTES[k][1],FONTES[k][0])}</li>' for k in a['fontes'])
+    body=intro+'<div class="montagem-intro">'+section(0)+'</div><div class="ideas-grid montagem-grid">'+cards+'</div><p class="montagem-credits">Imagens ilustrativas fornecidas para o projeto; não representam produção da Nobrinde. <a href="../creditos-imagens.html#montagem-fornecidas">Créditos das imagens</a></p><div class="montagem-intro">'+section(1)+'</div><section id="fontes"><h2>Fontes e âmbito</h2><p>Princípios gerais e configurações dos autores, sem confirmação de serviços ou equipamentos da Nobrinde.</p><ul class="sources">'+sources+'</ul></section><section><h2>Continue a explorar</h2><div class="article-grid">'+''.join(card(BY_ID[id],'../') for id in a['relacionados'])+'</div></section>'
+    write(url(a),shell(a['titulo'],a['resumo'],body,'../','tecnicas'))
+
 def page_article(a):
+    if a['id']==HUB_ID:
+        montagem_hub(a)
+        return
     if a['tipo']=='novidade':
         novelty_article(a)
         return
@@ -230,6 +252,13 @@ def page_article(a):
     ids=a.get('ids_seccoes', [f'parte-{n}' for n in range(len(a['seccoes']))])
     toc=''.join(link('#'+i,s[0]) for i,s in zip(ids,a['seccoes']))
     body=''.join(f'<section id="{i}"><h2>{escape(t)}</h2><p>{prose(p)}</p></section>' for i,(t,p) in zip(ids,a['seccoes']))
+    if a.get('montagem'):
+        body='<a class="back-to-ideas" href="'+HUB_ID+'.html">← Costura, Argolagem e Encadernação</a>'
+        for n,(i,(title,text)) in enumerate(zip(ids,a['seccoes'])):
+            content=''.join('<p>'+prose(p)+'</p>' for p in text.split('\n\n'))
+            if n==0:
+                content+=montagem_media(a)
+            body+='<section id="'+i+'"><h2>'+escape(title)+'</h2>'+content+'</section>'
     if a.get('transfer'):
         body=''
         if a['id']!='transfers':
@@ -245,6 +274,19 @@ def page_article(a):
                 content+='<ul class="guide-checklist">'+''.join('<li><strong>'+escape(label)+':</strong> '+prose(detail)+'</li>' for label,detail in a['checklist'])+'</ul>'
             if i=='comparar':
                 content+='<div class="context-links">'+''.join(link(k+'.html',BY_ID[k]['titulo']) for k in TRANSFER_IDS if k!=a['id'])+'</div>'
+            body+=f'<section id="{i}"><h2>{escape(title)}</h2>{content}</section>'
+    if a['id']=='crachas-automaticos':
+        body=''
+        for i,(title,text) in zip(ids,a['seccoes']):
+            content=''.join('<p>'+prose(p)+'</p>' for p in text.split('\n\n'))
+            if i=='como-funciona':
+                content+='<ol class="pad-steps">'+''.join('<li><strong>'+escape(t)+'</strong><p>'+prose(p)+'</p></li>' for t,p in PASSOS_CRACHAS)+'</ol>'
+            if i in ('componentes','perguntas'):
+                items=COMPONENTES_CRACHAS if i=='componentes' else FAQ_CRACHAS
+                content+='<div class="troubleshooting">'+''.join('<div><h3>'+escape(t)+'</h3><p>'+prose(p)+'</p></div>' for t,p in items)+'</div>'
+            if i=='equipamento':
+                file,width,height,alt,caption=IMAGEM_CRACHAS
+                content+=f'<figure class="pad-reference"><img src="../assets/tecnicas/Crachas/{quote(file)}" width="{width}" height="{height}" alt="{escape(alt)}" loading="lazy" decoding="async"><figcaption>{escape(caption)} <a href="../creditos-imagens.html#crachas-fornecida">Origem da imagem</a></figcaption></figure>'
             body+=f'<section id="{i}"><h2>{escape(title)}</h2>{content}</section>'
     if a['id']=='tecnica-troquelagem':
         body=''
@@ -434,6 +476,8 @@ def search_page():
     for entry in entries:
         article_id=entry['url'].split('/')[-1].removesuffix('.html')
         guide=BY_ID.get(article_id,{})
+        if article_id=='crachas-automaticos':
+            entry['text']+=' '+' '.join(t+' '+p for t,p in COMPONENTES_CRACHAS+PASSOS_CRACHAS+FAQ_CRACHAS)
         if article_id=='tecnica-troquelagem':
             entry['text']+=' '+' '.join(t+' '+p for t,p in OPERACOES_TROQUELAGEM+PASSOS_TROQUELAGEM+FAQ_TROQUELAGEM)
         if guide.get('checklist'):

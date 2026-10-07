@@ -1,5 +1,13 @@
 # brindes.pt — biblioteca informativa da Nobrinde
 
+## Costura, Argolagem e Encadernação — 7 de outubro de 2026
+
+A entrada `tecnicas/costura-argolagem-e-encadernacao.html` reúne três guias
+completos. Edite `conteudos/montagem.py` e execute `python gerar.py` para
+atualizar HTML e pesquisa. Os guias anteriores de Indústria mantêm as rotas.
+Fontes, seleção de imagens e confirmações pendentes estão em
+`editorial/fontes-montagem.md`. Os originais locais não foram alterados.
+
 ## Transfers — 30 de setembro de 2026
 
 A entrada `tecnicas/transfers.html` liga os guias de Transfer Serigráfico,
@@ -121,6 +129,12 @@ editorial/verificacao.md      Resultados e limitações da verificação
 ```
 
 ## Alterar uma página
+
+O guia **Crachás tipo pin/botão** está em `tecnicas/crachas-automaticos.html`.
+O conteúdo, componentes, passos, FAQ, imagem e fontes estão em `conteudos/crachas.py`.
+O título delimita o produto e o texto explica o alcance da prensagem automática.
+Conserva-se `industria/producao-de-crachas.html`, com ligação ao novo guia.
+Consulte `editorial/fontes-crachas.md` para fontes, verificações e confirmações.
 
 A técnica **Troquelagem** está em `tecnicas/tecnica-troquelagem.html`, com conteúdo
 em `conteudos/troquelagem.py`. Conserva o guia de equipamentos em
