@@ -20,6 +20,7 @@ from conteudos.impressao_uv import PASSOS as PASSOS_UV, IMAGENS as IMAGENS_UV
 from conteudos.guias import GRUPOS_GUIAS
 from conteudos.materiais import MATERIAIS
 from conteudos.bordado import IMAGENS_BORDADO
+from conteudos.troquelagem import IMAGENS_TROQUELAGEM, OPERACOES as OPERACOES_TROQUELAGEM, PASSOS as PASSOS_TROQUELAGEM, FAQ as FAQ_TROQUELAGEM
 from conteudos.transfers import IDS as TRANSFER_IDS, IMAGENS_TRANSFERS
 
 ROOT = Path(__file__).resolve().parent
@@ -245,6 +246,19 @@ def page_article(a):
             if i=='comparar':
                 content+='<div class="context-links">'+''.join(link(k+'.html',BY_ID[k]['titulo']) for k in TRANSFER_IDS if k!=a['id'])+'</div>'
             body+=f'<section id="{i}"><h2>{escape(title)}</h2>{content}</section>'
+    if a['id']=='tecnica-troquelagem':
+        body=''
+        for i,(title,text) in zip(ids,a['seccoes']):
+            content=''.join('<p>'+prose(p)+'</p>' for p in text.split('\n\n'))
+            if i=='como-funciona':
+                content+='<ol class="pad-steps">'+''.join('<li><strong>'+escape(t)+'</strong><p>'+prose(p)+'</p></li>' for t,p in PASSOS_TROQUELAGEM)+'</ol>'
+            if i in ('operacoes','perguntas'):
+                items=OPERACOES_TROQUELAGEM if i=='operacoes' else FAQ_TROQUELAGEM
+                content+='<div class="troubleshooting">'+''.join('<div><h3>'+escape(t)+'</h3><p>'+prose(p)+'</p></div>' for t,p in items)+'</div>'
+            if i in IMAGENS_TROQUELAGEM:
+                file,width,height,alt,caption=IMAGENS_TROQUELAGEM[i]
+                content+=f'<figure class="pad-reference"><img src="../assets/tecnicas/Troquelagem/{quote(file)}" width="{width}" height="{height}" alt="{escape(alt)}" loading="lazy" decoding="async"><figcaption>{escape(caption)} <a href="../creditos-imagens.html#troquelagem-fornecidas">Origem das imagens</a></figcaption></figure>'
+            body+=f'<section id="{i}"><h2>{escape(title)}</h2>{content}</section>'
     if a['id']=='termogravura':
         body=''
         for i,(title,text) in zip(ids,a['seccoes']):
@@ -420,6 +434,8 @@ def search_page():
     for entry in entries:
         article_id=entry['url'].split('/')[-1].removesuffix('.html')
         guide=BY_ID.get(article_id,{})
+        if article_id=='tecnica-troquelagem':
+            entry['text']+=' '+' '.join(t+' '+p for t,p in OPERACOES_TROQUELAGEM+PASSOS_TROQUELAGEM+FAQ_TROQUELAGEM)
         if guide.get('checklist'):
             entry['text']+=' '+' '.join(t+' '+p for t,p in guide['checklist'])+' '+' '.join(t+' '+p for t,p in guide['problemas'])
         if guide.get('confirmar_bordado'):

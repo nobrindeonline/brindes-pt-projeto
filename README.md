@@ -122,6 +122,11 @@ editorial/verificacao.md      Resultados e limitações da verificação
 
 ## Alterar uma página
 
+A técnica **Troquelagem** está em `tecnicas/tecnica-troquelagem.html`, com conteúdo
+em `conteudos/troquelagem.py`. Conserva o guia de equipamentos em
+`industria/troquelagem.html`. Fontes consultadas, seleção das imagens locais,
+verificações e pontos a confirmar estão em `editorial/fontes-troquelagem.md`.
+
 A secção **Materiais** tem uma entrada e sete guias completos, mantidos em
 `conteudos/materiais.py`. As funções `material_listing`, `material_article` e
 `material_media` de `gerar.py` reutilizam os cartões, navegação e leitura do site.

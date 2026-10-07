@@ -202,6 +202,12 @@ FONTES.update(FONTES_BORDADO)
 ARTIGOS.append(TERMOGRAVURA)
 FONTES.update(FONTES_TERMOGRAVURA)
 from conteudos.transfers import TRANSFERS, FONTES_TRANSFERS
+from conteudos.troquelagem import TROQUELAGEM, FONTES_TROQUELAGEM
+ARTIGOS.append(TROQUELAGEM)
+FONTES.update(FONTES_TROQUELAGEM)
+for artigo in ARTIGOS:
+    if artigo['id'] in ('troquelagem', 'termogravura', 'papel-e-cartao'):
+        artigo['relacionados'].append(TROQUELAGEM['id'])
 ARTIGOS.extend(TRANSFERS)
 FONTES.update(FONTES_TRANSFERS)
 for artigo in ARTIGOS:

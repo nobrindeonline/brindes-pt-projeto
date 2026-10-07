@@ -43,3 +43,12 @@ test('sublimação encontra a técnica e preserva o guia de equipamentos', () =>
     assert.ok(urls.includes('industria/sublimacao.html'));
   }
 });
+
+test('troquelagem encontra a técnica, operações e o guia de indústria existente', () => {
+  const urls = find(entries, 'TROQUELAGEM').map(entry => entry.url);
+  assert.ok(urls.includes('tecnicas/tecnica-troquelagem.html'));
+  assert.ok(urls.includes('industria/troquelagem.html'));
+  for (const query of ['kiss-cut', 'vincagem', 'perfuração', 'etiqueta base', 'amostra troquel']) {
+    assert.ok(find(entries, query).some(entry => entry.url === 'tecnicas/tecnica-troquelagem.html'), query);
+  }
+});

@@ -42,7 +42,7 @@ Para completar novos artigos: Descrição e fontes do processo; equipamento; com
 ### Outras aplicações
 
 - **Doming**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Troquelagem**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Troquelagem**: Pronto para revisão local — `/tecnicas/tecnica-troquelagem.html`.
 - **Produção de crachás**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
 
 ## Materiais
