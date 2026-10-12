@@ -1,0 +1,1306 @@
+{
+  "schema_version": "1.0",
+  "idioma": "pt-PT",
+  "site": "brindes.pt",
+  "introducao": "Escolha o percurso que corresponde à sua dúvida: definir o artigo e a personalização, preparar a arte ou rever a proposta antes de produzir.",
+  "data_revisao": "2026-10-12",
+  "percursos": [
+    {
+      "id": "escolher",
+      "titulo": "Escolher",
+      "resumo": "Uso e destinatários primeiro; material e técnica depois.",
+      "guias": [
+        "como-escolher-brindes-para-um-evento",
+        "como-escolher-o-material",
+        "como-escolher-a-tecnica"
+      ]
+    },
+    {
+      "id": "cor",
+      "titulo": "Preparar ficheiros e cor",
+      "resumo": "Do original à dimensão final e à referência de cor.",
+      "guias": [
+        "como-preparar-um-logotipo",
+        "pantone-cmyk-e-cor-final"
+      ]
+    },
+    {
+      "id": "qualidade",
+      "titulo": "Rever antes de produzir",
+      "resumo": "Da composição proposta à verificação do resultado.",
+      "guias": [
+        "como-avaliar-uma-maquete",
+        "problemas-comuns-na-personalizacao"
+      ]
+    }
+  ],
+  "guias": [
+    {
+      "id": "como-escolher-brindes-para-um-evento",
+      "slug": "como-escolher-brindes-para-um-evento",
+      "url": "guias/como-escolher-brindes-para-um-evento.html",
+      "titulo": "Como escolher brindes para um evento",
+      "categoria": "Escolher",
+      "resumo": "Ligue a escolha ao público, ao momento de entrega e ao uso depois do evento. Planeie também a distribuição.",
+      "resposta_breve": {
+        "texto": "Comece pela função para os destinatários e pelo percurso de entrega. Teste transporte e distribuição, e escolha uma mensagem que continue útil no contexto de utilização posterior.",
+        "fontes": []
+      },
+      "ordem_leitura": [
+        "parte-0",
+        "parte-1",
+        "parte-2",
+        "parte-3",
+        "parte-4"
+      ],
+      "passos": [
+        {
+          "id": "parte-0",
+          "titulo": "Antes: defina uma função para a oferta",
+          "texto": "Escreva uma frase que explique a utilidade: transportar materiais, tomar notas durante uma sessão ou recordar uma participação. Distinguir estas funções ajuda a selecionar artigos sem depender apenas da aparência.",
+          "fontes": []
+        },
+        {
+          "id": "parte-1",
+          "titulo": "1. Preparação: conheça destinatários e transporte",
+          "texto": "Considere quem recebe, como chega e o que já transporta. Um artigo volumoso pode exigir outro modo de entrega. Se houver vários públicos, defina variantes justificadas e uma forma simples de as distribuir. Confirme adequação etária e requisitos de utilização quando relevantes.",
+          "fontes": []
+        },
+        {
+          "id": "parte-2",
+          "titulo": "2. Preparação: experimente o conjunto real",
+          "texto": "Reúna o conteúdo que pretende entregar e teste dimensões úteis, volume, fecho e forma de transporte. Observe se o conjunto cabe e se é confortável de levar. Não infira a carga admissível pela gramagem ou pelas dimensões exteriores: confirme esse requisito quando for essencial. Liste os componentes previstos e quem prepara cada etapa, sem presumir montagem ou embalagem incluídas.",
+          "fontes": []
+        },
+        {
+          "id": "parte-3",
+          "titulo": "3. Entrega: organize variantes e distribuição",
+          "texto": "Registe destinatários, quantidades por variante, identificação das caixas, local de distribuição e momento necessário de receção. Observe o percurso de chegada, circulação e saída descrito no planeamento de eventos da HSE; pense onde a entrega se encaixa nesse percurso. Defina como localizar e entregar cada variante, incluindo uma alternativa para quem não recebe no momento previsto. Confirme as condições necessárias, sem presumir serviços ou um prazo padrão.",
+          "fontes": [
+            "guiaevento"
+          ]
+        },
+        {
+          "id": "parte-4",
+          "titulo": "4. Depois: pense no uso e na mensagem",
+          "texto": "Decida se a data e o nome do evento devem dominar o desenho ou se uma mensagem mais duradoura serve melhor o uso posterior. Observe a marca na posição real de utilização. Não escolha uma dimensão de impressão antes de confirmar costuras, acessos e área disponível.",
+          "fontes": []
+        }
+      ],
+      "casos": [],
+      "erros": [
+        {
+          "erro": "Escolher o saco sem experimentar o que vai levar",
+          "prevencao": {
+            "texto": "Valide o conjunto com os materiais reais e o transporte previsto.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Aprovar o artigo e esquecer a distribuição",
+          "prevencao": {
+            "texto": "Defina responsáveis, variantes e condições de entrega antes de fechar o pedido.",
+            "fontes": []
+          }
+        }
+      ],
+      "checklist": [
+        "Função e destinatários definidos.",
+        "Conteúdo, transporte e utilização avaliados.",
+        "Quantidades e variantes organizadas.",
+        "Receção, identificação das variantes e distribuição definidas."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Como organizar vários destinatários sem complicar a entrega?",
+          "resposta": {
+            "texto": "Use variantes justificadas, identifique-as de forma clara e teste o percurso de distribuição com o conjunto previsto.",
+            "fontes": []
+          }
+        },
+        {
+          "pergunta": "A data do evento deve aparecer em todos os artigos?",
+          "resposta": {
+            "texto": "É uma decisão editorial. Compare o valor de recordar a ocasião com a utilidade e a leitura da mensagem depois do evento.",
+            "fontes": []
+          }
+        }
+      ],
+      "esquema": [
+        {
+          "titulo": "Antes",
+          "descricao": "Escolha e preparação"
+        },
+        {
+          "titulo": "Durante",
+          "descricao": "Entrega e utilização"
+        },
+        {
+          "titulo": "Depois",
+          "descricao": "Utilidade que permanece"
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-escolher-o-material",
+          "titulo": "Como escolher o material de um brinde",
+          "url": "guias/como-escolher-o-material.html"
+        },
+        {
+          "id": "como-escolher-a-tecnica",
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "id": "como-avaliar-uma-maquete",
+          "titulo": "Como avaliar uma maquete antes da produção",
+          "url": "guias/como-avaliar-uma-maquete.html"
+        }
+      ],
+      "links_contexto": [
+        {
+          "titulo": "Conhecer os materiais",
+          "url": "materiais/index.html"
+        },
+        {
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        }
+      ],
+      "fontes": [
+        {
+          "id": "guiaevento",
+          "titulo": "Put crowd controls in place",
+          "entidade": "Health and Safety Executive",
+          "url": "https://www.hse.gov.uk/event-safety/crowd-management-controls.htm",
+          "ambito": "Chegada, circulação e saída de participantes; a seleção e distribuição de brindes são recomendações editoriais, não um plano de segurança do evento.",
+          "data_consulta": "2026-10-12"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "imagens": {
+        "cartao": {
+          "url": "assets/guias/visuais/evento-cartao.jpg",
+          "alt": "Duas pessoas seguram um instrumento de escrita junto a uma mesa com cestos e cadernos.",
+          "width": 1024,
+          "height": 569,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": []
+      }
+    },
+    {
+      "id": "como-escolher-o-material",
+      "slug": "como-escolher-o-material",
+      "url": "guias/como-escolher-o-material.html",
+      "titulo": "Como escolher o material de um brinde",
+      "categoria": "Escolher",
+      "resumo": "Compare utilização, composição e acabamento. O nome do material não resolve sozinho a escolha da personalização.",
+      "resposta_breve": {
+        "texto": "Escolha pelo uso previsto e identifique separadamente material de base, revestimento e acabamento. Compare a peça completa e confirme os cuidados e a superfície a personalizar.",
+        "fontes": []
+      },
+      "ordem_leitura": [
+        "parte-0",
+        "parte-1",
+        "parte-2",
+        "parte-3",
+        "parte-4"
+      ],
+      "passos": [
+        {
+          "id": "parte-0",
+          "titulo": "Comece pela utilização, não pela aparência",
+          "texto": "Descreva o contacto, a limpeza, o transporte e a exposição previstos. Separe os requisitos essenciais das preferências de toque, peso ou aspeto. Um material adequado a um uso pode exigir cuidados diferentes noutro contexto. Não atribua resistência ou compatibilidade a uma família inteira de materiais.",
+          "fontes": []
+        },
+        {
+          "id": "parte-1",
+          "titulo": "1. Identifique a peça completa",
+          "texto": "Peça a composição do corpo e dos componentes que interessam à aplicação. Distinga material de base, pintura, verniz e outros revestimentos. Numa peça com várias superfícies, indique exatamente onde quer a marca. O nome comercial ou a aparência de madeira não substituem a ficha do artigo. A documentação Roland DG alerta que tratamentos de superfície podem não ser identificáveis pela aparência, recomendando uma prova no objeto concreto.",
+          "fontes": [
+            "guiasuperficie"
+          ]
+        },
+        {
+          "id": "parte-2",
+          "titulo": "2. Compare uso, construção e cuidados",
+          "texto": "Compare artigos que cumpram a mesma função e registe quais as diferenças relevantes: forma, peso completo, espessura, componentes e acesso para limpeza. Uma medida igual não demonstra construção ou desempenho equivalentes. Se resistência, contacto com líquidos ou exposição forem decisivos, peça documentação e instruções do artigo, incluindo o acabamento personalizado.",
+          "fontes": []
+        },
+        {
+          "id": "parte-3",
+          "titulo": "3. Avalie superfície e processo em conjunto",
+          "texto": "Assinale a zona acessível e a camada exterior que recebe a marca. A superfície pode ser diferente do material de base. Confirme o resultado pretendido e uma prova nessa combinação. Uma indicação de preparação para um processo aplica-se ao artigo e ao acabamento documentados; não se estende automaticamente a toda a família de materiais.",
+          "fontes": [
+            "guiasuperficie"
+          ]
+        },
+        {
+          "id": "parte-4",
+          "titulo": "4. Peça fundamento para as alegações",
+          "texto": "Se uma propriedade reciclada ou uma alegação ambiental pesar na decisão, peça identificação do componente, âmbito e documentação correspondente. A palavra «reciclado» não demonstra, por si só, o impacto global do artigo. Compare também a utilidade prevista e as instruções de conservação, sem inventar vantagens ambientais.",
+          "fontes": []
+        }
+      ],
+      "casos": [],
+      "erros": [
+        {
+          "erro": "Confundir o revestimento com o material de base",
+          "prevencao": {
+            "texto": "Registe ambos e confirme em qual deles ficará a marca.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Escolher por uma propriedade isolada",
+          "prevencao": {
+            "texto": "Compare a peça completa, o uso e os cuidados, não apenas capacidade ou composição.",
+            "fontes": []
+          }
+        }
+      ],
+      "checklist": [
+        "Composição e revestimento identificados.",
+        "Zona de personalização e acabamento definidos.",
+        "Cuidados e resistência necessários confirmados.",
+        "Alegações relevantes sustentadas por documentação."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "A aparência permite identificar a composição?",
+          "resposta": {
+            "texto": "Não é suficiente. Peça a identificação do material, dos revestimentos e dos componentes relevantes.",
+            "fontes": []
+          }
+        },
+        {
+          "pergunta": "Uma alegação de material reciclado resolve a escolha?",
+          "resposta": {
+            "texto": "Não. Confirme o componente, o âmbito e a documentação da alegação, juntamente com uso e cuidados. Este guia não classifica o impacto ambiental de artigos.",
+            "fontes": []
+          }
+        }
+      ],
+      "esquema": [
+        {
+          "titulo": "Material",
+          "descricao": "De que é feito"
+        },
+        {
+          "titulo": "Superfície",
+          "descricao": "Onde se aplica a marca"
+        },
+        {
+          "titulo": "Uso",
+          "descricao": "O que terá de suportar"
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-escolher-a-tecnica",
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "id": "pantone-cmyk-e-cor-final",
+          "titulo": "Pantone, CMYK e a cor final do brinde",
+          "url": "guias/pantone-cmyk-e-cor-final.html"
+        },
+        {
+          "id": "problemas-comuns-na-personalizacao",
+          "titulo": "Problemas comuns na personalização e como os prevenir",
+          "url": "guias/problemas-comuns-na-personalizacao.html"
+        }
+      ],
+      "links_contexto": [
+        {
+          "titulo": "Conhecer os materiais",
+          "url": "materiais/index.html"
+        },
+        {
+          "titulo": "Gravação a laser",
+          "url": "tecnicas/gravacao-a-laser.html"
+        },
+        {
+          "titulo": "Impressão digital UV",
+          "url": "tecnicas/impressao-uv.html"
+        }
+      ],
+      "fontes": [
+        {
+          "id": "guiasuperficie",
+          "titulo": "Features of Inks — teste no objeto real",
+          "entidade": "Roland DG",
+          "url": "https://downloadcenter.rolanddg.com/contents/manuals/BD-8_USE_EN/fxw1677454678109.html",
+          "ambito": "Tratamentos de superfície e avaliação de aderência no sistema documentado; não generalizar a outros equipamentos ou tintas.",
+          "data_consulta": "2026-10-12"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "imagens": {
+        "cartao": {
+          "url": "assets/guias/visuais/material-cartao.jpg",
+          "alt": "Conjunto de recipientes, cadernos, pastas e estojos sobre um fundo cinzento.",
+          "width": 547,
+          "height": 365,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": []
+      }
+    },
+    {
+      "id": "como-escolher-a-tecnica",
+      "slug": "como-escolher-a-tecnica",
+      "url": "guias/como-escolher-a-tecnica.html",
+      "titulo": "Como escolher a técnica",
+      "categoria": "Escolher",
+      "resumo": "Relacione o efeito pretendido com a superfície, o desenho, a quantidade e o uso do artigo.",
+      "resposta_breve": {
+        "texto": "Escolha a técnica depois de relacionar o efeito desejado com a superfície real, a arte à escala final, as variantes e o uso. A escolha só fica confirmada para a combinação que foi avaliada.",
+        "fontes": []
+      },
+      "ordem_leitura": [
+        "parte-0",
+        "parte-1",
+        "parte-2",
+        "parte-3",
+        "parte-4",
+        "parte-5"
+      ],
+      "passos": [
+        {
+          "id": "parte-0",
+          "titulo": "1. Defina o resultado e a utilização",
+          "texto": "Indique se pretende uma imagem a cores, uma marca sem tinta, relevo ou outro efeito. Descreva contacto, limpeza e utilização esperados. Separe preferências visuais de requisitos que precisam de documentação ou ensaio; uma simulação não confirma resistência.",
+          "fontes": []
+        },
+        {
+          "id": "parte-1",
+          "titulo": "2. Identifique a superfície e a área útil",
+          "texto": "Registe material de base, pintura, verniz e outros revestimentos. Assinale a face, curvatura, acessos e componentes próximos da marca. A Roland DG recomenda ensaiar a aderência no objeto real porque o tratamento da superfície nem sempre é identificável visualmente. Esta recomendação pertence ao sistema documentado e não certifica outros processos.",
+          "fontes": [
+            "guiasuperficie"
+          ]
+        },
+        {
+          "id": "parte-2",
+          "titulo": "3. Observe a arte à escala final",
+          "texto": "Indique cores, fotografias, degradês, linhas, espaços e texto mais pequeno. Reveja as medidas no suporte antes de escolher o processo. Para pormenores que precisem de adaptação, defina qual a versão que será avaliada; não altere proporções ou elementos da marca sem validar a alteração.",
+          "fontes": []
+        },
+        {
+          "id": "parte-3",
+          "titulo": "4. Compare possibilidades e condições",
+          "texto": "Consulte os guias das técnicas para conhecer os seus mecanismos e limites. A tampografia transfere a imagem através de um tampão; geometria, tinta e superfície precisam de avaliação conjunta. No bordado, desenho, tecido e estabilização influenciam o resultado. Estes princípios não atribuem compatibilidade a uma família inteira de artigos.",
+          "fontes": [
+            "guiatampao",
+            "guiabordado"
+          ]
+        },
+        {
+          "id": "parte-4",
+          "titulo": "5. Organize quantidade e variantes",
+          "texto": "Indique número de peças, tamanhos ou cores do suporte e quantas versões da arte existem. Esclareça se a personalização muda entre peças. Peça avaliação dessa combinação: não escolha uma técnica por um limiar universal de quantidade nem presuma preparação ou condições iguais entre variantes.",
+          "fontes": []
+        },
+        {
+          "id": "parte-5",
+          "titulo": "6. Confirme com uma prova relevante",
+          "texto": "Identifique o que a prova deverá esclarecer: leitura, posição, cor, toque ou comportamento em uso. Escolha uma amostra ou verificação adequada ao requisito, com critérios explícitos. Conserve a versão da arte, a identificação do suporte e as condições avaliadas antes de repetir a aplicação.",
+          "fontes": []
+        }
+      ],
+      "casos": [],
+      "erros": [
+        {
+          "erro": "Escolher pela fotografia de outro trabalho",
+          "prevencao": {
+            "texto": "Use a fotografia apenas como referência visual e peça avaliação da combinação de artigo, arte e processo.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Tomar o material como garantia de compatibilidade",
+          "prevencao": {
+            "texto": "Identifique a camada exterior e confirme a área, o acesso e a prova relevante.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Deixar variantes para depois da escolha",
+          "prevencao": {
+            "texto": "Inclua alterações de suporte, cor, tamanho e arte na informação a avaliar.",
+            "fontes": []
+          }
+        }
+      ],
+      "checklist": [
+        "Resultado visual e requisitos de uso separados.",
+        "Superfície, área e acessos identificados.",
+        "Arte à escala final e variantes reunidas.",
+        "Quantidade, prova e critério de aceitação definidos."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Posso repetir a técnica quando muda apenas a cor do suporte?",
+          "resposta": {
+            "texto": "Reveja os pontos afetados: contraste, cobertura e acabamento podem ser diferentes. A avaliação anterior deve identificar as variantes abrangidas.",
+            "fontes": []
+          }
+        },
+        {
+          "pergunta": "A quantidade decide por si só a técnica?",
+          "resposta": {
+            "texto": "Não. Inclua também resultado, superfície, desenho, variantes e condições do processo; não existe aqui um limiar universal de escolha.",
+            "fontes": []
+          }
+        }
+      ],
+      "esquema": [
+        {
+          "titulo": "Resultado",
+          "descricao": "Qual o efeito e a utilização?"
+        },
+        {
+          "titulo": "Combinação",
+          "descricao": "Qual a superfície, arte e quantidade?"
+        },
+        {
+          "titulo": "Prova",
+          "descricao": "O que precisa de ser confirmado?"
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-escolher-o-material",
+          "titulo": "Como escolher o material de um brinde",
+          "url": "guias/como-escolher-o-material.html"
+        },
+        {
+          "id": "como-preparar-um-logotipo",
+          "titulo": "Como preparar um logótipo para personalização",
+          "url": "guias/como-preparar-um-logotipo.html"
+        },
+        {
+          "id": "como-avaliar-uma-maquete",
+          "titulo": "Como avaliar uma maquete antes da produção",
+          "url": "guias/como-avaliar-uma-maquete.html"
+        }
+      ],
+      "links_contexto": [
+        {
+          "titulo": "Conhecer os materiais",
+          "url": "materiais/index.html"
+        },
+        {
+          "titulo": "Tampografia",
+          "url": "tecnicas/tampografia.html"
+        },
+        {
+          "titulo": "Gravação a laser",
+          "url": "tecnicas/gravacao-a-laser.html"
+        },
+        {
+          "titulo": "Bordado",
+          "url": "tecnicas/bordado.html"
+        },
+        {
+          "titulo": "Impressão digital UV",
+          "url": "tecnicas/impressao-uv.html"
+        }
+      ],
+      "fontes": [
+        {
+          "id": "guiasuperficie",
+          "titulo": "Features of Inks — teste no objeto real",
+          "entidade": "Roland DG",
+          "url": "https://downloadcenter.rolanddg.com/contents/manuals/BD-8_USE_EN/fxw1677454678109.html",
+          "ambito": "Tratamentos de superfície e avaliação de aderência no sistema documentado; não generalizar a outros equipamentos ou tintas.",
+          "data_consulta": "2026-10-12"
+        },
+        {
+          "id": "guiatampao",
+          "titulo": "Pad Printing 101",
+          "entidade": "Inkcups",
+          "url": "https://www.inkcups.com/pad-printing-guide/",
+          "ambito": "Mecanismo de transferência por tampão e papel da geometria; não confirma compatibilidade de um artigo.",
+          "data_consulta": "2026-10-12"
+        },
+        {
+          "id": "guiabordado",
+          "titulo": "FAQ — preparação e problemas de bordado",
+          "entidade": "Madeira",
+          "url": "https://www.madeira.com/en-in/service/support/faq",
+          "ambito": "Desenho, estabilização, fixação e fatores de franzido; sem diagnóstico automático de uma peça.",
+          "data_consulta": "2026-10-12"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "imagens": {
+        "cartao": {
+          "url": "assets/guias/visuais/tecnica-cartao.jpg",
+          "alt": "Três t-shirts, cinzenta, escura e branca, penduradas em cabides com desenhos na frente.",
+          "width": 297,
+          "height": 170,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": []
+      }
+    },
+    {
+      "id": "como-preparar-um-logotipo",
+      "slug": "como-preparar-um-logotipo",
+      "url": "guias/como-preparar-um-logotipo.html",
+      "titulo": "Como preparar um logótipo para personalização",
+      "categoria": "Preparar ficheiros e cor",
+      "resumo": "Do ficheiro original à arte aprovada: prepare o logótipo para o artigo e a dimensão escolhidos.",
+      "resposta_breve": {
+        "texto": "Reúna a versão correta da marca, confirme o conteúdo do ficheiro e avalie a arte à dimensão de aplicação. Entregue uma versão identificada com medidas, posição e cores, sujeita às condições do processo.",
+        "fontes": []
+      },
+      "ordem_leitura": [
+        "parte-0",
+        "parte-1",
+        "parte-2",
+        "parte-3",
+        "parte-4"
+      ],
+      "passos": [
+        {
+          "id": "parte-0",
+          "titulo": "Comece pelo original",
+          "texto": "Reúna o ficheiro da identidade visual, a versão correta do logótipo e as referências de cor. Evite partir de uma captura de ecrã ou de uma imagem copiada de uma assinatura de email. Se só tiver essa versão, envie-a para avaliação e explique a limitação antes de aprovar qualquer reconstrução.",
+          "fontes": []
+        },
+        {
+          "id": "parte-1",
+          "titulo": "1. Distinga vetor e imagem",
+          "texto": "Um vetor descreve formas; uma imagem raster é composta por píxeis. O vetor adapta-se à escala sem a mesma dependência da resolução. A extensão não basta: um PDF pode conter apenas uma imagem. Mudar o nome de JPG para PDF não reconstrói o desenho. Peça inspeção do conteúdo do ficheiro.",
+          "fontes": [
+            "adobevetor"
+          ]
+        },
+        {
+          "id": "parte-2",
+          "titulo": "2. Verifique a arte à dimensão final",
+          "texto": "Indique o artigo, a face e as dimensões pretendidas. Observe letras pequenas, linhas e espaços vazios à escala final. Um desenho legível numa área larga pode deixar de o ser numa área estreita. Não confunda as dimensões totais do artigo com a área utilizável: peça a identificação desta área antes de adaptar a arte.",
+          "fontes": []
+        },
+        {
+          "id": "parte-3",
+          "titulo": "3. Adapte sem alterar a marca por acidente",
+          "texto": "Se os detalhes não forem viáveis, proponha uma versão simplificada ou outra posição. Não elimine o slogan nem altere proporções sem aprovação. Para bordado, é necessária uma preparação própria dos pontos e estabilização do suporte. Para impressão, podem ser necessárias separações de cor. Confirme quem faz essa adaptação e qual a prova a rever.",
+          "fontes": [
+            "guiabordado"
+          ]
+        },
+        {
+          "id": "parte-4",
+          "titulo": "4. Entregue um conjunto inequívoco",
+          "texto": "Envie o original editável disponível, uma pré-visualização e uma nota com versão, dimensões, posição e cores. Pergunte se é necessário incorporar imagens ligadas ou converter texto em contornos, conservando uma cópia editável. Formatos aceites, resolução e detalhe mínimo dependem do processo: não aplique um valor universal de DPI a todos os trabalhos.",
+          "fontes": []
+        }
+      ],
+      "casos": [],
+      "erros": [
+        {
+          "erro": "Enviar várias versões sem identificar a final",
+          "prevencao": {
+            "texto": "Nomeie a versão aprovada e retire as alternativas do conjunto destinado à produção.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Aumentar uma imagem pequena para a tornar nítida",
+          "prevencao": {
+            "texto": "Peça o original ou uma reconstrução validada; aumentar as dimensões não recupera o detalhe que falta.",
+            "fontes": []
+          }
+        }
+      ],
+      "checklist": [
+        "Artigo, face e dimensão final identificados.",
+        "Versão e grafia aprovadas.",
+        "Formato e tratamento de letras/imagens confirmados.",
+        "Simplificações e cores aprovadas antes da produção."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Um PDF é sempre vetorial?",
+          "resposta": {
+            "texto": "Não. Pode conter vetor, imagem raster ou ambos. Inspecione o conteúdo; a extensão não basta.",
+            "fontes": [
+              "adobevetor"
+            ]
+          }
+        },
+        {
+          "pergunta": "Existe um valor de resolução adequado a todos os processos?",
+          "resposta": {
+            "texto": "Não aplique um número universal. Relacione conteúdo e dimensão final e confirme os requisitos do processo; preserve o original disponível.",
+            "fontes": []
+          }
+        }
+      ],
+      "esquema": [
+        {
+          "titulo": "Original",
+          "descricao": "Identificar a versão"
+        },
+        {
+          "titulo": "Escala final",
+          "descricao": "Avaliar o pormenor"
+        },
+        {
+          "titulo": "Prova",
+          "descricao": "Aprovar a adaptação"
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "pantone-cmyk-e-cor-final",
+          "titulo": "Pantone, CMYK e a cor final do brinde",
+          "url": "guias/pantone-cmyk-e-cor-final.html"
+        },
+        {
+          "id": "como-avaliar-uma-maquete",
+          "titulo": "Como avaliar uma maquete antes da produção",
+          "url": "guias/como-avaliar-uma-maquete.html"
+        }
+      ],
+      "links_contexto": [
+        {
+          "titulo": "Tampografia",
+          "url": "tecnicas/tampografia.html"
+        },
+        {
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        },
+        {
+          "titulo": "Bordado",
+          "url": "tecnicas/bordado.html"
+        }
+      ],
+      "fontes": [
+        {
+          "id": "adobevetor",
+          "titulo": "Understand raster and vector files",
+          "entidade": "Adobe",
+          "url": "https://helpx.adobe.com/photoshop/desktop/create-open-import-images/import-files/use-raster-and-vector-files.html",
+          "ambito": "Vetor, raster e conteúdo misto em PDF; sem requisitos universais de resolução para personalização.",
+          "data_consulta": "2026-10-12"
+        },
+        {
+          "id": "guiabordado",
+          "titulo": "FAQ — preparação e problemas de bordado",
+          "entidade": "Madeira",
+          "url": "https://www.madeira.com/en-in/service/support/faq",
+          "ambito": "Desenho, estabilização, fixação e fatores de franzido; sem diagnóstico automático de uma peça.",
+          "data_consulta": "2026-10-12"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "imagens": {}
+    },
+    {
+      "id": "pantone-cmyk-e-cor-final",
+      "slug": "pantone-cmyk-e-cor-final",
+      "url": "guias/pantone-cmyk-e-cor-final.html",
+      "titulo": "Pantone, CMYK e a cor final do brinde",
+      "categoria": "Preparar ficheiros e cor",
+      "resumo": "Perceba o que uma referência de cor define e o que só uma prova no artigo permite avaliar.",
+      "resposta_breve": {
+        "texto": "Use Pantone como referência de cor e CMYK como método de reprodução, sem prometer equivalência exata. Quando a cor final for decisiva, avalie uma prova relevante no suporte escolhido.",
+        "fontes": []
+      },
+      "ordem_leitura": [
+        "parte-0",
+        "parte-1",
+        "parte-2",
+        "parte-3",
+        "parte-4"
+      ],
+      "passos": [
+        {
+          "id": "parte-0",
+          "titulo": "Defina o que precisa de comparar",
+          "texto": "Use o ecrã para discutir o desenho e identifique o que é prioritário: referência de cor, contraste ou consistência entre superfícies. Uma prova de ecrã simula a reprodução, com limitações do monitor e das condições de observação. Não substitui a avaliação física quando esta for decisiva.",
+          "fontes": [
+            "guiaprova"
+          ]
+        },
+        {
+          "id": "parte-1",
+          "titulo": "1. Separe referência e método de reprodução",
+          "texto": "Uma referência Pantone identifica uma cor num sistema de referência; não determina, por si só, a técnica. Uma cor direta usa uma tinta preparada, enquanto CMYK combina ciano, magenta, amarelo e preto. As cores diretas podem estar fora da gama reproduzível por CMYK. Pergunte como a referência será interpretada no processo proposto.",
+          "fontes": [
+            "adobecor"
+          ]
+        },
+        {
+          "id": "parte-2",
+          "titulo": "2. Identifique suporte e configuração",
+          "texto": "A aparência final depende também do suporte e da tinta, como explica a Adobe para as cores diretas. Identifique cor de fundo, textura, pintura e revestimento. Se forem propostas bases brancas ou acabamentos adicionais, confirme se fazem parte da configuração avaliada. Não estenda a aprovação a outra superfície sem rever as condições alteradas.",
+          "fontes": [
+            "adobecor"
+          ]
+        },
+        {
+          "id": "parte-3",
+          "titulo": "3. Compare uma prova relevante",
+          "texto": "Forneça a referência completa disponível e combine uma prova no suporte escolhido quando a cor for decisiva. Compare as amostras em condições de luz consistentes e registe qual serve de referência. Defina o critério de aceitação para cada suporte; não presuma uma tolerância numérica ou igualdade entre técnicas.",
+          "fontes": []
+        },
+        {
+          "id": "parte-4",
+          "titulo": "4. Aprove cada variante necessária",
+          "texto": "Num conjunto com caneta e saco, confirme separadamente a aparência em cada superfície. A coerência visual do conjunto pode exigir ajustes próprios. Uma alteração de tinta, artigo ou acabamento pode justificar nova avaliação, mesmo que o ficheiro seja o mesmo. Guarde a identificação da prova e a versão aprovada.",
+          "fontes": []
+        }
+      ],
+      "casos": [],
+      "erros": [
+        {
+          "erro": "Tomar uma fotografia como amostra de cor",
+          "prevencao": {
+            "texto": "Use a fotografia para discutir composição; para avaliar a cor final, recorra à referência física e às condições de comparação acordadas.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Converter uma referência para CMYK e prometer igualdade",
+          "prevencao": {
+            "texto": "Peça avaliação da reprodução e aprove o resultado no suporte.",
+            "fontes": []
+          }
+        }
+      ],
+      "checklist": [
+        "Referência de cor e variante do artigo registadas.",
+        "Técnica e configuração de tinta confirmadas.",
+        "Prova e condições de comparação acordadas.",
+        "Critério de aceitação definido para cada suporte."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Converter uma referência para CMYK garante igualdade?",
+          "resposta": {
+            "texto": "Não. As gamas de reprodução diferem e a conversão depende das condições do documento e do processo.",
+            "fontes": [
+              "adobecor"
+            ]
+          }
+        },
+        {
+          "pergunta": "A mesma aprovação de cor serve para vários suportes?",
+          "resposta": {
+            "texto": "Identifique quais foram avaliados. Se muda superfície, fundo, tinta ou acabamento, reveja a necessidade de uma nova prova.",
+            "fontes": []
+          }
+        }
+      ],
+      "esquema": [
+        {
+          "titulo": "Referência",
+          "descricao": "A intenção de cor"
+        },
+        {
+          "titulo": "Processo",
+          "descricao": "Como a cor é reproduzida"
+        },
+        {
+          "titulo": "Suporte",
+          "descricao": "Onde a cor é vista"
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-preparar-um-logotipo",
+          "titulo": "Como preparar um logótipo para personalização",
+          "url": "guias/como-preparar-um-logotipo.html"
+        },
+        {
+          "id": "como-avaliar-uma-maquete",
+          "titulo": "Como avaliar uma maquete antes da produção",
+          "url": "guias/como-avaliar-uma-maquete.html"
+        },
+        {
+          "id": "problemas-comuns-na-personalizacao",
+          "titulo": "Problemas comuns na personalização e como os prevenir",
+          "url": "guias/problemas-comuns-na-personalizacao.html"
+        }
+      ],
+      "links_contexto": [
+        {
+          "titulo": "Impressão digital UV",
+          "url": "tecnicas/impressao-uv.html"
+        },
+        {
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        },
+        {
+          "titulo": "Tampografia",
+          "url": "tecnicas/tampografia.html"
+        }
+      ],
+      "fontes": [
+        {
+          "id": "adobecor",
+          "titulo": "About spot and process colors",
+          "entidade": "Adobe",
+          "url": "https://helpx.adobe.com/in/creative-cloud/apps/colors/spot-and-process-colors.html",
+          "ambito": "Cores diretas, CMYK, gamas e influência do suporte; não promete equivalência entre processos.",
+          "data_consulta": "2026-10-12"
+        },
+        {
+          "id": "guiaprova",
+          "titulo": "Proofing colors",
+          "entidade": "Adobe",
+          "url": "https://helpx.adobe.com/photoshop/using/proofing-colors.html",
+          "ambito": "Prova de ecrã e condições de visualização; não estabelece comportamento físico de uma personalização.",
+          "data_consulta": "2026-10-12"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "imagens": {
+        "cartao": {
+          "url": "assets/guias/visuais/cor-cartao.webp",
+          "alt": "Dois leques de amostras de cor abertos sobre um fundo claro.",
+          "width": 400,
+          "height": 400,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/guias/visuais/cor-suporte.jpg",
+            "alt": "Recipiente verde sobre leques e folhas com amostras coloridas.",
+            "width": 1024,
+            "height": 569,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "parte-2",
+            "legenda": "Fotografia ilustrativa de um suporte junto a amostras. A imagem de ecrã não constitui uma referência física de cor."
+          }
+        ]
+      }
+    },
+    {
+      "id": "como-avaliar-uma-maquete",
+      "slug": "como-avaliar-uma-maquete",
+      "url": "guias/como-avaliar-uma-maquete.html",
+      "titulo": "Como avaliar uma maquete antes da produção",
+      "categoria": "Rever antes de produzir",
+      "resumo": "Reveja versão, texto, posição e escala. Distinga o que a maquete confirma do que exige uma amostra.",
+      "resposta_breve": {
+        "texto": "Confirme texto, versão, face, orientação e medidas na maquete. Separe essa revisão da avaliação física de cor, toque, aderência ou comportamento em uso.",
+        "fontes": []
+      },
+      "ordem_leitura": [
+        "parte-0",
+        "parte-1",
+        "parte-2",
+        "parte-3",
+        "parte-4"
+      ],
+      "passos": [
+        {
+          "id": "parte-0",
+          "titulo": "Identifique o alcance da maquete",
+          "texto": "A maquete representa a composição proposta: texto, posicionamento e proporções. Comece por identificar artigo, variante e versão da arte. Se a representação for genérica, confirme as medidas que a relacionam com o artigo escolhido. Para cor, uma simulação depende das condições de visualização; para aderência, é necessário avaliar o suporte real.",
+          "fontes": [
+            "guiaprova",
+            "guiasuperficie"
+          ]
+        },
+        {
+          "id": "parte-1",
+          "titulo": "1. Confira os dados, não apenas o aspeto",
+          "texto": "Leia nomes, contactos, datas e acentos sem depender da memória. Compare com o texto de origem e confirme se todos os elementos pertencem à versão final. Num trabalho com nomes individuais, valide também a lista e a correspondência de cada nome ao artigo; uma maquete geral não valida todas as variantes.",
+          "fontes": []
+        },
+        {
+          "id": "parte-2",
+          "titulo": "2. Localize a marca com referências claras",
+          "texto": "Confirme face, orientação, distância a elementos da peça e dimensão. Uma indicação como «centrado» pode referir-se ao artigo inteiro ou apenas à zona disponível. Peça que a área aprovada fique distinguida de costuras, clips, tampas e outras zonas que condicionam a aplicação. Não deduza medidas pelo tamanho da imagem no ecrã.",
+          "fontes": []
+        },
+        {
+          "id": "parte-3",
+          "titulo": "3. Separe composição e resultado físico",
+          "texto": "Reveja a posição numa representação com medidas explícitas, quando aplicável. Para cor, cobertura, relevo ou toque decisivos, defina a amostra necessária. Numa peça com componentes distintos, assinale a face e o componente a que a maquete corresponde. Uma imagem do conjunto não esclarece, sozinha, qual a superfície que será personalizada.",
+          "fontes": []
+        },
+        {
+          "id": "parte-4",
+          "titulo": "4. Feche a revisão por escrito",
+          "texto": "Concentre as correções numa lista e peça uma nova versão que as incorpore. Registe o identificador aprovado, os artigos e variantes abrangidos e as condições ainda pendentes. Uma resposta como «parece bem» pode deixar dúvidas sobre o alcance da aprovação.",
+          "fontes": []
+        }
+      ],
+      "casos": [],
+      "erros": [
+        {
+          "erro": "Aprovar a imagem anterior após uma correção",
+          "prevencao": {
+            "texto": "Confira o número ou nome da versão e compare os pontos alterados.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Confundir simulação com prova de resistência",
+          "prevencao": {
+            "texto": "Acorde um ensaio adequado ao uso antes de validar esse requisito.",
+            "fontes": []
+          }
+        }
+      ],
+      "checklist": [
+        "Artigo, variante e componentes certos.",
+        "Texto, nomes e versão final conferidos.",
+        "Posição, orientação e medidas explícitas.",
+        "Âmbito da aprovação e amostras pendentes registados."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Uma maquete confirma resistência à lavagem?",
+          "resposta": {
+            "texto": "Não. A simulação revê composição; esse requisito exige documentação ou verificação adequada à combinação real.",
+            "fontes": []
+          }
+        },
+        {
+          "pergunta": "O que faço depois de pedir uma correção?",
+          "resposta": {
+            "texto": "Reveja uma nova versão identificada e confirme os pontos alterados. A aprovação deve referir-se a essa versão e às variantes abrangidas.",
+            "fontes": []
+          }
+        }
+      ],
+      "esquema": [
+        {
+          "titulo": "Conteúdo",
+          "descricao": "O que vai ser reproduzido"
+        },
+        {
+          "titulo": "Composição",
+          "descricao": "Onde e com que dimensão"
+        },
+        {
+          "titulo": "Amostra",
+          "descricao": "Como fica no artigo"
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-preparar-um-logotipo",
+          "titulo": "Como preparar um logótipo para personalização",
+          "url": "guias/como-preparar-um-logotipo.html"
+        },
+        {
+          "id": "pantone-cmyk-e-cor-final",
+          "titulo": "Pantone, CMYK e a cor final do brinde",
+          "url": "guias/pantone-cmyk-e-cor-final.html"
+        },
+        {
+          "id": "problemas-comuns-na-personalizacao",
+          "titulo": "Problemas comuns na personalização e como os prevenir",
+          "url": "guias/problemas-comuns-na-personalizacao.html"
+        }
+      ],
+      "links_contexto": [
+        {
+          "titulo": "Conhecer os materiais",
+          "url": "materiais/index.html"
+        },
+        {
+          "titulo": "Comparar técnicas",
+          "url": "tecnicas/index.html"
+        }
+      ],
+      "fontes": [
+        {
+          "id": "guiaprova",
+          "titulo": "Proofing colors",
+          "entidade": "Adobe",
+          "url": "https://helpx.adobe.com/photoshop/using/proofing-colors.html",
+          "ambito": "Prova de ecrã e condições de visualização; não estabelece comportamento físico de uma personalização.",
+          "data_consulta": "2026-10-12"
+        },
+        {
+          "id": "guiasuperficie",
+          "titulo": "Features of Inks — teste no objeto real",
+          "entidade": "Roland DG",
+          "url": "https://downloadcenter.rolanddg.com/contents/manuals/BD-8_USE_EN/fxw1677454678109.html",
+          "ambito": "Tratamentos de superfície e avaliação de aderência no sistema documentado; não generalizar a outros equipamentos ou tintas.",
+          "data_consulta": "2026-10-12"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "imagens": {
+        "cartao": {
+          "url": "assets/guias/visuais/maquete-cartao.jpg",
+          "alt": "Saco, garrafa, caneca, caderno, lápis e porta-chaves dispostos sobre um fundo claro, com marcações genéricas.",
+          "width": 1410,
+          "height": 868,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/guias/visuais/maquete-composicao.jpg",
+            "alt": "Composição com recipientes, estojos, sacos e outros objetos com textos e marcas genéricas.",
+            "width": 678,
+            "height": 452,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "parte-3",
+            "legenda": "Composição ilustrativa: a representação de vários objetos não comprova materiais, funções ou resultados físicos."
+          }
+        ]
+      }
+    },
+    {
+      "id": "problemas-comuns-na-personalizacao",
+      "slug": "problemas-comuns-na-personalizacao",
+      "url": "guias/problemas-comuns-na-personalizacao.html",
+      "titulo": "Problemas comuns na personalização e como os prevenir",
+      "categoria": "Rever antes de produzir",
+      "resumo": "Identifique o sinal, reúna evidência e escolha a verificação adequada antes de repetir a produção.",
+      "resposta_breve": {
+        "texto": "Descreva o sinal e reúna contexto, ficheiro aprovado e uma peça afetada antes de procurar a causa. Compare hipóteses e confirme a correção com uma verificação adequada, em vez de diagnosticar apenas pela fotografia.",
+        "fontes": []
+      },
+      "ordem_leitura": [
+        "parte-0",
+        "parte-1",
+        "parte-2",
+        "parte-3",
+        "parte-4",
+        "bordado",
+        "parte-5"
+      ],
+      "passos": [
+        {
+          "id": "parte-0",
+          "titulo": "Descreva o problema antes de procurar a causa",
+          "texto": "Registe referência, variante, versão da arte, técnica e momento em que o problema apareceu. Fotografe o conjunto e o pormenor em condições comparáveis. Guarde uma peça afetada e a referência aprovada. A mesma aparência pode resultar de causas distintas; este guia orienta perguntas, não substitui o diagnóstico da produção.",
+          "fontes": []
+        },
+        {
+          "id": "parte-5",
+          "titulo": "5. Feche o ciclo de prevenção",
+          "texto": "Registe o que foi observado, a verificação realizada e a alteração aprovada. Peça uma prova que avalie o problema concreto e conserve-a como referência. Se o artigo, o revestimento ou a arte mudar, reveja os pontos afetados. Evite repetir a produção com base apenas na hipótese de que a causa foi encontrada.",
+          "fontes": []
+        }
+      ],
+      "casos": [
+        {
+          "id": "parte-1",
+          "titulo": "Letras fechadas ou detalhes pouco legíveis",
+          "sinal": {
+            "texto": "Os espaços entre letras ou linhas desaparecem, ou o texto perde leitura na dimensão de utilização.",
+            "fontes": []
+          },
+          "verificar": {
+            "texto": "Compare o ficheiro e a aplicação à escala final. Distinga um desenho já pouco legível de um pormenor perdido na reprodução. Peça avaliação da arte para o processo escolhido antes de simplificar ou alterar a posição.",
+            "fontes": []
+          },
+          "evidencia": {
+            "texto": "Ficheiro final, medidas da marca, maquete e fotografia do conjunto e do pormenor, acompanhadas de uma peça afetada quando disponível.",
+            "fontes": []
+          }
+        },
+        {
+          "id": "parte-2",
+          "titulo": "Cores ou contornos desalinhados",
+          "sinal": {
+            "texto": "Os contornos de várias cores não coincidem, ou a marca inteira aparece fora da posição prevista.",
+            "fontes": []
+          },
+          "verificar": {
+            "texto": "Distinga desalinhamento entre cores de deslocamento da composição inteira. Em serigrafia, a posição das telas e da peça faz parte do registo. Compare com a posição indicada na maquete; não atribua a causa apenas pela fotografia.",
+            "fontes": [
+              "guiaserigrafia"
+            ]
+          },
+          "evidencia": {
+            "texto": "Representação com medidas, versão aprovada e imagens comparáveis de várias peças, indicando se o desvio se repete na mesma direção.",
+            "fontes": []
+          }
+        },
+        {
+          "id": "parte-3",
+          "titulo": "Tinta que se solta ou se altera em uso",
+          "sinal": {
+            "texto": "A marca apresenta perda de tinta, alteração do aspeto ou desprendimento após utilização ou limpeza.",
+            "fontes": []
+          },
+          "verificar": {
+            "texto": "Reúna os cuidados efetivamente aplicados e peça revisão de superfície, preparação, tinta e condições do processo. A documentação de serigrafia têxtil relaciona a cura com a conservação da impressão e descreve verificações próprias desse processo. Não aplique um teste ou detergente universal aos restantes suportes.",
+            "fontes": [
+              "guiaserigrafia"
+            ]
+          },
+          "evidencia": {
+            "texto": "Peça afetada, instruções de cuidado, momento em que apareceu o sinal, condições de uso e amostra de referência; combine um ensaio específico para o requisito.",
+            "fontes": []
+          }
+        },
+        {
+          "id": "parte-4",
+          "titulo": "Cor, posição ou variante diferentes da aprovação",
+          "sinal": {
+            "texto": "A cor percebida, a face, a orientação ou o artigo recebido diferem da referência acordada.",
+            "fontes": []
+          },
+          "verificar": {
+            "texto": "Compare a mesma variante e a versão final. Para cor, use a referência e as condições de observação acordadas, não apenas o ecrã ou uma fotografia. Para posição, confira medidas e orientação; para variantes, reveja a identificação dos ficheiros e das peças.",
+            "fontes": [
+              "adobecor"
+            ]
+          },
+          "evidencia": {
+            "texto": "Aprovação identificada, referência física quando aplicável, lista de variantes e medições da posição observada.",
+            "fontes": []
+          }
+        },
+        {
+          "id": "bordado",
+          "titulo": "Tecido franzido ou bordado pouco definido",
+          "sinal": {
+            "texto": "A superfície junto ao bordado apresenta franzido, ou letras e contornos ficam pouco definidos.",
+            "fontes": []
+          },
+          "verificar": {
+            "texto": "A Madeira descreve vários fatores possíveis, incluindo estabilização, tensão, fixação e preparação dos pontos. Peça avaliação conjunta do tecido e do desenho; o aspeto não demonstra sozinho qual o fator responsável.",
+            "fontes": [
+              "guiabordado"
+            ]
+          },
+          "evidencia": {
+            "texto": "Amostra, desenho e dimensão final, composição documentada da peça e indicação de quando o sinal foi observado.",
+            "fontes": []
+          }
+        }
+      ],
+      "erros": [
+        {
+          "erro": "Atribuir uma falha a uma causa única pela fotografia",
+          "prevencao": {
+            "texto": "Junte contexto e uma amostra; peça diagnóstico do processo.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Repetir sem prova da correção",
+          "prevencao": {
+            "texto": "Defina o critério de aceitação e confirme-o numa nova avaliação.",
+            "fontes": []
+          }
+        }
+      ],
+      "checklist": [
+        "Sinal, momento e artigos afetados registados.",
+        "Prova aprovada e amostra disponíveis.",
+        "Causa avaliada pela produção.",
+        "Correção e verificação acordadas antes da repetição."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Uma fotografia basta para encontrar a causa?",
+          "resposta": {
+            "texto": "Não. Ajuda a descrever o sinal; junte contexto, condições de uso e uma amostra quando necessária.",
+            "fontes": []
+          }
+        },
+        {
+          "pergunta": "Devo repetir imediatamente depois de corrigir o ficheiro?",
+          "resposta": {
+            "texto": "Confirme primeiro se a alteração trata o problema observado e se a nova prova cumpre o critério de aceitação acordado.",
+            "fontes": []
+          }
+        }
+      ],
+      "esquema": [
+        {
+          "titulo": "Observar",
+          "descricao": "Descrever o sinal"
+        },
+        {
+          "titulo": "Verificar",
+          "descricao": "Investigar com contexto"
+        },
+        {
+          "titulo": "Validar",
+          "descricao": "Confirmar a correção"
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-escolher-a-tecnica",
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "id": "pantone-cmyk-e-cor-final",
+          "titulo": "Pantone, CMYK e a cor final do brinde",
+          "url": "guias/pantone-cmyk-e-cor-final.html"
+        },
+        {
+          "id": "como-avaliar-uma-maquete",
+          "titulo": "Como avaliar uma maquete antes da produção",
+          "url": "guias/como-avaliar-uma-maquete.html"
+        }
+      ],
+      "links_contexto": [
+        {
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        },
+        {
+          "titulo": "Impressão digital UV",
+          "url": "tecnicas/impressao-uv.html"
+        },
+        {
+          "titulo": "Bordado",
+          "url": "tecnicas/bordado.html"
+        }
+      ],
+      "fontes": [
+        {
+          "id": "guiaserigrafia",
+          "titulo": "A Guide to Screen Printing T-Shirts",
+          "entidade": "ScreenPrinting.com",
+          "url": "https://www.screenprinting.com/blogs/news/a-how-to-for-screen-printing-t-shirts",
+          "ambito": "Registo e cura em serigrafia têxtil; as verificações descritas não são universais para outros suportes.",
+          "data_consulta": "2026-10-12"
+        },
+        {
+          "id": "adobecor",
+          "titulo": "About spot and process colors",
+          "entidade": "Adobe",
+          "url": "https://helpx.adobe.com/in/creative-cloud/apps/colors/spot-and-process-colors.html",
+          "ambito": "Cores diretas, CMYK, gamas e influência do suporte; não promete equivalência entre processos.",
+          "data_consulta": "2026-10-12"
+        },
+        {
+          "id": "guiabordado",
+          "titulo": "FAQ — preparação e problemas de bordado",
+          "entidade": "Madeira",
+          "url": "https://www.madeira.com/en-in/service/support/faq",
+          "ambito": "Desenho, estabilização, fixação e fatores de franzido; sem diagnóstico automático de uma peça.",
+          "data_consulta": "2026-10-12"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "imagens": {}
+    }
+  ]
+}

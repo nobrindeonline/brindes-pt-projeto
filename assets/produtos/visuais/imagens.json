@@ -1,0 +1,173 @@
+{
+  "canetas-e-escrita": {
+    "cartao": {
+      "url": "assets/produtos/visuais/canetas-cartao.jpg",
+      "alt": "Estojo aberto com dois instrumentos de escrita de corpo claro e detalhes prateados.",
+      "width": 300,
+      "height": 300,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/produtos/visuais/canetas-estojo.jpg",
+        "alt": "Estojo transparente comprido, com base e abertura superior.",
+        "width": 300,
+        "height": 300,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "usos"
+      }
+    ]
+  },
+  "garrafas-copos-e-canecas": {
+    "cartao": {
+      "url": "assets/produtos/visuais/bebidas-cartao.jpg",
+      "alt": "Três canecas brancas com pegas e interiores nas cores azul, vermelho e preto.",
+      "width": 300,
+      "height": 301,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/produtos/visuais/bebidas-copos.jpg",
+        "alt": "Dois copos transparentes, de formato baixo e sem pega.",
+        "width": 300,
+        "height": 301,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "tipos"
+      },
+      {
+        "url": "assets/produtos/visuais/bebidas-pega.jpg",
+        "alt": "Recipiente cilíndrico prateado com tampa rosa e pega superior.",
+        "width": 300,
+        "height": 303,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "zonas"
+      }
+    ]
+  },
+  "texteis": {
+    "cartao": {
+      "url": "assets/produtos/visuais/texteis-cartao.jpg",
+      "alt": "Pessoa com t-shirt verde de manga curta e calções escuros.",
+      "width": 300,
+      "height": 300,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/produtos/visuais/texteis-corte.jpg",
+        "alt": "Pessoa com calças justas e top com padrão em tons azuis e brancos.",
+        "width": 300,
+        "height": 300,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "criterios"
+      },
+      {
+        "url": "assets/produtos/visuais/texteis-bones.jpg",
+        "alt": "Quatro bonés nas cores branca, preta, azul-escura e verde-escura.",
+        "width": 300,
+        "height": 300,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "zonas"
+      }
+    ]
+  },
+  "sacos-e-mochilas": {
+    "cartao": {
+      "url": "assets/produtos/visuais/sacos-cartao.jpg",
+      "alt": "Três sacos de duas alças, nas cores clara, branca e preta.",
+      "width": 300,
+      "height": 301,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/produtos/visuais/sacos-cordoes.jpg",
+        "alt": "Sacos de várias cores com cordões nas laterais e na abertura superior.",
+        "width": 300,
+        "height": 300,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "tipos"
+      },
+      {
+        "url": "assets/produtos/visuais/sacos-pasta.jpg",
+        "alt": "Pasta preta com duas pegas, alça comprida e bolsos com fecho.",
+        "width": 300,
+        "height": 301,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "zonas"
+      }
+    ]
+  },
+  "tecnologia": {
+    "cartao": {
+      "url": "assets/produtos/visuais/tecnologia-cartao.jpg",
+      "alt": "Telemóvel preto sobre um objeto retangular escuro; outra vista do objeto aparece abaixo.",
+      "width": 300,
+      "height": 301,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/produtos/visuais/tecnologia-mostrador.jpg",
+        "alt": "Dispositivo de mesa prateado com ecrã azul e botões na parte inferior.",
+        "width": 300,
+        "height": 301,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "materiais"
+      },
+      {
+        "url": "assets/produtos/visuais/tecnologia-base.jpg",
+        "alt": "Base circular clara com cabo e ficha USB visíveis.",
+        "width": 250,
+        "height": 250,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "zonas"
+      }
+    ]
+  },
+  "artigos-de-escritorio": {
+    "cartao": {
+      "url": "assets/produtos/visuais/escritorio-cartao.jpg",
+      "alt": "Calendário de mesa com folhas presas por uma espiral na parte superior.",
+      "width": 300,
+      "height": 300,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/produtos/visuais/escritorio-regua.jpg",
+        "alt": "Régua transparente graduada com uma zona circular junto a uma extremidade.",
+        "width": 300,
+        "height": 301,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "usos"
+      },
+      {
+        "url": "assets/produtos/visuais/escritorio-suporte.jpg",
+        "alt": "Suporte transparente com três instrumentos de escrita e um mostrador frontal.",
+        "width": 300,
+        "height": 301,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "materiais"
+      }
+    ]
+  }
+}

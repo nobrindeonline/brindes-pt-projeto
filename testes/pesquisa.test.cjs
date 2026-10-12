@@ -6,6 +6,37 @@ const { find } = require('../pesquisa.js');
 const context = { window: {} };
 vm.runInNewContext(fs.readFileSync(require.resolve('../assets/pesquisa-dados.js'), 'utf8'), context);
 const entries = context.window.BRINDES_SEARCH;
+
+test('Guias indexa perguntas, critérios e evidência sem exemplos comerciais', () => {
+  for (const [query, slug] of [
+    ['PDF vetorial', 'como-preparar-um-logotipo'],
+    ['quantidade variantes', 'como-escolher-a-tecnica'],
+    ['distribuição transporte', 'como-escolher-brindes-para-um-evento'],
+    ['revestimento cuidados', 'como-escolher-o-material'],
+    ['CMYK referência', 'pantone-cmyk-e-cor-final'],
+    ['maquete orientação', 'como-avaliar-uma-maquete'],
+    ['bordado franzido', 'problemas-comuns-na-personalizacao'],
+  ]) assert.ok(find(entries, query).some(e => e.url === `guias/${slug}.html`), query);
+  for (const e of entries.filter(e => e.url.startsWith('guias/'))) {
+    assert.ok(!/nobrinde|catálogo|catalogue|synex|gratox|chalmer|farnes|larsen/i.test(JSON.stringify(e)));
+  }
+});
+
+test('Produtos encontra sinónimos e critérios específicos das famílias', () => {
+  for (const [query, slug] of [
+    ['esferografica', 'canetas-e-escrita'],
+    ['rollerball', 'canetas-e-escrita'],
+    ['tumbler', 'garrafas-copos-e-canecas'],
+    ['tshirt', 'texteis'],
+    ['saco a tiracolo', 'sacos-e-mochilas'],
+    ['power bank', 'tecnologia'],
+    ['USB-C', 'tecnologia'],
+    ['papelaria', 'artigos-de-escritorio'],
+    ['coleccao', 'brindes-premium'],
+  ]) {
+    assert.ok(find(entries, query).some(e => e.url === `produtos/${slug}.html`), query);
+  }
+});
 test('pesquisa sem acentos ou distinção de maiúsculas', () => {
   assert.equal(find(entries, 'GRAVACAO')[0].title, 'Gravação a laser');
   assert.equal(find(entries, 'serigrafia')[0].title, 'Serigrafia');

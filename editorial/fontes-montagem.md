@@ -73,8 +73,6 @@ Não foram descarregadas imagens externas.
   créditos e ligações dos três guias de Indústria relacionados.
 - Alterações anteriores a Crachás preservadas.
 
-## Confirmações internas
-
 ## Verificações executadas
 
 - `python gerar.py`: 78 páginas, com formatação automática.
@@ -90,6 +88,29 @@ Não foram descarregadas imagens externas.
   horizontal, três cartões com destinos corretos e menu móvel funcional.
   Capturas em `tmp/montagem-qa/` (ficheiros locais ignorados pelo Git).
   Inspeção visual das capturas do hub em computador e telemóvel e dos artigos.
+
+## Revalidação — 12 de outubro de 2026
+
+O pedido recebido corresponde à implementação já existente. Não foi necessário
+alterar os conteúdos, rotas, imagens ou gerador, nem regenerar HTML idêntico.
+As seis fontes acima foram novamente abertas; confirmados os trechos sobre
+formação do ponto, construção da costura, acessórios, espiral, Wire-O e
+preparação da lombada na encadernação adesiva. Reabertas as três fotografias
+selecionadas e confirmada a correspondência entre conteúdo, alt e legenda.
+
+Executadas novamente: `python verificar.py` (78 páginas, 3024 ligações/recursos),
+`node --test testes/pesquisa.test.cjs` (nove testes),
+`.venv/Scripts/python.exe testes/verificar_imagens.py`,
+`python testes/verificar_materiais.py`, `npm.cmd run format:check` e
+`git diff --check`; todas aprovadas.
+
+Executado `node tmp/montagem-qa/verificar.cjs`: as quatro páginas responderam
+HTTP 200 em 360, 390, 768 e 1440 px, sem imagens quebradas nem excesso
+horizontal. Confirmados os três cartões, os destinos e o menu móvel.
+Capturas completas atualizadas em `tmp/montagem-qa/`; revista visualmente
+a captura de 390 px do hub e a apresentação de computador já arquivada.
+Nesta revisão, apenas este registo editorial foi alterado. Sem commit, push
+ou publicação.
 
 ## Confirmações internas
 

@@ -1,5 +1,5 @@
 """Conteúdo editorial em português de Portugal. Não contém dados internos."""
-from conteudos.produtos import NOVOS_ARTIGOS
+from conteudos.produtos import NOVOS_ARTIGOS, FONTES_PRODUTOS, PRODUTOS
 from conteudos.bordado import BORDADO, FONTES_BORDADO
 from conteudos.termogravura import TERMOGRAVURA, FONTES_TERMOGRAVURA
 from conteudos.ideias import IDEIAS
@@ -21,6 +21,8 @@ FONTES = {
  'screenhelp': ('ScreenPrinting.com — Preparação e impressão de t-shirts', 'https://www.screenprinting.com/blogs/news/a-how-to-for-screen-printing-t-shirts'),
 }
 
+FONTES.update({k: (f['entidade'] + ' — ' + f['titulo'], f['url']) for k, f in FONTES_PRODUTOS.items()})
+
 # Cada grupo origina uma entrada real no índice, nunca uma página vazia.
 SECCOES = [
  {'id':'tecnicas','titulo':'Técnicas de personalização','curto':'Técnicas','icone':'✦','resumo':'Do logótipo ao objeto: conheça o processo, o acabamento e as condições de cada técnica.', 'grupos':[
@@ -28,7 +30,7 @@ SECCOES = [
  ('gravacao','Gravação e relevo','Confirme o efeito pretendido numa amostra do artigo: cor, textura e profundidade não são escolhas equivalentes.', 'Gravação a laser|Gravação circular|Termogravura|Baixo-relevo e relevo'),
  ('textil','Têxteis e transferências','Indique a composição da peça, a cor, o local de aplicação e os cuidados de lavagem previstos.', 'Bordado|Transfers|Sublimação|Transferência cerâmica'),
  ('acabamentos','Outras aplicações','O formato final e os componentes do produto fazem parte da escolha do processo.', 'Doming|Troquelagem|Crachás tipo pin/botão'),
- ('montagem','Costura, Argolagem e Encadernação','Explore os processos de união, montagem e acabamento conforme o produto e os materiais.', 'Costura, Argolagem e Encadernação|Costura Industrial|Argolagem|Encadernação')]},
+ ('montagem','Costura, Argolagem e Encadernação','Explore os processos de união, montagem e acabamento conforme o produto e os materiais.', 'Costura, Argolagem e Encadernação')]},
  {'id':'materiais','titulo':'Materiais','curto':'Materiais','icone':'▥','resumo':'O nome do material é o ponto de partida. O acabamento e a construção do artigo também contam.', 'grupos':[
  ('plasticos','Plásticos','Peça a identificação do polímero e do revestimento. ABS, PP, PVC, PET e Tritan não devem ser tratados como uma superfície única; confirme a tinta e o tratamento com quem vai produzir.', 'ABS|PP|PVC|PET|Tritan'),
  ('metais','Metais','Distinga o metal de base do acabamento visível. Uma caneta pintada e uma superfície metálica sem revestimento podem exigir decisões diferentes.', 'Alumínio|Aço inoxidável|Ferro|Zamak'),
@@ -120,25 +122,7 @@ ARTIGOS = PUBLICOS + IDEIAS + NOVIDADES + NOVOS_ARTIGOS + [
  'problemas':[('Aderência insuficiente','Pedir ensaio do conjunto superfície, tinta e primário. Um primário não garante compatibilidade universal. [primer]'),('Cor diferente da expectativa','Rever a referência aprovada e a prova no suporte; distinguir cor de ecrã e reprodução por CMYK. [uv]')],
  'fontes':['uv','roland','primer'],'relacionados':['tampografia','gravacao-a-laser','como-escolher-a-tecnica'],'ancoras':['materiais/index.html#plasticos','produtos/index.html#tecnologia'],'tags':'digital uv cmyk branco verniz fotografia degradês primer'},
  BORDADO,
- {'id':'como-escolher-a-tecnica','sec':'guias','tipo':'guia','titulo':'Como escolher a técnica','resumo':'Comece pelo artigo e pelo resultado pretendido. Use estas perguntas para preparar uma escolha que a produção possa confirmar.',
- 'seccoes':[
- ('1. Identifique o artigo','Registe a referência, o material, o revestimento, a cor e a forma. Junte uma fotografia e, quando possível, uma amostra. Evite decidir apenas com a indicação «plástico» ou «metal».'),
- ('2. Defina a utilização','Quem vai receber o brinde? Como será usado, lavado, transportado e guardado? Descreva a utilização para que a equipa possa propor verificações adequadas.'),
- ('3. Observe o desenho','Indique se precisa de cores diretas, fotografia, degradês ou uma marca sem tinta. Anote o texto mais pequeno e a dimensão pretendida. Use os guias relacionados para comparar possibilidades.'),
- ('4. Confirme área e quantidade','Localize a marca na peça e confirme as dimensões com a produção. Informe a quantidade e as variantes: artigos, nomes, tamanhos ou cores. Peça avaliação para esse trabalho concreto.'),
- ('5. Prepare a arte','Envie o ficheiro original disponível, uma pré-visualização e as referências de cor. Pergunte quais os formatos necessários; mudar a extensão de uma imagem não cria um desenho vetorial.'),
- ('6. Reveja a maquete','Verifique referência e cor do artigo, versão do logótipo, ortografia, dimensão, posição, orientação e técnica. Registe a aprovação da versão correta e esclareça o que a simulação não permite avaliar.'),
- ('7. Valide uma amostra quando necessário','Se cor, textura ou resistência forem decisivas, combine uma prova apropriada. Uma escolha só fica confirmada depois de a produção avaliar a combinação de artigo, desenho e processo.')],
- 'problemas':[], 'fontes':[], 'relacionados':['tampografia','serigrafia','gravacao-a-laser','impressao-uv','bordado','canetas-e-escrita'], 'ancoras':['materiais/index.html','produtos/index.html'],'tags':'escolher tecnica logotipo logo vetor vector ficheiro maquete resolução pantone durabilidade'},
- {'id':'canetas-e-escrita','sec':'produtos','tipo':'produto','titulo':'Canetas e escrita','resumo':'O corpo, o clip e a posição do logótipo ajudam a escolher a personalização. Compare opções sobre o modelo concreto.',
- 'seccoes':[
- ('Variantes e utilização','Comece por distinguir o mecanismo, o tipo de escrita e a forma de entrega. Uma ação com distribuição alargada e um conjunto de oferta individual podem pedir critérios diferentes.'),
- ('Materiais e acabamentos','Registe o material do corpo e o acabamento visível, incluindo pintura ou revestimento. Peça identificação do polímero se o corpo for de plástico e do metal se for metálico.'),
- ('Técnicas a considerar','Consulte os guias de tampografia e laser para conhecer o processo antes de pedir avaliação da caneta. Se o desenho tiver muitas cores, inclua UV na conversa com a produção.'),
- ('Área e preparação da arte','Indique a posição desejada em relação ao clip e a orientação de leitura. Compare o desenho à escala real e confirme se o texto continua legível.'),
- ('Problemas frequentes','Se a marca parecer pequena, não a aumente sem confirmar a área disponível. Se o contraste for insuficiente, peça uma prova com o acabamento escolhido antes de alterar a cor.'),
- ('Antes de escolher','Confirme escrita, conforto, mecanismo, apresentação e resultado da personalização numa amostra. Guarde a referência e a arte aprovadas para futuras repetições.')],
- 'problemas':[], 'fontes':[], 'relacionados':['tampografia','gravacao-a-laser','impressao-uv','como-escolher-a-tecnica'],'ancoras':['materiais/index.html#plasticos','materiais/index.html#metais'],'tags':'caneta escrita esferografica clip metal plastico'},
+
 ]
 
 from conteudos.industria import INDUSTRIA, FONTES_INDUSTRIA, AREAS_INDUSTRIA
@@ -164,14 +148,13 @@ FONTES['rolanddireta'] = ('Roland DG — Impressão direta UV', 'https://www.rol
 impressao_uv = next(a for a in ARTIGOS if a['id']=='impressao-uv')
 impressao_uv.update(introducao=INTRO_UV, seccoes=SECCOES_UV, fontes=['inkcupsuv','rolanddireta'], problemas=[('Aderência insuficiente','Confirmar superfície, preparação, tinta e cura; pedir um ensaio antes de avançar com a produção.'),('Cor ou detalhe diferentes do esperado','Comparar com a prova aprovada, rever o ficheiro à escala final e avaliar o fundo e o acabamento do artigo.')])
 impressao_uv['relacionados'].append('serigrafia')
-from conteudos.guias import GUIAS, FONTES_GUIAS, TECNICA_EXTRA, GRUPOS_GUIAS
+from conteudos.guias import GUIAS, FONTES_GUIAS, GRUPOS_GUIAS, RESUMO_GUIAS
+from copy import deepcopy
 FONTES.update(FONTES_GUIAS)
-ARTIGOS.extend(GUIAS)
-guia_tecnica = next(a for a in ARTIGOS if a['id']=='como-escolher-a-tecnica')
-guia_tecnica.update(TECNICA_EXTRA)
-guia_tecnica['seccoes'].append(('Um exemplo que evita uma escolha automática','Chalmer e Bastien têm 900 ml, mas materiais diferentes: aço inoxidável reciclado e PP. Não transfira a solução de um para o outro sem avaliação. Já a placa Farnes é identificada no catálogo para sublimação; essa indicação aplica-se à referência concreta e não a qualquer peça de bambu. Compare as fichas abaixo e peça confirmação da área e do resultado.'))
-guia_tecnica['relacionados'] += ['como-preparar-um-logotipo','como-escolher-o-material','como-avaliar-uma-maquete']
+ARTIGOS.extend(deepcopy(GUIAS))
 sec_guias = next(s for s in SECCOES if s['id']=='guias')
+sec_guias['titulo'] = 'Guias práticos'
+sec_guias['resumo'] = RESUMO_GUIAS
 sec_guias['grupos'] = [(id,t,d,'|'.join(a['titulo'] for a in ARTIGOS if a['sec']=='guias' and a.get('tema')==tema)) for id,t,d,tema in GRUPOS_GUIAS]
 sec_industria = next(s for s in SECCOES if s['id']=='industria')
 sec_industria['resumo'] = 'O percurso de uma encomenda, os processos de personalização, a montagem e a história dos objetos promocionais.'
@@ -234,3 +217,8 @@ for artigo in ARTIGOS:
 for artigo in ARTIGOS:
     if artigo["id"] in ("materiais-texteis", "texteis", "sacos-e-mochilas", "tecnica-sublimacao", "como-avaliar-uma-maquete") and "bordado" not in artigo["relacionados"]:
         artigo["relacionados"].append("bordado")
+
+# Produtos deriva da fonte sem?ntica; as ?ncoras antigas mant?m-se.
+sec_produtos = next(s for s in SECCOES if s['id'] == 'produtos')
+sec_produtos['resumo'] = 'Compreenda e compare famílias de brindes pela utilização, construção e personalização.'
+sec_produtos['grupos'] = [(g['ancora'], g['titulo'], g['resumo'], g['titulo']) for g in PRODUTOS]

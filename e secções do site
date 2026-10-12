@@ -1,0 +1,204 @@
+ assets/guias-conteudos.json                        | 1306 [32m+++++++++++++++[m
+ .../images.jpg"                                    |  Bin [31m0[m -> [32m32289[m bytes
+ .../melhores-empresas-brindes-em-portugal.jpg"     |  Bin [31m0[m -> [32m109973[m bytes
+ .../brindes-para-feiras.jpg                        |  Bin [31m0[m -> [32m80419[m bytes
+ assets/guias/ComoEscolheraTecnica/images.jpg       |  Bin [31m0[m -> [32m9411[m bytes
+ .../ComoEscolheroMaterialdeUmBrinde/images.jpg     |  Bin [31m0[m -> [32m19934[m bytes
+ .../CorelDRAW-loc-wkspc-app-windowDRAW.jpg"        |  Bin [31m0[m -> [32m702746[m bytes
+ .../images.jpg"                                    |  Bin [31m0[m -> [32m22815[m bytes
+ ...d-uncoated-guides-product-2-1_2-sk5dvkob7f.webp |  Bin [31m0[m -> [32m22534[m bytes
+ .../pantone-brindes-promocionais-1024x569.jpg      |  Bin [31m0[m -> [32m86048[m bytes
+ .../brindes-personalizados-1-1024x576.jpg"         |  Bin [31m0[m -> [32m82703[m bytes
+ .../images.jpg"                                    |  Bin [31m0[m -> [32m44731[m bytes
+ assets/guias/visuais/cor-cartao.webp               |  Bin [31m0[m -> [32m22534[m bytes
+ assets/guias/visuais/cor-suporte.jpg               |  Bin [31m0[m -> [32m86048[m bytes
+ assets/guias/visuais/evento-cartao.jpg             |  Bin [31m0[m -> [32m80419[m bytes
+ assets/guias/visuais/imagens.json                  |   79 [32m+[m
+ assets/guias/visuais/maquete-cartao.jpg            |  Bin [31m0[m -> [32m109973[m bytes
+ assets/guias/visuais/maquete-composicao.jpg        |  Bin [31m0[m -> [32m32289[m bytes
+ assets/guias/visuais/material-cartao.jpg           |  Bin [31m0[m -> [32m19934[m bytes
+ assets/guias/visuais/tecnica-cartao.jpg            |  Bin [31m0[m -> [32m9411[m bytes
+ .../ig_0_nb225683_CALENDARIO-EM-BAMBU-KARENDA.jpg  |  Bin [31m0[m -> [32m40693[m bytes
+ .../Metais/ig_0_nb193335_SACA-ROLHAS-METAL.jpg     |  Bin [31m0[m -> [32m35173[m bytes
+ .../Papel_Cartao/z_0_nb222831_PASTA-HABORG.jpg     |  Bin [31m0[m -> [32m142944[m bytes
+ .../materiais/Pele/z_0_nb224514_TARJETERO-PIEL.jpg |  Bin [31m0[m -> [32m91376[m bytes
+ ...A-COLOCAR-O-PAPEL-IMPRESSO-OU-FOTO-DE-4-X-3.jpg |  Bin [31m0[m -> [32m21218[m bytes
+ .../materiais/Texteis/toopcalcao_1770905656_1.jpg  |  Bin [31m0[m -> [32m59143[m bytes
+ .../z_0_nb224623_TROFEU-BOLA-MUNDO-GRANDE.jpg      |  Bin [31m0[m -> [32m44013[m bytes
+ assets/pesquisa-dados.js                           |    2 [32m+[m[31m-[m
+ assets/produtos-conteudos.json                     | 1708 [32m++++++++++++++++++++[m
+ .../ig_0_nb137808_PORTA-ESFEROGRAFICAS.jpg         |  Bin [31m0[m -> [32m39867[m bytes
+ ...b138417_REGUA-COM-LUPA-E-TRANSFERIDOR-LASTA.jpg |  Bin [31m0[m -> [32m35831[m bytes
+ ...IO-DE-MESA-PEQUENO-13-FOLHAS-PERSONALIZAVEL.jpg |  Bin [31m0[m -> [32m29815[m bytes
+ ...ig_0_nb219808_ESFEROGRAFICA-COMUNHAO-MENINO.jpg |  Bin [31m0[m -> [32m21294[m bytes
+ .../ig_0_nb233802_SET-CANETA-E-LAPISEIRA-BAMBU.jpg |  Bin [31m0[m -> [32m41705[m bytes
+ ...16_ESTOJO-DE-CANETAS-TRANSPARENTE-EXPOSITOR.jpg |  Bin [31m0[m -> [32m21859[m bytes
+ ...ig_0_nb206769_CANECA-COLORIDA-P--SUBLIMACAO.jpg |  Bin [31m0[m -> [32m34535[m bytes
+ ..._nb213896_CONJUNTO-DE-VIDRO-DE-2-PECAS-BODA.jpg |  Bin [31m0[m -> [32m27405[m bytes
+ ...neca-De-Cha-Termica-De-500-Ml-Mepal-Ellipse.jpg |  Bin [31m0[m -> [32m28850[m bytes
+ .../ig_0_nb177487_PASTA-PARA-COMPUTADOR.jpg        |  Bin [31m0[m -> [32m31363[m bytes
+ .../ig_0_nb184332_MOCHILA-DE-FALSO-TECIDO..jpg     |  Bin [31m0[m -> [32m48688[m bytes
+ .../produtos/SacoseMochilas/ig_0_nb185624_SACO.jpg |  Bin [31m0[m -> [32m28364[m bytes
+ ...g_0_nb228708_MOCHILA-PEQUENA-PERSONALIZAVEL.jpg |  Bin [31m0[m -> [32m81372[m bytes
+ .../ig_0_nb146380_ESTACAO-METEOROLOGICA.jpg        |  Bin [31m0[m -> [32m45774[m bytes
+ .../ig_0_nb171544_AQUECEDOR-CHAVENAS-MUG.jpg       |  Bin [31m0[m -> [32m17361[m bytes
+ ...16_WIRELESS-POWERBANK-VIGOR-8000-mAh-TYPE-C.jpg |  Bin [31m0[m -> [32m37655[m bytes
+ ...4_AVENTAL-DE-CRIANCA-EM-RPET-PERSONALIZAVEL.jpg |  Bin [31m0[m -> [32m61730[m bytes
+ ...nb316909_BONE-MAUI--100-POLIESTER-RECICLADO.jpg |  Bin [31m0[m -> [32m29832[m bytes
+ .../produtos/Texteis/tooplegging_1770900493_1.jpg  |  Bin [31m0[m -> [32m36556[m bytes
+ .../produtos/Texteis/tooptshirth_1770893801_1.jpg  |  Bin [31m0[m -> [32m53188[m bytes
+ .../produtos/altifalante-nalow-1146-abs-bambu.webp |  Bin [31m3914[m -> [32m0[m bytes
+ assets/produtos/caderno-gratox-22075-apagavel.webp |  Bin [31m16814[m -> [32m0[m bytes
+ assets/produtos/copo-bastien-22361-pp-900ml.webp   |  Bin [31m9622[m -> [32m0[m bytes
+ assets/produtos/copo-chalmer-21986-inox-900ml.webp |  Bin [31m11910[m -> [32m0[m bytes
+ .../esferografica-synex-20673-abs-reciclado.webp   |  Bin [31m4400[m -> [32m0[m bytes
+ .../esferografica-trombolix-22293-aluminio.webp    |  Bin [31m3878[m -> [32m0[m bytes
+ .../garrafa-hetien-1364-aluminio-bambu-800ml.webp  |  Bin [31m7516[m -> [32m0[m bytes
+ assets/produtos/manifesto.json                     |  254 [31m---[m
+ .../mochila-sulkan-6620-poliester-600d.webp        |  Bin [31m41224[m -> [32m0[m bytes
+ .../placa-farnes-22151-bambu-sublimacao.webp       |  Bin [31m16176[m -> [32m0[m bytes
+ assets/produtos/saco-emphy-1818-algodao-300g.webp  |  Bin [31m2838[m -> [32m0[m bytes
+ assets/produtos/saco-larsen-3322-algodao-105g.webp |  Bin [31m2706[m -> [32m0[m bytes
+ .../produtos/tshirt-stiles-21840-algodao-170g.webp |  Bin [31m36356[m -> [32m0[m bytes
+ assets/produtos/visuais/bebidas-cartao.jpg         |  Bin [31m0[m -> [32m34535[m bytes
+ assets/produtos/visuais/bebidas-copos.jpg          |  Bin [31m0[m -> [32m27405[m bytes
+ assets/produtos/visuais/bebidas-pega.jpg           |  Bin [31m0[m -> [32m28850[m bytes
+ assets/produtos/visuais/canetas-cartao.jpg         |  Bin [31m0[m -> [32m41705[m bytes
+ assets/produtos/visuais/canetas-estojo.jpg         |  Bin [31m0[m -> [32m21859[m bytes
+ assets/produtos/visuais/escritorio-cartao.jpg      |  Bin [31m0[m -> [32m29815[m bytes
+ assets/produtos/visuais/escritorio-regua.jpg       |  Bin [31m0[m -> [32m35831[m bytes
+ assets/produtos/visuais/escritorio-suporte.jpg     |  Bin [31m0[m -> [32m39867[m bytes
+ assets/produtos/visuais/imagens.json               |  173 [32m++[m
+ assets/produtos/visuais/sacos-cartao.jpg           |  Bin [31m0[m -> [32m28364[m bytes
+ assets/produtos/visuais/sacos-cordoes.jpg          |  Bin [31m0[m -> [32m48688[m bytes
+ assets/produtos/visuais/sacos-pasta.jpg            |  Bin [31m0[m -> [32m31363[m bytes
+ assets/produtos/visuais/tecnologia-base.jpg        |  Bin [31m0[m -> [32m17361[m bytes
+ assets/produtos/visuais/tecnologia-cartao.jpg      |  Bin [31m0[m -> [32m37655[m bytes
+ assets/produtos/visuais/tecnologia-mostrador.jpg   |  Bin [31m0[m -> [32m45774[m bytes
+ assets/produtos/visuais/texteis-bones.jpg          |  Bin [31m0[m -> [32m29832[m bytes
+ assets/produtos/visuais/texteis-cartao.jpg         |  Bin [31m0[m -> [32m53188[m bytes
+ assets/produtos/visuais/texteis-corte.jpg          |  Bin [31m0[m -> [32m36556[m bytes
+ conteudos/apresentacao_recursos.py                 |    4 [32m+[m
+ conteudos/catalogo.py                              |   42 [32m+[m[31m-[m
+ conteudos/guias.py                                 |  637 [32m+++++++[m[31m-[m
+ conteudos/guias_imagens.py                         |   38 [32m+[m
+ conteudos/materiais.py                             |   32 [32m+[m[31m-[m
+ conteudos/produtos.py                              |  280 [32m+++[m[31m-[m
+ conteudos/produtos_imagens.py                      |   75 [32m+[m
+ creditos-imagens.html                              |  255 [32m+[m[31m--[m
+ editorial/fontes-guias.md                          |   92 [32m+[m[31m-[m
+ editorial/fontes-montagem.md                       |   25 [32m+[m[31m-[m
+ editorial/fontes-produtos.md                       |  113 [32m++[m
+ editorial/gerar_fontes_guias.py                    |   16 [32m+[m
+ editorial/gerar_fontes_produtos.py                 |   21 [32m+[m
+ editorial/guias-imagens.json                       |   79 [32m+[m
+ editorial/guias-revisao.md                         |  149 [32m++[m
+ .../identidade-2026-10-12/assets/pesquisa-dados.js |    1 [32m+[m
+ .../conteudos/produtos-antes.py                    |   50 [32m+[m
+ .../identidade-2026-10-12/creditos-imagens.html    |  630 [32m++++++++[m
+ .../guias/como-avaliar-uma-maquete.html            |  414 [32m+++++[m
+ .../guias/como-escolher-a-tecnica.html             |  621 [32m+++++++[m
+ .../como-escolher-brindes-para-um-evento.html      |  418 [32m+++++[m
+ .../guias/como-escolher-o-material.html            |  555 [32m+++++++[m
+ .../guias/como-preparar-um-logotipo.html           |  424 [32m+++++[m
+ editorial/identidade-2026-10-12/guias/index.html   |  285 [32m++++[m
+ .../guias/pantone-cmyk-e-cor-final.html            |  356 [32m++++[m
+ .../guias/problemas-comuns-na-personalizacao.html  |  375 [32m+++++[m
+ editorial/identidade-2026-10-12/index.html         |  620 [32m+++++++[m
+ .../industria/costura-industrial.html              |  312 [32m++++[m
+ .../industria/da-ideia-a-entrega.html              |  411 [32m+++++[m
+ .../industria/dtf-e-prensas-termicas.html          |  263 [32m+++[m
+ .../industria/encadernacao-e-argolagem.html        |  262 [32m+++[m
+ .../industria/equipamentos-de-serigrafia.html      |  271 [32m++++[m
+ .../industria/historia-dos-brindes.html            |  339 [32m++++[m
+ .../industria/impressoras-uv.html                  |  271 [32m++++[m
+ .../identidade-2026-10-12/industria/index.html     |  242 [32m+++[m
+ .../industria/maquinas-de-bordado.html             |  270 [32m++++[m
+ .../industria/maquinas-de-gravacao-laser.html      |  321 [32m++++[m
+ .../industria/maquinas-de-tampografia.html         |  271 [32m++++[m
+ .../industria/maquinas-e-processos.html            |  281 [32m++++[m
+ .../industria/montagem-e-acabamentos.html          |  384 [32m+++++[m
+ .../industria/producao-de-crachas.html             |  262 [32m+++[m
+ .../industria/sublimacao.html                      |  313 [32m++++[m
+ .../industria/troquelagem.html                     |  264 [32m+++[m
+ .../identidade-2026-10-12/materiais/index.html     |  388 [32m+++++[m
+ .../materiais/madeira-e-bambu.html                 |  396 [32m+++++[m
+ .../materiais/materiais-texteis.html               |  450 [32m++++++[m
+ .../identidade-2026-10-12/materiais/metais.html    |  441 [32m+++++[m
+ .../materiais/papel-e-cartao.html                  |  393 [32m+++++[m
+ .../materiais/pele-e-imitacao-de-pele.html         |  376 [32m+++++[m
+ .../identidade-2026-10-12/materiais/plasticos.html |  428 [32m+++++[m
+ .../materiais/vidro-e-ceramica.html                |  385 [32m+++++[m
+ editorial/identidade-2026-10-12/mercado/index.html |  191 [32m+++[m
+ .../identidade-2026-10-12/modelos/inicio.html      |  366 [32m+++++[m
+ editorial/identidade-2026-10-12/pesquisa.html      |  178 [32m++[m
+ .../produtos/artigos-de-escritorio.html            |  315 [32m++++[m
+ .../produtos/brindes-premium.html                  |  286 [32m++++[m
+ .../produtos/canetas-e-escrita.html                |  364 [32m+++++[m
+ .../produtos/garrafas-copos-e-canecas.html         |  381 [32m+++++[m
+ .../identidade-2026-10-12/produtos/index.html      |  631 [32m++++++++[m
+ .../produtos/sacos-e-mochilas.html                 |  408 [32m+++++[m
+ .../identidade-2026-10-12/produtos/tecnologia.html |  304 [32m++++[m
+ .../identidade-2026-10-12/produtos/texteis.html    |  349 [32m++++[m
+ .../publicos/camaras-municipais.html               |  370 [32m+++++[m
+ .../publicos/clubes-desportivos.html               |  370 [32m+++++[m
+ .../identidade-2026-10-12/publicos/empresas.html   |  377 [32m+++++[m
+ .../identidade-2026-10-12/publicos/escolas.html    |  329 [32m++++[m
+ .../identidade-2026-10-12/publicos/eventos.html    |  370 [32m+++++[m
+ .../identidade-2026-10-12/publicos/index.html      |  325 [32m++++[m
+ .../publicos/revendedores.html                     |  368 [32m+++++[m
+ .../identidade-2026-10-12/tecnicas/argolagem.html  |  427 [32m+++++[m
+ .../identidade-2026-10-12/tecnicas/bordado.html    |  788 [32m+++++++++[m
+ .../tecnicas/costura-argolagem-e-encadernacao.html |  310 [32m++++[m
+ .../tecnicas/crachas-automaticos.html              |  666 [32m++++++++[m
+ editorial/identidade-2026-10-12/tecnicas/dtf.html  |  523 [32m++++++[m
+ .../tecnicas/encadernacao.html                     |  428 [32m+++++[m
+ .../tecnicas/gravacao-a-laser.html                 |  478 [32m++++++[m
+ .../tecnicas/impressao-uv.html                     |  555 [32m+++++++[m
+ .../identidade-2026-10-12/tecnicas/index.html      |  388 [32m+++++[m
+ .../identidade-2026-10-12/tecnicas/serigrafia.html |  606 [32m+++++++[m
+ .../tecnicas/tampografia.html                      |  581 [32m+++++++[m
+ .../tecnicas/tecnica-costura-industrial.html       |  434 [32m+++++[m
+ .../tecnicas/tecnica-sublimacao.html               |  640 [32m++++++++[m
+ .../tecnicas/tecnica-troquelagem.html              |  785 [32m+++++++++[m
+ .../tecnicas/termogravura.html                     |  681 [32m++++++++[m
+ .../tecnicas/transfer-digital-com-base.html        |  479 [32m++++++[m
+ .../tecnicas/transfer-digital.html                 |  514 [32m++++++[m
+ .../tecnicas/transfer-serigrafico.html             |  563 [32m+++++++[m
+ .../identidade-2026-10-12/tecnicas/transfers.html  |  368 [32m+++++[m
+ .../tendencias/calculadora-lcd-mo2845.html         |  342 [32m++++[m
+ .../tendencias/carregador-trigo-3-em-1.html        |  339 [32m++++[m
+ .../garrafas-reutilizaveis-como-brinde.html        |  264 [32m+++[m
+ .../identidade-2026-10-12/tendencias/index.html    |  340 [32m++++[m
+ .../tendencias/kits-boas-vindas-equipas.html       |  316 [32m++++[m
+ .../tendencias/lanterna-magnetica-mo2932.html      |  340 [32m++++[m
+ .../sacos-personalizados-para-eventos.html         |  281 [32m++++[m
+ .../tendencias/smart-collection-pf-concept.html    |  334 [32m++++[m
+ editorial/integracao-produtos.md                   |  104 [32m++[m
+ editorial/preparar_imagens_guias.py                |   40 [32m+[m
+ editorial/preparar_imagens_produtos.py             |   47 [32m+[m
+ editorial/produtos-fotografias.md                  |  106 [32m++[m
+ editorial/produtos-imagens.json                    |  223 [32m+++[m
+ gerar.py                                           |  166 [32m+[m[31m-[m
+ guias.js                                           |   12 [32m+[m
+ guias/como-avaliar-uma-maquete.html                |  365 [32m++[m[31m---[m
+ guias/como-escolher-a-tecnica.html                 |  635 [32m+++[m[31m-----[m
+ guias/como-escolher-brindes-para-um-evento.html    |  356 [32m++[m[31m--[m
+ guias/como-escolher-o-material.html                |  487 [32m++[m[31m----[m
+ guias/como-preparar-um-logotipo.html               |  446 [32m++[m[31m---[m
+ guias/index.html                                   |  415 [32m+++[m[31m--[m
+ guias/pantone-cmyk-e-cor-final.html                |  316 [32m++[m[31m--[m
+ guias/problemas-comuns-na-personalizacao.html      |  431 [32m++[m[31m---[m
+ index.html                                         |  158 [32m+[m[31m-[m
+ industria/costura-industrial.html                  |   81 [32m+[m[31m-[m
+ industria/da-ideia-a-entrega.html                  |   49 [32m+[m[31m-[m
+ industria/dtf-e-prensas-termicas.html              |   29 [32m+[m[31m-[m
+ industria/encadernacao-e-argolagem.html            |   29 [32m+[m[31m-[m
+ industria/equipamentos-de-serigrafia.html          |   39 [32m+[m[31m-[m
+ industria/historia-dos-brindes.html                |   23 [32m+[m[31m-[m
+ industria/impressoras-uv.html                      |   39 [32m+[m[31m-[m
+ industria/index.html                               |   45 [32m+[m[31m-[m
+ industria/maquinas-de-bordado.html                 |   39 [32m+[m[31m-[m
+ industria/maquinas-de-gravacao-laser.html          |   92 [32m+[m[31m-[m
+ industria/maquinas-de-tampografia.html             |   39 [32m+[m[31m-[m
+ industria/maquinas-e-proc

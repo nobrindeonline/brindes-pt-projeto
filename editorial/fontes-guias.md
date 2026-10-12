@@ -1,42 +1,70 @@
-# Guias práticos — fontes e validação
+# Fontes dos Guias
 
-Revisão: 25/09/2026. Versão local, sem publicação na Internet.
+Revisão efetiva do conteúdo: 2026-10-12.
 
-## Fontes e âmbito
+Registo gerado a partir de `conteudos/guias.py`. As páginas públicas mostram
+a bibliografia e as datas documentais, sem os registos internos de execução.
 
-- Catálogo `General Catalogue 2026 - Iberia Prices.pdf`: páginas PDF 198 (impressa 196), 242 (240), 360 (358), 414 (412), 610 (608). Conferência visual das cinco páginas; factos e fotografias reutilizados de `conteudos/recursos.py`. Relação por artigo em `fontes-catalogo.md`.
-- [Adobe — Raster e vetor](https://www.adobe.com/creativecloud/file-types/image/comparison/raster-vs-vector.html): distinção entre píxeis e formas vetoriais, para o guia de logótipo. Não impõe formatos aceites pela Nobrinde.
-- [Adobe — Cores diretas e de processo](https://helpx.adobe.com/in/creative-cloud/apps/colors/spot-and-process-colors.html): princípios de cor direta e CMYK e limites de reprodução. Não garante correspondência sobre brindes.
-- [ScreenPrinting.com — Impressão de t-shirts](https://help.screenprinting.com/en-US/how-to-screen-print-t-shirts-114141): registo de telas e verificação da cura em serigrafia têxtil, para prevenção de problemas. Não extrapolado para todos os suportes.
-- Guias técnicos locais de tampografia, serigrafia, UV, laser e bordado, com as suas fontes identificadas: midocean, Inkcups, Marabu, Roland DG, Trotec e Madeira. Ligações de contexto, sem transformar especificações de fabricantes em capacidades da Nobrinde.
+## adobevetor
 
-Escolha de evento, organização da aprovação, listas de confirmação e comparações de utilização são propostas editoriais. Não são procedimentos internos confirmados. Os esquemas HTML/CSS são originais; o esquema CMYK não é prova de cor. Não se acrescentaram imagens de máquinas nem imagens técnicas provisórias aos guias.
+- Título: Understand raster and vector files
+- Entidade: Adobe
+- URL: https://helpx.adobe.com/photoshop/desktop/create-open-import-images/import-files/use-raster-and-vector-files.html
+- Consulta: 2026-10-12
+- Âmbito: Vetor, raster e conteúdo misto em PDF; sem requisitos universais de resolução para personalização.
 
-## Confirmar com a Nobrinde
+## adobecor
 
-- Formatos de ficheiro aceites, preparação de letras/imagens e responsabilidade pela adaptação da arte para cada processo.
-- Área de aplicação, pormenor viável, tinta, preparação e compatibilidade para a referência e variante escolhidas.
-- Processo de aprovação de maquetes e amostras, identificação de versões e responsáveis.
-- Critérios de aceitação de cor, posição e acabamento; ensaios de aderência, lavagem ou desgaste conforme o uso.
-- Disponibilidade, quantidades, calendário, embalagem e entrega para cada pedido. Nenhuma condição comercial foi presumida.
-- Autoria e licença das fotografias do catálogo antes de futura publicação. A origem está documentada; a autorização não é inferida.
+- Título: About spot and process colors
+- Entidade: Adobe
+- URL: https://helpx.adobe.com/in/creative-cloud/apps/colors/spot-and-process-colors.html
+- Consulta: 2026-10-12
+- Âmbito: Cores diretas, CMYK, gamas e influência do suporte; não promete equivalência entre processos.
 
-## Manutenção e verificação
+## guiaprova
 
-Conteúdo: `conteudos/guias.py`, complemento do guia original em `conteudos/catalogo.py`.
-Geração: `python gerar.py`; fontes: `python editorial/gerar_fontes_catalogo.py`.
-As primeiras sete secções e as âncoras do guia de técnica foram conservadas.
-As âncoras `escolher`, `cor` e `qualidade` da entrada continuam disponíveis.
+- Título: Proofing colors
+- Entidade: Adobe
+- URL: https://helpx.adobe.com/photoshop/using/proofing-colors.html
+- Consulta: 2026-10-12
+- Âmbito: Prova de ecrã e condições de visualização; não estabelece comportamento físico de uma personalização.
 
-A ferramenta de navegador não disponibilizou aplicações ou browsers nesta sessão.
-Foi revista a estrutura responsiva (cartões em coluna até 750 px, esquemas em
-coluna até 590 px, imagens proporcionais e índice móvel), mas a inspeção visual
-real a 360, 390, 768 e 1440 px continua pendente. Não confundir verificações
-estáticas com aprovação visual em telemóvel.
+## guiasuperficie
 
-Resultados: `verificar.py` aprovou 54 páginas e 1842 ligações/recursos;
-`testes/verificar_imagens.py` aprovou 110 utilizações de 24 imagens;
-os quatro testes JavaScript de pesquisa passaram. Conferência adicional:
-sete cartões com artigos existentes, cabeçalho/rodapé partilhados, secções de
-erros, confirmação e fontes em todos os guias e preservação das sete âncoras
-originais do guia de técnica. Registo do catálogo e plano editorial regenerados.
+- Título: Features of Inks — teste no objeto real
+- Entidade: Roland DG
+- URL: https://downloadcenter.rolanddg.com/contents/manuals/BD-8_USE_EN/fxw1677454678109.html
+- Consulta: 2026-10-12
+- Âmbito: Tratamentos de superfície e avaliação de aderência no sistema documentado; não generalizar a outros equipamentos ou tintas.
+
+## guiabordado
+
+- Título: FAQ — preparação e problemas de bordado
+- Entidade: Madeira
+- URL: https://www.madeira.com/en-in/service/support/faq
+- Consulta: 2026-10-12
+- Âmbito: Desenho, estabilização, fixação e fatores de franzido; sem diagnóstico automático de uma peça.
+
+## guiaserigrafia
+
+- Título: A Guide to Screen Printing T-Shirts
+- Entidade: ScreenPrinting.com
+- URL: https://www.screenprinting.com/blogs/news/a-how-to-for-screen-printing-t-shirts
+- Consulta: 2026-10-12
+- Âmbito: Registo e cura em serigrafia têxtil; as verificações descritas não são universais para outros suportes.
+
+## guiaevento
+
+- Título: Put crowd controls in place
+- Entidade: Health and Safety Executive
+- URL: https://www.hse.gov.uk/event-safety/crowd-management-controls.htm
+- Consulta: 2026-10-12
+- Âmbito: Chegada, circulação e saída de participantes; a seleção e distribuição de brindes são recomendações editoriais, não um plano de segurança do evento.
+
+## guiatampao
+
+- Título: Pad Printing 101
+- Entidade: Inkcups
+- URL: https://www.inkcups.com/pad-printing-guide/
+- Consulta: 2026-10-12
+- Âmbito: Mecanismo de transferência por tampão e papel da geometria; não confirma compatibilidade de um artigo.

@@ -1,0 +1,79 @@
+[
+  {
+    "guia": "como-escolher-a-tecnica",
+    "uso": "cartao",
+    "original": "assets/guias/ComoEscolheraTecnica/images.jpg",
+    "publico": "assets/guias/visuais/tecnica-cartao.jpg",
+    "sha256": "a78310633d15bd1787c9f16f594be402c6930507bcda7262fef416446bb00b52",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12."
+  },
+  {
+    "guia": "como-escolher-brindes-para-um-evento",
+    "uso": "cartao",
+    "original": "assets/guias/ComoEscolherBrindesEvento/brindes-para-feiras.jpg",
+    "publico": "assets/guias/visuais/evento-cartao.jpg",
+    "sha256": "6aaeab5a055e94bac884c9b1331e492c06a2bdd824def75148c2bd8db4dcfa23",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12."
+  },
+  {
+    "guia": "como-escolher-o-material",
+    "uso": "cartao",
+    "original": "assets/guias/ComoEscolheroMaterialdeUmBrinde/images.jpg",
+    "publico": "assets/guias/visuais/material-cartao.jpg",
+    "sha256": "f4939d9885962f663cb102b8927577550abbd124f0ee9bc976cc26ef7e450af2",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12."
+  },
+  {
+    "guia": "como-avaliar-uma-maquete",
+    "uso": "cartao",
+    "original": "assets/guias/Como avaliarumamaqueteantesdaprodução/melhores-empresas-brindes-em-portugal.jpg",
+    "publico": "assets/guias/visuais/maquete-cartao.jpg",
+    "sha256": "d797eb6e4b71c21be5371872be7094d94dcb90a413aad17ba9efe7235d2f3272",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12."
+  },
+  {
+    "guia": "como-avaliar-uma-maquete",
+    "uso": "artigo",
+    "original": "assets/guias/Como avaliarumamaqueteantesdaprodução/images.jpg",
+    "publico": "assets/guias/visuais/maquete-composicao.jpg",
+    "sha256": "f2ed4807f7852f58b6ab1eadc4472a4d9f9a382a45620fcc0b93959630fd2863",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12."
+  },
+  {
+    "guia": "pantone-cmyk-e-cor-final",
+    "uso": "cartao",
+    "original": "assets/guias/PantoneCMYKeacorfinaldobrinde/gp6102b-pantone-graphics-color-bridge-coated-uncoated-guides-product-2-1_2-sk5dvkob7f.webp",
+    "publico": "assets/guias/visuais/cor-cartao.webp",
+    "sha256": "e336cd1cd9df2e26cbf74d7c036af6ab5a39fbcb4829e9345956f9be25a3dd98",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12."
+  },
+  {
+    "guia": "pantone-cmyk-e-cor-final",
+    "uso": "artigo",
+    "original": "assets/guias/PantoneCMYKeacorfinaldobrinde/pantone-brindes-promocionais-1024x569.jpg",
+    "publico": "assets/guias/visuais/cor-suporte.jpg",
+    "sha256": "d8cc582d52ad481d30c490c8893e9df0b5701a40286c87095c8edd2a847ff2c4",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12."
+  }
+]

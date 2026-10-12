@@ -1,11 +1,18 @@
 """Gera HTML e pesquisa; formata as páginas com o Prettier local (npm ci)."""
 from pathlib import Path
-from urllib.parse import quote
-from html import escape
+from urllib.parse import quote, unquote, urlsplit
+from html import escape, unescape
 import json
 import re
 import shutil
 import subprocess
+import argparse
+import importlib.util
+import sys
+from neutralidade import pagina_publica, texto_publico, corrigir_ligacoes
+from conteudos.produtos import PRODUTOS, textos_publicos
+from render_produtos import POR_ID as FAMILIAS_PRODUTOS, render_guia, render_entrada, dados_publicos
+from conteudos.produtos_imagens import CREDITOS as CREDITOS_PRODUTOS
 from conteudos.catalogo import ARTIGOS, SECCOES, FONTES, DATA_REVISAO
 from conteudos.recursos import FOTOS_TECNICAS, ARTIGO_PRODUTOS, GRUPO_PRODUTOS, POR_ID
 from conteudos.apresentacao_recursos import tecnica, exemplos, creditos
@@ -18,6 +25,8 @@ from conteudos.tampografia import PASSOS as PASSOS_TAMPOGRAFIA, IMAGENS as IMAGE
 from conteudos.serigrafia import PASSOS as PASSOS_SERIGRAFIA
 from conteudos.impressao_uv import PASSOS as PASSOS_UV, IMAGENS as IMAGENS_UV
 from conteudos.guias import GRUPOS_GUIAS
+from render_guias import GUIAS_POR_ID, entrada_guias, artigo_guia, texto_guia, dados_guias
+from conteudos.guias_imagens import CREDITOS_GUIAS
 from conteudos.materiais import MATERIAIS
 from conteudos.bordado import IMAGENS_BORDADO
 from conteudos.troquelagem import IMAGENS_TROQUELAGEM, OPERACOES as OPERACOES_TROQUELAGEM, PASSOS as PASSOS_TROQUELAGEM, FAQ as FAQ_TROQUELAGEM
@@ -50,7 +59,49 @@ GROUP_LINKS = {
  ('publicos','eventos'):['serigrafia','canetas-e-escrita'],
 }
 def url(a): return f"{a['sec']}/{a['id']}.html"
+
+def corrigir_imagens_removidas(documento, path):
+    """Retira só referências a imagens locais removidas, sem alterar os textos."""
+    parent = (ROOT/path).parent
+    def ausente(src):
+        parsed = urlsplit(unescape(src))
+        if parsed.scheme or parsed.netloc: return False
+        target = (parent/unquote(parsed.path)).resolve()
+        return (target.is_relative_to(ROOT/'assets/produtos') and
+                target.suffix.lower() in ('.jpg','.jpeg','.png','.webp','.gif','.avif','.svg') and
+                not target.is_file())
+    def limpar_figura(m):
+        sources = re.findall(r'<img\b[^>]*src="([^"]+)"', m.group(0), re.S)
+        return '' if sources and all(ausente(src) for src in sources) else m.group(0)
+    documento = re.sub(r'<figure\b[^>]*>.*?</figure>', limpar_figura, documento, flags=re.S)
+    documento = re.sub(r'<img\b[^>]*src="([^"]+)"[^>]*>',
+        lambda m: '' if ausente(m.group(1)) else m.group(0), documento, flags=re.S)
+    documento = re.sub(r'<a\b[^>]*href="([^"]+)"[^>]*>.*?</a>',
+        lambda m: '' if ausente(m.group(1)) else m.group(0), documento, flags=re.S)
+    return documento
+
 def write(path, text):
+    if str(path).endswith('.html'):
+        text = pagina_publica(corrigir_imagens_removidas(text, path))
+    elif str(path) == 'assets/pesquisa-dados.js':
+        entries = json.loads(text.split('=', 1)[1].strip().removesuffix(';'))
+        for entry in entries:
+            guide_id = entry['url'].removeprefix('guias/').removesuffix('.html')
+            if entry['url'].startswith('guias/') and guide_id in GUIAS_POR_ID:
+                entry['text'] = texto_guia(GUIAS_POR_ID[guide_id])
+                continue
+            product_id = entry['url'].removeprefix('produtos/').removesuffix('.html')
+            if entry['url'].startswith('produtos/') and product_id in FAMILIAS_PRODUTOS:
+                entry['text'] = ' '.join(textos_publicos(FAMILIAS_PRODUTOS[product_id]))
+                continue
+            page = ROOT/entry['url']
+            if page.is_file():
+                main = re.search(r'<main\b[^>]*>(.*?)</main>', page.read_text(encoding='utf-8'), re.S)
+                if main:
+                    entry['text'] = re.sub(r'\s+', ' ', unescape(re.sub(r'<[^>]+>', ' ', main[1]))).strip()
+            for key, value in entry.items():
+                if isinstance(value, str): entry[key] = texto_publico(value)
+        text = 'window.BRINDES_SEARCH = ' + json.dumps(entries, ensure_ascii=False).replace('<', '\\u003c') + ';\n'
     target=ROOT/path
     target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(text,encoding='utf-8')
@@ -64,7 +115,7 @@ def header(prefix,active=''):
         nav+=f'<a href="{prefix}{s["id"]}/index.html"{current}>{s["curto"]}</a>'
     return f'''<a class="skip" href="#conteudo">Saltar para o conteúdo</a><div class="top"></div><header class="header"><div class="wrap header-inner"><a href="{prefix}index.html" class="brand" aria-label="brindes.pt — início">brindes<span>.pt</span></a><nav id="nav" class="nav" aria-label="Navegação principal">{nav}<a href="{prefix}pesquisa.html" class="nav-search">Pesquisar</a></nav><button class="hamb" aria-label="Abrir menu" id="menu-toggle" aria-expanded="false" aria-controls="nav">☰</button></div></header>'''
 def footer(prefix):
-    return f'<footer class="footer"><div class="wrap foot-inner"><div class="footer-library"><a href="{prefix}index.html" class="nobrinde-logo" aria-label="Nobrinde — página inicial do brindes.pt"><img src="{prefix}assets/marca/logo-nobrinde.jpg" alt="Nobrinde" width="200" height="200" loading="lazy" decoding="async"></a><p>Uma biblioteca da Nobrinde sobre brindes personalizados. Informação para compreender, comparar e escolher.</p></div><nav class="footer-links" aria-label="Informação do site"><a href="{prefix}creditos-imagens.html">Créditos de imagens</a><a href="https://nobrinde.immera.io/">Conhecer a Nobrinde ↗</a></nav></div></footer>'
+    return f'<footer class="footer"><div class="wrap foot-inner"><div class="footer-library"><p>brindes.pt — Biblioteca informativa independente. Informação para compreender, comparar e escolher.</p></div><nav class="footer-links" aria-label="Informação do site"><a href="{prefix}creditos-imagens.html">Créditos de imagens</a></nav></div></footer>'
 def search_form(prefix):
     return f'<form class="search" action="{prefix}pesquisa.html" method="get" role="search"><label class="sr-only" for="q">Pesquisar na biblioteca</label><input id="q" name="q" type="search" maxlength="160" placeholder="Técnica, produto ou dúvida…"><button type="submit">Pesquisar</button></form>'
 def shell(title,description,content,prefix='',active='',extra=''):
@@ -72,6 +123,8 @@ def shell(title,description,content,prefix='',active='',extra=''):
 def card(a,prefix=''):
     return f'<a class="topic content-card" href="{prefix}{url(a)}"><span class="eyebrow">{SECS[a["sec"]]["curto"]}</span><h3>{a["titulo"]}</h3><p>{a["resumo"]}</p><span class="arrow" aria-hidden="true">↗</span></a>'
 def idea_media(a,caption=True):
+    if not (ROOT/'assets/produtos/manifesto.json').is_file():
+        return ''
     sizes={p['id']:p for p in json.loads((ROOT/'assets/produtos/manifesto.json').read_text(encoding='utf-8'))}
     images=''
     for id in a['imagens']:
@@ -139,9 +192,11 @@ def public_listing(s):
     write('publicos/index.html',shell('Para quem',s['resumo'],body,'../','publicos'))
 
 def public_article(a):
-    sizes={p['id']:p for p in json.loads((ROOT/'assets/produtos/manifesto.json').read_text(encoding='utf-8'))}
+    manifest = ROOT/'assets/produtos/manifesto.json'
+    sizes={p['id']:p for p in json.loads(manifest.read_text(encoding='utf-8'))} if manifest.is_file() else {}
     choices=''
     for id,why in a['selecoes']:
+        if id not in sizes: continue
         p=POR_ID[id];size=sizes[id];category=PAGINAS_PRODUTOS[p['categoria']]
         choices+=f'''<article class="product-example audience-choice" id="produto-{id}"><figure><div class="product-photo-frame"><img src="../assets/produtos/{p['ficheiro']}" alt="{escape(p['alt'])}" width="{size['width']}" height="{size['height']}" loading="lazy" decoding="async"></div><figcaption>Fotografia do catálogo · Ref. {p['ref']}</figcaption></figure><div class="product-example-copy"><h3>{p['nome']} <span>Referência {p['ref']}</span></h3><p class="choice-reason">{escape(why)}</p><details><summary>Características indicadas no catálogo</summary><ul>{''.join('<li>'+escape(f)+'</li>' for f in p['factos'])}</ul></details><p class="catalogue-source"><a href="../creditos-imagens.html#catalogo-{id}">Fonte: PDF p. {p['pdf']} · página impressa {p['impressa']}</a></p><a class="choice-category" href="../produtos/{category}.html">Consultar o guia: {BY_ID[category]['titulo']} →</a></div></article>'''
     methods=''.join(link('../'+url(BY_ID[id]),BY_ID[id]['titulo']) for id in a['metodos'])
@@ -150,40 +205,18 @@ def public_article(a):
     write(url(a),shell(a['titulo'],a['resumo'],body,'../','publicos'))
 
 def guide_listing(s):
-    intro='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / Guias</nav><div class="page-intro"><span class="eyebrow">Da dúvida à decisão</span><h1>Guias práticos</h1><p>Sete guias para escolher o brinde, preparar a arte e aprovar o resultado com mais informação.</p></div>'
-    intro+='<nav class="context-links" aria-label="Temas dos guias">'+''.join(link('#'+id,t) for id,t,_,_ in GRUPOS_GUIAS)+'</nav>'
-    for id,title,desc,theme in GRUPOS_GUIAS:
-        cards=''
-        for a in ARTIGOS:
-            if a['sec']=='guias' and a.get('tema')==theme:
-                cards+=f'<article class="topic guide-card"><span class="eyebrow">Guia prático</span><h3>{escape(a["titulo"])}</h3><p>{escape(a["resumo"])}</p><a class="link" href="{a["id"]}.html" aria-label="Ler guia: {escape(a["titulo"],quote=True)}">Ler guia <span aria-hidden="true">→</span></a></article>'
-        intro+=f'<section id="{id}" class="guide-group"><div class="section-head"><div><h2>{title}</h2><p class="catalogue-intro">{desc}</p></div></div><div class="guide-grid">{cards}</div></section>'
-    write('guias/index.html',shell('Guias práticos',s['resumo'],intro,'../','guias'))
+    write('guias/index.html', entrada_guias(shell, link))
 
 def guide_article(a):
-    toc=''.join(link('#parte-'+str(n),t) for n,(t,_) in enumerate(a['seccoes']))
-    steps='<ol>'+''.join('<li><strong>'+escape(t)+'</strong> : <span>'+escape(p)+'</span></li>' for t,p in a['esquema_guia'])+'</ol>'
-    caption='<figcaption>Esquema original de leitura: três pontos para orientar a decisão.</figcaption>'
-    diagram='<figure class="guide-diagram">'+(caption+steps if a['id']=='como-escolher-a-tecnica' else steps+caption)+'</figure>'
-    body=diagram+''.join(f'<section id="parte-{n}"><h2>{escape(t)}</h2><p>{prose(p)}</p></section>' for n,(t,p) in enumerate(a['seccoes']))
-    if a['id']=='pantone-cmyk-e-cor-final':
-        body+='<figure class="guide-color"><div aria-hidden="true"><span>C</span><span>M</span><span>Y</span><span>K</span></div><figcaption>Ciano, magenta, amarelo e preto: as quatro componentes CMYK. Este esquema de ecrã não é uma prova de cor nem uma conversão Pantone.</figcaption></figure>'
-    if a.get('produtos_guia'):
-        body+=exemplos(a['produtos_guia'])
-        toc+=link('#exemplos-catalogo','Exemplos do catálogo')
-    body+='<section id="problemas"><h2>Erros frequentes e como os evitar</h2><div class="troubleshooting">'+''.join('<div><h3>'+escape(t)+'</h3><p>'+prose(p)+'</p></div>' for t,p in a['problemas'])+'</div></section>'
-    body+='<section id="confirmar" class="note"><h2>Antes de avançar</h2><ul class="guide-checklist">'+''.join('<li>'+escape(p)+'</li>' for p in a['confirmar'])+'</ul></section>'
-    sources=''.join(f'<li id="fonte-{k}">'+link(FONTES[k][1],FONTES[k][0])+'</li>' for k in a['fontes'])
-    sources+=''.join(f'<li>'+link('../creditos-imagens.html#catalogo-'+id,POR_ID[id]['nome']+' '+POR_ID[id]['ref'])+f' — PDF p. {POR_ID[id]["pdf"]}; página impressa {POR_ID[id]["impressa"]}.</li>' for id in a.get('produtos_guia',[]))
-    sources+=''.join('<li>'+link('../'+url(BY_ID[id]),BY_ID[id]['titulo']+' — guia técnico e respetivas fontes')+'</li>' for id in a['relacionados'] if BY_ID[id]['sec']=='tecnicas')
-    body+='<section id="fontes"><h2>Fontes e âmbito</h2><p>Critérios e listas de verificação são propostas editoriais. As características dos exemplos vêm do General Catalogue 2026; não confirmam disponibilidade, compatibilidade ou capacidades da Nobrinde. As fontes técnicas explicam princípios e configurações próprias, sem estabelecer requisitos universais para este trabalho.</p><ul class="sources">'+sources+'</ul></section><a class="back-to-ideas" href="index.html">← Voltar aos guias práticos</a>'
-    toc+=link('#problemas','Erros frequentes')+link('#confirmar','Antes de avançar')+link('#fontes','Fontes e âmbito')
-    related=''.join(card(BY_ID[id],'../') for id in a['relacionados'])
-    content=f'<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Guias</a> / <span>{escape(a["titulo"])}</span></nav><div class="page-intro"><span class="eyebrow">{a["tema"]}</span><h1>{escape(a["titulo"])}</h1><p>{escape(a["resumo"])}</p><div class="review">Revisão editorial: <time datetime="2026-09-25">25 de setembro de 2026</time> · Guia permanente</div></div><div class="reading-layout"><aside class="contents"><strong>Neste guia</strong><nav aria-label="Índice do artigo">{toc}</nav></aside><article class="reading">{body}</article></div><section><h2>Continue a explorar</h2><div class="context-links"><a href="../materiais/index.html">Conhecer os materiais</a><a href="../produtos/index.html">Conhecer os produtos</a></div><div class="article-grid">{related}</div></section>'
-    write(url(a),shell(a['titulo'],a['resumo'],content,'../','guias'))
+    write(url(a), artigo_guia(GUIAS_POR_ID[a['id']], BY_ID, shell, link))
 
 def material_media(a, caption=True):
+    if not caption and a.get('imagem_cartao'):
+        file, width, height, description = a['imagem_cartao']
+        return f'<figure class="idea-media material-media"><div class="idea-images"><img src="../{quote(file)}" alt="{escape(description, quote=True)}" width="{width}" height="{height}" loading="lazy" decoding="async"></div></figure>'
     if not a.get('imagem'):
+        return ''
+    if not (ROOT/'assets/produtos/manifesto.json').is_file():
         return ''
     product_id, description = a['imagem']
     p = POR_ID[product_id]
@@ -229,6 +262,9 @@ def montagem_hub(a):
     write(url(a),shell(a['titulo'],a['resumo'],body,'../','tecnicas'))
 
 def page_article(a):
+    if a['sec']=='produtos':
+        write(url(a), render_guia(FAMILIAS_PRODUTOS[a['id']], BY_ID, shell, link, card))
+        return
     if a['id']==HUB_ID:
         montagem_hub(a)
         return
@@ -238,7 +274,7 @@ def page_article(a):
     if a['sec']=='materiais':
         material_article(a)
         return
-    if a['sec']=='guias' and a.get('esquema_guia'):
+    if a['sec']=='guias':
         guide_article(a)
         return
     if a['tipo']=='area-industria':
@@ -435,6 +471,9 @@ def industry_listing(s):
     write('industria/index.html',shell('Indústria',s['resumo'],intro+'<div class="industry-areas">'+cards+'</div>','../','industria'))
 
 def page_section(s):
+    if s['id']=='produtos':
+        write('produtos/index.html', render_entrada(shell, link))
+        return
     if s['id']=='materiais':
         material_listing(s)
         return
@@ -450,7 +489,8 @@ def page_section(s):
     if s['id']=='tendencias':
         idea_listing(s)
         return
-    available=[a for a in ARTIGOS if a['sec']==s['id'] and a['id'] not in TRANSFER_IDS]
+    nested_ids = set(TRANSFER_IDS) | {a['id'] for a in MONTAGEM[1:]}
+    available=[a for a in ARTIGOS if a['sec']==s['id'] and a['id'] not in nested_ids]
     cards='<section class="available"><h2>Guias disponíveis</h2><div class="article-grid">'+''.join(card(a,'../') for a in available)+'</div></section>' if available else ''
     groups=''
     published={a['titulo']:a for a in available}
@@ -475,6 +515,13 @@ def search_page():
     entries += [dict(title=s['titulo'],category='Secção',url=s['id']+'/index.html',summary=s['resumo'],text=' '.join(' '.join(g[1:]) for g in s['grupos'])) for s in SECCOES]
     for entry in entries:
         article_id=entry['url'].split('/')[-1].removesuffix('.html')
+        if entry['url'].startswith('guias/') and article_id in GUIAS_POR_ID:
+            entry['text']=texto_guia(GUIAS_POR_ID[article_id])
+            continue
+        if entry['url'].startswith('produtos/'):
+            if article_id in FAMILIAS_PRODUTOS:
+                entry['text']=' '.join(textos_publicos(FAMILIAS_PRODUTOS[article_id]))
+            continue
         guide=BY_ID.get(article_id,{})
         if article_id=='crachas-automaticos':
             entry['text']+=' '+' '.join(t+' '+p for t,p in COMPONENTES_CRACHAS+PASSOS_CRACHAS+FAQ_CRACHAS)
@@ -497,14 +544,51 @@ def search_page():
     content='<nav class="crumb" aria-label="Percurso">'+link('index.html','Início')+' / Pesquisa</nav><div class="page-intro"><span class="eyebrow">Encontre a sua resposta</span><h1>Pesquisar na biblioteca</h1><p>Pesquise por técnica, produto, material ou dúvida.</p>'+search_form('')+'</div><p id="search-status" role="status" aria-live="polite"></p><div id="search-results" class="article-grid"></div><noscript><p>Ative JavaScript para pesquisar. Pode também navegar pelas secções abaixo.</p></noscript><section><h2>Explorar por assunto</h2><div class="context-links">'+''.join(link(s['id']+'/index.html',s['titulo']) for s in SECCOES)+'</div></section>'
     write('pesquisa.html',shell('Pesquisa','Pesquise os artigos e secções da biblioteca brindes.pt.',content,extra='<script src="assets/pesquisa-dados.js" defer></script><script src="pesquisa.js" defer></script>'))
 if __name__=='__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--secao', choices=['produtos','guias'], help='Regenera a secção indicada e os índices, preservando o conteúdo das outras páginas.')
+    args = parser.parse_args()
     node = shutil.which('node')
     prettier = ROOT/'node_modules/prettier/bin/prettier.cjs'
     if not node or not prettier.is_file():
         raise SystemExit('A geração requer Node.js e Prettier. Execute npm ci na pasta do projeto e volte a executar python gerar.py.')
-    for section in SECCOES: page_section(section)
-    for article in ARTIGOS: page_article(article)
-    homepage()
+    image_python = sys.executable if importlib.util.find_spec('PIL') else str(ROOT/'.venv/Scripts/python.exe')
+    if not Path(image_python).is_file():
+        raise SystemExit('A preparação das fotografias requer o ambiente Python existente com Pillow.')
+    if not args.secao or args.secao=='produtos':
+        subprocess.run([image_python, str(ROOT/'editorial/preparar_imagens_produtos.py')], cwd=ROOT, check=True)
+    if not args.secao or args.secao=='guias':
+        subprocess.run([image_python, str(ROOT/'editorial/preparar_imagens_guias.py')], cwd=ROOT, check=True)
+    for section in SECCOES:
+        if not args.secao or section['id']==args.secao: page_section(section)
+    for article in ARTIGOS:
+        if not args.secao or article['sec']==args.secao: page_article(article)
+    if not args.secao: homepage()
+    if args.secao:
+        # A correção de identidade é partilhada; o texto alheio à secção
+        # permanece como estava, incluindo alterações locais do utilizador.
+        paths = ['index.html', 'pesquisa.html', 'creditos-imagens.html']
+        paths += [s['id']+'/index.html' for s in SECCOES]
+        paths += [url(a) for a in ARTIGOS]
+        for path in paths:
+            if path.startswith(args.secao+'/'): continue
+            target = ROOT/path
+            previous = target.read_text(encoding='utf-8')
+            repaired = corrigir_imagens_removidas(previous, path)
+            neutral = pagina_publica(repaired) if 'nobrinde' in repaired.lower() else corrigir_ligacoes(repaired)
+            if path == 'creditos-imagens.html':
+                section_id, credits = ('produtos-ilustrativos', CREDITOS_PRODUTOS) if args.secao=='produtos' else ('guias-ilustrativos', CREDITOS_GUIAS)
+                neutral = re.sub(r'<section\b[^>]*id="'+section_id+r'"[^>]*>.*?</section>', '', neutral, flags=re.S)
+                neutral = neutral.replace('</main>', credits + '</main>')
+            if neutral != previous: target.write_text(neutral, encoding='utf-8')
     search_page()
-    write('creditos-imagens.html',shell('Créditos de imagens','Autores, fontes, licenças e alterações das fotografias utilizadas no brindes.pt.',creditos()))
-    subprocess.run([node, str(prettier), '--write', '**/*.html'], cwd=ROOT, check=True)
-    print(f'Geradas {len(SECCOES)+len(ARTIGOS)+3} páginas estáticas.')
+    if not args.secao or args.secao=='produtos':
+        write('assets/produtos-conteudos.json', dados_publicos(BY_ID))
+    if not args.secao or args.secao=='guias':
+        write('assets/guias-conteudos.json', dados_guias())
+    if not args.secao:
+        write('creditos-imagens.html',shell('Créditos de imagens','Autores, fontes, licenças e alterações das fotografias utilizadas no brindes.pt.',creditos() + CREDITOS_PRODUTOS + CREDITOS_GUIAS))
+    outputs = ['index.html', 'pesquisa.html', 'creditos-imagens.html']
+    outputs += [s['id']+'/index.html' for s in SECCOES]
+    outputs += [url(a) for a in ARTIGOS]
+    subprocess.run([node, str(prettier), '--write', '--log-level', 'warn', *outputs], cwd=ROOT, check=True)
+    print(f'Geradas {8 if args.secao else len(SECCOES)+len(ARTIGOS)+3} páginas; pesquisa e dados públicos atualizados.')

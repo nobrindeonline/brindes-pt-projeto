@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta
+      name="description"
+      content="Pesquise os artigos e secções da biblioteca brindes.pt."
+    />
+    <meta
+      name="robots"
+      content="noindex, nofollow"
+    />
+    <title>Pesquisa — brindes.pt</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+  </head>
+  <body>
+    <a
+      class="skip"
+      href="#conteudo"
+      >Saltar para o conteúdo</a
+    >
+    <div class="top"></div>
+    <header class="header">
+      <div class="wrap header-inner">
+        <a
+          href="index.html"
+          class="brand"
+          aria-label="brindes.pt — início"
+          >brindes<span>.pt</span></a
+        >
+        <nav
+          id="nav"
+          class="nav"
+          aria-label="Navegação principal"
+        >
+          <a href="tecnicas/index.html">Técnicas</a><a href="materiais/index.html">Materiais</a
+          ><a href="produtos/index.html">Produtos</a><a href="guias/index.html">Guias</a
+          ><a href="publicos/index.html">Para quem</a><a href="industria/index.html">Indústria</a
+          ><a href="mercado/index.html">Mercado</a><a href="tendencias/index.html">Tendências</a
+          ><a
+            href="pesquisa.html"
+            class="nav-search"
+            >Pesquisar</a
+          >
+        </nav>
+        <button
+          class="hamb"
+          aria-label="Abrir menu"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <main
+      id="conteudo"
+      class="wrap"
+      tabindex="-1"
+    >
+      <nav
+        class="crumb"
+        aria-label="Percurso"
+      >
+        <a href="index.html">Início</a> / Pesquisa
+      </nav>
+      <div class="page-intro">
+        <span class="eyebrow">Encontre a sua resposta</span>
+        <h1>Pesquisar na biblioteca</h1>
+        <p>Pesquise por técnica, produto, material ou dúvida.</p>
+        <form
+          class="search"
+          action="pesquisa.html"
+          method="get"
+          role="search"
+        >
+          <label
+            class="sr-only"
+            for="q"
+            >Pesquisar na biblioteca</label
+          ><input
+            id="q"
+            name="q"
+            type="search"
+            maxlength="160"
+            placeholder="Técnica, produto ou dúvida…"
+          /><button type="submit">Pesquisar</button>
+        </form>
+      </div>
+      <p
+        id="search-status"
+        role="status"
+        aria-live="polite"
+      ></p>
+      <div
+        id="search-results"
+        class="article-grid"
+      ></div>
+      <noscript
+        ><p>Ative JavaScript para pesquisar. Pode também navegar pelas secções abaixo.</p></noscript
+      >
+      <section>
+        <h2>Explorar por assunto</h2>
+        <div class="context-links">
+          <a href="tecnicas/index.html">Técnicas de personalização</a
+          ><a href="materiais/index.html">Materiais</a><a href="produtos/index.html">Produtos</a
+          ><a href="guias/index.html">Guias práticos e problemas</a
+          ><a href="publicos/index.html">Brindes por público e utilização</a
+          ><a href="industria/index.html">Indústria, processos e história</a
+          ><a href="mercado/index.html">Mercado e fornecedores</a
+          ><a href="tendencias/index.html">Artigos e ideias</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap foot-inner">
+        <div class="footer-library">
+          <a
+            href="index.html"
+            class="nobrinde-logo"
+            aria-label="Nobrinde — página inicial do brindes.pt"
+            ><img
+              src="assets/marca/logo-nobrinde.jpg"
+              alt="Nobrinde"
+              width="200"
+              height="200"
+              loading="lazy"
+              decoding="async"
+          /></a>
+          <p>
+            Uma biblioteca da Nobrinde sobre brindes personalizados. Informação para compreender,
+            comparar e escolher.
+          </p>
+        </div>
+        <nav
+          class="footer-links"
+          aria-label="Informação do site"
+        >
+          <a href="creditos-imagens.html">Créditos de imagens</a
+          ><a href="https://nobrinde.immera.io/">Conhecer a Nobrinde ↗</a>
+        </nav>
+      </div>
+    </footer>
+    <script
+      src="assets/pesquisa-dados.js"
+      defer
+    ></script>
+    <script
+      src="pesquisa.js"
+      defer
+    ></script>
+    <script
+      src="script.js"
+      defer
+    ></script>
+  </body>
+</html>

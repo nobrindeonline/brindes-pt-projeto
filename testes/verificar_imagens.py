@@ -9,8 +9,7 @@ sys.path.insert(0,str(ROOT))
 from conteudos.catalogo import ARTIGOS,SECCOES
 from conteudos.ideias import IDEIAS
 from conteudos.novidades import NOVIDADES
-from conteudos.publicos import PUBLICOS, PAGINAS_PRODUTOS
-from conteudos.recursos import POR_ID
+from conteudos.publicos import PUBLICOS
 paths=[ROOT/'index.html',ROOT/'pesquisa.html',ROOT/'creditos-imagens.html']
 paths += [ROOT/s['id']/'index.html' for s in SECCOES]
 paths += [ROOT/a['sec']/(a['id']+'.html') for a in ARTIGOS]
@@ -22,6 +21,7 @@ count=0;unique=set()
 for path in paths:
     html=path.read_text(encoding='utf-8')
     assert '€' not in html and 'assets/assets/' not in html,path
+    assert 'logo-nobrinde' not in html.lower(),f'Identidade da entidade mantenedora: {path}'
     parser=Images();parser.feed(html)
     for img in parser.images:
         assert img.get('alt','').strip(),f'Alt em falta: {path}'
@@ -38,23 +38,17 @@ for a in IDEIAS:
     html=(ROOT/'tendencias'/(a['id']+'.html')).read_text(encoding='utf-8')
     assert 'Voltar aos artigos e ideias' in html
     assert '<time' not in html and 'Guia permanente' not in html
-    for id in a.get('produtos',a['imagens']):assert 'catalogo-'+id in html
 assert not (ROOT/'assets/assets').exists()
 public_listing=(ROOT/'publicos/index.html').read_text(encoding='utf-8')
 assert public_listing.count('class="audience-card"')==6
 for a in PUBLICOS:
     assert f'href="{a["id"]}.html"' in public_listing
     assert f'id="{a["ancora"]}"' in public_listing
-    assert 3<=len(a['selecoes'])<=5
     html=(ROOT/'publicos'/(a['id']+'.html')).read_text(encoding='utf-8')
     assert 'Voltar a Para quem' in html
-    assert html.count('class="product-example audience-choice"')==len(a['selecoes'])
-    for id,why in a['selecoes']:
-        p=POR_ID[id]
-        assert 2<=len([s for s in why.split('.') if s.strip()])<=4
-        assert p['ficheiro'] in html and 'catalogo-'+id in html
-        assert f'PDF p. {p["pdf"]}' in html
-        assert '../produtos/'+PAGINAS_PRODUTOS[p['categoria']]+'.html' in html
+    # Os exemplos comerciais foram retirados pela neutralização anterior.
+    # Não exigir referências ou especificações cuja publicação foi excluída.
+    assert 'product-example audience-choice' not in html
     for method in a['metodos']:assert '../tecnicas/'+method+'.html' in html
 print(f'OK: {count} utilizações de imagens, {len(unique)} ficheiros; créditos, grelha, artigos e regressos válidos; sem preços em HTML.')
-print('OK: seis públicos, 23 recomendações, justificações de 2 a 4 frases, fontes e guias relacionados.')
+print('OK: seis públicos, navegação relacionada e imagens sem logótipo da entidade mantenedora.')

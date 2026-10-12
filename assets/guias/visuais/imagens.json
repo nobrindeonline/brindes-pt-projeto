@@ -1,0 +1,79 @@
+{
+  "como-escolher-a-tecnica": {
+    "cartao": {
+      "url": "assets/guias/visuais/tecnica-cartao.jpg",
+      "alt": "Três t-shirts, cinzenta, escura e branca, penduradas em cabides com desenhos na frente.",
+      "width": 297,
+      "height": 170,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": []
+  },
+  "como-escolher-brindes-para-um-evento": {
+    "cartao": {
+      "url": "assets/guias/visuais/evento-cartao.jpg",
+      "alt": "Duas pessoas seguram um instrumento de escrita junto a uma mesa com cestos e cadernos.",
+      "width": 1024,
+      "height": 569,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": []
+  },
+  "como-escolher-o-material": {
+    "cartao": {
+      "url": "assets/guias/visuais/material-cartao.jpg",
+      "alt": "Conjunto de recipientes, cadernos, pastas e estojos sobre um fundo cinzento.",
+      "width": 547,
+      "height": 365,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": []
+  },
+  "como-avaliar-uma-maquete": {
+    "cartao": {
+      "url": "assets/guias/visuais/maquete-cartao.jpg",
+      "alt": "Saco, garrafa, caneca, caderno, lápis e porta-chaves dispostos sobre um fundo claro, com marcações genéricas.",
+      "width": 1410,
+      "height": 868,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/guias/visuais/maquete-composicao.jpg",
+        "alt": "Composição com recipientes, estojos, sacos e outros objetos com textos e marcas genéricas.",
+        "width": 678,
+        "height": 452,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "parte-3",
+        "legenda": "Composição ilustrativa: a representação de vários objetos não comprova materiais, funções ou resultados físicos."
+      }
+    ]
+  },
+  "pantone-cmyk-e-cor-final": {
+    "cartao": {
+      "url": "assets/guias/visuais/cor-cartao.webp",
+      "alt": "Dois leques de amostras de cor abertos sobre um fundo claro.",
+      "width": 400,
+      "height": 400,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/guias/visuais/cor-suporte.jpg",
+        "alt": "Recipiente verde sobre leques e folhas com amostras coloridas.",
+        "width": 1024,
+        "height": 569,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "parte-2",
+        "legenda": "Fotografia ilustrativa de um suporte junto a amostras. A imagem de ecrã não constitui uma referência física de cor."
+      }
+    ]
+  }
+}

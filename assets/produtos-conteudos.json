@@ -1,0 +1,1708 @@
+{
+  "schema_version": "1.0",
+  "idioma": "pt-PT",
+  "site": "brindes.pt",
+  "data_revisao": "2026-10-12",
+  "conteudos": [
+    {
+      "id": "canetas-e-escrita",
+      "slug": "canetas-e-escrita",
+      "ancora": "canetas",
+      "titulo": "Canetas e escrita",
+      "categoria": "familia",
+      "resumo": "Compare o tipo de escrita, o mecanismo, a recarga e o espaço livre no corpo antes de escolher a marca.",
+      "sinonimos": [
+        "esferográfica",
+        "esferografica",
+        "rollerball",
+        "caneta de gel",
+        "lapiseira",
+        "lápis",
+        "instrumentos de escrita"
+      ],
+      "nomes_alternativos": [
+        "esferográfica",
+        "esferografica",
+        "rollerball",
+        "caneta de gel",
+        "lapiseira",
+        "lápis",
+        "instrumentos de escrita"
+      ],
+      "tipos": [
+        {
+          "nome": "Esferográficas",
+          "descricao": "Instrumentos de ponta esférica; a Pilot descreve variantes com tinta de base oleosa. Identifique o tipo de tinta na documentação.",
+          "comparar": "Botão, rotação ou tampa; traço, pega e recarga.",
+          "contexto": "Anotações rápidas, receção e uso diário.",
+          "citacoes": [
+            {
+              "campo": "descricao",
+              "fontes": [
+                "prodball"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Rollerballs e canetas de gel",
+          "descricao": "A Pilot descreve rollerballs com tinta aquosa ou de gel. O nome do tipo não basta para deduzir o tempo de secagem.",
+          "comparar": "Tinta, traço no papel habitual, tampa e recarga.",
+          "contexto": "Escrita prolongada, apontamentos e oferta individual.",
+          "citacoes": [
+            {
+              "campo": "descricao",
+              "fontes": [
+                "prodroller"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Lápis e lapiseiras",
+          "descricao": "Compare um lápis que se afia com uma lapiseira que recebe minas; os consumíveis e a preparação para escrever diferem.",
+          "comparar": "Dureza e diâmetro da mina, avanço e borracha.",
+          "contexto": "Desenho, formação e tarefas em que apagar seja útil."
+        }
+      ],
+      "usos_contextos": [
+        "Numa distribuição ampla, teste escrita e leitura da mensagem sem depender da embalagem.",
+        "Num conjunto individual, compare instrumento, recarga e estojo; confirme o que está incluído."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Corpo e tampa",
+          "materiais": [
+            "plásticos"
+          ],
+          "confirmar": "Identificar polímero, pintura e revestimento.",
+          "guia": {
+            "id": "plasticos",
+            "titulo": "Plásticos",
+            "url": "materiais/plasticos.html"
+          }
+        },
+        {
+          "parte": "Corpo, clip e ponteira",
+          "materiais": [
+            "metais"
+          ],
+          "confirmar": "Distinguir metal de base e acabamento; verificar cada componente.",
+          "guia": {
+            "id": "metais",
+            "titulo": "Metais",
+            "url": "materiais/metais.html"
+          }
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Corpo",
+          "condicao": "Medir espaço livre, curvatura e orientação em relação ao clip."
+        },
+        {
+          "nome": "Clip ou tampa",
+          "condicao": "Confirmar dimensão, mobilidade e acesso."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "tampografia",
+          "condicoes": "A Inkcups descreve aplicações em canetas; tinta, tampão e acabamento exigem avaliação do artigo.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Tampografia",
+          "url": "tecnicas/tampografia.html",
+          "citacoes": [
+            {
+              "campo": "condicoes",
+              "fontes": [
+                "prodpad"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gravacao-a-laser",
+          "condicoes": "Avaliar superfície e efeito numa amostra; metal pintado não equivale a metal sem revestimento.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Gravação a laser",
+          "url": "tecnicas/gravacao-a-laser.html"
+        },
+        {
+          "id": "impressao-uv",
+          "condicoes": "Confirmar acesso, aderência, curvatura e legibilidade à dimensão final.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Impressão digital UV",
+          "url": "tecnicas/impressao-uv.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Teste o traço no papel habitual e observe falhas, manchas e conforto.",
+        "Acione o mecanismo e verifique se o clip interfere com a marca.",
+        "Compare a recarga compatível e a forma de substituição; cargas semelhantes não são necessariamente intercambiáveis."
+      ],
+      "limitacoes": [
+        "Não atribua comprimento de escrita, resistência da tinta ou vida útil sem documentação.",
+        "Uma maquete ampliada pode ocultar texto ilegível; reveja a marca à escala real."
+      ],
+      "cuidados": [
+        "Siga as instruções de fecho, armazenamento e substituição de consumíveis. A Pilot identifica variantes recarregáveis, não toda a família."
+      ],
+      "perguntas_antes_de_decidir": [
+        "Que papel e duração de escrita são habituais?",
+        "O mecanismo e a pega são confortáveis?",
+        "Qual é a recarga compatível?",
+        "A marca cabe na área medida?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Uma caneta metálica pode sempre ser gravada?",
+          "resposta": "Não. Metal de base, revestimento e efeito pretendido devem ser avaliados na superfície concreta."
+        },
+        {
+          "pergunta": "O diâmetro da ponta é igual à largura do traço?",
+          "resposta": "Não use os valores como equivalentes sem confirmação. Compare o traço indicado e teste no papel habitual."
+        },
+        {
+          "pergunta": "Uma caneta recarregável aceita qualquer carga?",
+          "resposta": "Não. Confirme identificação, encaixe e instruções da carga compatível."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "prodball",
+          "titulo": "Ballpoint pens",
+          "entidade": "Pilot Europe",
+          "url": "https://www.pilotpen.eu/our-products/ballpoint-pens/",
+          "data_consulta": "2026-10-12",
+          "ambito": "Variantes com tinta de base oleosa e recarga; não generalizar a todos os instrumentos."
+        },
+        {
+          "id": "prodroller",
+          "titulo": "Rollerball Pens — perguntas frequentes",
+          "entidade": "Pilot Pen Australia",
+          "url": "https://pilotpen.com.au/pens/categories/rollerball",
+          "data_consulta": "2026-10-12",
+          "ambito": "Tinta aquosa ou de gel em rollerballs; não estabelece desempenho de todas as canetas."
+        },
+        {
+          "id": "prodpad",
+          "titulo": "Pad Printing 101 — The Ultimate Guide",
+          "entidade": "Inkcups",
+          "url": "https://www.inkcups.com/pad-printing-guide/",
+          "data_consulta": "2026-10-12",
+          "ambito": "Transferência com tampão e aplicações em objetos; não confirma aplicação num artigo."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-escolher-a-tecnica",
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "id": "como-preparar-um-logotipo",
+          "titulo": "Como preparar um logótipo para personalização",
+          "url": "guias/como-preparar-um-logotipo.html"
+        },
+        {
+          "id": "artigos-de-escritorio",
+          "titulo": "Artigos de escritório",
+          "url": "produtos/artigos-de-escritorio.html"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "url": "produtos/canetas-e-escrita.html",
+      "imagens": {
+        "cartao": {
+          "url": "assets/produtos/visuais/canetas-cartao.jpg",
+          "alt": "Estojo aberto com dois instrumentos de escrita de corpo claro e detalhes prateados.",
+          "width": 300,
+          "height": 300,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/produtos/visuais/canetas-estojo.jpg",
+            "alt": "Estojo transparente comprido, com base e abertura superior.",
+            "width": 300,
+            "height": 300,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "usos"
+          }
+        ]
+      },
+      "citacoes": [
+        {
+          "campo": "cuidados",
+          "indice": 0,
+          "fontes": [
+            "prodball"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "garrafas-copos-e-canecas",
+      "slug": "garrafas-copos-e-canecas",
+      "ancora": "bebidas",
+      "titulo": "Garrafas, copos e canecas",
+      "categoria": "familia",
+      "resumo": "Distinga transporte e consumo à mesa; compare formato, abertura, tampa, limpeza e zonas de personalização.",
+      "sinonimos": [
+        "recipientes de bebida",
+        "garrafa",
+        "copo",
+        "caneca",
+        "térmico",
+        "termo",
+        "tumbler"
+      ],
+      "nomes_alternativos": [
+        "recipientes de bebida",
+        "garrafa",
+        "copo",
+        "caneca",
+        "térmico",
+        "termo",
+        "tumbler"
+      ],
+      "tipos": [
+        {
+          "nome": "Garrafas",
+          "descricao": "Compare gargalo, abertura, fecho e forma de agarrar; a presença de uma tampa não demonstra estanquidade.",
+          "comparar": "Altura, diâmetro, capacidade e acesso para limpeza.",
+          "contexto": "Deslocações, secretária e transporte de bebida."
+        },
+        {
+          "nome": "Copos com ou sem tampa",
+          "descricao": "Copo aberto, tampa com abertura e fecho para transporte respondem a necessidades diferentes.",
+          "comparar": "Bocal, palhinha se existir, base e instruções de transporte.",
+          "contexto": "Consumo à mesa ou em movimento, conforme o fecho documentado."
+        },
+        {
+          "nome": "Canecas",
+          "descricao": "A pega e o formato de consumo fazem parte da escolha; compare a posição da mensagem com ambas as mãos.",
+          "comparar": "Pega, base, peso e acesso ao interior.",
+          "contexto": "Bebidas à mesa e pausas no trabalho."
+        }
+      ],
+      "usos_contextos": [
+        "Para transporte dentro de um saco, confirme fecho e estanquidade.",
+        "Para consumo à mesa, compare conforto de pega, estabilidade e limpeza."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Corpo",
+          "materiais": [
+            "aço inoxidável",
+            "alumínio"
+          ],
+          "confirmar": "Confirmar construção, revestimento interior e uso previsto.",
+          "guia": {
+            "id": "metais",
+            "titulo": "Metais",
+            "url": "materiais/metais.html"
+          }
+        },
+        {
+          "parte": "Tampa, bocal e acessórios",
+          "materiais": [
+            "plásticos"
+          ],
+          "confirmar": "Identificar peças desmontáveis e juntas; o corpo não descreve a tampa.",
+          "guia": {
+            "id": "plasticos",
+            "titulo": "Plásticos",
+            "url": "materiais/plasticos.html"
+          }
+        },
+        {
+          "parte": "Corpo ou recipiente interior",
+          "materiais": [
+            "vidro",
+            "cerâmica"
+          ],
+          "confirmar": "Confirmar acabamento e instruções do artigo completo.",
+          "guia": {
+            "id": "vidro-e-ceramica",
+            "titulo": "Vidro e cerâmica",
+            "url": "materiais/vidro-e-ceramica.html"
+          }
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Parede exterior",
+          "condicao": "Medir altura útil, curvatura e mudanças de diâmetro; excluir zonas de contacto com a bebida."
+        },
+        {
+          "nome": "Pega ou tampa",
+          "condicao": "Avaliar cada componente sem dificultar abertura ou limpeza."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "gravacao-a-laser",
+          "condicoes": "Confirmar material, acabamento, fixação e efeito; aparência metálica não prova compatibilidade.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Gravação a laser",
+          "url": "tecnicas/gravacao-a-laser.html"
+        },
+        {
+          "id": "serigrafia",
+          "condicoes": "Confirmar geometria, área livre, tinta e lavagem prevista.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        },
+        {
+          "id": "tecnica-sublimacao",
+          "condicoes": "Exige suporte e revestimento adequados; não se presume que qualquer caneca de cerâmica aceite o processo.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Sublimação",
+          "url": "tecnicas/tecnica-sublimacao.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Compare capacidade com dimensões e peso; verifique o encaixe no local de uso.",
+        "Peça instruções sobre bebidas quentes, temperatura, fecho e transporte.",
+        "Observe desmontagem e acesso ao bocal, juntas e palhinha."
+      ],
+      "limitacoes": [
+        "“Térmico” não quantifica duração de conservação da temperatura; procure ensaio e condições do artigo.",
+        "Não atribua estanquidade, resistência a quedas ou uso em micro-ondas pelo material."
+      ],
+      "cuidados": [
+        "A Stanley recomenda consultar as instruções antes de lavar à máquina e separar componentes quando essa lavagem é permitida. Isto não confirma os cuidados de outros artigos.",
+        "Confirme também os cuidados do acabamento personalizado."
+      ],
+      "perguntas_antes_de_decidir": [
+        "Vai ser transportado ou usado à mesa?",
+        "Que bebida e temperatura estão previstas?",
+        "Como se desmonta a tampa?",
+        "Que cuidados exigem corpo e marca?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Uma tampa torna o copo estanque?",
+          "resposta": "Não. Pode haver abertura para beber; confirme estanquidade e posição permitida no transporte."
+        },
+        {
+          "pergunta": "Pode ir à máquina de lavar loiça?",
+          "resposta": "Só quando as instruções do artigo e da personalização o permitirem; confirme todas as peças."
+        },
+        {
+          "pergunta": "Parede dupla garante um resultado térmico específico?",
+          "resposta": "Não atribua horas de conservação sem documentação e condições de ensaio."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "prodwash",
+          "titulo": "How To Clean Your Stanley 1913 Products",
+          "entidade": "Stanley 1913",
+          "url": "https://ca.stanley1913.com/blogs/how-to-guides/how-to-properly-clean-your-stanley-products",
+          "data_consulta": "2026-10-12",
+          "ambito": "Cuidados dos recipientes do fabricante e consulta das instruções antes de lavar à máquina."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-escolher-o-material",
+          "titulo": "Como escolher o material de um brinde",
+          "url": "guias/como-escolher-o-material.html"
+        },
+        {
+          "id": "como-escolher-a-tecnica",
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "id": "sacos-e-mochilas",
+          "titulo": "Sacos e mochilas",
+          "url": "produtos/sacos-e-mochilas.html"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "url": "produtos/garrafas-copos-e-canecas.html",
+      "imagens": {
+        "cartao": {
+          "url": "assets/produtos/visuais/bebidas-cartao.jpg",
+          "alt": "Três canecas brancas com pegas e interiores nas cores azul, vermelho e preto.",
+          "width": 300,
+          "height": 301,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/produtos/visuais/bebidas-copos.jpg",
+            "alt": "Dois copos transparentes, de formato baixo e sem pega.",
+            "width": 300,
+            "height": 301,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "tipos"
+          },
+          {
+            "url": "assets/produtos/visuais/bebidas-pega.jpg",
+            "alt": "Recipiente cilíndrico prateado com tampa rosa e pega superior.",
+            "width": 300,
+            "height": 303,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "zonas"
+          }
+        ]
+      },
+      "citacoes": [
+        {
+          "campo": "cuidados",
+          "indice": 0,
+          "fontes": [
+            "prodwash"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "texteis",
+      "slug": "texteis",
+      "ancora": "texteis",
+      "titulo": "Têxteis",
+      "categoria": "familia",
+      "resumo": "Compare composição, estrutura, gramagem, corte, medidas e cuidados antes de definir a posição do desenho.",
+      "sinonimos": [
+        "t-shirt",
+        "tshirt",
+        "camisola",
+        "polo",
+        "sweatshirt",
+        "casaco",
+        "vestuário",
+        "roupa",
+        "tamanhos"
+      ],
+      "nomes_alternativos": [
+        "t-shirt",
+        "tshirt",
+        "camisola",
+        "polo",
+        "sweatshirt",
+        "casaco",
+        "vestuário",
+        "roupa",
+        "tamanhos"
+      ],
+      "tipos": [
+        {
+          "nome": "T-shirts e polos",
+          "descricao": "Compare corte, gola, mangas e superfície. Malha é uma construção com laçadas, não o nome de uma fibra.",
+          "comparar": "Composição, estrutura, gramagem, transparência e medidas.",
+          "contexto": "Eventos, equipas e uso diário.",
+          "citacoes": [
+            {
+              "campo": "descricao",
+              "fontes": [
+                "prodknit"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Sweatshirts e casacos",
+          "descricao": "Compare camadas, forro, punhos e fechos; uma face não descreve o conjunto.",
+          "comparar": "Espessura, ajuste com outras peças e acesso à zona da marca.",
+          "contexto": "Sobreposição e contextos com necessidades de abrigo."
+        },
+        {
+          "nome": "Bonés e acessórios",
+          "descricao": "Observe painéis, costuras e ajuste; o desenho deve caber numa zona acessível.",
+          "comparar": "Forma dos painéis, ajuste e posição das costuras.",
+          "contexto": "Identificação de equipas e uso recorrente."
+        }
+      ],
+      "usos_contextos": [
+        "Para grupos, recolha medidas e escolha o corte antes dos tamanhos; as letras não substituem a tabela da peça.",
+        "Para uso repetido, considere lavagem, conforto e manutenção da marca."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Tecido exterior",
+          "materiais": [
+            "algodão",
+            "poliéster",
+            "misturas de fibras"
+          ],
+          "confirmar": "Separar composição, estrutura e acabamento; confirmar percentagens da variante.",
+          "guia": {
+            "id": "materiais-texteis",
+            "titulo": "Têxteis",
+            "url": "materiais/materiais-texteis.html"
+          }
+        },
+        {
+          "parte": "Forro, punhos e painéis",
+          "materiais": [
+            "materiais têxteis"
+          ],
+          "confirmar": "Identificar cada parte; a composição do exterior não descreve todos os acessórios.",
+          "guia": {
+            "id": "materiais-texteis",
+            "titulo": "Têxteis",
+            "url": "materiais/materiais-texteis.html"
+          }
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Peito, costas ou manga",
+          "condicao": "Medir no tamanho escolhido; verificar bolsos, costuras e proporção nos diferentes tamanhos."
+        },
+        {
+          "nome": "Painel de boné",
+          "condicao": "Confirmar curvatura, costuras e acesso ao verso."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "serigrafia",
+          "condicoes": "Avaliar fibras, acabamento, cor, tinta e cura.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        },
+        {
+          "id": "bordado",
+          "condicoes": "A Madeira relaciona resultado com tecido, estabilização e densidade de pontos; confirmar desenho e suporte.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Bordado",
+          "url": "tecnicas/bordado.html",
+          "citacoes": [
+            {
+              "campo": "condicoes",
+              "fontes": [
+                "prodemb"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "transfers",
+          "condicoes": "Escolher a modalidade após conhecer composição, acabamento, aplicação de calor e cuidados.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Transfers",
+          "url": "tecnicas/transfers.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Gramagem é massa por área, habitualmente expressa em g/m², e difere de espessura. O âmbito do ensaio ASTM D3776 é a massa por unidade de área do tecido.",
+        "Compare peito, comprimento e manga na tabela da peça; observe o corte numa amostra.",
+        "Examine costuras e remates, e o comportamento após o cuidado previsto quando este for decisivo."
+      ],
+      "limitacoes": [
+        "Mais gramagem não prova, por si só, conforto ou durabilidade superiores.",
+        "Não deduza encolhimento, resistência da cor ou proteção contra intempéries sem documentação ou ensaio."
+      ],
+      "cuidados": [
+        "A GINETEX explica os tratamentos de lavagem, secagem, passagem a ferro e cuidado profissional indicados na etiqueta. Siga os cuidados da peça e da personalização."
+      ],
+      "perguntas_antes_de_decidir": [
+        "Que uso e lavagem estão previstos?",
+        "Qual é a composição de cada parte?",
+        "Que tabela de medidas corresponde ao corte?",
+        "A arte foi medida nos tamanhos relevantes?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Algodão e malha são a mesma coisa?",
+          "resposta": "Não. Algodão é uma fibra; malha descreve uma construção do tecido. Identifique ambos."
+        },
+        {
+          "pergunta": "Mais gramagem significa sempre melhor peça?",
+          "resposta": "Não. Compare construção, corte, conforto, acabamento e adequação ao uso."
+        },
+        {
+          "pergunta": "O mesmo desenho serve para todos os tamanhos?",
+          "resposta": "A presença visual e a área podem mudar. Reveja posição e dimensões nos tamanhos usados."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "prodknit",
+          "titulo": "Knit Basics",
+          "entidade": "CottonWorks / Cotton Incorporated",
+          "url": "https://cottonworks.com/learning-hub/knitting/knit-basics/",
+          "data_consulta": "2026-10-12",
+          "ambito": "Estrutura de malha e diferenças de construção; não comprova desempenho de uma peça."
+        },
+        {
+          "id": "prodmass",
+          "titulo": "D3776 — Standard Test Methods for Mass Per Unit Area (Weight) of Fabric",
+          "entidade": "ASTM International",
+          "url": "https://store.astm.org/d3776-07.html",
+          "data_consulta": "2026-10-12",
+          "ambito": "Título e resumo público do ensaio de massa por área; não foram usados procedimentos do texto integral."
+        },
+        {
+          "id": "prodemb",
+          "titulo": "FAQ — tecido, estabilização e bordado",
+          "entidade": "Madeira",
+          "url": "https://www.madeira.com/en-in/service/support/faq",
+          "data_consulta": "2026-10-12",
+          "ambito": "Influência do suporte, estabilizador, agulha e densidade de pontos."
+        },
+        {
+          "id": "prodcare",
+          "titulo": "Care Labelling Symbols",
+          "entidade": "GINETEX",
+          "url": "https://www.ginetex.net/userfiles/files/gin_bro_gb_rz_brochure_web.pdf",
+          "data_consulta": "2026-10-12",
+          "ambito": "Significado das instruções de cuidado; os símbolos não são reproduzidos."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-escolher-a-tecnica",
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "id": "como-avaliar-uma-maquete",
+          "titulo": "Como avaliar uma maquete antes da produção",
+          "url": "guias/como-avaliar-uma-maquete.html"
+        },
+        {
+          "id": "sacos-e-mochilas",
+          "titulo": "Sacos e mochilas",
+          "url": "produtos/sacos-e-mochilas.html"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "url": "produtos/texteis.html",
+      "imagens": {
+        "cartao": {
+          "url": "assets/produtos/visuais/texteis-cartao.jpg",
+          "alt": "Pessoa com t-shirt verde de manga curta e calções escuros.",
+          "width": 300,
+          "height": 300,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/produtos/visuais/texteis-corte.jpg",
+            "alt": "Pessoa com calças justas e top com padrão em tons azuis e brancos.",
+            "width": 300,
+            "height": 300,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "criterios"
+          },
+          {
+            "url": "assets/produtos/visuais/texteis-bones.jpg",
+            "alt": "Quatro bonés nas cores branca, preta, azul-escura e verde-escura.",
+            "width": 300,
+            "height": 300,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "zonas"
+          }
+        ]
+      },
+      "citacoes": [
+        {
+          "campo": "criterios_escolha",
+          "indice": 0,
+          "fontes": [
+            "prodmass"
+          ]
+        },
+        {
+          "campo": "cuidados",
+          "indice": 0,
+          "fontes": [
+            "prodcare"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sacos-e-mochilas",
+      "slug": "sacos-e-mochilas",
+      "ancora": "sacos",
+      "titulo": "Sacos e mochilas",
+      "categoria": "familia",
+      "resumo": "Compare abertura, construção, compartimentos, alças e área livre de personalização com o conteúdo a transportar.",
+      "sinonimos": [
+        "saco",
+        "mochila",
+        "tote",
+        "saco de cordões",
+        "saco a tiracolo",
+        "transporte",
+        "alças",
+        "compartimentos"
+      ],
+      "nomes_alternativos": [
+        "saco",
+        "mochila",
+        "tote",
+        "saco de cordões",
+        "saco a tiracolo",
+        "transporte",
+        "alças",
+        "compartimentos"
+      ],
+      "tipos": [
+        {
+          "nome": "Sacos de duas alças",
+          "descricao": "Observe fundo, abertura e união das alças ao corpo; compare o interior com o conteúdo habitual.",
+          "comparar": "Alças, profundidade, costuras e eventual fecho.",
+          "contexto": "Eventos, compras e transporte conforme a carga documentada."
+        },
+        {
+          "nome": "Sacos de cordões e a tiracolo",
+          "descricao": "Fecho por cordões e alça de ombro são soluções distintas; avalie acesso e transporte com o conteúdo real.",
+          "comparar": "Abertura, ajuste e pontos de união.",
+          "contexto": "Atividades pontuais e acesso rápido."
+        },
+        {
+          "nome": "Mochilas",
+          "descricao": "Compare organização interior e ajuste em vez de escolher apenas pela dimensão exterior.",
+          "comparar": "Compartimentos, acolchoamento, alças e fechos.",
+          "contexto": "Deslocações diárias e transporte de equipamento."
+        }
+      ],
+      "usos_contextos": [
+        "Para entregar documentos ou artigos, teste o encaixe do conteúdo previsto.",
+        "Para equipamento, compare as medidas internas úteis e a proteção documentada, não apenas a diagonal nominal."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Corpo e painéis",
+          "materiais": [
+            "algodão",
+            "poliéster",
+            "tecidos e não tecidos"
+          ],
+          "confirmar": "Confirmar fibra, construção, gramagem quando indicada e revestimento de cada painel.",
+          "guia": {
+            "id": "materiais-texteis",
+            "titulo": "Têxteis",
+            "url": "materiais/materiais-texteis.html"
+          }
+        },
+        {
+          "parte": "Fechos, fivelas e acessórios",
+          "materiais": [
+            "plásticos"
+          ],
+          "confirmar": "Identificar peças e forma de substituição; testar funcionamento.",
+          "guia": {
+            "id": "plasticos",
+            "titulo": "Plásticos",
+            "url": "materiais/plasticos.html"
+          }
+        },
+        {
+          "parte": "Argolas e ferragens",
+          "materiais": [
+            "metais"
+          ],
+          "confirmar": "Observar acabamento e fixação; não deduzir resistência da aparência.",
+          "guia": {
+            "id": "metais",
+            "titulo": "Metais",
+            "url": "materiais/metais.html"
+          }
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Painel frontal ou traseiro",
+          "condicao": "Medir zona sem costuras e acesso ao verso; bolsos e forros podem dificultar a aplicação."
+        },
+        {
+          "nome": "Bolso exterior",
+          "condicao": "Confirmar área e fixação sem afetar o fecho."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "serigrafia",
+          "condicoes": "Confirmar superfície, acabamento, acesso e separação de camadas.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        },
+        {
+          "id": "bordado",
+          "condicoes": "Avaliar agulha, estabilização e acesso; a Madeira identifica a influência do tecido e da densidade de pontos.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Bordado",
+          "url": "tecnicas/bordado.html",
+          "citacoes": [
+            {
+              "campo": "condicoes",
+              "fontes": [
+                "prodemb"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "transfers",
+          "condicoes": "Verificar revestimentos, sensibilidade ao calor e área plana para a modalidade escolhida.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Transfers",
+          "url": "tecnicas/transfers.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Teste abertura e conforto das alças com o conteúdo esperado.",
+        "Observe uniões das alças, fundo, remates, forro e fechos.",
+        "Peça documentação ou ensaio se carga ou proteção contra água forem decisivas."
+      ],
+      "limitacoes": [
+        "Gramagem, volume e densidade do fio não equivalem a carga máxima.",
+        "Um bolso para equipamento não demonstra proteção contra quedas nem impermeabilidade.",
+        "Uma passagem ou cabo USB não prova que exista bateria incluída."
+      ],
+      "cuidados": [
+        "A Osprey desaconselha lavagem à máquina para as mochilas abrangidas pelo seu guia; não é uma regra para todos os sacos. Consulte os cuidados do artigo escolhido.",
+        "Confirme limpeza do forro, fechos e personalização e a forma de secar antes de guardar."
+      ],
+      "perguntas_antes_de_decidir": [
+        "O que vai ser transportado e com que medidas?",
+        "As alças e fechos funcionam com esse conteúdo?",
+        "Que carga e proteção estão documentadas?",
+        "O painel está acessível?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Um saco mais pesado suporta mais carga?",
+          "resposta": "Não necessariamente. Avalie construção, uniões e componentes; peça dados de carga quando necessários."
+        },
+        {
+          "pergunta": "O tamanho exterior garante que o portátil cabe?",
+          "resposta": "Não. Confirme medidas úteis do compartimento e teste o equipamento ou as suas dimensões."
+        },
+        {
+          "pergunta": "Um saco revestido é impermeável?",
+          "resposta": "Não conclua impermeabilidade do artigo completo pelo revestimento; costuras e fechos também precisam de documentação."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "prodemb",
+          "titulo": "FAQ — tecido, estabilização e bordado",
+          "entidade": "Madeira",
+          "url": "https://www.madeira.com/en-in/service/support/faq",
+          "data_consulta": "2026-10-12",
+          "ambito": "Influência do suporte, estabilizador, agulha e densidade de pontos."
+        },
+        {
+          "id": "prodpack",
+          "titulo": "How to Clean Your Osprey Backpack",
+          "entidade": "Osprey",
+          "url": "https://www.osprey.com/gb/how-to-clean-your-osprey-backpack",
+          "data_consulta": "2026-10-12",
+          "ambito": "Limpeza das mochilas abrangidas pelo guia; não estender a todos os sacos."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "texteis",
+          "titulo": "Têxteis",
+          "url": "produtos/texteis.html"
+        },
+        {
+          "id": "como-escolher-o-material",
+          "titulo": "Como escolher o material de um brinde",
+          "url": "guias/como-escolher-o-material.html"
+        },
+        {
+          "id": "como-escolher-a-tecnica",
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "url": "produtos/sacos-e-mochilas.html",
+      "imagens": {
+        "cartao": {
+          "url": "assets/produtos/visuais/sacos-cartao.jpg",
+          "alt": "Três sacos de duas alças, nas cores clara, branca e preta.",
+          "width": 300,
+          "height": 301,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/produtos/visuais/sacos-cordoes.jpg",
+            "alt": "Sacos de várias cores com cordões nas laterais e na abertura superior.",
+            "width": 300,
+            "height": 300,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "tipos"
+          },
+          {
+            "url": "assets/produtos/visuais/sacos-pasta.jpg",
+            "alt": "Pasta preta com duas pegas, alça comprida e bolsos com fecho.",
+            "width": 300,
+            "height": 301,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "zonas"
+          }
+        ]
+      },
+      "citacoes": [
+        {
+          "campo": "cuidados",
+          "indice": 0,
+          "fontes": [
+            "prodpack"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tecnologia",
+      "slug": "tecnologia",
+      "ancora": "tecnologia",
+      "titulo": "Tecnologia",
+      "categoria": "familia",
+      "resumo": "Escolha pela função e pelos dispositivos envolvidos; compare ligações, componentes e superfície separadamente.",
+      "sinonimos": [
+        "acessórios tecnológicos",
+        "eletrónica",
+        "power bank",
+        "bateria externa",
+        "carregador",
+        "USB-C",
+        "altifalante",
+        "suporte de telemóvel"
+      ],
+      "nomes_alternativos": [
+        "acessórios tecnológicos",
+        "eletrónica",
+        "power bank",
+        "bateria externa",
+        "carregador",
+        "USB-C",
+        "altifalante",
+        "suporte de telemóvel"
+      ],
+      "tipos": [
+        {
+          "nome": "Cabos, carregadores e baterias externas",
+          "descricao": "USB Type-C não é sinónimo de USB Power Delivery nem de uma versão de transferência de dados. Separe conector de capacidades.",
+          "comparar": "Entrada, saída, protocolo, cabo necessário e dispositivos suportados.",
+          "contexto": "Carregamento ou dados conforme a função documentada.",
+          "citacoes": [
+            {
+              "campo": "descricao",
+              "fontes": [
+                "produsb"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Altifalantes e áudio",
+          "descricao": "O nome da ligação não descreve sozinho controlos, autonomia ou experiência de audição.",
+          "comparar": "Ligação, alimentação, controlos e emparelhamento.",
+          "contexto": "Escuta individual ou partilha de som em ambiente adequado."
+        },
+        {
+          "nome": "Suportes sem eletrónica",
+          "descricao": "Podem resolver posicionamento sem carregar nem comunicar com o dispositivo.",
+          "comparar": "Encaixe, estabilidade, ajuste e uso com capa.",
+          "contexto": "Secretária, videochamadas e organização."
+        }
+      ],
+      "usos_contextos": [
+        "Identifique os dispositivos e a tarefa: carregar, comunicar, ouvir ou apoiar.",
+        "Peça documentação e teste a combinação real se depender de uma função específica."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Carcaça e botões",
+          "materiais": [
+            "plásticos"
+          ],
+          "confirmar": "Separar invólucro e eletrónica; confirmar textura, revestimento e peças móveis.",
+          "guia": {
+            "id": "plasticos",
+            "titulo": "Plásticos",
+            "url": "materiais/plasticos.html"
+          }
+        },
+        {
+          "parte": "Invólucro ou placa exterior",
+          "materiais": [
+            "metais"
+          ],
+          "confirmar": "Identificar acabamento e área livre; não inferir dissipação térmica pela aparência.",
+          "guia": {
+            "id": "metais",
+            "titulo": "Metais",
+            "url": "materiais/metais.html"
+          }
+        },
+        {
+          "parte": "Painel decorativo",
+          "materiais": [
+            "madeira",
+            "bambu"
+          ],
+          "confirmar": "Avaliar o painel; a decoração não descreve os circuitos interiores.",
+          "guia": {
+            "id": "madeira-e-bambu",
+            "titulo": "Madeira e bambu",
+            "url": "materiais/madeira-e-bambu.html"
+          }
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Face exterior livre",
+          "condicao": "Excluir portas, botões, grelhas, informação de segurança e área de carregamento."
+        },
+        {
+          "nome": "Painel decorativo",
+          "condicao": "Confirmar acesso sem abrir ou alterar componentes eletrónicos."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "tampografia",
+          "condicoes": "Avaliar material da carcaça, tinta, acesso e aderência; evitar controlos e aberturas.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Tampografia",
+          "url": "tecnicas/tampografia.html"
+        },
+        {
+          "id": "impressao-uv",
+          "condicoes": "Confirmar acabamento, aderência e fixação; uma face lisa não prova compatibilidade.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Impressão digital UV",
+          "url": "tecnicas/impressao-uv.html"
+        },
+        {
+          "id": "gravacao-a-laser",
+          "condicoes": "Avaliar superfície, acabamento e proximidade de componentes sensíveis; metal exterior não basta.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Gravação a laser",
+          "url": "tecnicas/gravacao-a-laser.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Porta, cabo e dispositivo devem suportar a função pretendida em ambas as extremidades.",
+        "Para carregamento sem fios, verifique a identificação e certificação no registo público do Wireless Power Consortium; não atribua certificação por uma fotografia.",
+        "Separe autonomia documentada de capacidade nominal da bateria e registe as condições declaradas."
+      ],
+      "limitacoes": [
+        "Não prometa autonomia ou velocidade sem dados e condições do dispositivo concreto.",
+        "Não deduza potência pelo conector nem proteção contra água pela forma da carcaça."
+      ],
+      "cuidados": [
+        "Siga instruções do dispositivo e alimentação; confirme limites de uso, armazenamento e limpeza.",
+        "Mantenha legíveis as informações técnicas e de utilização; a marca não deve tapá-las."
+      ],
+      "perguntas_antes_de_decidir": [
+        "Que dispositivos e funções são necessários?",
+        "Que cabo e alimentação são exigidos?",
+        "Que dados estão documentados e em que condições?",
+        "Que face está livre de controlos?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "USB-C garante carregamento rápido?",
+          "resposta": "Não. Confirme protocolo, potência e capacidades de carregador, cabo e dispositivo. O conector não basta.",
+          "citacoes": [
+            {
+              "campo": "resposta",
+              "fontes": [
+                "produsb"
+              ]
+            }
+          ]
+        },
+        {
+          "pergunta": "Mais capacidade da bateria garante mais horas?",
+          "resposta": "Não compare autonomia só pela capacidade; procure condições e resultados declarados para o uso pretendido."
+        },
+        {
+          "pergunta": "Um suporte de telemóvel também carrega?",
+          "resposta": "Só se essa função estiver documentada e for compatível com o dispositivo."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "produsb",
+          "titulo": "USB Type-C Language and Packaging Guidelines",
+          "entidade": "USB Implementers Forum",
+          "url": "https://www.usb.org/sites/default/files/usb_type-c_language_product_and_packaging_guidelines_20230320.pdf",
+          "data_consulta": "2026-10-12",
+          "ambito": "Distinção entre conector USB Type-C, protocolos de dados e USB Power Delivery."
+        },
+        {
+          "id": "prodqi",
+          "titulo": "Qi Certified Products",
+          "entidade": "Wireless Power Consortium",
+          "url": "https://www.wirelesspowerconsortium.com/knowledge-base/testing-and-certification/qi-certified-products/",
+          "data_consulta": "2026-10-12",
+          "ambito": "Certificação e verificação de dispositivos Qi; não atribuir certificação sem consulta do artigo específico."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-escolher-a-tecnica",
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "id": "como-avaliar-uma-maquete",
+          "titulo": "Como avaliar uma maquete antes da produção",
+          "url": "guias/como-avaliar-uma-maquete.html"
+        },
+        {
+          "id": "artigos-de-escritorio",
+          "titulo": "Artigos de escritório",
+          "url": "produtos/artigos-de-escritorio.html"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "url": "produtos/tecnologia.html",
+      "imagens": {
+        "cartao": {
+          "url": "assets/produtos/visuais/tecnologia-cartao.jpg",
+          "alt": "Telemóvel preto sobre um objeto retangular escuro; outra vista do objeto aparece abaixo.",
+          "width": 300,
+          "height": 301,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/produtos/visuais/tecnologia-mostrador.jpg",
+            "alt": "Dispositivo de mesa prateado com ecrã azul e botões na parte inferior.",
+            "width": 300,
+            "height": 301,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "materiais"
+          },
+          {
+            "url": "assets/produtos/visuais/tecnologia-base.jpg",
+            "alt": "Base circular clara com cabo e ficha USB visíveis.",
+            "width": 250,
+            "height": 250,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "zonas"
+          }
+        ]
+      },
+      "citacoes": [
+        {
+          "campo": "criterios_escolha",
+          "indice": 1,
+          "fontes": [
+            "prodqi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "artigos-de-escritorio",
+      "slug": "artigos-de-escritorio",
+      "ancora": "escritorio",
+      "titulo": "Artigos de escritório",
+      "categoria": "familia",
+      "resumo": "Compare formato, páginas, encadernação, acessórios e consumíveis com a rotina de escrita e organização.",
+      "sinonimos": [
+        "caderno",
+        "bloco de notas",
+        "agenda",
+        "pasta",
+        "organizador",
+        "secretária",
+        "papelaria",
+        "caderno apagável"
+      ],
+      "nomes_alternativos": [
+        "caderno",
+        "bloco de notas",
+        "agenda",
+        "pasta",
+        "organizador",
+        "secretária",
+        "papelaria",
+        "caderno apagável"
+      ],
+      "tipos": [
+        {
+          "nome": "Cadernos, blocos e agendas",
+          "descricao": "Distinga folhas destacáveis, encadernação permanente e organização por datas; confirme o período de uma agenda datada.",
+          "comparar": "Formato útil, pauta, folhas ou páginas, abertura e encadernação.",
+          "contexto": "Apontamentos, planeamento e formação."
+        },
+        {
+          "nome": "Pastas e organizadores",
+          "descricao": "Compare o conteúdo a guardar e o acesso; não deduza acessórios incluídos da apresentação.",
+          "comparar": "Compartimentos, fecho e dimensões internas.",
+          "contexto": "Reuniões e organização de documentos."
+        },
+        {
+          "nome": "Sistemas apagáveis",
+          "descricao": "A Rocketbook documenta um sistema com páginas sintéticas, caneta específica e limpeza húmida; não generalize esse método a todos os cadernos apagáveis.",
+          "comparar": "Consumível compatível, apagamento e conservação dos registos.",
+          "contexto": "Notas temporárias com método de manutenção próprio.",
+          "citacoes": [
+            {
+              "campo": "descricao",
+              "fontes": [
+                "prodnotes"
+              ]
+            }
+          ]
+        }
+      ],
+      "usos_contextos": [
+        "Teste o papel com o instrumento habitual e observe a leitura no verso.",
+        "Num conjunto de reunião, confirme acessórios e encaixe da documentação."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Folhas e capa de papel ou cartão",
+          "materiais": [
+            "papel",
+            "cartão"
+          ],
+          "confirmar": "A Holmen distingue gramagem, espessura e rigidez como propriedades e ensaios diferentes.",
+          "guia": {
+            "id": "papel-e-cartao",
+            "titulo": "Papel e cartão",
+            "url": "materiais/papel-e-cartao.html"
+          },
+          "citacoes": [
+            {
+              "campo": "confirmar",
+              "fontes": [
+                "prodboard"
+              ]
+            }
+          ]
+        },
+        {
+          "parte": "Capa revestida",
+          "materiais": [
+            "pele",
+            "imitação de pele"
+          ],
+          "confirmar": "Identificar suporte, revestimento e acabamento.",
+          "guia": {
+            "id": "pele-e-imitacao-de-pele",
+            "titulo": "Pele e imitação de pele",
+            "url": "materiais/pele-e-imitacao-de-pele.html"
+          }
+        },
+        {
+          "parte": "Espiral, ferragens e fechos",
+          "materiais": [
+            "metais"
+          ],
+          "confirmar": "Verificar abertura, saliências e proximidade da marca.",
+          "guia": {
+            "id": "metais",
+            "titulo": "Metais",
+            "url": "materiais/metais.html"
+          }
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Capa",
+          "condicao": "Medir espaço livre de elástico, espiral, fechos e acessórios; identificar a camada exterior."
+        },
+        {
+          "nome": "Folhas ou separadores",
+          "condicao": "Confirmar possibilidade e processo de impressão e montagem."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "impressao-uv",
+          "condicoes": "Avaliar acabamento, aderência e acesso à capa.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Impressão digital UV",
+          "url": "tecnicas/impressao-uv.html"
+        },
+        {
+          "id": "termogravura",
+          "condicoes": "Confirmar material e resposta a calor e pressão numa amostra; aparência de pele não basta.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Termogravura",
+          "url": "tecnicas/termogravura.html"
+        },
+        {
+          "id": "serigrafia",
+          "condicoes": "Verificar tinta, revestimento, área plana e uso da capa.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Confirme se a contagem é de folhas ou páginas e quais são utilizáveis.",
+        "Teste abertura e passagem de página com os acessórios.",
+        "Identifique canetas, recargas, folhas de reposição ou panos incluídos e a sua substituição."
+      ],
+      "limitacoes": [
+        "Não atribua compatibilidade de escrita ou apagamento sem instruções do sistema.",
+        "O material das folhas não identifica o da capa; rigidez não demonstra resistência à água."
+      ],
+      "cuidados": [
+        "Limpeza húmida só se aplica a sistemas que a documentem; siga as instruções do suporte e consumíveis.",
+        "Para notas permanentes, escolha suporte e conservação adequados à informação."
+      ],
+      "perguntas_antes_de_decidir": [
+        "O uso é temporário, permanente ou datado?",
+        "Qual é o formato e a contagem de folhas?",
+        "Que acessórios estão incluídos?",
+        "Qual é o acabamento exterior?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Folhas e páginas são a mesma contagem?",
+          "resposta": "Não. Uma folha tem duas faces; confirme se a contagem inclui faces em branco ou outros elementos."
+        },
+        {
+          "pergunta": "Qualquer caneta serve num caderno apagável?",
+          "resposta": "Não. Use o consumível indicado nas instruções do sistema."
+        },
+        {
+          "pergunta": "Gramagem revela a espessura da capa?",
+          "resposta": "Não. Mede massa por área; confirme também espessura, construção e rigidez.",
+          "citacoes": [
+            {
+              "campo": "resposta",
+              "fontes": [
+                "prodboard"
+              ]
+            }
+          ]
+        }
+      ],
+      "fontes": [
+        {
+          "id": "prodnotes",
+          "titulo": "Rocketbook Core — instruções de utilização",
+          "entidade": "Rocketbook Help Center",
+          "url": "https://rocketbookhelp.zendesk.com/hc/en-us/articles/360004098373-Rocketbook-Core",
+          "data_consulta": "2026-10-12",
+          "ambito": "Sistema específico com páginas sintéticas, caneta própria e limpeza húmida; não aplicável a todos os cadernos apagáveis."
+        },
+        {
+          "id": "prodboard",
+          "titulo": "General Technical Information About Paperboard",
+          "entidade": "Holmen Iggesund",
+          "url": "https://www.iggesund.com/insights/paperboard-know-how/general-technical-information/",
+          "data_consulta": "2026-10-12",
+          "ambito": "Diferenças entre gramagem, espessura e ensaios de rigidez do cartão."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "canetas-e-escrita",
+          "titulo": "Canetas e escrita",
+          "url": "produtos/canetas-e-escrita.html"
+        },
+        {
+          "id": "como-escolher-o-material",
+          "titulo": "Como escolher o material de um brinde",
+          "url": "guias/como-escolher-o-material.html"
+        },
+        {
+          "id": "como-escolher-a-tecnica",
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "id": "encadernacao",
+          "titulo": "Encadernação",
+          "url": "tecnicas/encadernacao.html"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "url": "produtos/artigos-de-escritorio.html",
+      "imagens": {
+        "cartao": {
+          "url": "assets/produtos/visuais/escritorio-cartao.jpg",
+          "alt": "Calendário de mesa com folhas presas por uma espiral na parte superior.",
+          "width": 300,
+          "height": 300,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/produtos/visuais/escritorio-regua.jpg",
+            "alt": "Régua transparente graduada com uma zona circular junto a uma extremidade.",
+            "width": 300,
+            "height": 301,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "usos"
+          },
+          {
+            "url": "assets/produtos/visuais/escritorio-suporte.jpg",
+            "alt": "Suporte transparente com três instrumentos de escrita e um mostrador frontal.",
+            "width": 300,
+            "height": 301,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "materiais"
+          }
+        ]
+      },
+      "citacoes": [
+        {
+          "campo": "cuidados",
+          "indice": 0,
+          "fontes": [
+            "prodnotes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brindes-premium",
+      "slug": "brindes-premium",
+      "ancora": "premium",
+      "titulo": "Premium: seleção transversal",
+      "categoria": "colecao_editorial",
+      "resumo": "Uma coleção editorial para comparar utilidade, acabamento, apresentação e contexto entre diferentes famílias.",
+      "sinonimos": [
+        "brindes premium",
+        "oferta individual",
+        "coleção editorial",
+        "colecção",
+        "apresentação",
+        "conjunto de oferta"
+      ],
+      "nomes_alternativos": [
+        "brindes premium",
+        "oferta individual",
+        "coleção editorial",
+        "colecção",
+        "apresentação",
+        "conjunto de oferta"
+      ],
+      "tipos": [
+        {
+          "nome": "Um artigo de uso frequente",
+          "descricao": "Selecione em qualquer família pela rotina do destinatário; a designação editorial não comprova qualidade superior.",
+          "comparar": "Utilidade, conforto e manutenção.",
+          "contexto": "Reconhecimento individual e relações de longa duração."
+        },
+        {
+          "nome": "Um conjunto coerente",
+          "descricao": "Combine funções complementares e identifique cada componente; uma caixa não demonstra acessórios incluídos.",
+          "comparar": "Conteúdo e reposição de consumíveis.",
+          "contexto": "Acolhimento, reuniões e oferta com um tema definido."
+        },
+        {
+          "nome": "Apresentação cuidada",
+          "descricao": "Observe mensagem, acabamento e experiência de abrir e guardar.",
+          "comparar": "Proteção, legibilidade e destino da embalagem.",
+          "contexto": "Ocasiões em que a forma de entrega tenha significado."
+        }
+      ],
+      "usos_contextos": [
+        "Defina destinatário, ocasião e função antes da apresentação.",
+        "Use critérios verificáveis numa amostra: abertura, encaixe, toque e legibilidade."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Artigo principal",
+          "materiais": [
+            "materiais da família escolhida"
+          ],
+          "confirmar": "Identificar materiais de cada parte e usar o guia da família.",
+          "guia": {
+            "id": "como-escolher-o-material",
+            "titulo": "Como escolher o material de um brinde",
+            "url": "guias/como-escolher-o-material.html"
+          }
+        },
+        {
+          "parte": "Caixa e separadores",
+          "materiais": [
+            "papel",
+            "cartão"
+          ],
+          "confirmar": "Avaliar encaixe e proteção; a Holmen distingue gramagem, espessura e rigidez.",
+          "guia": {
+            "id": "papel-e-cartao",
+            "titulo": "Papel e cartão",
+            "url": "materiais/papel-e-cartao.html"
+          },
+          "citacoes": [
+            {
+              "campo": "confirmar",
+              "fontes": [
+                "prodboard"
+              ]
+            }
+          ]
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Artigo principal",
+          "condicao": "Usar áreas e condições do guia da família."
+        },
+        {
+          "nome": "Embalagem e cartão",
+          "condicao": "Confirmar área, contraste e relação com a marca; manter instruções legíveis."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "gravacao-a-laser",
+          "condicoes": "Considerar apenas para superfície identificada e avaliada.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Gravação a laser",
+          "url": "tecnicas/gravacao-a-laser.html"
+        },
+        {
+          "id": "termogravura",
+          "condicoes": "Avaliar suporte e efeito; não é um indicador automático de qualidade.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Termogravura",
+          "url": "tecnicas/termogravura.html"
+        },
+        {
+          "id": "impressao-uv",
+          "condicoes": "Confirmar acesso e aderência em cada componente.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Impressão digital UV",
+          "url": "tecnicas/impressao-uv.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Compare utilidade e facilidade de manutenção para o destinatário.",
+        "Observe consistência visual, remates, encaixe e leitura numa amostra.",
+        "Identifique componentes, instruções e consumíveis."
+      ],
+      "limitacoes": [
+        "“Premium” é uma designação editorial transversal, não uma família técnica nem garantia de qualidade, durabilidade ou impacto ambiental.",
+        "Não atribua vantagem ambiental por aparência ou material sem documentação com âmbito claro."
+      ],
+      "cuidados": [
+        "Conserve as instruções de cada componente e avalie proteção após abrir.",
+        "O estatuto editorial não altera os cuidados da respetiva família."
+      ],
+      "perguntas_antes_de_decidir": [
+        "Que função terá para o destinatário?",
+        "Que componentes estão incluídos?",
+        "Que acabamento consigo avaliar?",
+        "A embalagem protege sem dificultar o uso?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Premium significa melhor qualidade?",
+          "resposta": "Não. Compare critérios concretos e documentados; a designação não substitui a avaliação."
+        },
+        {
+          "pergunta": "Uma embalagem transforma qualquer artigo em premium?",
+          "resposta": "É um critério de apresentação a comparar com utilidade, acabamento e contexto."
+        },
+        {
+          "pergunta": "A coleção tem técnicas ou materiais exclusivos?",
+          "resposta": "Não. Abrange várias famílias; cada componente mantém as suas condições de personalização."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "prodboard",
+          "titulo": "General Technical Information About Paperboard",
+          "entidade": "Holmen Iggesund",
+          "url": "https://www.iggesund.com/insights/paperboard-know-how/general-technical-information/",
+          "data_consulta": "2026-10-12",
+          "ambito": "Diferenças entre gramagem, espessura e ensaios de rigidez do cartão."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "canetas-e-escrita",
+          "titulo": "Canetas e escrita",
+          "url": "produtos/canetas-e-escrita.html"
+        },
+        {
+          "id": "garrafas-copos-e-canecas",
+          "titulo": "Garrafas, copos e canecas",
+          "url": "produtos/garrafas-copos-e-canecas.html"
+        },
+        {
+          "id": "texteis",
+          "titulo": "Têxteis",
+          "url": "produtos/texteis.html"
+        },
+        {
+          "id": "sacos-e-mochilas",
+          "titulo": "Sacos e mochilas",
+          "url": "produtos/sacos-e-mochilas.html"
+        },
+        {
+          "id": "tecnologia",
+          "titulo": "Tecnologia",
+          "url": "produtos/tecnologia.html"
+        },
+        {
+          "id": "artigos-de-escritorio",
+          "titulo": "Artigos de escritório",
+          "url": "produtos/artigos-de-escritorio.html"
+        },
+        {
+          "id": "como-avaliar-uma-maquete",
+          "titulo": "Como avaliar uma maquete antes da produção",
+          "url": "guias/como-avaliar-uma-maquete.html"
+        }
+      ],
+      "data_revisao": "2026-10-12",
+      "url": "produtos/brindes-premium.html"
+    }
+  ]
+}

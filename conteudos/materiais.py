@@ -21,11 +21,12 @@ FONTES_MATERIAIS = {
 
 AMBIENTE = ('Alegações ambientais com contexto', '«Natural», «bambu», «reciclado» e «reciclável» não demonstram, por si só, menor impacto ambiental nem uma certificação. Peça documentação relativa ao artigo e ao âmbito da alegação. Considere a utilização real, a vida útil, os componentes e as opções locais de recolha; não atribua uma vantagem ambiental a partir de uma fotografia ou de uma palavra.')
 
-def material(id, ancora, titulo, resumo, seccoes, fontes, relacionados, imagem=None):
+def material(id, ancora, titulo, resumo, seccoes, fontes, relacionados, imagem=None, imagem_cartao=None):
     return dict(id=id, ancora=ancora, sec='materiais', tipo='material', titulo=titulo,
                 resumo=resumo, seccoes=seccoes + [AMBIENTE], fontes=fontes,
                 relacionados=relacionados + ['como-escolher-o-material'],
-                problemas=[], ancoras=[], tags=' '.join(t for t, _ in seccoes), imagem=imagem)
+                problemas=[], ancoras=[], tags=' '.join(t for t, _ in seccoes), imagem=imagem,
+                imagem_cartao=imagem_cartao)
 
 MATERIAIS = [
     material('plasticos', 'plasticos', 'Plásticos',
@@ -86,7 +87,9 @@ MATERIAIS = [
         ('Comparar aspeto, peso e resistência', 'Observe flexibilidade, textura, acabamento das bordas e regularidade das costuras. Compare o peso do objeto completo e experimente dobrar ou abrir apenas como previsto no uso. A espessura e o suporte condicionam o resultado. Não assuma que pele é sempre mais resistente, ou que todas as imitações têm o mesmo comportamento.'),
         ('Uso e limpeza a confirmar', 'Peça instruções próprias para o acabamento: pano permitido, contacto com água, produtos de limpeza e armazenamento. Não recomende universalmente cremes, óleos ou sabão; o Canadian Conservation Institute alerta para os efeitos de tratamentos inadequados em pele. As suas orientações de conservação não substituem as instruções de um artigo novo. [pelecci]'),
         ('Personalização a considerar', 'Relevo, baixo-relevo ou termogravura podem ser discutidos com a produção, assim como impressão em superfícies compatíveis. Calor, pressão e tinta exigem ensaio no conjunto de camadas. Para laser, a composição precisa de validação prévia: a Trotec exclui PVC e pele ou imitação de pele com crómio VI. Não use uma amostra não identificada para decidir. [laserlimites]'),
-    ], ['peledef', 'pelecci', 'laserlimites'], ['artigos-de-escritorio', 'brindes-premium', 'como-escolher-a-tecnica', 'impressao-uv']),
+    ], ['peledef', 'pelecci', 'laserlimites'], ['artigos-de-escritorio', 'brindes-premium', 'como-escolher-a-tecnica', 'impressao-uv'],
+    imagem_cartao=('assets/materiais/Pele/z_0_nb224514_TARJETERO-PIEL.jpg', 500, 500,
+                   'Carteira castanha com superfície texturada e pespontos')),
 
     material('vidro-e-ceramica', 'vidro-ceramica', 'Vidro e cerâmica',
         'Copos, canecas e peças de oferta: distinguir corpo, superfície e decoração antes de definir o uso.', [
@@ -96,7 +99,9 @@ MATERIAIS = [
         ('Comparar peso, aspeto e contexto', 'Para um evento com transporte frequente, avalie peso, pega e proteção na embalagem. Para uso numa secretária, compare estabilidade e conforto ao segurar. Paredes mais espessas não demonstram, por si só, maior resistência a choque térmico ou queda. A transparência também muda a leitura de uma marca conforme o fundo ou a bebida.'),
         ('Uso e limpeza a confirmar', 'Confirme bebidas quentes e frias, mudanças de temperatura, máquina de lavar e micro-ondas para o produto decorado. A decoração pode ter limitações diferentes do corpo. Peça instruções para evitar choques e para retirar de uso peças danificadas; não atribua uma temperatura máxima ou um número de lavagens sem ensaio documentado.'),
         ('Personalização a considerar', 'Transferência cerâmica, serigrafia ou impressão UV podem ser discutidas consoante a superfície, a forma e o destino. Sublimação depende de um revestimento apropriado. Confirme área, posição relativamente ao bordo e uso permitido após decorar. Uma técnica que adere à superfície não fica automaticamente validada para contacto alimentar ou lavagem.'),
-    ], ['vidrocci'], ['garrafas-copos-e-canecas', 'brindes-premium', 'como-escolher-a-tecnica', 'sublimacao', 'serigrafia', 'impressao-uv']),
+    ], ['vidrocci'], ['garrafas-copos-e-canecas', 'brindes-premium', 'como-escolher-a-tecnica', 'sublimacao', 'serigrafia', 'impressao-uv'],
+    imagem_cartao=('assets/materiais/Vidro/z_0_nb224623_TROFEU-BOLA-MUNDO-GRANDE.jpg', 500, 500,
+                   'Troféu transparente em forma de globo com mapa e base facetada')),
 
     material('papel-e-cartao', 'papel', 'Papel e cartão',
         'Folhas, capas e embalagens: avaliar escrita, impressão, rigidez e proteção no uso previsto.', [
@@ -106,5 +111,22 @@ MATERIAIS = [
         ('Comparar peso e resistência', 'Para um bloco de notas, dê prioridade à escrita e à portabilidade. Para uma embalagem de oferta, compare rigidez, dimensões e suporte do conteúdo. Mais gramagem acrescenta massa por área, mas não garante melhor desempenho em todas as funções. A resistência deve ser avaliada no artigo completo. [papel]'),
         ('Uso, armazenamento e limpeza', 'Confirme condições de armazenamento seco, exposição à humidade e modo de remover sujidade sem danificar impressão e revestimentos. Não presuma que uma capa laminada torna todo o caderno lavável. Num saco ou caixa, peça a carga e as condições de transporte previstas; verifique também as alças e colagens.'),
         ('Personalização a considerar', 'Impressão gráfica digital ou offset, serigrafia e termogravura podem entrar na avaliação conforme o suporte e a quantidade. A impressão UV em capas prontas depende da superfície e do acesso. Confirme cor, legibilidade e comportamento nas dobras com uma prova. Peça também avaliação de acabamentos e separação de componentes no fim de vida.'),
-    ], ['papel'], ['artigos-de-escritorio', 'brindes-premium', 'serigrafia', 'impressao-uv', 'como-escolher-a-tecnica']),
+    ], ['papel'], ['artigos-de-escritorio', 'brindes-premium', 'serigrafia', 'impressao-uv', 'como-escolher-a-tecnica'],
+    imagem_cartao=('assets/materiais/Papel_Cartao/z_0_nb222831_PASTA-HABORG.jpg', 700, 700,
+                   'Pasta castanha aberta com abas interiores sobre fundo branco')),
 ]
+
+# Imagens da entrada; não alteram o conteúdo nem as imagens dos artigos.
+IMAGENS_CARTOES_MATERIAIS = {
+    'plasticos': ('assets/materiais/Plasticos/ig_0_nb183602_PORTA-CHAVES-PARA-COLOCAR-O-PAPEL-IMPRESSO-OU-FOTO-DE-4-X-3.jpg', 300, 300,
+                 'Porta-chaves transparente retangular com argola e uma zona central clara.'),
+    'materiais-texteis': ('assets/materiais/Texteis/toopcalcao_1770905656_1.jpg', 300, 300,
+                        'Pessoa com calções verdes e painel lateral azul-escuro.'),
+    'metais': ('assets/materiais/Metais/ig_0_nb193335_SACA-ROLHAS-METAL.jpg', 300, 301,
+              'Saca-rolhas cinzento com espiral e ferramentas dobráveis.'),
+    'madeira-e-bambu': ('assets/materiais/MadeiraeBambu/ig_0_nb225683_CALENDARIO-EM-BAMBU-KARENDA.jpg', 300, 301,
+                       'Calendário de mesa com suporte claro e blocos com números, meses e dias da semana.'),
+}
+for _material in MATERIAIS:
+    if _material['id'] in IMAGENS_CARTOES_MATERIAIS:
+        _material['imagem_cartao'] = IMAGENS_CARTOES_MATERIAIS[_material['id']]
