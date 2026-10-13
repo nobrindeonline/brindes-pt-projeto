@@ -1,0 +1,12 @@
+node_modules
+.git
+.github
+.DS_Store
+*.py
+*.md
+package.json
+package-lock.json
+.prettierrc.json
+.prettierignore
+wrangler.jsonc
+.assetsignore
