@@ -49,21 +49,6 @@ A folha de contacto foi inspecionada visualmente: 12 produtos identificáveis, s
 - Faltam exemplos e fotografias de produção própria da Nobrinde. Nenhuma fotografia de terceiros é apresentada como produção própria.
 - A verificação visual do site em navegador continua pendente: a ferramenta não dispõe de navegador ligado nesta sessão.
 
-## Para quem — seleções por público
-
-As necessidades e justificações são propostas editoriais. Os factos e fotografias reutilizam exclusivamente as fichas identificadas acima. Cada cartão tem ligação à fonte e ao guia da categoria.
-
-| Guia | Produtos e páginas PDF (impressas) |
-| --- | --- |
-| `publicos/empresas.html` | Gratox 22075 — 198 (196); Hetien 1364 — 270 (268); Sulkan 6620 — 10 (8); Trombolix 22293 — 426 (424) |
-| `publicos/camaras-municipais.html` | Larsen 3322 — 360 (358); Synex 20673 — 414 (412); Farnes 22151 — 610 (608); Stiles 21840 — 1000 (996) |
-| `publicos/escolas.html` | Gratox 22075 — 198 (196); Larsen 3322 — 360 (358); Stiles 21840 — 1000 (996) |
-| `publicos/clubes-desportivos.html` | Stiles 21840 — 1000 (996); Hetien 1364 — 270 (268); Emphy 1818 — 360 (358); Farnes 22151 — 610 (608) |
-| `publicos/revendedores.html` | Synex 20673 — 414 (412); Trombolix 22293 — 426 (424); Chalmer 21986 — 242 (240); Bastien 22361 — 242 (240) |
-| `publicos/eventos.html` | Larsen 3322 — 360 (358); Synex 20673 — 414 (412); Stiles 21840 — 1000 (996); Hetien 1364 — 270 (268) |
-
-Também utilizadas fotografias de destaque em `publicos/index.html`: Gratox (198), Larsen (360), Stiles (1000) e Synex (414), conforme o primeiro produto de cada seleção. Não foram extraídas novas imagens nem atribuídas novas propriedades aos produtos.
-
 ## Indústria — imagens e menções textuais
 
 | Produto / informação | Página PDF | Utilização |

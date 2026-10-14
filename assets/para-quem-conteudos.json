@@ -1,0 +1,1297 @@
+{
+  "schema_version": "1.0",
+  "idioma": "pt-PT",
+  "secao": "Para quem",
+  "data_revisao": "2026-10-14",
+  "destinos": [
+    {
+      "id": "empresas",
+      "titulo": "Empresas",
+      "url": "publicos/empresas.html",
+      "resumo": "Ideias para acolhimento de equipas, reuniões, formação, visitas e encontros de trabalho.",
+      "destinatário": [
+        {
+          "destinatário": "Novos colaboradores",
+          "necessidade": "Podem precisar de informação de boas-vindas e de elementos úteis ao contexto de integração."
+        },
+        {
+          "destinatário": "Equipas e participantes",
+          "necessidade": "Em reuniões e formação, considere quem participa, a duração e se a atividade envolve apontamentos ou materiais de apoio."
+        },
+        {
+          "destinatário": "Visitantes e clientes",
+          "necessidade": "Uma lembrança deve corresponder ao motivo da visita e ao modo como será entregue, sem presumir que todas as pessoas querem o mesmo artigo."
+        }
+      ],
+      "ocasiões": [
+        {
+          "destinatário": [
+            "Novos colaboradores"
+          ],
+          "ocasião": "Integração de uma pessoa na equipa",
+          "local": "Receção, local de trabalho ou sessão de acolhimento",
+          "época": "Ao longo do ano, antes ou no momento de chegada",
+          "objetivo": "Facilitar uma receção organizada e identificar informação que a pessoa possa consultar.",
+          "texto_editorial": "A ocasião destina-se a novos colaboradores e pode decorrer em contextos como receção, local de trabalho ou sessão de acolhimento. O momento — ao longo do ano, antes ou no momento de chegada — ajuda a enquadrar o objetivo de facilitar uma receção organizada e identificar informação que a pessoa possa consultar."
+        },
+        {
+          "destinatário": [
+            "Equipas",
+            "Formadores e participantes"
+          ],
+          "ocasião": "Reunião, formação ou encontro de equipa",
+          "local": "Sala de reunião, espaço de formação ou local do encontro",
+          "época": "Na data definida pela organização; encontros de fim de ano variam entre equipas",
+          "objetivo": "Apoiar a participação sem substituir o material necessário à atividade.",
+          "texto_editorial": "A ocasião destina-se a equipas e a formadores e participantes e pode decorrer em contextos como sala de reunião, espaço de formação ou local do encontro. O momento — na data definida pela organização; encontros de fim de ano variam entre equipas — ajuda a enquadrar o objetivo de apoiar a participação sem substituir o material necessário à atividade."
+        },
+        {
+          "destinatário": [
+            "Visitantes",
+            "Clientes"
+          ],
+          "ocasião": "Visita, aniversário de equipa ou encontro institucional",
+          "local": "Receção, instalações ou espaço de evento",
+          "época": "Conforme a agenda da organização; não existe uma época universal",
+          "objetivo": "Assinalar o contexto da visita ou do encontro, quando uma oferta fizer sentido.",
+          "texto_editorial": "A ocasião destina-se a visitantes e a clientes e pode decorrer em contextos como receção, instalações ou espaço de evento. O momento — conforme a agenda da organização; não existe uma época universal — ajuda a enquadrar o objetivo de assinalar o contexto da visita ou do encontro, quando uma oferta fizer sentido."
+        }
+      ],
+      "imagens_contexto": [
+        {
+          "url": "assets/para_quem/visuais/empresas-organizacao.jpg",
+          "alt": "Dois instrumentos de escrita dentro de uma caixa aberta de cartão.",
+          "width": 300,
+          "height": 301,
+          "legenda": "Para reuniões e formação, vale a pena planear o que os participantes devem encontrar à chegada."
+        },
+        {
+          "url": "assets/para_quem/visuais/empresas-distribuicao.jpg",
+          "alt": "Saco de tecido claro apresentado isoladamente sobre fundo branco.",
+          "width": 300,
+          "height": 301,
+          "legenda": "A forma como os materiais são reunidos e entregues também faz parte da preparação de uma receção."
+        }
+      ],
+      "famílias_de_artigos": [
+        {
+          "destinatário": "Novos colaboradores",
+          "objetivo": "Acolhimento e consulta",
+          "famílias": [
+            "Material de escrita",
+            "Cadernos e material de organização",
+            "Sacos para reunir informação"
+          ]
+        },
+        {
+          "destinatário": "Equipas e participantes",
+          "objetivo": "Reuniões e formação",
+          "famílias": [
+            "Material de escrita",
+            "Cadernos",
+            "Artigos para identificação da equipa"
+          ]
+        },
+        {
+          "destinatário": "Visitantes e clientes",
+          "objetivo": "Lembrança de visita ou encontro",
+          "famílias": [
+            "Sacos",
+            "Têxteis",
+            "Artigos de hidratação"
+          ]
+        }
+      ],
+      "distribuição": [
+        "Prepare lotes por equipa ou sessão e identifique claramente qualquer material que não seja para distribuição geral.",
+        "Se houver nomes, tamanhos ou versões diferentes, separe-os antes da entrega e defina como corrigir uma troca.",
+        "Num encontro de fim de ano, confirme a data, os destinatários e o local concretos; não trate a ocasião como uma recomendação automática de oferta."
+      ],
+      "critérios": [
+        "Quem recebe: equipa inteira, participantes, visitantes ou um grupo específico?",
+        "Que necessidade concreta pretende apoiar e durante quanto tempo será usado o artigo?",
+        "Como será transportado, guardado e distribuído no local?",
+        "Que mensagem, identidade visual, quantidade e variantes precisam de aprovação?",
+        "As famílias de artigos são possibilidades editoriais; confirme sempre a adequação, a personalização e as condições da opção concreta."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "É necessário preparar a mesma oferta para todas as pessoas?",
+          "resposta": "Não necessariamente. Defina primeiro os destinatários e a ocasião; uma solução comum só é adequada se corresponder às necessidades do grupo."
+        },
+        {
+          "pergunta": "Os encontros de fim de ano têm uma data fixa?",
+          "resposta": "Não. A data e o formato dependem da organização e da equipa; confirme a agenda antes de planear uma distribuição."
+        }
+      ],
+      "fontes": [],
+      "etiquetas": [
+        "integração de colaboradores",
+        "reuniões",
+        "formação",
+        "visitas",
+        "equipas"
+      ],
+      "imagem": {
+        "url": "assets/para_quem/visuais/empresas.jpg",
+        "alt": "Cadernos escuros e canetas dispostos em filas sobre uma mesa.",
+        "width": 500,
+        "height": 500
+      },
+      "relacionados": [
+        {
+          "titulo": "Como preparar um logótipo para personalização",
+          "url": "guias/como-preparar-um-logotipo.html"
+        },
+        {
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "titulo": "Materiais",
+          "url": "materiais/index.html"
+        }
+      ],
+      "data_revisao": "2026-10-14"
+    },
+    {
+      "id": "camaras-municipais",
+      "titulo": "Câmaras municipais",
+      "url": "publicos/camaras-municipais.html",
+      "resumo": "Ideias para iniciativas culturais e desportivas, feiras locais, informação pública e receção de visitantes.",
+      "destinatário": [
+        {
+          "destinatário": "Participantes e famílias",
+          "necessidade": "Podem precisar de informação clara sobre a iniciativa e de uma forma simples de a levar consigo."
+        },
+        {
+          "destinatário": "Voluntários e equipas organizadoras",
+          "necessidade": "Podem beneficiar de identificação funcional e de uma distribuição coordenada com as tarefas do evento."
+        },
+        {
+          "destinatário": "Visitantes",
+          "necessidade": "Considere a língua, o contexto local e a facilidade de transporte, sem presumir as necessidades de cada pessoa."
+        }
+      ],
+      "ocasiões": [
+        {
+          "destinatário": [
+            "Participantes",
+            "Famílias"
+          ],
+          "ocasião": "Atividade cultural, desportiva ou familiar",
+          "local": "Biblioteca, equipamento cultural, espaço público ou recinto desportivo",
+          "época": "Datas e programação dependem do município e da iniciativa; confirme a agenda local",
+          "objetivo": "Apoiar a participação ou disponibilizar informação relevante para a atividade.",
+          "texto_editorial": "A ocasião destina-se a participantes e a famílias e pode decorrer em contextos como biblioteca, equipamento cultural, espaço público ou recinto desportivo. O momento — datas e programação dependem do município e da iniciativa; confirme a agenda local — ajuda a enquadrar o objetivo de apoiar a participação ou disponibilizar informação relevante para a atividade."
+        },
+        {
+          "destinatário": [
+            "Visitantes",
+            "Expositores",
+            "Organização"
+          ],
+          "ocasião": "Feira local ou receção de visitantes",
+          "local": "Recinto da feira, posto de receção ou espaço municipal",
+          "época": "Calendário definido localmente e sujeito a atualização",
+          "objetivo": "Orientar a participação e distinguir os materiais destinados a cada público.",
+          "texto_editorial": "A ocasião destina-se a visitantes, a expositores e à organização e pode decorrer em contextos como recinto da feira, posto de receção ou espaço municipal. O momento — calendário definido localmente e sujeito a atualização — ajuda a enquadrar o objetivo de orientar a participação e distinguir os materiais destinados a cada público."
+        },
+        {
+          "destinatário": [
+            "Voluntários",
+            "Equipas organizadoras"
+          ],
+          "ocasião": "Ação de informação ou reconhecimento",
+          "local": "Ponto de encontro, balcão de acolhimento ou local da ação",
+          "época": "Conforme o calendário e as prioridades de cada iniciativa",
+          "objetivo": "Facilitar identificação, distribuição ou reconhecimento, conforme o objetivo escolhido.",
+          "texto_editorial": "A ocasião destina-se a voluntários e a equipas organizadoras e pode decorrer em contextos como ponto de encontro, balcão de acolhimento ou local da ação. O momento — conforme o calendário e as prioridades de cada iniciativa — ajuda a enquadrar o objetivo de facilitar identificação, distribuição ou reconhecimento, conforme o objetivo escolhido."
+        }
+      ],
+      "imagens_contexto": [
+        {
+          "url": "assets/para_quem/visuais/contexto-identificacao.jpg",
+          "alt": "Pulseiras de várias cores dispostas em grupos sobre fundo branco.",
+          "width": 300,
+          "height": 300,
+          "legenda": "Em iniciativas com públicos diferentes, planeie quem recebe cada material e onde o levanta."
+        }
+      ],
+      "famílias_de_artigos": [
+        {
+          "destinatário": "Participantes e famílias",
+          "objetivo": "Participação e informação",
+          "famílias": [
+            "Material de escrita",
+            "Sacos para documentos",
+            "Artigos para atividades"
+          ]
+        },
+        {
+          "destinatário": "Voluntários e organização",
+          "objetivo": "Identificação e coordenação",
+          "famílias": [
+            "Têxteis identificativos",
+            "Artigos de identificação",
+            "Material de apoio à equipa"
+          ]
+        },
+        {
+          "destinatário": "Visitantes",
+          "objetivo": "Receção e informação local",
+          "famílias": [
+            "Mapas ou material informativo",
+            "Sacos",
+            "Artigos de hidratação"
+          ]
+        }
+      ],
+      "distribuição": [
+        "Separe materiais para participantes, voluntários e equipas organizadoras; a oferta ou identificação destinada a um grupo não deve ser presumida para os restantes.",
+        "Defina um ponto de entrega, uma pessoa responsável e uma forma de gerir sobras ou entregas tardias.",
+        "Nas festas e feiras locais, confirme datas, locais, acessos e programação junto da entidade organizadora: variam por município e por ano."
+      ],
+      "critérios": [
+        "Qual é o objetivo público da iniciativa e quem é responsável pela distribuição?",
+        "A mensagem é legível e adequada ao espaço, ao idioma e ao público previsto?",
+        "Há variantes por equipa, atividade ou local que devam ser separadas?",
+        "Como serão armazenados e transportados os materiais até ao ponto de entrega?",
+        "As famílias indicadas são ideias para avaliar, não uma especificação nem uma recomendação institucional."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "As festas locais têm datas iguais em todos os municípios?",
+          "resposta": "Não. Consulte o programa atualizado da câmara ou da entidade organizadora do local e do ano em causa."
+        },
+        {
+          "pergunta": "Devo preparar a mesma oferta para participantes e voluntários?",
+          "resposta": "Não é obrigatório. Identifique necessidades e funções de cada grupo e decida separadamente se uma oferta ou material de apoio é pertinente."
+        }
+      ],
+      "fontes": [],
+      "etiquetas": [
+        "municípios",
+        "iniciativas culturais",
+        "feiras locais",
+        "famílias",
+        "voluntariado"
+      ],
+      "imagem": {
+        "url": "assets/para_quem/visuais/camaras-municipais.jpg",
+        "alt": "Caixa aberta com uma medalha e um certificado sobre uma mesa.",
+        "width": 992,
+        "height": 661
+      },
+      "relacionados": [
+        {
+          "titulo": "Como avaliar uma maquete antes da produção",
+          "url": "guias/como-avaliar-uma-maquete.html"
+        },
+        {
+          "titulo": "Como escolher o material de um brinde",
+          "url": "guias/como-escolher-o-material.html"
+        },
+        {
+          "titulo": "Técnicas",
+          "url": "tecnicas/index.html"
+        }
+      ],
+      "data_revisao": "2026-10-14"
+    },
+    {
+      "id": "escolas",
+      "titulo": "Escolas",
+      "url": "publicos/escolas.html",
+      "resumo": "Ideias para alunos, docentes, famílias e equipas escolares, ajustadas à idade e à atividade concreta.",
+      "destinatário": [
+        {
+          "destinatário": "Alunos",
+          "necessidade": "A idade, a autonomia, a atividade e as instruções de utilização precisam de ser consideradas antes de escolher qualquer artigo."
+        },
+        {
+          "destinatário": "Docentes e equipas escolares",
+          "necessidade": "Podem ter necessidades diferentes das dos alunos, como materiais de apoio, identificação ou organização."
+        },
+        {
+          "destinatário": "Famílias e visitantes",
+          "necessidade": "Em dias abertos ou cerimónias, importa perceber se o material é informativo, participativo ou uma lembrança."
+        }
+      ],
+      "ocasiões": [
+        {
+          "destinatário": [
+            "Alunos",
+            "Docentes",
+            "Famílias"
+          ],
+          "ocasião": "Início do ano letivo",
+          "local": "Escola, sala de aula ou sessão de acolhimento",
+          "época": "Antes do início definido pela escola; datas e organização variam consoante o calendário e a instituição",
+          "objetivo": "Acolher ou orientar participantes sem pressupor que todos precisam do mesmo material.",
+          "texto_editorial": "A ocasião destina-se a alunos, a docentes e a famílias e pode decorrer em contextos como escola, sala de aula ou sessão de acolhimento. O momento — antes do início definido pela escola; datas e organização variam consoante o calendário e a instituição — ajuda a enquadrar o objetivo de acolher ou orientar participantes sem pressupor que todos precisam do mesmo material."
+        },
+        {
+          "destinatário": [
+            "Alunos",
+            "Famílias",
+            "Equipas escolares"
+          ],
+          "ocasião": "Dia aberto ou atividade escolar",
+          "local": "Entrada, salas, pátio ou espaço da atividade",
+          "época": "Ao longo do ano, segundo o calendário publicado pela escola",
+          "objetivo": "Apoiar a participação e distribuir materiais no local adequado.",
+          "texto_editorial": "A ocasião destina-se a alunos, a famílias e a equipas escolares e pode decorrer em contextos como entrada, salas, pátio ou espaço da atividade. O momento — ao longo do ano, segundo o calendário publicado pela escola — ajuda a enquadrar o objetivo de apoiar a participação e distribuir materiais no local adequado."
+        },
+        {
+          "destinatário": [
+            "Alunos",
+            "Docentes",
+            "Famílias"
+          ],
+          "ocasião": "Fim do ano letivo, encerramento ou cerimónia de conclusão",
+          "local": "Escola ou espaço escolhido para a cerimónia",
+          "época": "No encerramento do ano letivo ou percurso; data definida pela instituição",
+          "objetivo": "Assinalar a ocasião, distinguindo participantes, famílias e equipa.",
+          "texto_editorial": "A ocasião destina-se a alunos, a docentes e a famílias e pode decorrer em contextos como escola ou espaço escolhido para a cerimónia. O momento — no encerramento do ano letivo ou percurso; data definida pela instituição — ajuda a enquadrar o objetivo de assinalar a ocasião, distinguindo participantes, famílias e equipa."
+        },
+        {
+          "destinatário": [
+            "Comunidade educativa"
+          ],
+          "ocasião": "Dia Internacional da Educação",
+          "local": "Escola ou atividade educativa",
+          "época": "24 de janeiro, data assinalada pelas Nações Unidas [dia-educacao]",
+          "objetivo": "Ligar uma atividade ao tema da educação; a data não implica oferecer brindes.",
+          "texto_editorial": "A ocasião destina-se à comunidade educativa e pode decorrer em contextos como escola ou atividade educativa. O momento — 24 de janeiro, data assinalada pelas Nações Unidas [dia-educacao] — ajuda a enquadrar o objetivo de ligar uma atividade ao tema da educação; a data não implica oferecer brindes."
+        }
+      ],
+      "imagens_contexto": [
+        {
+          "url": "assets/para_quem/visuais/escolas-atividade.jpg",
+          "alt": "Duas mochilas com desenhos a traço acompanhadas por lápis de cor.",
+          "width": 300,
+          "height": 301,
+          "legenda": "Uma atividade escolar pode reunir materiais diferentes; considere as idades e a utilização prevista."
+        },
+        {
+          "url": "assets/para_quem/visuais/escolas-materiais.jpg",
+          "alt": "Conjuntos de material escolar em estojos transparentes, com régua e lápis.",
+          "width": 300,
+          "height": 301,
+          "legenda": "A escolha deve acompanhar a atividade definida pela escola, sem presumir que uma opção serve todos os alunos."
+        }
+      ],
+      "famílias_de_artigos": [
+        {
+          "destinatário": "Alunos",
+          "objetivo": "Atividade e participação",
+          "famílias": [
+            "Material de escrita",
+            "Material de desenho",
+            "Sacos para atividades"
+          ]
+        },
+        {
+          "destinatário": "Docentes e equipas escolares",
+          "objetivo": "Organização e apoio",
+          "famílias": [
+            "Cadernos",
+            "Material de escrita",
+            "Artigos de identificação"
+          ]
+        },
+        {
+          "destinatário": "Famílias e visitantes",
+          "objetivo": "Informação e acolhimento",
+          "famílias": [
+            "Sacos para documentação",
+            "Material informativo",
+            "Artigos de identificação"
+          ]
+        }
+      ],
+      "distribuição": [
+        "Organize a entrega por turma, idade, atividade ou papel; evite deixar materiais acessíveis sem supervisão quando a escola considere que isso não é adequado.",
+        "Antes de selecionar algo para alunos, peça à escola que avalie a faixa etária, os componentes, as instruções e o contexto de utilização.",
+        "Confirme as datas diretamente com a escola e consulte o calendário escolar aplicável; início, interrupções e conclusão não são universais."
+      ],
+      "critérios": [
+        "Que idades e grupos vão receber o artigo? Há participantes que não devem receber determinada variante?",
+        "A escola reviu instruções, componentes e condições de utilização previstas para a idade?",
+        "O artigo é para uso dos alunos, apoio aos docentes ou entrega às famílias?",
+        "Como será distribuído em sala, no pátio ou durante uma cerimónia?",
+        "A família de artigos é apenas uma possibilidade a avaliar; não demonstra adequação, segurança ou conformidade para crianças."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Um artigo destinado a adultos pode ser distribuído a alunos?",
+          "resposta": "Não assuma essa adequação. A escola deve avaliar a idade, as instruções e o uso previsto antes de decidir."
+        },
+        {
+          "pergunta": "O início e o fim do ano letivo têm datas iguais em todas as escolas?",
+          "resposta": "Não trate as datas como universais; confirme o calendário em vigor e a informação publicada pela escola."
+        },
+        {
+          "pergunta": "O Dia Internacional da Educação implica uma oferta?",
+          "resposta": "Não. 24 de janeiro é uma data de sensibilização; uma atividade ou oferta só deve ser considerada se servir um objetivo educativo concreto."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "dia-educacao",
+          "titulo": "Dia Internacional da Educação",
+          "entidade": "Nações Unidas",
+          "url": "https://www.un.org/en/observances/education-day",
+          "data_consulta": "2026-10-14",
+          "ambito": "A Assembleia Geral das Nações Unidas proclamou 24 de janeiro como Dia Internacional da Educação."
+        }
+      ],
+      "etiquetas": [
+        "alunos",
+        "docentes",
+        "famílias",
+        "ano letivo",
+        "atividades escolares"
+      ],
+      "imagem": {
+        "url": "assets/para_quem/visuais/escolas.jpg",
+        "alt": "Lápis de cor alinhados, cada um com uma mensagem impressa.",
+        "width": 554,
+        "height": 554
+      },
+      "relacionados": [
+        {
+          "titulo": "Como preparar um logótipo para personalização",
+          "url": "guias/como-preparar-um-logotipo.html"
+        },
+        {
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "titulo": "Materiais",
+          "url": "materiais/index.html"
+        }
+      ],
+      "data_revisao": "2026-10-14"
+    },
+    {
+      "id": "clubes-desportivos",
+      "titulo": "Clubes desportivos",
+      "url": "publicos/clubes-desportivos.html",
+      "resumo": "Ideias para atletas, voluntários, participantes e adeptos, sem confundir lembranças com equipamento técnico.",
+      "destinatário": [
+        {
+          "destinatário": "Atletas",
+          "necessidade": "Podem receber material de acolhimento ou reconhecimento; o equipamento necessário à prática deve ser tratado separadamente."
+        },
+        {
+          "destinatário": "Voluntários e organização",
+          "necessidade": "Podem precisar de identificação ligada às tarefas e aos pontos de apoio do evento."
+        },
+        {
+          "destinatário": "Participantes e adeptos",
+          "necessidade": "A ocasião, a duração e a forma de entrega ajudam a decidir se uma lembrança tem utilidade."
+        }
+      ],
+      "ocasiões": [
+        {
+          "destinatário": [
+            "Atletas",
+            "Equipas técnicas"
+          ],
+          "ocasião": "Abertura ou encerramento da época",
+          "local": "Instalações do clube ou local de treino",
+          "época": "Calendário definido pelo clube e pela competição",
+          "objetivo": "Acolher participantes ou assinalar um momento da época.",
+          "texto_editorial": "A ocasião destina-se a atletas e a equipas técnicas e pode decorrer em contextos como instalações do clube ou local de treino. O momento — calendário definido pelo clube e pela competição — ajuda a enquadrar o objetivo de acolher participantes ou assinalar um momento da época."
+        },
+        {
+          "destinatário": [
+            "Participantes",
+            "Voluntários",
+            "Adeptos"
+          ],
+          "ocasião": "Torneio, corrida ou convívio",
+          "local": "Recinto, percurso, zona de partida ou espaço de encontro",
+          "época": "Data e local variam por organização e edição",
+          "objetivo": "Apoiar a participação, a identificação ou o reconhecimento.",
+          "texto_editorial": "A ocasião destina-se a participantes, a voluntários e a adeptos e pode decorrer em contextos como recinto, percurso, zona de partida ou espaço de encontro. O momento — data e local variam por organização e edição — ajuda a enquadrar o objetivo de apoiar a participação, a identificação ou o reconhecimento."
+        },
+        {
+          "destinatário": [
+            "Participantes",
+            "Voluntários",
+            "Adeptos"
+          ],
+          "ocasião": "Dia Internacional do Desporto para o Desenvolvimento e a Paz",
+          "local": "Clube, escola ou espaço da atividade",
+          "época": "6 de abril, data assinalada pelas Nações Unidas [dia-desporto]",
+          "objetivo": "Dar contexto a uma atividade desportiva; a data não é uma recomendação automática para distribuir brindes.",
+          "texto_editorial": "A ocasião destina-se a participantes, a voluntários e a adeptos e pode decorrer em contextos como clube, escola ou espaço da atividade. O momento — 6 de abril, data assinalada pelas Nações Unidas [dia-desporto] — ajuda a enquadrar o objetivo de dar contexto a uma atividade desportiva; a data não é uma recomendação automática para distribuir brindes."
+        }
+      ],
+      "imagens_contexto": [
+        {
+          "url": "assets/para_quem/visuais/contexto-identificacao.jpg",
+          "alt": "Pulseiras de várias cores dispostas em grupos sobre fundo branco.",
+          "width": 300,
+          "height": 300,
+          "legenda": "Em torneios ou corridas, distinga o que se destina a participantes, voluntários e organização."
+        }
+      ],
+      "famílias_de_artigos": [
+        {
+          "destinatário": "Atletas",
+          "objetivo": "Acolhimento ou reconhecimento",
+          "famílias": [
+            "Artigos de identificação",
+            "Têxteis de representação",
+            "Artigos de reconhecimento"
+          ]
+        },
+        {
+          "destinatário": "Voluntários e organização",
+          "objetivo": "Identificação funcional",
+          "famílias": [
+            "Têxteis identificativos",
+            "Artigos de identificação",
+            "Sacos para materiais da equipa"
+          ]
+        },
+        {
+          "destinatário": "Participantes e adeptos",
+          "objetivo": "Participação e memória do evento",
+          "famílias": [
+            "Artigos de reconhecimento",
+            "Sacos",
+            "Artigos de hidratação"
+          ]
+        }
+      ],
+      "distribuição": [
+        "Separe atletas, voluntários, participantes e público; a identificação de uma função não equivale a uma oferta para todo o recinto.",
+        "Se houver nomes ou tamanhos, prepare uma lista de distribuição e um método para gerir alterações e substituições.",
+        "Uma lembrança não substitui equipamento técnico desportivo nem confirma adequação à prática. Confirme essa distinção com o clube.",
+        "Defina como transportar e entregar os materiais sem bloquear zonas de circulação, partida ou assistência."
+      ],
+      "critérios": [
+        "A oferta é para atletas, voluntários, participantes ou adeptos?",
+        "Está claramente separada do equipamento técnico necessário à modalidade?",
+        "Como serão identificados nomes, equipas, tamanhos e quantidades?",
+        "O ponto de entrega é compatível com o percurso e a organização da atividade?",
+        "Os artigos de hidratação e os têxteis são apenas famílias possíveis; não se afirma qualquer característica ou adequação técnica."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Uma lembrança do clube substitui equipamento de treino?",
+          "resposta": "Não. Este guia trata de artigos promocionais ou de reconhecimento; o equipamento necessário à modalidade é uma decisão distinta."
+        },
+        {
+          "pergunta": "O Dia Internacional do Desporto é uma data de oferta?",
+          "resposta": "Não. 6 de abril pode contextualizar uma atividade; uma oferta só deve ser considerada se corresponder a uma necessidade e a uma decisão do clube."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "dia-desporto",
+          "titulo": "Dia Internacional do Desporto para o Desenvolvimento e a Paz",
+          "entidade": "Nações Unidas",
+          "url": "https://www.un.org/en/observances/sport-day",
+          "data_consulta": "2026-10-14",
+          "ambito": "A página identifica 6 de abril como Dia Internacional do Desporto para o Desenvolvimento e a Paz."
+        }
+      ],
+      "etiquetas": [
+        "atletas",
+        "voluntários",
+        "torneios",
+        "corridas",
+        "adeptos"
+      ],
+      "imagem": {
+        "url": "assets/para_quem/visuais/clubes-desportivos.jpg",
+        "alt": "Porta-chaves com uma bola de futebol em miniatura sobre fundo branco.",
+        "width": 447,
+        "height": 447
+      },
+      "relacionados": [
+        {
+          "titulo": "Bordado",
+          "url": "tecnicas/bordado.html"
+        },
+        {
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        },
+        {
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "titulo": "Materiais",
+          "url": "materiais/index.html"
+        }
+      ],
+      "data_revisao": "2026-10-14"
+    },
+    {
+      "id": "revendedores",
+      "titulo": "Revendedores",
+      "url": "publicos/revendedores.html",
+      "resumo": "Um método para transformar o contexto do destinatário em perguntas e comparações claras, sem pressupostos comerciais.",
+      "destinatário": [
+        {
+          "destinatário": "Pessoa que prepara a proposta",
+          "necessidade": "Precisa de recolher o contexto de utilização, os destinatários e as condições que ainda não estão confirmadas."
+        },
+        {
+          "destinatário": "Pessoa que avalia a proposta",
+          "necessidade": "Precisa de distinguir possibilidades editoriais, dados confirmados e questões por esclarecer."
+        },
+        {
+          "destinatário": "Destinatários finais",
+          "necessidade": "As necessidades variam com a ocasião, o local e a forma de distribuição da proposta."
+        }
+      ],
+      "ocasiões": [
+        {
+          "destinatário": [
+            "Pessoa que prepara a proposta",
+            "Cliente"
+          ],
+          "ocasião": "Recolha inicial do pedido",
+          "local": "Reunião, chamada ou documento de requisitos",
+          "época": "Antes de iniciar a comparação",
+          "objetivo": "Perceber quem recebe, quando, onde e com que objetivo.",
+          "texto_editorial": "A ocasião destina-se a quem prepara a proposta e a clientes e pode decorrer em contextos como reunião, chamada ou documento de requisitos. O momento — antes de iniciar a comparação — ajuda a enquadrar o objetivo de perceber quem recebe, quando, onde e com que objetivo."
+        },
+        {
+          "destinatário": [
+            "Pessoa que avalia a proposta",
+            "Destinatários finais"
+          ],
+          "ocasião": "Comparação de famílias genéricas",
+          "local": "Proposta ou sessão de avaliação",
+          "época": "Conforme o calendário do projeto; não existe um prazo universal",
+          "objetivo": "Comparar utilidade, distribuição, personalização e pontos que ainda exigem confirmação.",
+          "texto_editorial": "A ocasião destina-se a quem avalia a proposta e a destinatários finais e pode decorrer em contextos como proposta ou sessão de avaliação. O momento — conforme o calendário do projeto; não existe um prazo universal — ajuda a enquadrar o objetivo de comparar utilidade, distribuição, personalização e pontos que ainda exigem confirmação."
+        },
+        {
+          "destinatário": [
+            "Equipa responsável"
+          ],
+          "ocasião": "Preparação de uma repetição ou nova edição",
+          "local": "Arquivo de versões e material de referência da própria organização",
+          "época": "Antes de cada nova decisão; não presumir que as condições anteriores se mantêm",
+          "objetivo": "Identificar o que mudou e o que tem de ser reconfirmado.",
+          "texto_editorial": "A ocasião destina-se à equipa responsável e pode decorrer em contextos como arquivo de versões e material de referência da própria organização. O momento — antes de cada nova decisão; não presumir que as condições anteriores se mantêm — ajuda a enquadrar o objetivo de identificar o que mudou e o que tem de ser reconfirmado."
+        }
+      ],
+      "imagens_contexto": [
+        {
+          "url": "assets/para_quem/visuais/empresas-distribuicao.jpg",
+          "alt": "Saco de tecido claro apresentado isoladamente sobre fundo branco.",
+          "width": 300,
+          "height": 301,
+          "legenda": "A comparação começa por definir se o material será levado consigo ou entregue no local."
+        },
+        {
+          "url": "assets/para_quem/visuais/escolas-materiais.jpg",
+          "alt": "Conjuntos de material escolar em estojos transparentes, com régua e lápis.",
+          "width": 300,
+          "height": 301,
+          "legenda": "Compare as possibilidades com o destinatário e a ocasião, não apenas pela aparência."
+        }
+      ],
+      "famílias_de_artigos": [
+        {
+          "destinatário": "Preparação da proposta",
+          "objetivo": "Explorar opções sem fechar prematuramente uma escolha",
+          "famílias": [
+            "Material de escrita",
+            "Sacos",
+            "Têxteis",
+            "Artigos de hidratação"
+          ]
+        },
+        {
+          "destinatário": "Comparação",
+          "objetivo": "Explicar diferenças relevantes para o contexto",
+          "famílias": [
+            "Cadernos e material de organização",
+            "Artigos para eventos",
+            "Artigos de identificação"
+          ]
+        }
+      ],
+      "distribuição": [
+        "Use uma grelha curta: destinatário, ocasião, local, época, objetivo, família possível, personalização e questão por confirmar.",
+        "Separe numa proposta aquilo que é uma possibilidade editorial do que foi confirmado por uma fonte atual.",
+        "Não deduza preço, prazo, stock, quantidade mínima, margem, exclusividade ou compatibilidade a partir de uma família genérica.",
+        "Ao reutilizar uma proposta, confirme novamente arte, quantidades, destinatários, local e condições aplicáveis."
+      ],
+      "critérios": [
+        "Que informação sobre os destinatários está confirmada e o que continua por apurar?",
+        "As opções estão descritas por família e finalidade, sem converter uma possibilidade numa promessa?",
+        "A comparação separa factos documentados, sugestões editoriais e decisões comerciais?",
+        "Que perguntas faltam sobre distribuição, variantes, personalização, data e local?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Como comparar duas famílias de artigos?",
+          "resposta": "Relacione cada opção com os destinatários, a ocasião, o uso esperado e o modo de distribuição; registe também as questões por confirmar."
+        },
+        {
+          "pergunta": "Uma proposta anterior pode ser reutilizada sem revisão?",
+          "resposta": "Não assuma que as condições se mantêm. Reveja contexto, arte, variantes, quantidades, calendário e requisitos antes de a adaptar."
+        }
+      ],
+      "fontes": [],
+      "etiquetas": [
+        "preparação de propostas",
+        "comparação",
+        "destinatários",
+        "requisitos",
+        "reconfirmação"
+      ],
+      "imagem": {
+        "url": "assets/para_quem/visuais/revendedores.jpg",
+        "alt": "Chapéu de palha com fita colorida e dois acessórios dobráveis sobre fundo branco.",
+        "width": 700,
+        "height": 700
+      },
+      "relacionados": [
+        {
+          "titulo": "Como escolher o material de um brinde",
+          "url": "guias/como-escolher-o-material.html"
+        },
+        {
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "titulo": "Como avaliar uma maquete antes da produção",
+          "url": "guias/como-avaliar-uma-maquete.html"
+        }
+      ],
+      "data_revisao": "2026-10-14"
+    },
+    {
+      "id": "eventos",
+      "titulo": "Eventos",
+      "url": "publicos/eventos.html",
+      "resumo": "Ideias para congressos, conferências, feiras, festivais e eventos desportivos, pensadas ao longo do percurso de participação.",
+      "destinatário": [
+        {
+          "destinatário": "Participantes",
+          "necessidade": "Podem precisar de informação, materiais de sessão ou de uma forma de identificar o evento."
+        },
+        {
+          "destinatário": "Oradores e expositores",
+          "necessidade": "Podem ter necessidades diferentes das do público geral e da organização."
+        },
+        {
+          "destinatário": "Equipa organizadora e voluntários",
+          "necessidade": "Podem precisar de identificação e de materiais ligados às tarefas que desempenham."
+        }
+      ],
+      "ocasiões": [
+        {
+          "destinatário": [
+            "Participantes",
+            "Oradores",
+            "Expositores"
+          ],
+          "ocasião": "Inscrição e receção",
+          "local": "Balcão de inscrição, entrada ou ponto de acreditação",
+          "época": "Antes da abertura e durante a chegada, segundo o programa do evento",
+          "objetivo": "Entregar informação e materiais adequados ao grupo identificado.",
+          "texto_editorial": "A ocasião destina-se a participantes, a oradores e a expositores e pode decorrer em contextos como balcão de inscrição, entrada ou ponto de acreditação. O momento — antes da abertura e durante a chegada, segundo o programa do evento — ajuda a enquadrar o objetivo de entregar informação e materiais adequados ao grupo identificado."
+        },
+        {
+          "destinatário": [
+            "Participantes",
+            "Oradores"
+          ],
+          "ocasião": "Sessões e conferências",
+          "local": "Salas, auditórios ou espaços de formação",
+          "época": "Durante as sessões previstas no programa",
+          "objetivo": "Apoiar a atividade sem interferir com o conteúdo ou o equipamento de apresentação.",
+          "texto_editorial": "A ocasião destina-se a participantes e a oradores e pode decorrer em contextos como salas, auditórios ou espaços de formação. O momento — durante as sessões previstas no programa — ajuda a enquadrar o objetivo de apoiar a atividade sem interferir com o conteúdo ou o equipamento de apresentação."
+        },
+        {
+          "destinatário": [
+            "Expositores",
+            "Público"
+          ],
+          "ocasião": "Feira ou exposição",
+          "local": "Bancadas, pavilhões e zonas de circulação",
+          "época": "Horário e datas definidos para cada edição",
+          "objetivo": "Facilitar a participação ou a recolha de informação, ponderando o transporte.",
+          "texto_editorial": "A ocasião destina-se a expositores e a público e pode decorrer em contextos como bancadas, pavilhões e zonas de circulação. O momento — horário e datas definidos para cada edição — ajuda a enquadrar o objetivo de facilitar a participação ou a recolha de informação, ponderando o transporte."
+        },
+        {
+          "destinatário": [
+            "Participantes",
+            "Voluntários",
+            "Público"
+          ],
+          "ocasião": "Festival, atividade ao ar livre ou evento desportivo",
+          "local": "Recinto, percurso e pontos de apoio",
+          "época": "Condições e datas variam por evento e edição",
+          "objetivo": "Planear onde ocorre a entrega e a quem se destina cada material.",
+          "texto_editorial": "A ocasião destina-se a participantes, a voluntários e a público e pode decorrer em contextos como recinto, percurso e pontos de apoio. O momento — condições e datas variam por evento e edição — ajuda a enquadrar o objetivo de planear onde ocorre a entrega e a quem se destina cada material."
+        },
+        {
+          "destinatário": [
+            "Participantes",
+            "Organização"
+          ],
+          "ocasião": "Saída e encerramento",
+          "local": "Saída, balcão de informação ou ponto de recolha",
+          "época": "No fim do programa, se essa etapa estiver prevista",
+          "objetivo": "Evitar concentrar entregas num ponto que dificulte a circulação.",
+          "texto_editorial": "A ocasião destina-se a participantes e à organização e pode decorrer em contextos como saída, balcão de informação ou ponto de recolha. O momento — no fim do programa, se essa etapa estiver prevista — ajuda a enquadrar o objetivo de evitar concentrar entregas num ponto que dificulte a circulação."
+        }
+      ],
+      "imagens_contexto": [
+        {
+          "url": "assets/para_quem/visuais/empresas-organizacao.jpg",
+          "alt": "Dois instrumentos de escrita dentro de uma caixa aberta de cartão.",
+          "width": 300,
+          "height": 301,
+          "legenda": "A preparação de uma sessão começa por identificar o que é necessário e para quem."
+        },
+        {
+          "url": "assets/para_quem/visuais/eventos-acolhimento.jpg",
+          "alt": "Bolsa clara aberta com vários artigos de higiene pessoal dispostos à frente.",
+          "width": 1000,
+          "height": 1000,
+          "legenda": "O acolhimento pode variar conforme o programa; a imagem é ilustrativa e não define uma oferta."
+        }
+      ],
+      "famílias_de_artigos": [
+        {
+          "destinatário": "Participantes",
+          "objetivo": "Inscrição e acompanhamento",
+          "famílias": [
+            "Sacos para documentação",
+            "Material de escrita",
+            "Artigos de identificação"
+          ]
+        },
+        {
+          "destinatário": "Oradores e expositores",
+          "objetivo": "Apoio à participação",
+          "famílias": [
+            "Cadernos",
+            "Material de escrita",
+            "Artigos de identificação"
+          ]
+        },
+        {
+          "destinatário": "Organização e voluntários",
+          "objetivo": "Identificação e coordenação",
+          "famílias": [
+            "Têxteis identificativos",
+            "Sacos para materiais da equipa",
+            "Artigos de identificação"
+          ]
+        },
+        {
+          "destinatário": "Público",
+          "objetivo": "Participação e recordação",
+          "famílias": [
+            "Artigos para eventos",
+            "Sacos",
+            "Artigos de hidratação"
+          ]
+        }
+      ],
+      "distribuição": [
+        "Desenhe a entrega ao longo do percurso: inscrição, receção, sessões, exposição ou atividades, e saída.",
+        "Distinga materiais de participação, artigos para oradores, expositores e equipa; não pressuponha que o mesmo conteúdo serve todos.",
+        "Para atividades ao ar livre, confirme local, acesso, transporte e plano de distribuição com a organização; não presuma condições meteorológicas nem requisitos de segurança.",
+        "Faça uma simulação de montagem e fluxo com o espaço e as quantidades previstos."
+      ],
+      "critérios": [
+        "Quem recebe cada material e em que etapa do evento?",
+        "O que a pessoa terá de transportar durante e depois da participação?",
+        "Onde será feita a entrega e como se evita criar filas ou bloquear acessos?",
+        "Que variantes, línguas, mensagens ou nomes precisam de aprovação?",
+        "As famílias sugeridas são possibilidades a avaliar, não um conjunto obrigatório para qualquer evento."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "É melhor entregar tudo na inscrição?",
+          "resposta": "Depende do percurso, do volume e dos destinatários. Compare receção, sessões e saída e defina o ponto que melhor serve cada material."
+        },
+        {
+          "pergunta": "Participantes, oradores e expositores devem receber o mesmo?",
+          "resposta": "Não existe uma regra universal. Identifique as necessidades de cada grupo e decida se há materiais diferentes ou se algum não é necessário."
+        }
+      ],
+      "fontes": [],
+      "etiquetas": [
+        "congressos",
+        "conferências",
+        "feiras",
+        "festivais",
+        "eventos desportivos"
+      ],
+      "imagem": {
+        "url": "assets/para_quem/visuais/eventos.png",
+        "alt": "Conjunto de artigos dispostos sobre uma mesa, incluindo recipientes, cadernos e acessórios.",
+        "width": 800,
+        "height": 600
+      },
+      "relacionados": [
+        {
+          "titulo": "Como escolher brindes para um evento",
+          "url": "guias/como-escolher-brindes-para-um-evento.html"
+        },
+        {
+          "titulo": "Como preparar um logótipo para personalização",
+          "url": "guias/como-preparar-um-logotipo.html"
+        },
+        {
+          "titulo": "Materiais",
+          "url": "materiais/index.html"
+        }
+      ],
+      "data_revisao": "2026-10-14"
+    },
+    {
+      "id": "turismo-alojamento",
+      "titulo": "Turismo e alojamento",
+      "url": "publicos/turismo-alojamento.html",
+      "resumo": "Ideias para acolhimento de hóspedes, visitas guiadas, programas culturais e eventos em alojamentos.",
+      "destinatário": [
+        {
+          "destinatário": "Hóspedes",
+          "necessidade": "Considere o que pode ser útil no contexto da estadia e se a pessoa terá de transportar o artigo durante a visita ou viagem."
+        },
+        {
+          "destinatário": "Visitantes e participantes",
+          "necessidade": "Uma visita guiada ou programa cultural pode exigir informação legível e adequada ao percurso e à duração."
+        },
+        {
+          "destinatário": "Equipas de alojamento e organização",
+          "necessidade": "Podem precisar de materiais para acolhimento, identificação ou coordenação de atividades."
+        }
+      ],
+      "ocasiões": [
+        {
+          "destinatário": [
+            "Hóspedes"
+          ],
+          "ocasião": "Receção ou início de uma estadia",
+          "local": "Balcão de receção, quarto ou ponto de acolhimento",
+          "época": "Ao longo do ano; épocas de maior procura variam por destino e alojamento",
+          "objetivo": "Transmitir informação útil ou acolher, se uma oferta for apropriada.",
+          "texto_editorial": "A ocasião destina-se a hóspedes e pode decorrer em contextos como balcão de receção, quarto ou ponto de acolhimento. O momento — ao longo do ano; épocas de maior procura variam por destino e alojamento — ajuda a enquadrar o objetivo de transmitir informação útil ou acolher, se uma oferta for apropriada."
+        },
+        {
+          "destinatário": [
+            "Visitantes",
+            "Guias"
+          ],
+          "ocasião": "Visita guiada ou programa cultural",
+          "local": "Ponto de encontro, percurso ou equipamento cultural",
+          "época": "Calendário e época definidos localmente",
+          "objetivo": "Apoiar a orientação ou a participação sem presumir necessidades de transporte.",
+          "texto_editorial": "A ocasião destina-se a visitantes e a guias e pode decorrer em contextos como ponto de encontro, percurso ou equipamento cultural. O momento — calendário e época definidos localmente — ajuda a enquadrar o objetivo de apoiar a orientação ou a participação sem presumir necessidades de transporte."
+        },
+        {
+          "destinatário": [
+            "Hóspedes",
+            "Participantes",
+            "Organização"
+          ],
+          "ocasião": "Evento num alojamento",
+          "local": "Sala, espaço de receção ou área definida pelo alojamento",
+          "época": "Datas específicas do programa e da reserva",
+          "objetivo": "Distinguir materiais de acolhimento, participação e apoio à equipa.",
+          "texto_editorial": "A ocasião destina-se a hóspedes, a participantes e à organização e pode decorrer em contextos como sala, espaço de receção ou área definida pelo alojamento. O momento — datas específicas do programa e da reserva — ajuda a enquadrar o objetivo de distinguir materiais de acolhimento, participação e apoio à equipa."
+        },
+        {
+          "destinatário": [
+            "Visitantes",
+            "Comunidade local"
+          ],
+          "ocasião": "Dia Mundial do Turismo",
+          "local": "Alojamento, destino ou atividade local",
+          "época": "27 de setembro; a página oficial da ONU Turismo consultada é relativa à edição de 2026 [dia-turismo]",
+          "objetivo": "Dar contexto a uma atividade local; a data não implica uma oferta nem uma iniciativa universal.",
+          "texto_editorial": "A ocasião destina-se a visitantes e a comunidade local e pode decorrer em contextos como alojamento, destino ou atividade local. O momento — 27 de setembro; a página oficial da ONU Turismo consultada é relativa à edição de 2026 [dia-turismo] — ajuda a enquadrar o objetivo de dar contexto a uma atividade local; a data não implica uma oferta nem uma iniciativa universal."
+        }
+      ],
+      "imagens_contexto": [
+        {
+          "url": "assets/para_quem/visuais/turismo-transporte.jpg",
+          "alt": "Recipiente escuro com tampa transparente, isolado sobre fundo claro.",
+          "width": 500,
+          "height": 500,
+          "legenda": "Em visitas e estadias, considere o que as pessoas poderão transportar durante o percurso."
+        }
+      ],
+      "famílias_de_artigos": [
+        {
+          "destinatário": "Hóspedes",
+          "objetivo": "Acolhimento e informação",
+          "famílias": [
+            "Material informativo",
+            "Sacos",
+            "Artigos de hidratação"
+          ]
+        },
+        {
+          "destinatário": "Visitantes e participantes",
+          "objetivo": "Visita e programa cultural",
+          "famílias": [
+            "Material de orientação",
+            "Sacos leves para materiais",
+            "Artigos de identificação"
+          ]
+        },
+        {
+          "destinatário": "Equipas de alojamento",
+          "objetivo": "Coordenação e acolhimento",
+          "famílias": [
+            "Têxteis identificativos",
+            "Material de escrita",
+            "Artigos para eventos"
+          ]
+        }
+      ],
+      "distribuição": [
+        "Considere se o artigo será entregue antes da visita, durante a estadia ou no final e quem o transportará.",
+        "Se houver visitantes com línguas diferentes, confirme traduções e revisão da informação; não assuma que um idioma serve todas as pessoas.",
+        "A sazonalidade e os programas dependem do destino e do alojamento: verifique a agenda local em vigor antes de referir épocas ou datas.",
+        "Defina como a equipa guardará, reporá e distribuirá os materiais no ponto de receção."
+      ],
+      "critérios": [
+        "O artigo continua útil fora do alojamento ou durante o transporte?",
+        "A mensagem de acolhimento é local, clara e atualizada?",
+        "Há necessidades linguísticas ou de orientação que a equipa já identificou?",
+        "A oferta destina-se a hóspedes, visitantes, participantes ou à equipa?",
+        "As famílias indicadas são possibilidades editoriais; não afirmam requisitos de viagem, compatibilidade ou características dos artigos."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Há uma época turística igual em todos os destinos?",
+          "resposta": "Não. Confirme a programação e os períodos relevantes com fontes atuais do destino e do alojamento."
+        },
+        {
+          "pergunta": "O Dia Mundial do Turismo é uma recomendação para oferecer artigos?",
+          "resposta": "Não. 27 de setembro pode servir de referência a uma atividade; só considere uma oferta se corresponder ao objetivo e ao contexto locais."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "dia-turismo",
+          "titulo": "Dia Mundial do Turismo",
+          "entidade": "ONU Turismo",
+          "url": "https://www.untourism.int/world-tourism-day-2026",
+          "data_consulta": "2026-10-14",
+          "ambito": "Página oficial da celebração de 2026; a referência à data serve apenas para localizar uma ocasião possível."
+        }
+      ],
+      "etiquetas": [
+        "alojamento",
+        "hóspedes",
+        "visitas guiadas",
+        "programas culturais",
+        "visitantes"
+      ],
+      "imagem": {
+        "url": "assets/para_quem/visuais/turismo-alojamento.jpg",
+        "alt": "Almofada de viagem e acessórios dispostos sobre fundo branco.",
+        "width": 447,
+        "height": 447
+      },
+      "relacionados": [
+        {
+          "titulo": "Como escolher brindes para um evento",
+          "url": "guias/como-escolher-brindes-para-um-evento.html"
+        },
+        {
+          "titulo": "Como escolher o material de um brinde",
+          "url": "guias/como-escolher-o-material.html"
+        },
+        {
+          "titulo": "Materiais",
+          "url": "materiais/index.html"
+        }
+      ],
+      "data_revisao": "2026-10-14"
+    },
+    {
+      "id": "associacoes-organizacoes-comunitarias",
+      "titulo": "Associações e organizações comunitárias",
+      "url": "publicos/associacoes-organizacoes-comunitarias.html",
+      "resumo": "Ideias para integrar e reconhecer voluntários e apoiar campanhas, iniciativas culturais e atividades comunitárias.",
+      "destinatário": [
+        {
+          "destinatário": "Voluntários",
+          "necessidade": "Podem precisar de acolhimento, informação sobre a atividade ou identificação relacionada com a função."
+        },
+        {
+          "destinatário": "Participantes e comunidade",
+          "necessidade": "A utilidade do material depende do objetivo, da acessibilidade da mensagem e do local de distribuição."
+        },
+        {
+          "destinatário": "Equipas organizadoras",
+          "necessidade": "Podem precisar de materiais separados para preparação, coordenação e entrega ao público."
+        }
+      ],
+      "ocasiões": [
+        {
+          "destinatário": [
+            "Voluntários"
+          ],
+          "ocasião": "Integração ou reconhecimento de voluntários",
+          "local": "Sessão de acolhimento, ponto de encontro ou encerramento de atividade",
+          "época": "Ao longo do ano; datas definidas pela organização",
+          "objetivo": "Agradecer ou apoiar a participação sem transformar o reconhecimento numa obrigação material.",
+          "texto_editorial": "A ocasião destina-se a voluntários e pode decorrer em contextos como sessão de acolhimento, ponto de encontro ou encerramento de atividade. O momento — ao longo do ano; datas definidas pela organização — ajuda a enquadrar o objetivo de agradecer ou apoiar a participação sem transformar o reconhecimento numa obrigação material."
+        },
+        {
+          "destinatário": [
+            "Participantes",
+            "Comunidade"
+          ],
+          "ocasião": "Campanha de sensibilização",
+          "local": "Rua, espaço comunitário, escola ou local da atividade",
+          "época": "Calendário definido pela organização e pela campanha",
+          "objetivo": "Acompanhar uma mensagem clara e orientar a participação.",
+          "texto_editorial": "A ocasião destina-se a participantes e à comunidade e pode decorrer em contextos como rua, espaço comunitário, escola ou local da atividade. O momento — calendário definido pela organização e pela campanha — ajuda a enquadrar o objetivo de acompanhar uma mensagem clara e orientar a participação."
+        },
+        {
+          "destinatário": [
+            "Comunidade",
+            "Voluntários",
+            "Equipas"
+          ],
+          "ocasião": "Iniciativa cultural ou atividade comunitária",
+          "local": "Associação, recinto local, espaço público ou equipamento cultural",
+          "época": "Datas e locais variam por organização e localidade",
+          "objetivo": "Facilitar acolhimento, identificação ou participação conforme a necessidade.",
+          "texto_editorial": "A ocasião destina-se à comunidade, a voluntários e a equipas e pode decorrer em contextos como associação, recinto local, espaço público ou equipamento cultural. O momento — datas e locais variam por organização e localidade — ajuda a enquadrar o objetivo de facilitar acolhimento, identificação ou participação conforme a necessidade."
+        },
+        {
+          "destinatário": [
+            "Voluntários",
+            "Comunidade"
+          ],
+          "ocasião": "Dia Internacional dos Voluntários",
+          "local": "Atividade comunitária ou sessão da organização",
+          "época": "5 de dezembro, data anual assinalada pelas Nações Unidas [dia-voluntariado]",
+          "objetivo": "Dar visibilidade ao contributo voluntário; a data não implica oferecer brindes.",
+          "texto_editorial": "A ocasião destina-se a voluntários e à comunidade e pode decorrer em contextos como atividade comunitária ou sessão da organização. O momento — 5 de dezembro, data anual assinalada pelas Nações Unidas [dia-voluntariado] — ajuda a enquadrar o objetivo de dar visibilidade ao contributo voluntário; a data não implica oferecer brindes."
+        }
+      ],
+      "imagens_contexto": [
+        {
+          "url": "assets/para_quem/visuais/associacoes-distribuicao.jpg",
+          "alt": "Saco de tecido bege apresentado isoladamente sobre fundo branco.",
+          "width": 300,
+          "height": 301,
+          "legenda": "Em campanhas e atividades comunitárias, relacione a mensagem com o local e a forma de distribuição."
+        }
+      ],
+      "famílias_de_artigos": [
+        {
+          "destinatário": "Voluntários",
+          "objetivo": "Acolhimento e reconhecimento",
+          "famílias": [
+            "Artigos de identificação",
+            "Material de escrita",
+            "Têxteis identificativos"
+          ]
+        },
+        {
+          "destinatário": "Participantes e comunidade",
+          "objetivo": "Informação e participação",
+          "famílias": [
+            "Material informativo",
+            "Sacos",
+            "Artigos para eventos"
+          ]
+        },
+        {
+          "destinatário": "Equipas organizadoras",
+          "objetivo": "Coordenação local",
+          "famílias": [
+            "Cadernos",
+            "Material de escrita",
+            "Sacos para materiais da equipa"
+          ]
+        }
+      ],
+      "distribuição": [
+        "Diferencie materiais de campanha, identificação de voluntários e ofertas aos participantes.",
+        "Confirme que a mensagem é compreensível para o público e para o local onde será distribuída.",
+        "Planeie o armazenamento, a entrega e o destino das sobras com a equipa organizadora.",
+        "Se a iniciativa envolver outras entidades, confirme quem aprovou a mensagem e quem gere os materiais."
+      ],
+      "critérios": [
+        "O que pretende alcançar: informar, acolher, identificar ou reconhecer?",
+        "Quem deve receber o material e quem não precisa dele?",
+        "A mensagem explica a ação sem exagerar o seu alcance ou prometer resultados?",
+        "Há uma forma de participar sem receber um artigo?",
+        "As famílias indicadas são possibilidades a avaliar e não substituem a decisão da organização."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "É necessário oferecer algo para reconhecer voluntários?",
+          "resposta": "Não. O reconhecimento pode assumir formas diferentes; escolha uma oferta apenas se for adequada ao objetivo e à decisão da organização."
+        },
+        {
+          "pergunta": "O Dia Internacional dos Voluntários exige uma campanha ou oferta?",
+          "resposta": "Não. 5 de dezembro é uma data de reconhecimento; qualquer atividade ou material é opcional e deve fazer sentido no contexto local."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "dia-voluntariado",
+          "titulo": "Dia Internacional dos Voluntários",
+          "entidade": "Nações Unidas",
+          "url": "https://www.un.org/en/observances/volunteer-day",
+          "data_consulta": "2026-10-14",
+          "ambito": "A página das Nações Unidas refere a celebração anual do Dia Internacional dos Voluntários a 5 de dezembro."
+        }
+      ],
+      "etiquetas": [
+        "associações",
+        "organizações comunitárias",
+        "voluntários",
+        "sensibilização",
+        "iniciativas culturais"
+      ],
+      "imagem": {
+        "url": "assets/para_quem/visuais/associacoes-organizacoes-comunitarias.jpg",
+        "alt": "Caderno e caneta colocados sobre fundo branco.",
+        "width": 367,
+        "height": 367
+      },
+      "relacionados": [
+        {
+          "titulo": "Como preparar um logótipo para personalização",
+          "url": "guias/como-preparar-um-logotipo.html"
+        },
+        {
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "titulo": "Materiais",
+          "url": "materiais/index.html"
+        }
+      ],
+      "data_revisao": "2026-10-14"
+    }
+  ]
+}

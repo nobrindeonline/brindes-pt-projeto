@@ -6,7 +6,6 @@ sys.path.insert(0,str(ROOT))
 from conteudos.recursos import PRODUTOS, CATALOGO, POR_ID
 from conteudos.catalogo import ARTIGOS, SECCOES
 from conteudos.ideias import IDEIAS
-from conteudos.publicos import PUBLICOS
 
 paths=[ROOT/'index.html',ROOT/'creditos-imagens.html']
 paths += [ROOT/s['id']/'index.html' for s in SECCOES]
@@ -43,11 +42,6 @@ lines += ['', '## Artigos e ideias', '', '| Artigo | Dados e imagens usados | Or
 '- Faltam exemplos e fotografias de produção própria da Nobrinde. Nenhuma fotografia de terceiros é apresentada como produção própria.',
 '- A verificação visual do site em navegador continua pendente: a ferramenta não dispõe de navegador ligado nesta sessão.',
 '']
-lines+=['## Para quem — seleções por público','','As necessidades e justificações são propostas editoriais. Os factos e fotografias reutilizam exclusivamente as fichas identificadas acima. Cada cartão tem ligação à fonte e ao guia da categoria.','','| Guia | Produtos e páginas PDF (impressas) |','| --- | --- |']
-for a in PUBLICOS:
-    selection='; '.join(f"{POR_ID[id]['nome']} {POR_ID[id]['ref']} — {POR_ID[id]['pdf']} ({POR_ID[id]['impressa']})" for id,_ in a['selecoes'])
-    lines.append(f"| `publicos/{a['id']}.html` | {selection} |")
-lines+=['','Também utilizadas fotografias de destaque em `publicos/index.html`: Gratox (198), Larsen (360), Stiles (1000) e Synex (414), conforme o primeiro produto de cada seleção. Não foram extraídas novas imagens nem atribuídas novas propriedades aos produtos.','']
 lines += ['## Indústria — imagens e menções textuais', '', '| Produto / informação | Página PDF | Utilização |', '| --- | --- | --- |',
  '| Gratox 22075: bloco, caneta apagável e pano incluídos | 198 | `industria/index.html`, `industria/montagem-e-acabamentos.html`; menção sem fotografia em `industria/encadernacao-e-argolagem.html`. O catálogo não identifica aqui fabrico por argolagem. |',
  '| Hetien 1364: alumínio, bambu e mosquetão | 270 | `industria/montagem-e-acabamentos.html`; conferência de componentes sugerida editorialmente. |',

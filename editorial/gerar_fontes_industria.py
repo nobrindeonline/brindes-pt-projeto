@@ -1,37 +1,121 @@
-"""Registo reproduzível das fontes e limites da secção indústria."""
+"""Gera o registo de fontes públicas usado nos guias da secção Indústria."""
+
 from pathlib import Path
 import sys
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from conteudos.catalogo import FONTES
-from conteudos.industria import INDUSTRIA
 
-lines = ['# Fontes da secção indústria', '', 'Consulta e revisão: 24 de setembro de 2026.', '',
- '## Afirmações técnicas e históricas', '',
- 'Cada guia apresenta as fontes publicamente. As explicações são sínteses; recomendações de confirmação são orientação editorial, não procedimentos internos da Nobrinde.',
- '', '| Página | Âmbito documentado | Fontes |', '| --- | --- | --- |']
-for a in INDUSTRIA:
-    sources = '; '.join(f'[{FONTES[k][0]}]({FONTES[k][1]})' for k in a['fontes'])
-    lines.append(f"| `industria/{a['id']}.html` | {a['resumo']} | {sources or 'Catálogo: Gratox, PDF 198; Hetien, PDF 270. Operações propostas editorialmente.'} |")
-lines += ['', '## Precisão histórica', '',
- '- Museu Bordalo Pinheiro, entrada 1881: Almanach Bijou ilustrado por Rafael e oferecido como publicidade pela Havaneza, no Chiado. Não se afirma uma primeira oferta portuguesa.',
- '- Cornell, coleção Susan H. Douglas, objeto 2214.BT0003b: emblemas de McKinley, data aproximada 1896. Trata-se de comunicação política, não de uma encomenda empresarial.',
- '- PPAI, artigo de Tina Berres Filipski publicado em 26/07/2016: reunião de fabricantes em Chicago em 1903. A página refere a reunião; não se transforma essa data em origem universal dos brindes.',
- '- Os guias atuais midocean sustentam a comparação entre tampografia e bordado, sem estabelecer uma cronologia de invenções.',
- '- O catálogo de 2026 não é usado como prova histórica.', '',
- '## Imagens e esquemas', '',
- '- Reutilizadas as cinco fotografias de técnicas já fornecidas. Autores, fontes, licenças e alterações mantidos em `creditos-imagens.html`. A fotografia de tampografia surge também na etapa de personalização do percurso.',
- '- Produtos reutilizados sem nova edição: Gratox (PDF 198), Hetien (270), Trombolix (426), Farnes (610) e Larsen (360). Ver o registo completo em `fontes-catalogo.md`.',
- '- Pesquisa de fotografias adicionais: Commons (DTF, Almanach Bijou e emblemas McKinley) e registo Cornell. Os pequenos recortes de emblemas encontrados não foram selecionados; o registo Cornell apresenta condições de reprodução que exigem esclarecimento para publicação. Não foi adotada uma imagem adicional com qualidade e licença verificadas.',
- '- Para as máquinas sem fotografia selecionada e para a história, foram criados esquemas HTML/CSS. Não representam instalações, procedimentos de segurança ou equipamento da Nobrinde.',
- '', '## Confirmações necessárias sobre a operação real', '',
- '- Equipamentos disponíveis e quais os processos executados internamente ou por parceiros.',
- '- Referências e superfícies aceites, ensaios e restrições de personalização.',
- '- Forma de aprovação, fornecimento de amostras e gestão de alterações.',
- '- Plano de inspeção, critérios de aceitação e tratamento de peças não conformes.',
- '- Operações de montagem, acessórios e embalagens efetivamente propostas.',
- '- Aquisição dos artigos, disponibilidade, condições e prazos acordáveis.',
- '- Expedição, transporte, acompanhamento, destinatários e modalidades de entrega.',
- '', 'O percurso é uma organização editorial em 11 etapas. Não se apresenta como procedimento confirmado da empresa.', '']
-(ROOT/'editorial/fontes-industria.md').write_text('\n'.join(lines), encoding='utf-8')
-print('Fontes da industria atualizadas.')
+from conteudos.industria import (  # noqa: E402
+    AREAS_INDUSTRIA,
+    DATA_REVISAO_TEXTO,
+    ETAPAS,
+    FONTES_INDUSTRIA,
+    GRUPOS_INDUSTRIA,
+    INDUSTRIA,
+)
+
+DATA_CONSULTA = "14 de outubro de 2026"
+AMBITOS = {
+    "ind_pad": "Componentes e funcionamento geral da tampografia.",
+    "ind_screen": "Descrição geral da preparação e aplicação serigráfica.",
+    "ind_screen_ink": "Dependência da cura UV em relação ao sistema de tinta e equipamento; não extrapolada a outras tintas.",
+    "ind_laser": "Riscos do feixe e riscos não associados diretamente ao feixe; não é um procedimento operacional.",
+    "ind_uv": "Impressão UV direta e dependência da configuração do equipamento.",
+    "ind_dtf": "Definição e sequência geral de DTF, segundo a documentação do fabricante consultado.",
+    "ind_embroidery": "Distinção e características gerais de pontos de bordado; sem transformar parâmetros de exemplo em limites universais.",
+    "ind_seams": "Classificação e construção geral de costuras.",
+    "ind_sublimation": "Exemplos de aplicação têxtil por sublimação em poliéster.",
+    "ind_cutting": "Distinção entre corte, corte parcial e vinco em dados estruturais.",
+    "ind_diecutting": "Exemplos de equipamentos planos e rotativos para corte e estampagem.",
+    "ind_binding": "Exemplo de equipamento de encadernação adesiva e respetivas etapas gerais.",
+    "ind_wire": "Sistema de argolagem e fatores que condicionam os resultados descritos pelo fabricante.",
+    "ind_spiral": "Descrição geral de como uma espiral contínua atravessa furos no bordo de um documento.",
+    "ind_history_ppai": "Relato da reunião de fabricantes em Chicago, em 1903; não sustenta uma origem universal dos objetos promocionais.",
+    "ind_history_unesco": "Documentação de uma tradição chinesa de impressão a partir de blocos gravados; não apresentada como origem dos brindes.",
+    "ind_history_espr": "Quadro regulamentar europeu para a conceção ecológica de produtos sustentáveis; não certifica artigos promocionais concretos.",
+}
+
+lines = [
+    "# Fontes da secção Indústria",
+    "",
+    f"Última revisão editorial: {DATA_REVISAO_TEXTO}.",
+    f"Consulta das fontes abaixo: {DATA_CONSULTA}.",
+    "",
+    "As páginas sintetizam documentação pública e explicações educativas. As referências",
+    "de fabricantes descrevem os seus próprios sistemas; não estabelecem compatibilidade",
+    "universal, capacidades locais ou condições de produção. Orientações de validação",
+    "são editoriais e não instruções de operação.",
+    "",
+    "## Registo de fontes",
+    "",
+    "| Chave | Entidade ou autor | Título | URL | Data de consulta | Âmbito usado |",
+    "| --- | --- | --- | --- | --- | --- |",
+]
+
+for key, (title, url) in FONTES_INDUSTRIA.items():
+    entity, separator, source_title = title.partition(" — ")
+    if not separator:
+        entity, source_title = "Não indicado na página", title
+    lines.append(
+        f"| `{key}` | {entity} | {source_title} | <{url}> | {DATA_CONSULTA} | "
+        f"{AMBITOS[key]} |"
+    )
+
+lines.extend(
+    [
+        "",
+        "## Fontes por página",
+        "",
+        "| Página | Chaves de fontes |",
+        "| --- | --- |",
+    ]
+)
+
+for article in INDUSTRIA + AREAS_INDUSTRIA:
+    source_keys = ", ".join(f"`{key}`" for key in article["fontes"]) or "Orientação editorial"
+    lines.append(f"| `industria/{article['id']}.html` | {source_keys} |")
+
+lines.extend(
+    [
+        "",
+        "## Limites editoriais",
+        "",
+        "- O relato da PPAI documenta uma reunião associativa em 1903; não é usado como",
+        "  prova da origem dos brindes ou da história do mercado português.",
+        "- A referência de segurança laser não identifica materiais processáveis nem",
+        "  substitui avaliação de risco, documentação do material ou instruções do fabricante.",
+        "- Para UV DTF, a página distingue impressão direta de transferência em filme e",
+        "  remete a validação de cada sistema para a respetiva documentação. A fonte UV",
+        "  citada descreve impressão direta, não é apresentada como fonte de UV DTF.",
+        "- As etapas de `Da ideia à entrega` são um exemplo editorial adaptável; podem",
+        "  variar, ser opcionais ou decorrer em paralelo.",
+        "- Foram selecionadas imagens locais apenas quando o conteúdo visível é pertinente.",
+        "  As imagens da pasta da História foram excluídas por conterem datas ou marcas que",
+        "  não podem ser usadas como evidência histórica ou imagem pública independente.",
+        "- Não há imagens próprias por processo técnico em `assets/Industria`; não foram",
+        "  preenchidos esses cartões com fotografias de outros temas.",
+        "",
+        "## Organização dos guias",
+        "",
+    ]
+)
+
+for group_id, title, description, ids in GRUPOS_INDUSTRIA:
+    lines.append(f"- **{title}:** {description} Guias: {', '.join(ids)}.")
+
+lines.extend(
+    [
+        "",
+        "As etapas de `Da ideia à entrega` são:",
+        "",
+    ]
+)
+lines.extend(f"- {title}" for title, _, _ in ETAPAS)
+lines.append("")
+
+(ROOT / "editorial" / "fontes-industria.md").write_text(
+    "\n".join(lines),
+    encoding="utf-8",
+)
+print("Registo de fontes da secção Indústria atualizado.")

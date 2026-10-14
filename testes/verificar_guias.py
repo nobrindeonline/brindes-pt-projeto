@@ -32,7 +32,7 @@ class Page(HTMLParser):
 
 listing=(ROOT/'guias/index.html').read_text(encoding='utf-8')
 index=Page(listing)
-assert index.cards==7 and len(index.images)==5
+assert index.cards==7 and len(index.images)==7
 assert all(g['id']+'.html' in index.links for g in GUIAS)
 assert all(id in index.ids for id,_,_,_ in GRUPOS_GUIAS)
 assert not forbidden.search(listing)

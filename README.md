@@ -219,6 +219,15 @@ texto por validar como facto: registe-o em `editorial/validacoes.md`.
 Para um artigo de atualidade, acrescente primeiro um modelo com data de publicação
 visível e categoria de notícia; não o apresente como guia permanente.
 
+## Guias «Para quem»
+
+Os oito guias são mantidos em `conteudos/publicos.py`, com destinatários,
+ocasiões, locais, épocas, objetivos, famílias genéricas, critérios, fontes,
+etiquetas e relações estruturadas. As imagens dos cartões usam aliases neutros
+em `assets/para_quem/visuais/`. Para regenerar apenas esta secção, execute
+`python gerar.py --secao publicos`; o processo também atualiza a pesquisa e
+`assets/para-quem-conteudos.json`, que conserva os campos para consulta estruturada.
+
 ## Verificação e próximos passos
 
 Consulte `editorial/verificacao.md` para resultados exatos. O ambiente desta sessão

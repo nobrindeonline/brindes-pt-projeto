@@ -50,13 +50,15 @@ SECCOES = [
  ('escolher','Escolher e preparar','Reúna informação sobre o produto e o resultado esperado antes de definir a técnica.', 'Como escolher a técnica|Como preparar um logótipo|Ficheiros vetoriais e imagens|Resolução e pormenores mínimos'),
  ('cor','Cor e área de aplicação','Compare a referência de cor, a simulação e uma amostra no suporte final. Registe o que foi aprovado.', 'Pantone e CMYK|Diferenças de cor entre ecrã, maquete e produto|Escolha da área de personalização'),
  ('qualidade','Verificar o resultado','Descreva o defeito observado e as condições de uso. Uma fotografia isolada pode não explicar a causa.', 'Durabilidade|Tratamento de superfícies|Erros frequentes|Falhas de impressão|O que confirmar numa maquete antes de produzir')]},
- {'id':'publicos','titulo':'Brindes por público e utilização','curto':'Para quem','icone':'◎','resumo':'O contexto de utilização ajuda a definir um brinde útil e uma mensagem adequada.', 'grupos':[
- ('empresas','Empresas','Para acolhimento de colaboradores ou ações comerciais, defina quem recebe o brinde e em que momento. Explore escrita, escritório e têxteis.', 'Empresas'),
- ('municipios','Câmaras municipais','Diferencie ações culturais, iniciativas locais e atendimento público. Considere a legibilidade da mensagem e a distribuição por públicos diversos.', 'Câmaras municipais'),
- ('escolas','Escolas','Tenha em conta a idade dos destinatários, o uso diário e a identificação de turmas. Confirme a adequação do artigo à faixa etária.', 'Escolas'),
- ('clubes','Clubes desportivos','Distinga equipamento de equipa e artigos para adeptos. Considere tamanhos, reposições e leitura de nomes ou emblemas.', 'Clubes desportivos'),
- ('revendedores','Revendedores','Organize referências, versões de arte e aprovações por cliente. Confirme as condições de repetição de uma encomenda antes de prometer uniformidade.', 'Revendedores'),
- ('eventos','Eventos','Parta do tipo de evento, da forma de entrega e do uso durante ou depois da ocasião. Considere transporte, volume e utilidade.', 'Eventos')]},
+ {'id':'publicos','titulo':'Para quem','curto':'Para quem','icone':'◎','resumo':'Guias para relacionar destinatários, ocasiões, locais e épocas com famílias de artigos que podem ser avaliadas.', 'grupos':[
+ ('empresas','Empresas','Integração, reuniões, formação, visitas e encontros de equipa.', 'Empresas'),
+ ('municipios','Câmaras municipais','Iniciativas culturais e desportivas, feiras locais e receção de visitantes.', 'Câmaras municipais'),
+ ('escolas','Escolas','Alunos, docentes, famílias e equipas, com atenção à idade e ao contexto.', 'Escolas'),
+ ('clubes','Clubes desportivos','Atletas, voluntários, participantes e adeptos; separar lembranças de equipamento técnico.', 'Clubes desportivos'),
+ ('revendedores','Revendedores','Preparação de propostas e comparação de famílias genéricas por contexto.', 'Revendedores'),
+ ('eventos','Eventos','Congressos, conferências, feiras, festivais e eventos desportivos.', 'Eventos'),
+ ('turismo-alojamento','Turismo e alojamento','Acolhimento de hóspedes, visitas guiadas e programas culturais.', 'Turismo e alojamento'),
+ ('associacoes','Associações e organizações comunitárias','Voluntariado, sensibilização e atividades comunitárias.', 'Associações e organizações comunitárias')]},
  {'id':'industria','titulo':'Indústria, processos e história','curto':'Indústria','icone':'⚙','resumo':'Acompanhe as etapas de um trabalho e relacione cada máquina com o processo que executa.', 'grupos':[
  ('fluxo','Da arte à expedição','Uma sequência de referência para conversar com a produção: validar o pedido, preparar a arte, aprovar a maquete, produzir, verificar, embalar e expedir. A sequência concreta depende do trabalho.', 'Funcionamento de uma fábrica|Fluxo de produção|Preparação de artes|Impressão|Acabamento|Controlo de qualidade|Expedição'),
  ('maquinas','Máquinas e processos','Nos guias de técnicas encontra o papel dos equipamentos de tampografia, serigrafia, laser, UV e bordado. Modelos e capacidades devem ser confirmados para cada operação.', 'Máquinas de tampografia|Máquinas de serigrafia|Máquinas laser|Máquinas UV|Máquinas DTF|Equipamentos de sublimação|Máquinas de troquelagem|Máquinas de bordado|Máquinas de costura|Máquinas de crachás'),
@@ -125,7 +127,7 @@ ARTIGOS = PUBLICOS + IDEIAS + NOVIDADES + NOVOS_ARTIGOS + [
 
 ]
 
-from conteudos.industria import INDUSTRIA, FONTES_INDUSTRIA, AREAS_INDUSTRIA
+from conteudos.industria import INDUSTRIA, FONTES_INDUSTRIA, AREAS_INDUSTRIA, GRUPOS_INDUSTRIA
 ARTIGOS += INDUSTRIA + AREAS_INDUSTRIA
 FONTES.update(FONTES_INDUSTRIA)
 from conteudos.tampografia import INTRO, SECCOES as SECCOES_TAMPOGRAFIA
@@ -157,12 +159,11 @@ sec_guias['titulo'] = 'Guias práticos'
 sec_guias['resumo'] = RESUMO_GUIAS
 sec_guias['grupos'] = [(id,t,d,'|'.join(a['titulo'] for a in ARTIGOS if a['sec']=='guias' and a.get('tema')==tema)) for id,t,d,tema in GRUPOS_GUIAS]
 sec_industria = next(s for s in SECCOES if s['id']=='industria')
-sec_industria['resumo'] = 'O percurso de uma encomenda, os processos de personalização, a montagem e a história dos objetos promocionais.'
+sec_industria['resumo'] = 'Equipamentos, operações e organização da produção, com guias sobre impressão, processos têxteis, corte, montagem e acabamento.'
 sec_industria['grupos'] = [
- ('fluxo','Percurso de uma encomenda','Da escolha à receção, com decisões e confirmações em cada etapa.','O percurso de uma encomenda'),
- ('maquinas','Processos e máquinas','Funções, aplicações e limites; sem inventário de equipamentos da Nobrinde.','|'.join(a['titulo'] for a in INDUSTRIA[:-2])),
- ('montagem','Montagem e acabamentos','Componentes, acessórios, revisão e apresentação.','Montagem e acabamentos'),
- ('historia','História dos brindes','Marcos documentados, incluindo um exemplo português.','História dos brindes e dos objetos promocionais')]
+ ('impressao-marcacao','Impressão e marcação','Equipamentos e operações para aplicar ou alterar uma imagem.','|'.join(next(a['titulo'] for a in INDUSTRIA + AREAS_INDUSTRIA if a['id']==id) for id in GRUPOS_INDUSTRIA[0][3])),
+ ('processos-texteis','Processos têxteis','Bordado decorativo e costura estrutural, com funções distintas.','|'.join(next(a['titulo'] for a in INDUSTRIA + AREAS_INDUSTRIA if a['id']==id) for id in GRUPOS_INDUSTRIA[1][3])),
+ ('corte-montagem-acabamento','Corte, montagem e acabamento','Preparação de formas, união de componentes e apresentação.','|'.join(next(a['titulo'] for a in INDUSTRIA + AREAS_INDUSTRIA if a['id']==id) for id in GRUPOS_INDUSTRIA[2][3]))]
 for guia in INDUSTRIA:
     if guia.get("foto_tecnica"):
         next(a for a in ARTIGOS if a["id"] == guia["foto_tecnica"])["relacionados"].append(guia["id"])

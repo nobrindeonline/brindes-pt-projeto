@@ -705,7 +705,17 @@
         }
       ],
       "data_revisao": "2026-10-12",
-      "imagens": {}
+      "imagens": {
+        "cartao": {
+          "url": "assets/guias/visuais/logotipo-cartao.jpg",
+          "alt": "Mão a desenhar a palavra LOGO a lápis sobre uma grelha.",
+          "width": 738,
+          "height": 415,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": []
+      }
     },
     {
       "id": "pantone-cmyk-e-cor-final",
@@ -1300,7 +1310,17 @@
         }
       ],
       "data_revisao": "2026-10-12",
-      "imagens": {}
+      "imagens": {
+        "cartao": {
+          "url": "assets/guias/visuais/problemas-cartao.jpg",
+          "alt": "Pessoa sentada junto a caixas de brindes por distribuir numa feira, com canetas e porta-chaves em primeiro plano.",
+          "width": 738,
+          "height": 415,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": []
+      }
     }
   ]
 }

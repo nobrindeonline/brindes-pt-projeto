@@ -55,6 +55,17 @@
     "utilizacao_local": "Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12."
   },
   {
+    "guia": "como-preparar-um-logotipo",
+    "uso": "cartao",
+    "original": "assets/guias/Comoprepararumlogótipoparapersonalização/images.jpg",
+    "publico": "assets/guias/visuais/logotipo-cartao.jpg",
+    "sha256": "6ff19bfb48621fb042f0207eca3026905c33bbd07a147102bd52434aa3a97f0d",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12."
+  },
+  {
     "guia": "pantone-cmyk-e-cor-final",
     "uso": "cartao",
     "original": "assets/guias/PantoneCMYKeacorfinaldobrinde/gp6102b-pantone-graphics-color-bridge-coated-uncoated-guides-product-2-1_2-sk5dvkob7f.webp",
@@ -71,6 +82,17 @@
     "original": "assets/guias/PantoneCMYKeacorfinaldobrinde/pantone-brindes-promocionais-1024x569.jpg",
     "publico": "assets/guias/visuais/cor-suporte.jpg",
     "sha256": "d8cc582d52ad481d30c490c8893e9df0b5701a40286c87095c8edd2a847ff2c4",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12."
+  },
+  {
+    "guia": "problemas-comuns-na-personalizacao",
+    "uso": "cartao",
+    "original": "assets/guias/Problemascomunsnapersonalizaçãoecomoosprevenir/images.jpg",
+    "publico": "assets/guias/visuais/problemas-cartao.jpg",
+    "sha256": "3547b6814ee7615a4c803c0462bfd814c4bc078a707f094e4baceb234fe1c1b1",
     "autoria": null,
     "licenca": null,
     "transformacoes": "Cópia binária, sem recorte ou conversão.",

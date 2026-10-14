@@ -75,6 +75,24 @@ test('sublimação encontra a técnica e preserva o guia de equipamentos', () =>
   }
 });
 
+test('Para quem encontra os oito guias por destinatário e contexto', () => {
+  for (const [query, slug] of [
+    ['integração colaboradores', 'empresas'],
+    ['feiras locais voluntários', 'camaras-municipais'],
+    ['alunos idade calendário', 'escolas'],
+    ['atletas voluntários equipamento', 'clubes-desportivos'],
+    ['comparação destinatários material', 'revendedores'],
+    ['expositores inscrição participantes', 'eventos'],
+    ['hóspedes visitas guiadas', 'turismo-alojamento'],
+    ['voluntários sensibilização comunidade', 'associacoes-organizacoes-comunitarias'],
+  ]) {
+    assert.ok(find(entries, query).some(entry => entry.url === `publicos/${slug}.html`), query);
+  }
+  for (const entry of entries.filter(item => item.url.startsWith('publicos/'))) {
+    assert.ok(!/nobrinde|catálogo|catalogue|\bSKU\b|gratox|sulkan|larsen|synex/i.test(JSON.stringify(entry)));
+  }
+});
+
 test('troquelagem encontra a técnica, operações e o guia de indústria existente', () => {
   const urls = find(entries, 'TROQUELAGEM').map(entry => entry.url);
   assert.ok(urls.includes('tecnicas/tecnica-troquelagem.html'));

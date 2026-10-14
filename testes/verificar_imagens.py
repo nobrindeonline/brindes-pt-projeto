@@ -40,15 +40,17 @@ for a in IDEIAS:
     assert '<time' not in html and 'Guia permanente' not in html
 assert not (ROOT/'assets/assets').exists()
 public_listing=(ROOT/'publicos/index.html').read_text(encoding='utf-8')
-assert public_listing.count('class="audience-card"')==6
+assert public_listing.count('class="audience-card"')==8
 for a in PUBLICOS:
     assert f'href="{a["id"]}.html"' in public_listing
     assert f'id="{a["ancora"]}"' in public_listing
+    assert a['imagem']['alt'] in public_listing and a['imagem']['url'] in public_listing
     html=(ROOT/'publicos'/(a['id']+'.html')).read_text(encoding='utf-8')
     assert 'Voltar a Para quem' in html
-    # Os exemplos comerciais foram retirados pela neutralização anterior.
-    # Não exigir referências ou especificações cuja publicação foi excluída.
-    assert 'product-example audience-choice' not in html
-    for method in a['metodos']:assert '../tecnicas/'+method+'.html' in html
+    assert 'class="guide-checklist"' in html
+    assert 'id="fontes"' not in html and 'id="relacionados"' in html
+    assert 'Fontes, âmbito e revisão' not in html
+    assert 'assets/produtos/' not in html
+    assert not any(term in html.lower() for term in ('nobrinde','catálogo','catalogue','sku'))
 print(f'OK: {count} utilizações de imagens, {len(unique)} ficheiros; créditos, grelha, artigos e regressos válidos; sem preços em HTML.')
-print('OK: seis públicos, navegação relacionada e imagens sem logótipo da entidade mantenedora.')
+print('OK: oito guias por público, navegação relacionada e imagens com texto alternativo.')

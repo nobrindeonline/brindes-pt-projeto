@@ -11,7 +11,7 @@ import importlib.util
 import sys
 from neutralidade import pagina_publica, texto_publico, corrigir_ligacoes
 from conteudos.produtos import PRODUTOS, textos_publicos
-from render_produtos import POR_ID as FAMILIAS_PRODUTOS, render_guia, render_entrada, dados_publicos
+from render_produtos import POR_ID as FAMILIAS_PRODUTOS, render_guia, render_entrada, dados_publicos as dados_produtos
 from conteudos.produtos_imagens import CREDITOS as CREDITOS_PRODUTOS
 from conteudos.catalogo import ARTIGOS, SECCOES, FONTES, DATA_REVISAO
 from conteudos.recursos import FOTOS_TECNICAS, ARTIGO_PRODUTOS, GRUPO_PRODUTOS, POR_ID
@@ -19,8 +19,8 @@ from conteudos.apresentacao_recursos import tecnica, exemplos, creditos
 from conteudos.ideias import IDEIAS
 from conteudos.novidades import NOVIDADES
 from conteudos.sublimacao import IMAGENS_SUBLIMACAO
-from conteudos.publicos import PUBLICOS, PAGINAS_PRODUTOS
-from conteudos.industria import INDUSTRIA, ETAPAS
+from conteudos.publicos import PUBLICOS, FONTES_PUBLICOS, DATA_REVISAO_PUBLICOS
+from conteudos.industria import INDUSTRIA, AREAS_INDUSTRIA, ETAPAS, GRUPOS_INDUSTRIA, PROCESSOS_INDUSTRIA, DATA_REVISAO as DATA_REVISAO_INDUSTRIA, DATA_REVISAO_TEXTO
 from conteudos.tampografia import PASSOS as PASSOS_TAMPOGRAFIA, IMAGENS as IMAGENS_TAMPOGRAFIA
 from conteudos.serigrafia import PASSOS as PASSOS_SERIGRAFIA
 from conteudos.impressao_uv import PASSOS as PASSOS_UV, IMAGENS as IMAGENS_UV
@@ -107,7 +107,7 @@ def write(path, text):
     target.write_text(text,encoding='utf-8')
 def link(href,title): return f'<a href="{escape(href,quote=True)}">{escape(title)}</a>'
 def prose(text):
-    return re.sub(r'\[([a-z]+)\]',lambda m:f'<a class="source-ref" href="#fonte-{m[1]}" aria-label="Fonte: {escape(FONTES[m[1]][0])}">↗</a>',escape(text))
+    return re.sub(r'\[([a-z_]+)\]',lambda m:f'<a class="source-ref" href="#fonte-{m[1]}" aria-label="Fonte: {escape(FONTES[m[1]][0])}">↗</a>',escape(text))
 def header(prefix,active=''):
     nav=''
     for s in SECCOES:
@@ -118,8 +118,8 @@ def footer(prefix):
     return f'<footer class="footer"><div class="wrap foot-inner"><div class="footer-library"><p>brindes.pt — Biblioteca informativa independente. Informação para compreender, comparar e escolher.</p></div><nav class="footer-links" aria-label="Informação do site"><a href="{prefix}creditos-imagens.html">Créditos de imagens</a></nav></div></footer>'
 def search_form(prefix):
     return f'<form class="search" action="{prefix}pesquisa.html" method="get" role="search"><label class="sr-only" for="q">Pesquisar na biblioteca</label><input id="q" name="q" type="search" maxlength="160" placeholder="Técnica, produto ou dúvida…"><button type="submit">Pesquisar</button></form>'
-def shell(title,description,content,prefix='',active='',extra=''):
-    return f'''<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{escape(description,quote=True)}"><meta name="robots" content="noindex, nofollow"><title>{escape(title)} — brindes.pt</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="{prefix}styles.css"></head><body>{header(prefix,active)}<main id="conteudo" class="wrap" tabindex="-1">{content}</main>{footer(prefix)}{extra}<script src="{prefix}script.js" defer></script></body></html>'''
+def shell(title,description,content,prefix='',active='',extra='',robots='noindex, nofollow'):
+    return f'''<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{escape(description,quote=True)}"><meta name="robots" content="{escape(robots,quote=True)}"><title>{escape(title)} — brindes.pt</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="{prefix}styles.css"></head><body>{header(prefix,active)}<main id="conteudo" class="wrap" tabindex="-1">{content}</main>{footer(prefix)}{extra}<script src="{prefix}script.js" defer></script></body></html>'''
 def card(a,prefix=''):
     return f'<a class="topic content-card" href="{prefix}{url(a)}"><span class="eyebrow">{SECS[a["sec"]]["curto"]}</span><h3>{a["titulo"]}</h3><p>{a["resumo"]}</p><span class="arrow" aria-hidden="true">↗</span></a>'
 def idea_media(a,caption=True):
@@ -186,23 +186,79 @@ def idea_article(a):
 def public_listing(s):
     cards=''
     for a in PUBLICOS:
-        photo=idea_media({'imagens':[a['selecoes'][0][0]]},False)
-        cards+=f'<article class="audience-card" id="{a["ancora"]}">{photo}<div class="idea-card-copy"><span class="eyebrow">Guia de escolha</span><h2>{a["titulo"]}</h2><p>{a["resumo"]}</p><a class="link idea-read-more" href="{a["id"]}.html">Explorar: {a["titulo"]} <span aria-hidden="true">→</span></a></div></article>'
-    body='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / Para quem</nav><div class="page-intro"><span class="eyebrow">Escolher pelo contexto</span><h1>Para quem</h1><p>Encontre ideias para os seus destinatários. Seis guias com produtos reais do catálogo e perguntas úteis para preparar a escolha.</p></div><div class="audience-grid">'+cards+'</div><aside class="note"><strong>Da referência à escolha</strong><p>As seleções são propostas editoriais. As fotografias e características provêm do catálogo; a utilização pretendida e a personalização precisam de avaliação para o artigo concreto.</p></aside>'
+        image=a['imagem']
+        photo='<figure class="audience-cover"><img src="../'+escape(image['url'],quote=True)+'" alt="'+escape(image['alt'],quote=True)+'" width="'+str(image['width'])+'" height="'+str(image['height'])+'" loading="lazy" decoding="async"></figure>'
+        cards+=f'<article class="audience-card" id="{a["ancora"]}">{photo}<div class="idea-card-copy"><span class="eyebrow">Guia de contexto</span><h2>{escape(a["titulo"])}</h2><p>{escape(a["resumo"])}</p><a class="link idea-read-more" href="{a["id"]}.html" aria-label="Explorar: {escape(a["titulo"],quote=True)}">Explorar: {escape(a["titulo"])} <span aria-hidden="true">→</span></a></div></article>'
+    body='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / Para quem</nav><div class="page-intro"><span class="eyebrow">Escolher pelo contexto</span><h1>Para quem</h1><p>Guias para relacionar destinatários, ocasiões, locais e épocas com famílias de artigos que podem ser avaliadas. As propostas são editoriais e não substituem a confirmação das necessidades concretas.</p></div><div class="audience-grid">'+cards+'</div>'
     write('publicos/index.html',shell('Para quem',s['resumo'],body,'../','publicos'))
 
+def public_text(text):
+    def reference(match):
+        key=match[1]
+        source=FONTES_PUBLICOS[key]
+        return '<a class="source-ref" href="'+escape(source['url'],quote=True)+'" aria-label="Fonte: '+escape(source['entidade']+' — '+source['titulo'],quote=True)+'">Fonte</a>'
+    return re.sub(r'\[([a-z0-9-]+)\]',reference,escape(text))
+
 def public_article(a):
-    manifest = ROOT/'assets/produtos/manifesto.json'
-    sizes={p['id']:p for p in json.loads(manifest.read_text(encoding='utf-8'))} if manifest.is_file() else {}
-    choices=''
-    for id,why in a['selecoes']:
-        if id not in sizes: continue
-        p=POR_ID[id];size=sizes[id];category=PAGINAS_PRODUTOS[p['categoria']]
-        choices+=f'''<article class="product-example audience-choice" id="produto-{id}"><figure><div class="product-photo-frame"><img src="../assets/produtos/{p['ficheiro']}" alt="{escape(p['alt'])}" width="{size['width']}" height="{size['height']}" loading="lazy" decoding="async"></div><figcaption>Fotografia do catálogo · Ref. {p['ref']}</figcaption></figure><div class="product-example-copy"><h3>{p['nome']} <span>Referência {p['ref']}</span></h3><p class="choice-reason">{escape(why)}</p><details><summary>Características indicadas no catálogo</summary><ul>{''.join('<li>'+escape(f)+'</li>' for f in p['factos'])}</ul></details><p class="catalogue-source"><a href="../creditos-imagens.html#catalogo-{id}">Fonte: PDF p. {p['pdf']} · página impressa {p['impressa']}</a></p><a class="choice-category" href="../produtos/{category}.html">Consultar o guia: {BY_ID[category]['titulo']} →</a></div></article>'''
-    methods=''.join(link('../'+url(BY_ID[id]),BY_ID[id]['titulo']) for id in a['metodos'])
-    sources=''.join(f'<li>{POR_ID[id]["nome"]} {POR_ID[id]["ref"]}: PDF p. {POR_ID[id]["pdf"]}; página impressa {POR_ID[id]["impressa"]}.</li>' for id,_ in a['selecoes'])
-    body=f'''<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Para quem</a> / {a['titulo']}</nav><div class="page-intro"><span class="eyebrow">Guia de escolha · Para quem</span><h1>{a['titulo']}</h1><p>{a['resumo']}</p></div><section class="audience-intro"><h2>Necessidades e critérios</h2><p>{escape(a['seccoes'][0][1])}</p></section><section class="audience-selection"><h2>Produtos a considerar</h2><p class="catalogue-intro">Sugestões de utilização para este público, apoiadas em características do catálogo. As fotografias não representam trabalhos da Nobrinde.</p><div class="audience-products">{choices}</div></section><section class="note"><h2>Antes de escolher</h2><p>{escape(a['seccoes'][1][1])}</p></section><section><h2>Compreender a personalização</h2><p class="catalogue-intro">Estes guias explicam métodos a discutir com a produção. A ligação a uma técnica não confirma a sua compatibilidade com todos os produtos desta seleção. Confirme a referência, a superfície, a arte e as condições de aplicação.</p><div class="context-links">{methods}{link('../guias/como-escolher-a-tecnica.html','Como escolher a técnica')}</div></section><section id="fontes"><h2>Fontes deste guia</h2><p class="catalogue-intro">General Catalogue 2026, fornecido pela equipa. Os dados referem-se à edição consultada; não constituem confirmação de disponibilidade. As justificações de utilização são sugestões editoriais.</p><ul class="sources">{sources}</ul></section><a class="back-to-ideas" href="index.html">← Voltar a Para quem</a>'''
+    recipients=''.join('<article class="audience-context"><h3>'+escape(item['destinatário'])+'</h3><p>'+public_text(item['necessidade'])+'</p></article>' for item in a['destinatário'])
+    occasions=''
+    for item in a['ocasiões']:
+        occasions+='<article class="audience-context"><h3>'+escape(item['ocasião'])+'</h3><p class="audience-scenario">'+public_text(item['texto_editorial'])+'</p></article>'
+    visual_items=''.join(
+        '<figure class="audience-context-image"><img src="../'+escape(item['url'],quote=True)+'" alt="'+escape(item['alt'],quote=True)+'" width="'+str(item['width'])+'" height="'+str(item['height'])+'" loading="lazy" decoding="async"><figcaption>'+public_text(item['legenda'])+'</figcaption></figure>'
+        for item in a['imagens_contexto']
+    )
+    visual_context=''
+    if visual_items:
+        gallery_class='audience-image-gallery audience-image-gallery-single' if len(a['imagens_contexto'])==1 else 'audience-image-gallery'
+        visual_context='<section class="audience-image-context" aria-label="Imagens de contexto"><h2>Contexto em imagens</h2><div class="'+gallery_class+'">'+visual_items+'</div></section>'
+    families=''.join('<article class="audience-family"><h3>'+escape(item['destinatário'])+'</h3><p><strong>Objetivo</strong><br>'+public_text(item['objetivo'])+'</p><p><strong>Famílias a avaliar</strong><br>'+escape(', '.join(item['famílias']))+'</p></article>' for item in a['famílias_de_artigos'])
+    distribution='<ul>'+''.join('<li>'+public_text(item)+'</li>' for item in a['distribuição'])+'</ul>'
+    criteria='<ul class="guide-checklist">'+''.join('<li>'+public_text(item)+'</li>' for item in a['critérios'])+'</ul>'
+    faq=''.join('<details class="guide-faq"><summary>'+escape(item['pergunta'])+'</summary><p>'+public_text(item['resposta'])+'</p></details>' for item in a['perguntas_frequentes'])
+    related=''.join(link('../'+item['url'],item['titulo']) for item in a['relacionados'])
+    sections=[
+        ('destinatarios','Destinatários e necessidades', '<div class="audience-context-grid">'+recipients+'</div>'),
+        ('ocasioes','Ocasiões, locais e épocas', '<div class="audience-context-grid">'+occasions+'</div>'),
+        ('familias','Famílias de artigos a avaliar', '<div class="audience-families">'+families+'</div>'),
+        ('distribuicao','Utilização e distribuição', distribution),
+        ('criterios','O que confirmar antes de escolher', criteria),
+        ('faq','Perguntas frequentes', faq),
+        ('relacionados','Guias, materiais e técnicas relacionados', '<div class="context-links">'+related+'</div>'),
+    ]
+    toc=''.join(link('#'+id,title) for id,title,_ in sections)
+    content='<nav class="crumb" aria-label="Percurso">'+link('../index.html','Início')+' / '+link('index.html','Para quem')+' / '+escape(a['titulo'])+'</nav><div class="page-intro"><span class="eyebrow">Guia de contexto · Para quem</span><h1>'+escape(a['titulo'])+'</h1><p>'+escape(a['resumo'])+'</p></div><div class="reading-layout"><aside class="contents"><strong>Neste guia</strong><nav aria-label="Índice do artigo">'+toc+'</nav></aside><article class="reading audience-reading"><section class="guide-answer"><h2>Em resumo</h2><p>'+escape(a['resumo'])+' As famílias apresentadas são possibilidades a avaliar, não artigos obrigatórios.</p></section>'+visual_context+''.join('<section id="'+id+'"><h2>'+title+'</h2>'+text+'</section>' for id,title,text in sections)+'</article></div><a class="back-to-ideas" href="index.html">← Voltar a Para quem</a>'
+    body=content
     write(url(a),shell(a['titulo'],a['resumo'],body,'../','publicos'))
+
+def dados_publicos():
+    destinations=[]
+    for audience in PUBLICOS:
+        destinations.append({
+            'id':audience['id'],
+            'titulo':audience['titulo'],
+            'url':'publicos/'+audience['id']+'.html',
+            'resumo':audience['resumo'],
+            'destinatário':audience['destinatário'],
+            'ocasiões':audience['ocasiões'],
+            'imagens_contexto':audience['imagens_contexto'],
+            'famílias_de_artigos':audience['famílias_de_artigos'],
+            'distribuição':audience['distribuição'],
+            'critérios':audience['critérios'],
+            'perguntas_frequentes':audience['perguntas_frequentes'],
+            'fontes':[dict(id=key,**FONTES_PUBLICOS[key]) for key in audience['fontes']],
+            'etiquetas':audience['etiquetas'],
+            'imagem':audience['imagem'],
+            'relacionados':[dict(item,url=item['url']) for item in audience['relacionados']],
+            'data_revisao':audience['data_revisao'],
+        })
+    return json.dumps({
+        'schema_version':'1.0',
+        'idioma':'pt-PT',
+        'secao':'Para quem',
+        'data_revisao':DATA_REVISAO_PUBLICOS,
+        'destinos':destinations,
+    },ensure_ascii=False,indent=2)+'\n'
 
 def guide_listing(s):
     write('guias/index.html', entrada_guias(shell, link))
@@ -420,55 +476,134 @@ def page_article(a):
     if a['tipo']=='tecnica':
         body+='<aside class="note"><strong>Antes de produzir</strong><p>A compatibilidade deve ser confirmada para o artigo, a arte e a utilização pretendida. Estes guias não constituem uma declaração de equipamentos ou capacidades da Nobrinde.</p></aside>'
     if a['fontes']:
-        scope='Os registos históricos sustentam apenas os marcos identificados. As interpretações são editoriais; o catálogo não é usado como prova histórica.' if a['tipo']=='historia' else 'As referências de fabricantes e fornecedores descrevem os seus próprios processos ou equipamentos. Não são especificações da operação da Nobrinde.'
+        scope=('As fontes históricas documentam os exemplos identificados; não estabelecem uma origem única.' if a['tipo']=='historia'
+               else 'As fontes descrevem processos, equipamentos ou contextos específicos. As explicações gerais e recomendações de validação não são especificações universais.')
         body+='<section id="fontes"><h2>Fontes e âmbito</h2><p>'+scope+'</p><ul class="sources">'+''.join(f'<li id="fonte-{k}">{link(FONTES[k][1],FONTES[k][0])}</li>' for k in a['fontes'])+'</ul></section>'
+    elif a['sec']=='industria':
+        body+='<section id="fontes"><h2>Âmbito deste guia</h2><p>Descrição educativa e critérios editoriais de validação. Não identifica equipamento, serviço ou capacidade de produção de uma entidade específica.</p></section>'
     else:
-        body+='<section id="fontes"><h2>Base deste guia</h2><p>Perguntas editoriais para preparar o trabalho, acompanhadas por exemplos do General Catalogue 2026. Cada exemplo identifica a página do PDF e a página impressa que suportam a fotografia e as características. As explicações técnicas e respetivas fontes encontram-se nos guias relacionados.</p></section>'
+        body+='<section id="fontes"><h2>Base deste guia</h2><p>Perguntas editoriais para preparar o trabalho, acompanhadas por exemplos documentados nas fontes relacionadas.</p></section>'
     def context_title(p):
         sec=SECS[p.split('/')[0]]
         return next((g[1] for g in sec['grupos'] if '#' in p and g[0]==p.split('#')[1]),sec['titulo'])
     context=''.join(link('../'+p,context_title(p)) for p in a['ancoras'])
     related=''.join(card(BY_ID[k],'../') for k in a['relacionados'])
-    content=f'''<nav class="crumb" aria-label="Percurso">{link('../index.html','Início')} / {link('index.html',SECS[a['sec']]['titulo'])} / <span>{a['titulo']}</span></nav><div class="page-intro"><span class="eyebrow">{SECS[a['sec']]['titulo']}</span><h1>{a['titulo']}</h1><p>{a['resumo']}</p><div class="review">Revisão documental: <time datetime="{a.get('data_revisao', DATA_REVISAO)}">{a.get('data_revisao_texto', '24 de setembro de 2026')}</time> · Guia permanente</div></div><div class="reading-layout"><aside class="contents"><strong>Neste guia</strong><nav aria-label="Índice do artigo">{toc}{link('#fontes','Fontes e âmbito')}</nav></aside><article class="reading">{body}</article></div><section><div class="section-head"><div><span class="eyebrow">Continue a explorar</span><h2>Assuntos relacionados</h2></div></div><div class="context-links">{context}</div><div class="article-grid">{related}</div></section>'''
-    write(url(a),shell(a['titulo'],a['resumo'],content,'../',a['sec']))
+    review_class='review industry-review' if a['sec']=='industria' else 'review'
+    content=f'''<nav class="crumb" aria-label="Percurso">{link('../index.html','Início')} / {link('index.html',SECS[a['sec']]['titulo'])} / <span>{a['titulo']}</span></nav><div class="page-intro"><span class="eyebrow">{SECS[a['sec']]['titulo']}</span><h1>{a['titulo']}</h1><p>{a['resumo']}</p><div class="{review_class}">Revisão documental: <time datetime="{a.get('data_revisao', DATA_REVISAO)}">{a.get('data_revisao_texto', '24 de setembro de 2026')}</time> · Guia permanente</div></div><div class="reading-layout"><aside class="contents"><strong>Neste guia</strong><nav aria-label="Índice do artigo">{toc}{link('#fontes','Fontes e âmbito')}</nav></aside><article class="reading">{body}</article></div><section><div class="section-head"><div><span class="eyebrow">Continue a explorar</span><h2>Assuntos relacionados</h2></div></div><div class="context-links">{context}</div><div class="article-grid">{related}</div></section>'''
+    robots='index, follow' if a['sec']=='industria' else 'noindex, nofollow'
+    write(url(a),shell(a['titulo'],a['resumo'],content,'../',a['sec'],robots=robots))
 def industry_listing(s):
-    intro='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / Indústria</nav><div class="page-intro"><span class="eyebrow">Da escolha à receção</span><h1>O percurso de uma encomenda</h1><p>Conheça as decisões que transformam um pedido num artigo personalizado, pronto a chegar ao destinatário.</p></div><aside class="note"><strong>Um percurso para compreender e adaptar</strong><p>A sequência pode variar com o produto e o tipo de encomenda, incluir regressos à aprovação e combinar etapas. É um guia editorial, não um procedimento interno ou uma promessa de serviços da Nobrinde.</p></aside>'
+    review=f'<div class="review industry-review">Revisão editorial: <time datetime="{DATA_REVISAO_INDUSTRIA}">{DATA_REVISAO_TEXTO}</time></div>'
+    intro='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Indústria</a> / Da ideia à entrega</nav><div class="page-intro"><span class="eyebrow">Organização da produção</span><h1>Da ideia à entrega</h1><p>'+escape(BY_ID['da-ideia-a-entrega']['resumo'])+'</p>'+review+'</div><aside class="note"><strong>Um percurso possível, não uma sequência universal</strong><p>As etapas podem ser opcionais, ocorrer noutra ordem, em paralelo ou ser realizadas por intervenientes diferentes. Este guia explica decisões gerais; não descreve um procedimento empresarial nem promete prazos, resultados ou serviços.</p></aside>'
     stages=''
     for n,(title,what,confirm) in enumerate(ETAPAS,1):
         more=''
-        if n==1: more='<a href="../produtos/index.html">Explorar os produtos →</a>'
-        if n==2: more='<a href="../guias/como-escolher-a-tecnica.html">Comparar técnicas →</a>'
-        if n==6: more=tecnica('tampografia')+'<a href="#maquinas">Conhecer os processos →</a>'
-        if n==8: more=idea_media({'imagens':['gratox-22075']})+'<a href="montagem-e-acabamentos.html">Conhecer as operações de montagem →</a>'
-        stages+=f'<li id="etapa-{n}"><span class="stage-number" aria-hidden="true">{n:02}</span><div><h3>{title}</h3><p>{what}</p><p class="stage-confirm"><strong>A confirmar pelo cliente</strong> {confirm}</p>{more}</div></li>'
-    timeline='<section id="fluxo"><h2>Do pedido à entrega, em 11 etapas</h2><ol class="order-timeline">'+stages+'</ol></section>'
-    machines='<section id="maquinas"><div class="section-head"><div><span class="eyebrow">Compreender a produção</span><h2>Processos e tipos de máquinas</h2><p>Função, aplicações e limites. Estes guias não identificam o parque de máquinas da Nobrinde.</p></div></div><div class="article-grid">'+''.join(card(a,'../') for a in INDUSTRIA if a['id'] not in ['montagem-e-acabamentos','historia-dos-brindes'])+'</div></section>'
+        if n==3: more='<a href="../tecnicas/index.html">Explorar os métodos de personalização →</a>'
+        if n==11: more='<a href="montagem-e-acabamentos.html">Ler sobre montagem e acabamentos →</a>'
+        if n==12: more='<a href="montagem-embalagem-expedicao.html">Ler sobre embalagem e expedição →</a>'
+        stages+=f'<li id="etapa-{n}"><span class="stage-number" aria-hidden="true">{n:02}</span><div><h3>{escape(title)}</h3><p>{escape(what)}</p><p class="stage-confirm"><strong>O que clarificar</strong> {escape(confirm)}</p>{more}</div></li>'
+    timeline='<section id="fluxo"><h2>Exemplo de etapas a considerar</h2><ol class="order-timeline">'+stages+'</ol></section>'
     back='<a class="back-to-ideas" href="index.html">← Voltar a Indústria</a>'
-    journey=intro.replace('<h1>O percurso de uma encomenda</h1>','<h1>Da ideia à entrega</h1>').replace('href="#maquinas"','href="maquinas-e-processos.html"')
-    journey=journey.replace(' / Indústria</nav>',' / <a href="index.html">Indústria</a> / Da ideia à entrega</nav>')
-    journey+=timeline.replace('href="#maquinas"','href="maquinas-e-processos.html"')
-    journey+='<aside class="note"><h2>Base e limites deste percurso</h2><p>Organização editorial das perguntas de uma encomenda. Os guias de processos identificam as fontes técnicas. Equipamentos, amostras, critérios de qualidade, montagem, embalagem e condições de entrega precisam de confirmação pela produção.</p></aside>'+back
-    write('industria/da-ideia-a-entrega.html',shell('Da ideia à entrega',BY_ID['da-ideia-a-entrega']['resumo'],journey,'../','industria'))
-    machine_intro='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Indústria</a> / Máquinas e processos</nav><div class="page-intro"><span class="eyebrow">Compreender a produção</span><h1>Máquinas e processos</h1><p>Explore como os artigos podem ser produzidos e personalizados, as aplicações e os limites de cada processo.</p></div>'
-    write('industria/maquinas-e-processos.html',shell('Máquinas e processos',BY_ID['maquinas-e-processos']['resumo'],machine_intro+machines+back,'../','industria'))
-    areas=[
-        ('historia','historia-dos-brindes','História dos Brindes','Evolução dos objetos promocionais, com marcos documentados e um exemplo português.'),
-        ('fluxo','da-ideia-a-entrega','Da ideia à entrega','O percurso de uma encomenda, desde a escolha do artigo até à receção.'),
-        ('maquinas','maquinas-e-processos','Máquinas e processos','Como trabalham os equipamentos, para que servem e quais são os seus limites.'),
-        ('montagem','montagem-e-acabamentos','Montagem e acabamentos','Componentes, acessórios, revisão, embalagem e preparação para expedição.')]
+    journey=intro+timeline+'<p class="context-links"><a href="maquinas-e-processos.html">Explorar equipamentos e processos →</a> <a href="montagem-embalagem-expedicao.html">Montagem, embalagem e expedição →</a></p>'+back
+    write('industria/da-ideia-a-entrega.html',shell('Da ideia à entrega',BY_ID['da-ideia-a-entrega']['resumo'],journey,'../','industria',robots='index, follow'))
+    processos=[]
+    for group_id,title,description,_ in GRUPOS_INDUSTRIA:
+        cards_processo=''
+        for processo_item in (item for item in PROCESSOS_INDUSTRIA if item["grupo"]==group_id):
+            guia=(link(processo_item["guia"],"Guia de equipamento e processo") if processo_item["guia"] else "")
+            tecnicas=''.join(link(path,label) for label,path in processo_item["tecnicas"])
+            links=''.join([guia,tecnicas])
+            cards_processo+=(
+                '<article class="industry-process-summary">'
+                f'<h3>{escape(processo_item["nome"])}</h3>'
+                f'<p>{escape(processo_item["processo"])}</p>'
+                f'<p><strong>Equipamento:</strong> {escape(processo_item["equipamento"])}</p>'
+                f'<p><strong>Aplicabilidade e limites:</strong> {escape(processo_item["condicoes"])}</p>'
+                f'<nav aria-label="Guias de {escape(processo_item["nome"])}">{links}</nav>'
+                '</article>'
+            )
+        processos.append(
+            f'<section id="{group_id}"><div class="section-head"><div>'
+            f'<h2>{escape(title)}</h2><p>{escape(description)}</p></div></div>'
+            f'<div class="industry-process-grid">{cards_processo}</div></section>'
+        )
+    machine_intro='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Indústria</a> / Máquinas e processos</nav><div class="page-intro"><span class="eyebrow">Equipamentos e operações</span><h1>Máquinas e processos</h1><p>Uma visão geral do que fazem os processos, do tipo de equipamento envolvido e das condições que devem ser avaliadas. Os resumos encaminham para os guias da Indústria e para as páginas de Técnicas, que aprofundam o método de personalização.</p><p>As possibilidades dependem do artigo, do material, da configuração e dos consumíveis. Esta página não é um inventário de equipamentos nem uma declaração de compatibilidade.</p>'+review+'</div>'
+    machine_body=machine_intro+''.join(processos)+'<section><h2>Depois da personalização</h2><p>Montagem, acabamentos, embalagem e expedição são operações posteriores ou complementares; não são técnicas de personalização. A montagem reúne componentes, o acabamento revê ou conclui o conjunto, a embalagem acondiciona os artigos e a expedição organiza a recolha e o transporte.</p><div class="context-links"><a href="montagem-e-acabamentos.html">Montagem e acabamentos</a><a href="montagem-embalagem-expedicao.html">Montagem, embalagem e expedição</a><a href="da-ideia-a-entrega.html">Da ideia à entrega</a></div></section>'+back
+    write('industria/maquinas-e-processos.html',shell('Máquinas e processos',BY_ID['maquinas-e-processos']['resumo'],machine_body,'../','industria',robots='index, follow'))
+    final_article=BY_ID['montagem-embalagem-expedicao']
+    final_intro=(
+        '<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / '
+        '<a href="index.html">Indústria</a> / <span>Montagem, embalagem e expedição</span></nav>'
+        '<div class="page-intro"><span class="eyebrow">Operações depois da personalização</span>'
+        f'<h1>{escape(final_article["titulo"])}</h1><p>{escape(final_article["resumo"])}</p>{review}</div>'
+        '<p>Montar, inspecionar, acondicionar e transportar são fases relacionadas, mas não equivalentes. '
+        'A sequência abaixo é uma explicação geral: algumas operações podem não ser necessárias, '
+        'mudar de ordem ou caber a intervenientes diferentes.</p>'
+    )
+    final_sections=''.join(
+        f'<section id="final-{n}"><h2>{escape(title)}</h2><p>{escape(text)}</p></section>'
+        for n,(title,text) in enumerate(final_article["seccoes"],1)
+    )
+    final_toc=''.join(
+        link(f'#final-{n}',title)
+        for n,(title,_) in enumerate(final_article["seccoes"],1)
+    )
+    final_related=''.join(card(BY_ID[id],'../') for id in final_article["relacionados"])
+    final_body=(
+        final_intro+'<div class="reading-layout"><aside class="contents"><strong>Neste guia</strong>'
+        f'<nav aria-label="Índice do artigo">{final_toc}</nav></aside>'
+        f'<article class="reading industry-final-guide">{final_sections}</article></div>'
+        '<section><h2>Guias relacionados</h2><div class="article-grid">'+final_related+'</div></section>'
+        +back
+    )
+    write('industria/montagem-embalagem-expedicao.html',shell(final_article['titulo'],final_article['resumo'],final_body,'../','industria',robots='index, follow'))
+    top_topics=[
+        dict(
+            id="historia",
+            article=BY_ID["historia-dos-brindes"],
+            description="Distingue objetos oferecidos, comemorativos, de identificação e promocionais sem lhes atribuir uma origem única.",
+        ),
+        dict(
+            id="fluxo",
+            article=BY_ID["da-ideia-a-entrega"],
+            description="Acompanha decisões possíveis desde definir o objetivo até organizar a entrega.",
+        ),
+        dict(
+            id="maquinas",
+            article=BY_ID["maquinas-e-processos"],
+            description="Compara por alto operações de impressão, processos têxteis, corte, montagem e acabamento.",
+        ),
+        dict(
+            id="expedicao",
+            article=final_article,
+            description="Explica montagem, inspeção, acondicionamento, expedição e entrega sem pressupor um fluxo universal.",
+        ),
+    ]
     cards=''
-    for anchor,id,title,description in areas:
-        if anchor=='historia':
-            visual='<div class="industry-card-visual history-milestones"><span>1881 · Portugal</span><span>c. 1896 · Emblemas</span><span>1903 · Setor profissional</span></div>'
-        elif anchor=='fluxo':
-            visual='<div class="industry-card-visual journey-milestones"><span>Ideia</span><span>Personalização</span><span>Entrega</span></div>'
-        elif anchor=='maquinas':
-            visual=tecnica('tampografia')
+    for topic in top_topics:
+        article=topic["article"]
+        image=article.get("imagem_cartao")
+        if image:
+            image_path=ROOT.joinpath(*image["src"].split("/"))
+            if not image_path.is_file():
+                raise FileNotFoundError(f"Imagem de cartão da Indústria inexistente: {image_path}")
+            visual=(
+                '<div class="industry-card-visual">'
+                f'<img src="../{escape(image["src"],quote=True)}" width="{image["width"]}" height="{image["height"]}" alt="{escape(image["alt"],quote=True)}" loading="lazy" decoding="async">'
+                '</div>'
+            )
         else:
-            visual=idea_media({'imagens':['gratox-22075']})
-        cards+=f'<article class="industry-area" id="{anchor}">{visual}<div class="idea-card-copy"><h2><a href="{id}.html">{title}</a></h2><p>{description}</p><a class="link idea-read-more" href="{id}.html">Explorar: {title} →</a></div></article>'
-    intro='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / Indústria</nav><div class="page-intro"><span class="eyebrow">História, produção e entrega</span><h1>Indústria</h1><p>Quatro caminhos para compreender os brindes: a sua história, o percurso de uma encomenda, os processos e as operações finais.</p></div>'
-    write('industria/index.html',shell('Indústria',s['resumo'],intro+'<div class="industry-areas">'+cards+'</div>','../','industria'))
+            visual='<div class="industry-card-visual"></div>'
+        cards+=(
+            f'<article class="industry-area" id="{topic["id"]}">{visual}'
+            f'<div class="idea-card-copy"><h2><a href="{escape(article["id"])}.html">{escape(article["titulo"])}</a></h2>'
+            f'<p>{escape(topic["description"])}</p>'
+            f'<a class="link idea-read-more" href="{escape(article["id"])}.html">Ler o guia →</a></div></article>'
+        )
+    intro='<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / Indústria</nav><div class="page-intro industry-page-intro"><span class="eyebrow">Equipamentos, operações, história e produção</span><h1>Indústria</h1><p>Guias para compreender a história dos objetos oferecidos e promocionais, os equipamentos e as operações que podem participar na sua produção, e as fases que podem anteceder a entrega.</p><p>Os artigos explicam princípios e decisões gerais. Não descrevem a operação de uma empresa específica nem estabelecem compatibilidade universal. Para comparar métodos de personalização, consulte também <a href="../tecnicas/index.html">Técnicas</a>.</p>'+review+'</div>'
+    group_links=''.join(f'<section id="{group_id}"><div class="section-head"><div><h2>{title}</h2><p>{description}</p></div></div><div class="article-grid">'+''.join(card(BY_ID[id],'../') for id in ids)+'</div></section>' for group_id,title,description,ids in GRUPOS_INDUSTRIA)
+    section_description='História, equipamentos e operações de produção, da personalização à montagem, embalagem e expedição.'
+    write('industria/index.html',shell('Indústria',section_description,intro+'<div class="industry-areas">'+cards+'</div>'+group_links,'../','industria',robots='index, follow'))
 
 def page_section(s):
     if s['id']=='produtos':
@@ -509,7 +644,7 @@ def page_section(s):
 def homepage():
     main=(ROOT/'modelos/inicio.html').read_text(encoding='utf-8')
     main+=exemplos(['synex-20673','hetien-1364','sulkan-6620'],prefix='')
-    write('index.html',shell('O universo dos brindes, explicado','Um projeto informativo da Nobrinde: técnicas de personalização, materiais, produtos e guias práticos.',main))
+    write('index.html',shell('O universo dos brindes, explicado','Biblioteca informativa sobre técnicas de personalização, materiais e guias práticos.',main))
 def search_page():
     entries=[dict(title=a['titulo'],category=SECS[a['sec']]['curto'],url=url(a),summary=a['resumo'],text=' '.join(p for _,p in a['seccoes'])+' '+a['tags']) for a in ARTIGOS]
     entries += [dict(title=s['titulo'],category='Secção',url=s['id']+'/index.html',summary=s['resumo'],text=' '.join(' '.join(g[1:]) for g in s['grupos'])) for s in SECCOES]
@@ -523,6 +658,19 @@ def search_page():
                 entry['text']=' '.join(textos_publicos(FAMILIAS_PRODUTOS[article_id]))
             continue
         guide=BY_ID.get(article_id,{})
+        if guide.get('tipo')=='publico':
+            audience=next(a for a in PUBLICOS if a['id']==article_id)
+            entry['text']=' '.join([
+                audience['resumo'],
+                ' '.join(item['destinatário']+' '+item['necessidade'] for item in audience['destinatário']),
+                ' '.join(item['ocasião']+' '+' '.join(item['destinatário'])+' '+item['local']+' '+item['época']+' '+item['objetivo'] for item in audience['ocasiões']),
+                ' '.join(item['destinatário']+' '+item['objetivo']+' '+' '.join(item['famílias']) for item in audience['famílias_de_artigos']),
+                ' '.join(audience['distribuição']),
+                ' '.join(audience['critérios']),
+                ' '.join(item['pergunta']+' '+item['resposta'] for item in audience['perguntas_frequentes']),
+                ' '.join(audience['etiquetas']),
+            ])
+            continue
         if article_id=='crachas-automaticos':
             entry['text']+=' '+' '.join(t+' '+p for t,p in COMPONENTES_CRACHAS+PASSOS_CRACHAS+FAQ_CRACHAS)
         if article_id=='tecnica-troquelagem':
@@ -534,9 +682,6 @@ def search_page():
         if guide.get('esquema_guia'):
             entry['text']+=' '+' '.join(guide['confirmar'])+' '+' '.join(t+' '+p for t,p in guide['problemas'])
             entry['text']+=' '+' '.join(POR_ID[id]['nome']+' '+POR_ID[id]['ref'] for id in guide.get('produtos_guia',[]))
-        audience=next((a for a in PUBLICOS if a['id']==article_id and entry['url'].startswith('publicos/')),None)
-        if audience:
-            entry['text']+=' '+' '.join(POR_ID[id]['nome']+' '+POR_ID[id]['ref']+' '+why+' '+' '.join(POR_ID[id]['factos']) for id,why in audience['selecoes'])
         for product_id in ARTIGO_PRODUTOS.get(article_id,[]):
             p=POR_ID[product_id]
             entry['text']+=' '+p['nome']+' '+p['ref']+' '+' '.join(p['factos'])
@@ -545,7 +690,7 @@ def search_page():
     write('pesquisa.html',shell('Pesquisa','Pesquise os artigos e secções da biblioteca brindes.pt.',content,extra='<script src="assets/pesquisa-dados.js" defer></script><script src="pesquisa.js" defer></script>'))
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--secao', choices=['produtos','guias'], help='Regenera a secção indicada e os índices, preservando o conteúdo das outras páginas.')
+    parser.add_argument('--secao', choices=['produtos','guias','publicos','industria'], help='Regenera a secção indicada e os índices, preservando o conteúdo das outras páginas.')
     args = parser.parse_args()
     node = shutil.which('node')
     prettier = ROOT/'node_modules/prettier/bin/prettier.cjs'
@@ -563,7 +708,7 @@ if __name__=='__main__':
     for article in ARTIGOS:
         if not args.secao or article['sec']==args.secao: page_article(article)
     if not args.secao: homepage()
-    if args.secao:
+    if args.secao in ('produtos','guias'):
         # A correção de identidade é partilhada; o texto alheio à secção
         # permanece como estava, incluindo alterações locais do utilizador.
         paths = ['index.html', 'pesquisa.html', 'creditos-imagens.html']
@@ -582,13 +727,20 @@ if __name__=='__main__':
             if neutral != previous: target.write_text(neutral, encoding='utf-8')
     search_page()
     if not args.secao or args.secao=='produtos':
-        write('assets/produtos-conteudos.json', dados_publicos(BY_ID))
+        write('assets/produtos-conteudos.json', dados_produtos(BY_ID))
     if not args.secao or args.secao=='guias':
         write('assets/guias-conteudos.json', dados_guias())
+    if not args.secao or args.secao=='publicos':
+        write('assets/para-quem-conteudos.json', dados_publicos())
     if not args.secao:
         write('creditos-imagens.html',shell('Créditos de imagens','Autores, fontes, licenças e alterações das fotografias utilizadas no brindes.pt.',creditos() + CREDITOS_PRODUTOS + CREDITOS_GUIAS))
-    outputs = ['index.html', 'pesquisa.html', 'creditos-imagens.html']
-    outputs += [s['id']+'/index.html' for s in SECCOES]
-    outputs += [url(a) for a in ARTIGOS]
+    if args.secao=='publicos':
+        outputs=['publicos/index.html']+['publicos/'+a['id']+'.html' for a in PUBLICOS]+['pesquisa.html']
+    elif args.secao=='industria':
+        outputs=['industria/index.html','pesquisa.html']+['industria/'+a['id']+'.html' for a in INDUSTRIA + AREAS_INDUSTRIA]
+    else:
+        outputs = ['index.html', 'pesquisa.html', 'creditos-imagens.html']
+        outputs += [s['id']+'/index.html' for s in SECCOES]
+        outputs += [url(a) for a in ARTIGOS]
     subprocess.run([node, str(prettier), '--write', '--log-level', 'warn', *outputs], cwd=ROOT, check=True)
-    print(f'Geradas {8 if args.secao else len(SECCOES)+len(ARTIGOS)+3} páginas; pesquisa e dados públicos atualizados.')
+    print(f'Geradas {len(outputs)} páginas; pesquisa e dados públicos atualizados.')

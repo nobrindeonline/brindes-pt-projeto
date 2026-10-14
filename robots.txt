@@ -1,0 +1,12 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Preserve GPTBot's previous default crawl access; no training policy is set here.
+User-agent: GPTBot
+Allow: /
+
+User-agent: *
+Allow: /

@@ -20,11 +20,15 @@ IMAGENS_GUIAS = {
      artigo=[foto('Como avaliarumamaqueteantesdaprodução','images.jpg','maquete-composicao.jpg',
          'Composição com recipientes, estojos, sacos e outros objetos com textos e marcas genéricas.', 'parte-3',
          'Composição ilustrativa: a representação de vários objetos não comprova materiais, funções ou resultados físicos.')]),
+ 'como-preparar-um-logotipo': dict(cartao=foto('Comoprepararumlogótipoparapersonalização','images.jpg','logotipo-cartao.jpg',
+     'Mão a desenhar a palavra LOGO a lápis sobre uma grelha.'), artigo=[]),
  'pantone-cmyk-e-cor-final': dict(cartao=foto('PantoneCMYKeacorfinaldobrinde','gp6102b-pantone-graphics-color-bridge-coated-uncoated-guides-product-2-1_2-sk5dvkob7f.webp','cor-cartao.webp',
      'Dois leques de amostras de cor abertos sobre um fundo claro.'),
      artigo=[foto('PantoneCMYKeacorfinaldobrinde','pantone-brindes-promocionais-1024x569.jpg','cor-suporte.jpg',
          'Recipiente verde sobre leques e folhas com amostras coloridas.', 'parte-2',
          'Fotografia ilustrativa de um suporte junto a amostras. A imagem de ecrã não constitui uma referência física de cor.')]),
+ 'problemas-comuns-na-personalizacao': dict(cartao=foto('Problemascomunsnapersonalizaçãoecomoosprevenir','images.jpg','problemas-cartao.jpg',
+     'Pessoa sentada junto a caixas de brindes por distribuir numa feira, com canetas e porta-chaves em primeiro plano.'), artigo=[]),
 }
 
 def fotos_publicas_guias():
