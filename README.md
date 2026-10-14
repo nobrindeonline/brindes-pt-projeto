@@ -85,8 +85,27 @@ A entrada apresenta quatro cartões: História dos Brindes, Da ideia à entrega,
 Abra industria/index.html no navegador para consultar o percurso e os 13 guias. Os textos e as 11 etapas são mantidos em conteudos/industria.py; a apresentação é gerada por gerar.py e styles.css. As fontes técnicas e históricas estão em editorial/fontes-industria.md, reproduzíveis com python editorial/gerar_fontes_industria.py. O registo do catálogo continua em editorial/fontes-catalogo.md.
 Sublimação — técnica de personalização
 O guia tecnicas/tecnica-sublimacao.html usa o modelo comum das técnicas e é mantido em conteudos/sublimacao.py. O ID é distinto do guia de equipamentos já existente em industria/sublimacao.html. As relações são registadas em conteudos/catalogo.py; a listagem de Técnicas e a pesquisa são atualizadas pelo gerador habitual. As quatro imagens em assets/tecnicas/Sublimacao/ foram incluídas após autorização expressa do utilizador em 28/09/2026, com legendas e créditos. A origem/autoria continua por documentar; os originais não foram alterados. Consultar editorial/fontes-sublimacao.md e editorial/imagens-por-confirmar.md.
-Atualização da secção Indústria — 14 de outubro de 2026
-A secção Indústria foi organizada em quatro cartões — História dos Brindes, Da ideia à entrega, Máquinas e processos e Montagem e acabamentos — que abrem páginas próprias. O conteúdo foi ampliado para explicar a evolução histórica dos brindes, as etapas possíveis entre a ideia inicial e a entrega e os principais processos de produção e equipamentos, com ligações para as técnicas correspondentes.
+## Atualização da secção Indústria — 14 de outubro de 2026
+
+### Conteúdos e organização
+
+A secção Indústria foi organizada em quatro cartões — História dos Brindes, Da ideia à entrega, Máquinas e processos e Montagem e acabamentos — que abrem páginas próprias.
+
+O conteúdo foi ampliado para explicar a evolução histórica dos brindes, as etapas possíveis entre a ideia inicial e a entrega e os principais processos de produção e equipamentos, com ligações para as técnicas correspondentes.
+
 Foi também desenvolvida a parte final do percurso: montagem, controlo final, embalagem e preparação para expedição, incluindo o encaminhamento para o transportador e a entrega. O texto distingue etapas que podem variar de projeto para projeto e não apresenta um fluxo empresarial como universal.
+
+### Imagens e apresentação
+
 As imagens de assets/industria/ foram organizadas por tema para apoiar os cartões e os artigos. A apresentação da página foi afinada para mostrar uma imagem adequada no primeiro cartão, evitar a duplicação do título sobre a imagem e no texto e dar mais largura ao texto introdutório de Indústria.
-A secção destina-se a ser pública e descoberta por motores de pesquisa e sistemas de IA. A configuração efetiva de publicação — incluindo domínio, regras de rastreio, canonicals e sitemap — deve ser verificada antes da disponibilização pública; a possibilidade de rastreio não garante indexação.
+
+### Descoberta e indexação
+
+A secção destina-se a ser pública e descoberta por motores de pesquisa e sistemas de IA. Antes da disponibilização pública, é necessário verificar:
+
+- o domínio;
+- as regras de rastreio;
+- os canonicals;
+- o sitemap.
+
+A possibilidade de rastreio não garante indexação.
