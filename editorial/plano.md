@@ -204,20 +204,57 @@ Para completar novos artigos: Descrição do processo/equipamento; fontes primá
 
 Para completar novos artigos: Atividade e âmbito geográfico; fontes públicas atuais; utilidade editorial; data de revisão. Excluir dados internos.
 
-### Compreender a cadeia
+### Papelaria e Escritório
 
-- **Cadeia de fornecimento**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Papelaria e Escritório**: Pronto para revisão local — `/mercado/papelaria-e-escritorio.html`.
 
-### Portugal e outros mercados
+### Tecnologia e Acessórios Digitais
 
-- **Portugal**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Mercado ibérico**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Europa**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
-- **Mundo**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Tecnologia e Acessórios Digitais**: Pronto para revisão local — `/mercado/tecnologia-e-acessorios-digitais.html`.
 
-### Como serão preparados os perfis
+### Casa, Lazer e Bebidas
 
-- **Perfis de fornecedores**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+- **Casa, Lazer e Bebidas**: Pronto para revisão local — `/mercado/casa-lazer-e-bebidas.html`.
+
+### Têxtil e Vestuário
+
+- **Têxtil e Vestuário**: Pronto para revisão local — `/mercado/textil-e-vestuario.html`.
+
+### Sazonalidade e Clima
+
+- **Sazonalidade e Clima**: Pronto para revisão local — `/mercado/sazonalidade-e-clima.html`.
+
+### Brindes Ecológicos
+
+- **Brindes Ecológicos**: Pronto para revisão local — `/mercado/brindes-ecologicos.html`.
+
+### Perfis de empresas
+
+- **Stricker: desenvolvimento e distribuição a profissionais**: Pronto para revisão local — `/mercado/stricker.html`.
+- **TejoBrinde: fornecimento e alcance internacional**: Pronto para revisão local — `/mercado/tejobrinde.html`.
+- **TH Clothes e Organizações Biscana: marca de vestuário**: Pronto para revisão local — `/mercado/th-clothes.html`.
+- **Roly e Gor Factory: vestuário e gestão de encomendas**: Pronto para revisão local — `/mercado/roly.html`.
+- **Dimatur: materiais, consumíveis e equipamentos**: Pronto para revisão local — `/mercado/dimatur.html`.
+- **Eurovinil: fornecimento para comunicação visual**: Pronto para revisão local — `/mercado/eurovinil.html`.
+- **Solo midocean: stock, impressão e preparação**: Pronto para revisão local — `/mercado/solo-midocean.html`.
+- **BIC Graphic: atividade e modelo de fornecimento**: Pronto para revisão local — `/mercado/bic-graphic.html`.
+- **Tela: atividade e modelo de fornecimento**: Pronto para revisão local — `/mercado/tela.html`.
+- **Giving Europe: atividade e modelo de fornecimento**: Pronto para revisão local — `/mercado/giving-europe.html`.
+- **Goya Importaciones: atividade e modelo de fornecimento**: Pronto para revisão local — `/mercado/goya.html`.
+- **Plural: atividade e modelo de fornecimento**: Pronto para revisão local — `/mercado/plural.html`.
+- **XD Connects: atividade e modelo de fornecimento**: Pronto para revisão local — `/mercado/xd-connects.html`.
+- **AODACi: atividade e modelo de fornecimento**: Pronto para revisão local — `/mercado/aodaci.html`.
+- **PF Concept: atividade e modelo de fornecimento**: Pronto para revisão local — `/mercado/pf-concept.html`.
+- **Velilla Group / MUKUA: atividade e modelo de fornecimento**: Pronto para revisão local — `/mercado/velilla-group.html`.
+
+### Guias complementares da cadeia
+
+- **Distribuição e importação de brindes**: Pronto para revisão local — `/mercado/distribuicao-e-importacao.html`.
+- **Desenvolvimento de produto e marcas próprias**: Pronto para revisão local — `/mercado/desenvolvimento-e-marcas.html`.
+- **Vestuário promocional e profissional**: Pronto para revisão local — `/mercado/vestuario-promocional-profissional.html`.
+- **Personalização, impressão e acabamento**: Pronto para revisão local — `/mercado/personalizacao-impressao-acabamento.html`.
+- **Matérias-primas, consumíveis e equipamentos**: Pronto para revisão local — `/mercado/materias-primas-consumiveis-equipamentos.html`.
+- **Logística e preparação de encomendas**: Pronto para revisão local — `/mercado/logistica-e-encomendas.html`.
 
 ## Artigos e ideias
 

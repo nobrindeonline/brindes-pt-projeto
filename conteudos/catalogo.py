@@ -223,3 +223,9 @@ for artigo in ARTIGOS:
 sec_produtos = next(s for s in SECCOES if s['id'] == 'produtos')
 sec_produtos['resumo'] = 'Compreenda e compare famílias de brindes pela utilização, construção e personalização.'
 sec_produtos['grupos'] = [(g['ancora'], g['titulo'], g['resumo'], g['titulo']) for g in PRODUTOS]
+
+from conteudos.mercado import MERCADO, AREAS as TEMAS_MERCADO
+ARTIGOS.extend(MERCADO)
+sec_mercado = next(s for s in SECCOES if s['id'] == 'mercado')
+sec_mercado['resumo'] = 'Seis áreas editoriais para conhecer empresas de papelaria, tecnologia, casa, têxtil, sazonalidade e informação ambiental de brindes.'
+sec_mercado['grupos'] = [(a['id'], a['titulo'], a['resumo'], a['titulo']) for a in TEMAS_MERCADO]

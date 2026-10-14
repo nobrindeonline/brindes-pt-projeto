@@ -26,5 +26,13 @@ for s in SECCOES:
             state=f"Pronto para revisão local — `/{article['sec']}/{article['id']}.html`" if article else ('Pronto para revisão local — `/industria/index.html#fluxo`' if s['id']=='industria' and topic=='O percurso de uma encomenda' else 'Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página')
             lines += [f'- **{topic}**: {state}.']
         lines += ['']
+    if s['id']=='mercado':
+        for heading,articles in [
+            ('Perfis de empresas',[a for a in ARTIGOS if a['sec']=='mercado' and a.get('ficha')]),
+            ('Guias complementares da cadeia',[a for a in ARTIGOS if a['sec']=='mercado' and a['tipo']=='mercado' and not a.get('ficha')]),
+        ]:
+            lines += ['### '+heading,'']
+            lines += [f"- **{a['titulo']}**: Pronto para revisão local — `/mercado/{a['id']}.html`." for a in articles]
+            lines += ['']
 (ROOT/'editorial/plano.md').write_text('\n'.join(lines),encoding='utf-8')
 print('Plano editorial atualizado.')

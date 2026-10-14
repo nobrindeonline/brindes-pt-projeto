@@ -7,6 +7,42 @@
 
 ## Atualizações
 
+### Mercado — 14 de outubro de 2026
+
+A entrada `mercado/index.html` reúne seis áreas de produto: Papelaria e
+Escritório; Tecnologia e Acessórios Digitais; Casa, Lazer e Bebidas; Têxtil e
+Vestuário; Sazonalidade e Clima; Brindes Ecológicos. Cada area apresenta tres ou quatro
+exemplos ligados aos perfis canónicos. São catorze entradas selecionadas, com
+Velilla Group / MUKUA num único perfil. Dimatur e Eurovinil mantêm os perfis
+complementares; os seis guias anteriores de cadeia conservam as rotas.
+
+Edite `conteudos/mercado_areas.py`, `conteudos/mercado_novos_perfis.py` e
+`conteudos/perfis_mercado.py`. A integração está em `conteudos/mercado.py`;
+`render_mercado.py` reutiliza os componentes comuns. Gere com
+`python gerar.py --secao mercado`: atualiza entrada, artigos e pesquisa de
+Mercado, preservando as outras secções.
+
+As fontes públicas, limites de cada perfil, candidatas não incluídas e
+resultados de verificação estão em [editorial/fontes-mercado.md](editorial/fontes-mercado.md),
+reproduzível com `python editorial/gerar_fontes_mercado.py`. Mercado segue a
+indexabilidade de Indústria; não altera as diretivas das restantes secções.
+Não existe sitemap nem domínio canónico confirmado neste projeto.
+
+Os cartões reutilizam imagens locais inspecionadas e selecionadas em
+`conteudos/mercado_imagens.py`. A geração
+prepara cópias com nomes neutros em `assets/mercado/visuais/`, preservando os
+originais. Os logótipos estão mapeados em `conteudos/mercado_empresas.py`.
+
+Os dezasseis perfis incluem história, operação, especialização, limites e
+fontes por secção, conforme a informação disponível. Para regenerar artigos
+e pesquisa preservando a entrada aprovada, use
+`python gerar.py --secao mercado --preservar-entrada`. As fichas-resumo usam os
+logótipos locais de `assets/mercado/Empresas/`. O dossier de fontes regista as
+afirmações publicadas e as informações que não puderam ser confirmadas.
+
+Verifique com `python verificar.py`, `python testes/verificar_mercado.py`,
+`node --test testes/pesquisa.test.cjs` e `npm.cmd run format:check`.
+
 ### Costura, argolagem e encadernação — 7 de outubro de 2026
 
 A entrada [`tecnicas/costura-argolagem-e-encadernacao.html`](tecnicas/costura-argolagem-e-encadernacao.html)

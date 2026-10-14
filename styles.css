@@ -242,3 +242,38 @@
 @media(max-width:620px){.novelty-visual{min-height:200px;padding:24px}.novelty-visual strong{font-size:27px}}
 
 .reading .sublimacao-reference img{max-width:min(100%,474px)}
+
+/* Imagens editoriais de Mercado: estilos limitados aos seus componentes. */
+.market-card{overflow:hidden;padding:0;min-width:0}
+.market-card .market-card-image{display:block;width:100%;height:190px;object-fit:cover;object-position:center;background:#f1f7fc}
+.market-card>.eyebrow{margin:24px 26px 0}
+.market-card>h3,.market-card>p{margin-left:26px;margin-right:26px}
+.market-card>.arrow{margin-left:26px;margin-right:26px;padding-bottom:24px}
+.market-body-image{margin:28px 0;max-width:100%}
+.market-body-image img{display:block;width:auto;max-width:100%;height:auto;border:1px solid var(--line);border-radius:12px}
+.market-body-image figcaption{margin-top:12px;font-size:12px;line-height:1.75;color:var(--body)}
+@media(max-width:590px){.market-card .market-card-image{height:200px}}
+
+/* Exemplos de empresas no início dos artigos temáticos de Mercado. */
+.reading .market-examples{padding-top:0}
+.market-company-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:24px 0 32px}
+.market-company{min-width:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.market-company-heading{padding:24px;background:var(--pale);border-bottom:1px solid var(--line)}
+.market-company-heading h3{font-size:21px;line-height:1.35;margin:12px 0;overflow-wrap:anywhere}
+.reading .market-company-location{font-size:12px;line-height:1.6;margin:0;color:var(--body)}
+.market-company-copy{padding:24px;display:flex;flex-direction:column;flex:1}
+.reading .market-company-copy p{font-size:14px;line-height:1.75}
+.reading .market-company-copy .market-company-role{font-size:14px;font-weight:700;color:var(--navy);margin:0 0 12px}
+.market-company-profile{white-space:normal;margin-top:auto;font-size:14px;line-height:1.7}
+.reading .market-company-copy .market-company-sources{font-size:11px;line-height:1.7;margin:18px 0 0;overflow-wrap:anywhere}
+@media(max-width:1100px){.market-company-grid{grid-template-columns:minmax(0,1fr)}}
+.market-company-logo{height:120px;margin:0 0 20px;padding:12px;background:#fff;border:1px solid var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.market-company-logo img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.market-card .market-area-image{object-fit:contain;background:#fff}
+.market-profile-summary{display:grid;grid-template-columns:180px minmax(0,1fr);gap:28px;align-items:center;padding:26px;border:1px solid var(--line);border-radius:18px;background:var(--pale);margin:0 0 32px}
+.market-profile-summary .market-company-logo{margin:0;height:145px}
+.market-profile-summary dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:0}
+.market-profile-summary dt{font-size:12px;font-weight:700;color:var(--blue);margin-bottom:5px}
+.market-profile-summary dd{font-size:14px;line-height:1.65;margin:0;overflow-wrap:anywhere}
+.reading .market-section-sources{font-size:12px;line-height:1.8;margin:18px 0 0;overflow-wrap:anywhere}
+@media(max-width:590px){.market-profile-summary{grid-template-columns:minmax(0,1fr);padding:22px}.market-profile-summary dl{grid-template-columns:minmax(0,1fr)}.market-profile-summary .market-company-logo{max-width:220px;width:100%;justify-self:center}}

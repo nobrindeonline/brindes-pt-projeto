@@ -33,6 +33,9 @@ from conteudos.troquelagem import IMAGENS_TROQUELAGEM, OPERACOES as OPERACOES_TR
 from conteudos.crachas import IMAGEM_CRACHAS, COMPONENTES as COMPONENTES_CRACHAS, PASSOS as PASSOS_CRACHAS, FAQ as FAQ_CRACHAS
 from conteudos.montagem import MONTAGEM, HUB_ID, BASE_IMAGENS, IMAGENS_MONTAGEM
 from conteudos.transfers import IDS as TRANSFER_IDS, IMAGENS_TRANSFERS
+from conteudos.mercado import MERCADO
+from render_mercado import entrada as entrada_mercado, pagina as pagina_mercado
+from conteudos.mercado_imagens import preparar as preparar_imagens_mercado
 
 ROOT = Path(__file__).resolve().parent
 BY_ID = {a['id']: a for a in ARTIGOS}
@@ -318,6 +321,9 @@ def montagem_hub(a):
     write(url(a),shell(a['titulo'],a['resumo'],body,'../','tecnicas'))
 
 def page_article(a):
+    if a['sec']=='mercado':
+        write(url(a), pagina_mercado(a, shell, card, BY_ID, link))
+        return
     if a['sec']=='produtos':
         write(url(a), render_guia(FAMILIAS_PRODUTOS[a['id']], BY_ID, shell, link, card))
         return
@@ -606,6 +612,9 @@ def industry_listing(s):
     write('industria/index.html',shell('Indústria',section_description,intro+'<div class="industry-areas">'+cards+'</div>'+group_links,'../','industria',robots='index, follow'))
 
 def page_section(s):
+    if s['id']=='mercado':
+        write('mercado/index.html', entrada_mercado(shell, card))
+        return
     if s['id']=='produtos':
         write('produtos/index.html', render_entrada(shell, link))
         return
@@ -688,10 +697,38 @@ def search_page():
     write('assets/pesquisa-dados.js','window.BRINDES_SEARCH = '+json.dumps(entries,ensure_ascii=False).replace('<','\\u003c')+';\n')
     content='<nav class="crumb" aria-label="Percurso">'+link('index.html','Início')+' / Pesquisa</nav><div class="page-intro"><span class="eyebrow">Encontre a sua resposta</span><h1>Pesquisar na biblioteca</h1><p>Pesquise por técnica, produto, material ou dúvida.</p>'+search_form('')+'</div><p id="search-status" role="status" aria-live="polite"></p><div id="search-results" class="article-grid"></div><noscript><p>Ative JavaScript para pesquisar. Pode também navegar pelas secções abaixo.</p></noscript><section><h2>Explorar por assunto</h2><div class="context-links">'+''.join(link(s['id']+'/index.html',s['titulo']) for s in SECCOES)+'</div></section>'
     write('pesquisa.html',shell('Pesquisa','Pesquise os artigos e secções da biblioteca brindes.pt.',content,extra='<script src="assets/pesquisa-dados.js" defer></script><script src="pesquisa.js" defer></script>'))
+def atualizar_pesquisa_mercado(perfis, incluir_entrada=False):
+    """Insere/atualiza Mercado sem reescrever entradas de outras secções."""
+    path = ROOT/'assets/pesquisa-dados.js'
+    entries = json.loads(path.read_text(encoding='utf-8').split('=',1)[1].strip().removesuffix(';'))
+    selected = {url(a):a for a in perfis}
+    valid_market = {url(a) for a in MERCADO} | {'mercado/index.html'}
+    entries = [entry for entry in entries if not entry['url'].startswith('mercado/') or entry['url'] in valid_market]
+    if incluir_entrada:
+        section = SECS['mercado']
+        selected['mercado/index.html'] = dict(titulo=section['titulo'],resumo=section['resumo'])
+    known = {entry['url'] for entry in entries}
+    for target, article in selected.items():
+        if target not in known:
+            entries.append(dict(title=article['titulo'],category='Mercado',url=target,summary=article['resumo'],text=''))
+    for entry in entries:
+        if entry['url'] not in selected:
+            continue
+        article = selected[entry['url']]
+        page = (ROOT/entry['url']).read_text(encoding='utf-8')
+        main = re.search(r'<main\b[^>]*>(.*?)</main>',page,re.S)
+        entry.update(title=article['titulo'], summary=article['resumo'],
+                     text=re.sub(r'\s+',' ',unescape(re.sub(r'<[^>]+>',' ',main[1]))).strip())
+    path.write_text('window.BRINDES_SEARCH = '+json.dumps(entries,ensure_ascii=False).replace('<','\\u003c')+';\n',encoding='utf-8')
+
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--secao', choices=['produtos','guias','publicos','industria'], help='Regenera a secção indicada e os índices, preservando o conteúdo das outras páginas.')
+    parser.add_argument('--secao', choices=['produtos','guias','publicos','industria','mercado'], help='Regenera a secção indicada e os índices, preservando o conteúdo das outras páginas.')
+    parser.add_argument('--preservar-entrada', action='store_true', help='Com --secao mercado, gera os artigos e atualiza a pesquisa da secção, preservando a entrada e as outras páginas.')
     args = parser.parse_args()
+    if args.preservar_entrada and args.secao!='mercado':
+        parser.error('--preservar-entrada requer --secao mercado')
+    selected_market = MERCADO if args.preservar_entrada else []
     node = shutil.which('node')
     prettier = ROOT/'node_modules/prettier/bin/prettier.cjs'
     if not node or not prettier.is_file():
@@ -703,9 +740,12 @@ if __name__=='__main__':
         subprocess.run([image_python, str(ROOT/'editorial/preparar_imagens_produtos.py')], cwd=ROOT, check=True)
     if not args.secao or args.secao=='guias':
         subprocess.run([image_python, str(ROOT/'editorial/preparar_imagens_guias.py')], cwd=ROOT, check=True)
+    if not args.secao or args.secao=='mercado':
+        preparar_imagens_mercado(ROOT)
     for section in SECCOES:
-        if not args.secao or section['id']==args.secao: page_section(section)
+        if not args.preservar_entrada and (not args.secao or section['id']==args.secao): page_section(section)
     for article in ARTIGOS:
+        if args.preservar_entrada and article not in selected_market: continue
         if not args.secao or article['sec']==args.secao: page_article(article)
     if not args.secao: homepage()
     if args.secao in ('produtos','guias'):
@@ -725,7 +765,10 @@ if __name__=='__main__':
                 neutral = re.sub(r'<section\b[^>]*id="'+section_id+r'"[^>]*>.*?</section>', '', neutral, flags=re.S)
                 neutral = neutral.replace('</main>', credits + '</main>')
             if neutral != previous: target.write_text(neutral, encoding='utf-8')
-    search_page()
+    if args.secao=='mercado':
+        atualizar_pesquisa_mercado(MERCADO, incluir_entrada=not args.preservar_entrada)
+    else:
+        search_page()
     if not args.secao or args.secao=='produtos':
         write('assets/produtos-conteudos.json', dados_produtos(BY_ID))
     if not args.secao or args.secao=='guias':
@@ -734,7 +777,9 @@ if __name__=='__main__':
         write('assets/para-quem-conteudos.json', dados_publicos())
     if not args.secao:
         write('creditos-imagens.html',shell('Créditos de imagens','Autores, fontes, licenças e alterações das fotografias utilizadas no brindes.pt.',creditos() + CREDITOS_PRODUTOS + CREDITOS_GUIAS))
-    if args.secao=='publicos':
+    if args.secao=='mercado':
+        outputs=[url(a) for a in selected_market] if args.preservar_entrada else ['mercado/index.html']+[url(a) for a in MERCADO]
+    elif args.secao=='publicos':
         outputs=['publicos/index.html']+['publicos/'+a['id']+'.html' for a in PUBLICOS]+['pesquisa.html']
     elif args.secao=='industria':
         outputs=['industria/index.html','pesquisa.html']+['industria/'+a['id']+'.html' for a in INDUSTRIA + AREAS_INDUSTRIA]
