@@ -5,3 +5,4 @@ tmp/
 node_modules/
 .env
 General Catalogue 2026 - Iberia Prices.pdf
+.wrangler/

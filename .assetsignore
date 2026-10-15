@@ -6,7 +6,6 @@ node_modules
 __pycache__
 conteudos/
 editorial/
-mercado/
 modelos/
 testes/
 tmp/
