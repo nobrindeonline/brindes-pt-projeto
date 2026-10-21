@@ -37,7 +37,7 @@ o renderizador, a integração no catálogo, o gerador e os testes de Produtos e
 imagens. Não foram encontradas instruções AGENTS.md. O Git estava limpo.
 
 Fonte: conteudos/produtos.py; adaptação para ARTIGOS em conteudos/catalogo.py.
-Apresentação: render_produtos.py. Geração: python gerar.py --secao produtos.
+Apresentação: scripts/render_produtos.py. Geração: python scripts/gerar.py --secao produtos.
 Pesquisa: textos_publicos alimenta os sete artigos; os grupos da entrada e o
 HTML alimentam a descoberta das áreas. Exportação: assets/produtos-conteudos.json.
 Imagens: seis pastas de origem em assets/produtos, seleção em
@@ -103,7 +103,7 @@ sem guia. Não se extraíram nem descarregaram imagens de catálogos.
 ## Validação
 
 - Geração normal com --secao produtos, preservando as outras secções.
-- verificar.py: 109 páginas e mais de 4100 ligações/recursos locais válidos.
+- scripts/verificar.py: 109 páginas e mais de 4100 ligações/recursos locais válidos.
 - testes/verificar_produtos.py: dez áreas, cinco cartões, sete rotas, âncoras,
   ligações relacionadas, JSON e presença das áreas na pesquisa.
 - testes/verificar_produtos_imagens.py: 17 ficheiros decodificados, dimensões,

@@ -40,7 +40,7 @@ def pagina_publica(documento):
         '<div class="footer-library"><p>brindes.pt — Biblioteca informativa independente. '
         'Informação para compreender, comparar e escolher.</p></div>'
         '<nav class="footer-links" aria-label="Informação do site">'
-        '<a href="' + ('../' if 'href="../styles.css"' in documento else '') +
+        '<a href="' + ('../' if 'href="../assets/css/styles.css"' in documento else '') +
         'creditos-imagens.html">Créditos de imagens</a></nav></div></footer>',
         documento, flags=re.S | re.I)
     documento = re.sub(r'<div\b[^>]*class="review"[^>]*>.*?</div>', '', documento, flags=re.S)

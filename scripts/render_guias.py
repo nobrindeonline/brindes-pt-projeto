@@ -99,7 +99,7 @@ def artigo_guia(g, artigos, shell, link):
     content=intro+'<div class="reading-layout"><aside class="contents"><details id="guia-indice" class="guide-toc" open><summary>Neste guia</summary><nav aria-label="Índice do artigo">'+link('#resposta','Resposta breve')+toc+'</nav></details></aside><article class="reading guide-reading">'+body+'</article></div>'
     related=list(dict.fromkeys(g['relacionados']))
     content+='<section><h2>Guias relacionados</h2><div class="guide-related">'+''.join('<a href="'+id+'.html">'+escape(GUIAS_POR_ID[id]['titulo'])+' <span aria-hidden="true">→</span></a>' for id in related)+'</div><div class="context-links">'+''.join(link('../'+p['url'],p['titulo']) for p in g['links_contexto'])+'</div></section><a class="back-to-ideas" href="index.html">← Voltar aos Guias</a>'
-    return shell(g['titulo'],g['resumo'],content,'../','guias',extra='<script src="../guias.js" defer></script>')
+    return shell(g['titulo'],g['resumo'],content,'../','guias',extra='<script src="../assets/js/guias.js" defer></script>')
 
 
 def texto_guia(g):

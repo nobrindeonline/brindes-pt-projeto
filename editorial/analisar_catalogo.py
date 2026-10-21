@@ -7,7 +7,7 @@ from PIL import Image, ImageOps, ImageDraw
 ROOT=Path(__file__).resolve().parents[1]
 TMP=ROOT/'tmp/pdfs'
 TMP.mkdir(parents=True,exist_ok=True)
-pdf=fitz.open(ROOT/'General Catalogue 2026 - Iberia Prices.pdf')
+pdf=fitz.open(ROOT.parent/'arquivo/referencias/General Catalogue 2026 - Iberia Prices.pdf')
 pages=[]
 for n,page in enumerate(pdf,1):
     pages.append({'pagina_pdf':n,'rotulo':page.get_label(),'texto':page.get_text()})

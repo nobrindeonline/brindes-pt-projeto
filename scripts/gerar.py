@@ -1,5 +1,7 @@
 """Gera HTML e pesquisa; formata as páginas com o Prettier local (npm ci)."""
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from urllib.parse import quote, unquote, urlsplit
 from html import escape, unescape
 import json
@@ -8,10 +10,9 @@ import shutil
 import subprocess
 import argparse
 import importlib.util
-import sys
-from neutralidade import pagina_publica, texto_publico, corrigir_ligacoes
+from scripts.neutralidade import pagina_publica, texto_publico, corrigir_ligacoes
 from conteudos.produtos import PRODUTOS, textos_publicos
-from render_produtos import POR_ID as FAMILIAS_PRODUTOS, render_guia, render_entrada, dados_publicos as dados_produtos
+from scripts.render_produtos import POR_ID as FAMILIAS_PRODUTOS, render_guia, render_entrada, dados_publicos as dados_produtos
 from conteudos.produtos_imagens import CREDITOS as CREDITOS_PRODUTOS
 from conteudos.catalogo import ARTIGOS, SECCOES, FONTES, DATA_REVISAO
 from conteudos.recursos import FOTOS_TECNICAS, ARTIGO_PRODUTOS, GRUPO_PRODUTOS, POR_ID
@@ -25,7 +26,7 @@ from conteudos.tampografia import PASSOS as PASSOS_TAMPOGRAFIA, IMAGENS as IMAGE
 from conteudos.serigrafia import PASSOS as PASSOS_SERIGRAFIA
 from conteudos.impressao_uv import PASSOS as PASSOS_UV, IMAGENS as IMAGENS_UV
 from conteudos.guias import GRUPOS_GUIAS
-from render_guias import GUIAS_POR_ID, entrada_guias, artigo_guia, texto_guia, dados_guias
+from scripts.render_guias import GUIAS_POR_ID, entrada_guias, artigo_guia, texto_guia, dados_guias
 from conteudos.guias_imagens import CREDITOS_GUIAS
 from conteudos.materiais import MATERIAIS
 from conteudos.bordado import IMAGENS_BORDADO
@@ -34,10 +35,10 @@ from conteudos.crachas import IMAGEM_CRACHAS, COMPONENTES as COMPONENTES_CRACHAS
 from conteudos.montagem import MONTAGEM, HUB_ID, BASE_IMAGENS, IMAGENS_MONTAGEM
 from conteudos.transfers import IDS as TRANSFER_IDS, IMAGENS_TRANSFERS
 from conteudos.mercado import MERCADO
-from render_mercado import entrada as entrada_mercado, pagina as pagina_mercado
+from scripts.render_mercado import entrada as entrada_mercado, pagina as pagina_mercado
 from conteudos.mercado_imagens import preparar as preparar_imagens_mercado
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 BY_ID = {a['id']: a for a in ARTIGOS}
 SECS = {s['id']: s for s in SECCOES}
 GROUP_LINKS = {
@@ -122,7 +123,7 @@ def footer(prefix):
 def search_form(prefix):
     return f'<form class="search" action="{prefix}pesquisa.html" method="get" role="search"><label class="sr-only" for="q">Pesquisar na biblioteca</label><input id="q" name="q" type="search" maxlength="160" placeholder="Técnica, produto ou dúvida…"><button type="submit">Pesquisar</button></form>'
 def shell(title,description,content,prefix='',active='',extra='',robots='noindex, nofollow'):
-    return f'''<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{escape(description,quote=True)}"><meta name="robots" content="{escape(robots,quote=True)}"><title>{escape(title)} — brindes.pt</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="{prefix}styles.css"></head><body>{header(prefix,active)}<main id="conteudo" class="wrap" tabindex="-1">{content}</main>{footer(prefix)}{extra}<script src="{prefix}script.js" defer></script></body></html>'''
+    return f'''<!doctype html><html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{escape(description,quote=True)}"><meta name="robots" content="{escape(robots,quote=True)}"><title>{escape(title)} — brindes.pt</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="{prefix}assets/css/styles.css"></head><body>{header(prefix,active)}<main id="conteudo" class="wrap" tabindex="-1">{content}</main>{footer(prefix)}{extra}<script src="{prefix}assets/js/script.js" defer></script></body></html>'''
 def card(a,prefix=''):
     return f'<a class="topic content-card" href="{prefix}{url(a)}"><span class="eyebrow">{SECS[a["sec"]]["curto"]}</span><h3>{a["titulo"]}</h3><p>{a["resumo"]}</p><span class="arrow" aria-hidden="true">↗</span></a>'
 def idea_media(a,caption=True):
@@ -696,7 +697,7 @@ def search_page():
             entry['text']+=' '+p['nome']+' '+p['ref']+' '+' '.join(p['factos'])
     write('assets/pesquisa-dados.js','window.BRINDES_SEARCH = '+json.dumps(entries,ensure_ascii=False).replace('<','\\u003c')+';\n')
     content='<nav class="crumb" aria-label="Percurso">'+link('index.html','Início')+' / Pesquisa</nav><div class="page-intro"><span class="eyebrow">Encontre a sua resposta</span><h1>Pesquisar na biblioteca</h1><p>Pesquise por técnica, produto, material ou dúvida.</p>'+search_form('')+'</div><p id="search-status" role="status" aria-live="polite"></p><div id="search-results" class="article-grid"></div><noscript><p>Ative JavaScript para pesquisar. Pode também navegar pelas secções abaixo.</p></noscript><section><h2>Explorar por assunto</h2><div class="context-links">'+''.join(link(s['id']+'/index.html',s['titulo']) for s in SECCOES)+'</div></section>'
-    write('pesquisa.html',shell('Pesquisa','Pesquise os artigos e secções da biblioteca brindes.pt.',content,extra='<script src="assets/pesquisa-dados.js" defer></script><script src="pesquisa.js" defer></script>'))
+    write('pesquisa.html',shell('Pesquisa','Pesquise os artigos e secções da biblioteca brindes.pt.',content,extra='<script src="assets/pesquisa-dados.js" defer></script><script src="assets/js/pesquisa.js" defer></script>'))
 def atualizar_pesquisa_mercado(perfis, incluir_entrada=False):
     """Insere/atualiza Mercado sem reescrever entradas de outras secções."""
     path = ROOT/'assets/pesquisa-dados.js'

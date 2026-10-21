@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from conteudos.produtos import PRODUTOS, FONTES_PRODUTOS, textos_publicos
 from conteudos.produtos_imagens import fotos_publicas, IMAGENS
-from render_produtos import dados_publicos
+from scripts.render_produtos import dados_publicos
 from conteudos.produtos_areas import AREAS
 from conteudos.catalogo import ARTIGOS
 

@@ -506,8 +506,8 @@ Papel resumido: Grupo têxtil e titular da marca MUKUA.
 
 ## Geração e verificações
 
-- Conteúdos: `conteudos/mercado_areas.py`, `conteudos/mercado_novos_perfis.py`, `conteudos/perfis_mercado.py` e `conteudos/mercado.py`. Apresentação: `render_mercado.py` e estilos existentes.
-- `python gerar.py --secao mercado`: entrada e 29 páginas individuais; pesquisa insere novas entradas e atualiza apenas Mercado. Outras entradas e HTML fora da secção são preservados.
+- Conteúdos: `conteudos/mercado_areas.py`, `conteudos/mercado_novos_perfis.py`, `conteudos/perfis_mercado.py` e `conteudos/mercado.py`. Apresentação: `scripts/render_mercado.py` e estilos existentes.
+- `python scripts/gerar.py --secao mercado`: entrada e 29 páginas individuais; pesquisa insere novas entradas e atualiza apenas Mercado. Outras entradas e HTML fora da secção são preservados.
 - Resultados finais em `editorial/verificacao-mercado-areas.md`: verificação geral, pesquisa, formatação, seis cartões, 24 associações, perfis canónicos, imagens e privacidade.
 - Não existe sitemap nem domínio canónico confirmado. As novas rotas integram pesquisa e inventário; não se inventou um sitemap absoluto sem domínio.
 - Mantêm-se `index, follow`, as regras de robots existentes e conteúdo principal em HTML, sem dependência de JavaScript.

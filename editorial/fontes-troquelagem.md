@@ -6,7 +6,7 @@ Consulta e revisão: 7 de outubro de 2026. Versão local; sem commit, push ou pu
 
 - `conteudos/troquelagem.py`: artigo, fontes com título/URL, operações, passos, FAQ e metadados das imagens.
 - `conteudos/catalogo.py`: registo e relações com Termogravura, Papel e cartão e o guia de Indústria.
-- `gerar.py`: composição com os mesmos cabeçalho, rodapé, índice de leitura, referências, cartões, passos e imagens responsivas das técnicas existentes; pesquisa inclui também operações e FAQ.
+- `scripts/gerar.py`: composição com os mesmos cabeçalho, rodapé, índice de leitura, referências, cartões, passos e imagens responsivas das técnicas existentes; pesquisa inclui também operações e FAQ.
 - `conteudos/apresentacao_recursos.py`: créditos das duas imagens utilizadas.
 - Rota: `tecnicas/tecnica-troquelagem.html`. O prefixo segue a solução existente em Sublimação e evita colisão no identificador global `troquelagem`, usado por `industria/troquelagem.html`. A rota anterior continua intacta e ambas estão ligadas.
 - A listagem Técnicas passa a ligar o tema Troquelagem, além do cartão de guia disponível. Não existe mapa de rotas ou dados estruturados separado a atualizar.
@@ -64,8 +64,8 @@ quantidades mínimas, preços ou prazos.
 
 ## Verificação
 
-- `python gerar.py`: geração com Prettier concluída.
-- `python verificar.py`: 73 páginas, 2795 ligações/recursos locais válidos.
+- `python scripts/gerar.py`: geração com Prettier concluída.
+- `python scripts/verificar.py`: 73 páginas, 2795 ligações/recursos locais válidos.
 - `node --test testes/pesquisa.test.cjs`: sete testes aprovados, incluindo Troquelagem.
 - `.venv/Scripts/python.exe testes/verificar_imagens.py`: 198 utilizações de imagens,
   39 ficheiros válidos; dimensões e texto alternativo verificados.

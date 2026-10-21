@@ -3,7 +3,7 @@
 ## Fonte e geração
 
 O artigo é definido em `conteudos/bordado.py`, importado por `conteudos/catalogo.py`.
-`python gerar.py` produz `tecnicas/bordado.html`, os cartões relacionados e
+`python scripts/gerar.py` produz `tecnicas/bordado.html`, os cartões relacionados e
 `assets/pesquisa-dados.js`. O gerador preserva as âncoras `parte-0` a `parte-7`
 e as três âncoras de tipos de ponto. A lista de confirmação e os problemas
 também entram na pesquisa. O esquema de processo é HTML/CSS original do site.
@@ -45,8 +45,8 @@ da peça, dimensão e legibilidade, cores de linha, estabilização, prova e cui
 
 ## Verificação
 
-- `python gerar.py`: 66 páginas geradas e formatadas.
-- `python verificar.py`: páginas, ligações e recursos locais aprovados após inserir as três imagens autorizadas.
+- `python scripts/gerar.py`: 66 páginas geradas e formatadas.
+- `python scripts/verificar.py`: páginas, ligações e recursos locais aprovados após inserir as três imagens autorizadas.
 - `node --test testes/pesquisa.test.cjs`: 5 testes aprovados.
 - `python testes/verificar_materiais.py`: aprovado.
 - `.venv/Scripts/python.exe testes/verificar_imagens.py`: imagens, créditos e percursos aprovados após inserir as três imagens autorizadas. O Python global não tem Pillow.

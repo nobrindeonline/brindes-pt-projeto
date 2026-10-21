@@ -13,5 +13,5 @@ Não foram criadas nem procuradas fotografias externas.
 `visuais/` conserva as cópias públicas com nomes neutros usadas pelo site.
 Não renomear essa pasta: é preparada pelo gerador. A seleção está em
 `conteudos/produtos_imagens.py`, no mapa `IMAGENS` das onze famílias/Guias.
-Execute `python gerar.py --secao produtos` depois de alterar a seleção.
+Execute `python scripts/gerar.py --secao produtos` depois de alterar a seleção.
 Os créditos existentes mantêm-se; uma cópia não altera a autoria ou a licença.

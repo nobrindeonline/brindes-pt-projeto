@@ -98,7 +98,7 @@ não se inventou atribuição ou licença aberta.
 ## Validação e limites
 
 - Geração normal, limitada a Produtos para preservar o âmbito.
-- verificar.py: 114 páginas, mais de 4300 ligações/recursos locais válidos.
+- scripts/verificar.py: 114 páginas, mais de 4300 ligações/recursos locais válidos.
 - verificar_produtos.py: dez cartões completos, destinos próprios, doze artigos,
   fontes, relações recebidas pelos novos guias, pesquisa e JSON consistentes.
 - verificar_produtos_imagens.py: 29 ficheiros decodificados, dimensões,

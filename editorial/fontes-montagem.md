@@ -4,7 +4,7 @@ Revisão: 7 de outubro de 2026. Implementação local; sem commit, push ou publi
 
 ## Estrutura e decisões
 
-O projeto gera HTML com `gerar.py`, usa os dados de `conteudos/catalogo.py`
+O projeto gera HTML com `scripts/gerar.py`, usa os dados de `conteudos/catalogo.py`
 e formata com o Prettier local. As referências são chaves `[fonte]` no texto,
 convertidas em ligações para a lista de fontes de cada página.
 
@@ -65,7 +65,7 @@ Não foram descarregadas imagens externas.
 ## Ficheiros de implementação
 
 - Novo: `conteudos/montagem.py`.
-- Integração: `conteudos/catalogo.py`, `gerar.py`, `styles.css`,
+- Integração: `conteudos/catalogo.py`, `scripts/gerar.py`, `assets/css/styles.css`,
   `conteudos/apresentacao_recursos.py`.
 - Documentação: este dossier, `README.md`, `editorial/plano.md`.
 - Pesquisa: `testes/pesquisa.test.cjs` e dados regenerados em `assets/pesquisa-dados.js`.
@@ -75,8 +75,8 @@ Não foram descarregadas imagens externas.
 
 ## Verificações executadas
 
-- `python gerar.py`: 78 páginas, com formatação automática.
-- `python verificar.py`: 3024 ligações e recursos locais válidos nas 78 páginas.
+- `python scripts/gerar.py`: 78 páginas, com formatação automática.
+- `python scripts/verificar.py`: 3024 ligações e recursos locais válidos nas 78 páginas.
 - `node --test testes/pesquisa.test.cjs`: nove testes aprovados, incluindo
   pesquisas com e sem acentos e preservação dos guias de Indústria.
 - `.venv/Scripts/python.exe testes/verificar_imagens.py`: 210 utilizações de
@@ -98,7 +98,7 @@ formação do ponto, construção da costura, acessórios, espiral, Wire-O e
 preparação da lombada na encadernação adesiva. Reabertas as três fotografias
 selecionadas e confirmada a correspondência entre conteúdo, alt e legenda.
 
-Executadas novamente: `python verificar.py` (78 páginas, 3024 ligações/recursos),
+Executadas novamente: `python scripts/verificar.py` (78 páginas, 3024 ligações/recursos),
 `node --test testes/pesquisa.test.cjs` (nove testes),
 `.venv/Scripts/python.exe testes/verificar_imagens.py`,
 `python testes/verificar_materiais.py`, `npm.cmd run format:check` e

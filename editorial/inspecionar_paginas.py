@@ -4,7 +4,7 @@ import pymupdf as fitz
 from PIL import Image, ImageOps, ImageDraw
 ROOT=Path(__file__).resolve().parents[1]
 TMP=ROOT/'tmp/pdfs'
-pdf=fitz.open(ROOT/'General Catalogue 2026 - Iberia Prices.pdf')
+pdf=fitz.open(ROOT.parent/'arquivo/referencias/General Catalogue 2026 - Iberia Prices.pdf')
 numbers=[int(x) for x in sys.argv[1:]]
 tiles=[]
 for number in numbers:

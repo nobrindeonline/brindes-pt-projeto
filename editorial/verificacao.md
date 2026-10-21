@@ -17,7 +17,7 @@
 ## Atualização: imagens e secção editorial
 
 - 27 páginas geradas, incluindo três artigos de ideias e a página de créditos.
-- `python verificar.py`: 937 ligações e recursos locais válidos.
+- `python scripts/verificar.py`: 937 ligações e recursos locais válidos.
 - `.venv/Scripts/python.exe testes/verificar_imagens.py`: 54 utilizações de imagens
   em 17 ficheiros, todos decodificáveis, com texto alternativo e dimensões corretas.
 - As três ligações «Ler mais» apontam para os artigos certos; todos têm ligação
@@ -38,13 +38,13 @@ Data: 24 de setembro de 2026.
 ## Verificações concluídas
 
 - Geração das 17 páginas: inicial, pesquisa, oito índices e sete artigos.
-- `python verificar.py`: 550 destinos de ligações e recursos locais verificados,
+- `python scripts/verificar.py`: 550 destinos de ligações e recursos locais verificados,
   incluindo âncoras. Nenhum destino em falta; nenhum ID repetido; um H1 por página;
   idioma `pt-PT` em todas as páginas.
 - `node --test testes/pesquisa.test.cjs`: quatro testes aprovados. Cobrem acentos,
   maiúsculas, combinação de termos, prioridade do título, pesquisa vazia,
   ausência de resultados, entrada com marcação HTML e temas editoriais pendentes.
-- `node --check script.js` e `node --check pesquisa.js`: sintaxe válida.
+- `node --check assets/js/script.js` e `node --check assets/js/pesquisa.js`: sintaxe válida.
 - As 17 páginas responderam com HTTP 200 no servidor local e texto UTF-8.
 - Conteúdos e modelos revistos à procura de caracteres corrompidos pela codificação.
 - Revisão do código responsivo: grelhas adaptáveis, menu para larguras até 1100 px,
@@ -68,7 +68,7 @@ artigos históricos ou notícias sem fontes suficientes. Não houve publicação
 # Verificação da secção indústria — 24/09/2026
 
 - Geradas 46 páginas no total: entrada da indústria revista e 13 novos guias.
-- `python verificar.py`: 1518 ligações e recursos locais válidos; títulos, idioma e âncoras válidos.
+- `python scripts/verificar.py`: 1518 ligações e recursos locais válidos; títulos, idioma e âncoras válidos.
 - `.venv/Scripts/python.exe testes/verificar_imagens.py`: 95 utilizações, 17 ficheiros de imagem; dimensões, textos alternativos, créditos e ausência de preços verificados.
 - `node --test testes/pesquisa.test.cjs`: 4 testes aprovados. DTF passa a conduzir ao guia publicado.
 - Mantidas as âncoras `fluxo`, `maquinas`, `montagem` e `historia`. Ligações entre os cinco guias de técnicas e os novos guias de máquinas em ambos os sentidos.
@@ -79,8 +79,8 @@ artigos históricos ou notícias sem fontes suficientes. Não houve publicação
 
 - Entrada com sete cartões ligados a sete guias completos; fotografias existentes
   em quatro famílias. Âncoras antigas preservadas e sete artigos na pesquisa.
-- `python gerar.py`: geração e Prettier concluídos.
-- `python verificar.py`: 61 páginas e 2170 ligações/recursos locais válidos.
+- `python scripts/gerar.py`: geração e Prettier concluídos.
+- `python scripts/verificar.py`: 61 páginas e 2170 ligações/recursos locais válidos.
 - `node --test testes/pesquisa.test.cjs`: quatro testes aprovados.
 - `.venv/Scripts/python.exe testes/verificar_imagens.py`: 172 utilizações,
   25 ficheiros válidos, dimensões e textos alternativos verificados.

@@ -8,7 +8,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from conteudos.recursos import PRODUTOS
 OUT=ROOT/'assets/produtos';OUT.mkdir(parents=True,exist_ok=True)
-pdf=fitz.open(ROOT/'General Catalogue 2026 - Iberia Prices.pdf')
+pdf=fitz.open(ROOT.parent/'arquivo/referencias/General Catalogue 2026 - Iberia Prices.pdf')
 manifest=[];tiles=[]
 for p in PRODUTOS:
     blocks=pdf[p['pdf']-1].get_text('dict')['blocks']

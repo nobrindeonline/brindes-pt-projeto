@@ -7,7 +7,7 @@ reformulações anteriores, as novas pastas de imagens e as remoções locais de
 ficheiros. Não se fez commit, push ou publicação.
 
 Foram analisados `conteudos/guias.py`, o índice Python `conteudos/catalogo.py`,
-as funções de `gerar.py`, os oito HTML de Guias e as onze imagens locais. Não
+as funções de `scripts/gerar.py`, os oito HTML de Guias e as onze imagens locais. Não
 foi aberto o documento comercial local. Os exemplos dependentes dele foram
 retirados da fonte e das funções específicas de Guias, incluindo nomes, medidas,
 referências, campos de exemplos, fotografias e ligações de origem.
@@ -104,7 +104,7 @@ imagem selecionada nem os seus metadados identificam a entidade mantenedora.
 
 ## Fonte única, pesquisa e consulta futura
 
-`render_guias.py` apresenta os dados de `conteudos/guias.py`. O índice de artigos
+`scripts/render_guias.py` apresenta os dados de `conteudos/guias.py`. O índice de artigos
 usa cópias desses dados para que as relações antigas de outras secções não
 modifiquem acidentalmente a fonte revista dos Guias.
 
@@ -124,14 +124,14 @@ para “Guias práticos”, para corresponder ao índice revisto.
 ## Ficheiros e verificação
 
 Principais alterações: `conteudos/guias.py`, integração em `conteudos/catalogo.py`,
-`gerar.py`, `render_guias.py`, `conteudos/guias_imagens.py`, `styles.css`, `guias.js`,
+`scripts/gerar.py`, `scripts/render_guias.py`, `conteudos/guias_imagens.py`, `assets/css/styles.css`, `assets/js/guias.js`,
 os oito HTML de Guias, os créditos, a pesquisa, as exportações e os testes de Guias.
 Os registos de fontes/imagens e de execução ficam em `editorial/` e `tmp/guias-qa/`.
 As demais páginas e os dados de Produtos foram preservados.
 
-- Geração completa: `python gerar.py` terminou com sucesso. A versão final foi
-  regenerada com `python gerar.py --secao guias` para preservar os textos alheios.
-- `python verificar.py`: 78 páginas e 2713 ligações/recursos locais válidos.
+- Geração completa: `python scripts/gerar.py` terminou com sucesso. A versão final foi
+  regenerada com `python scripts/gerar.py --secao guias` para preservar os textos alheios.
+- `python scripts/verificar.py`: 78 páginas e 2713 ligações/recursos locais válidos.
 - `node --test testes/pesquisa.test.cjs`: onze testes aprovados, incluindo Guias.
 - `python testes/verificar_guias.py`: fontes, datas, rotas, imagens, relações,
   anonimato, pesquisa e exportação consistentes.

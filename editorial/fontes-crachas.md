@@ -54,7 +54,7 @@ a utilização local solicitada e a autoria/fonte original/licença ainda por do
 
 - `conteudos/crachas.py`: conteúdo, fontes, passos, componentes, FAQ e imagem.
 - `conteudos/catalogo.py`: registo global, tema do índice e ligação inversa de Indústria.
-- `gerar.py`: mesma composição usada em Troquelagem; pesquisa inclui componentes, passos e FAQ.
+- `scripts/gerar.py`: mesma composição usada em Troquelagem; pesquisa inclui componentes, passos e FAQ.
 - `conteudos/apresentacao_recursos.py`: créditos da imagem.
 - `tecnicas/crachas-automaticos.html`, `tecnicas/index.html`, `industria/producao-de-crachas.html`, `creditos-imagens.html` e `assets/pesquisa-dados.js`: resultados gerados.
 - `testes/pesquisa.test.cjs`: pesquisa pela designação inicial e termos do processo, preservando a rota de Indústria.
@@ -67,7 +67,7 @@ não foram acrescentados CSS ou JavaScript de interface.
 ## Verificação
 
 - Geração Python e Prettier concluídos.
-- `python verificar.py`: 74 páginas e 2858 ligações/recursos locais válidos.
+- `python scripts/verificar.py`: 74 páginas e 2858 ligações/recursos locais válidos.
 - `node --test testes/pesquisa.test.cjs`: oito testes aprovados.
 - `.venv/Scripts/python.exe testes/verificar_imagens.py`: 200 utilizações de imagens,
   40 ficheiros válidos; dimensões e alt verificados.

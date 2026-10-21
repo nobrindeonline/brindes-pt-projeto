@@ -7,6 +7,23 @@
 
 ## Atualizações
 
+### Organização dos ficheiros — 21 de outubro de 2026
+
+- `scripts/`: gerador, renderizadores e verificadores gerais.
+- `assets/js/` e `assets/css/`: JavaScript e estilos públicos.
+- `docs/`: brief e registos de apoio.
+- `../arquivo/referencias/`: PDFs de referência, fora da pasta publicada.
+- `../arquivo/backups/`: ZIPs de arquivo, fora da pasta publicada.
+
+As páginas mantêm os URLs. Configurações, README, páginas de entrada,
+pesquisa, créditos e robots.txt continuam na raiz. As ferramentas, documentos
+e fontes editoriais são excluídos da publicação por `.assetsignore`.
+
+Gere com `npm run build` ou `python scripts/gerar.py`. Verifique tudo com
+`npm run check` ou `python scripts/verificar_tudo.py`. A verificação usa o
+ambiente `.venv` existente quando são necessários os testes de imagens.
+Não existe publicação automática nestes comandos.
+
 ### Produtos — 21 de outubro de 2026
 
 A entrada apresenta dez cartões visuais. As cinco áreas antes ligadas a
@@ -21,8 +38,8 @@ Edite `conteudos/produtos.py`, `conteudos/produtos_complementos.py` e
 os originais das dez pastas. Não se deduzem materiais ou certificações dos
 nomes dos ficheiros.
 
-Execute `python gerar.py --secao produtos`,
-`python editorial/gerar_fontes_produtos.py`, `python verificar.py`,
+Execute `python scripts/gerar.py --secao produtos`,
+`python editorial/gerar_fontes_produtos.py`, `python scripts/verificar.py`,
 `python testes/verificar_produtos.py`,
 `.venv/Scripts/python.exe testes/verificar_produtos_imagens.py` e
 `node --test testes/pesquisa.test.cjs`.
@@ -40,8 +57,8 @@ complementares; os seis guias anteriores de cadeia conservam as rotas.
 
 Edite `conteudos/mercado_areas.py`, `conteudos/mercado_novos_perfis.py` e
 `conteudos/perfis_mercado.py`. A integração está em `conteudos/mercado.py`;
-`render_mercado.py` reutiliza os componentes comuns. Gere com
-`python gerar.py --secao mercado`: atualiza entrada, artigos e pesquisa de
+`scripts/render_mercado.py` reutiliza os componentes comuns. Gere com
+`python scripts/gerar.py --secao mercado`: atualiza entrada, artigos e pesquisa de
 Mercado, preservando as outras secções.
 
 As fontes públicas, limites de cada perfil, candidatas não incluídas e
@@ -58,18 +75,18 @@ originais. Os logótipos estão mapeados em `conteudos/mercado_empresas.py`.
 Os dezasseis perfis incluem história, operação, especialização, limites e
 fontes por secção, conforme a informação disponível. Para regenerar artigos
 e pesquisa preservando a entrada aprovada, use
-`python gerar.py --secao mercado --preservar-entrada`. As fichas-resumo usam os
+`python scripts/gerar.py --secao mercado --preservar-entrada`. As fichas-resumo usam os
 logótipos locais de `assets/mercado/Empresas/`. O dossier de fontes regista as
 afirmações publicadas e as informações que não puderam ser confirmadas.
 
-Verifique com `python verificar.py`, `python testes/verificar_mercado.py`,
+Verifique com `python scripts/verificar.py`, `python testes/verificar_mercado.py`,
 `node --test testes/pesquisa.test.cjs` e `npm.cmd run format:check`.
 
 ### Costura, argolagem e encadernação — 7 de outubro de 2026
 
 A entrada [`tecnicas/costura-argolagem-e-encadernacao.html`](tecnicas/costura-argolagem-e-encadernacao.html)
 reúne três guias completos. Edite `conteudos/montagem.py` e execute
-`python gerar.py` para atualizar o HTML e a pesquisa. Os guias anteriores de
+`python scripts/gerar.py` para atualizar o HTML e a pesquisa. Os guias anteriores de
 Indústria mantêm as rotas.
 
 Fontes, seleção de imagens e confirmações pendentes estão em
@@ -80,7 +97,7 @@ locais não foram alterados.
 
 A entrada [`tecnicas/transfers.html`](tecnicas/transfers.html) liga os guias de
 Transfer Serigráfico, Transfer Digital, Transfer Digital com Base e DTF. O
-conteúdo está em `conteudos/transfers.py`; use `python gerar.py` para atualizar
+conteúdo está em `conteudos/transfers.py`; use `python scripts/gerar.py` para atualizar
 páginas e pesquisa.
 
 As definições comerciais de Digital e Digital com Base precisam de confirmação
@@ -99,7 +116,7 @@ A listagem [`tendencias/index.html`](tendencias/index.html) reúne quatro artigo
 do pacote editorial recebido e as três ideias existentes. Os novos textos,
 fontes, data editorial, classificação e confirmações pendentes são mantidos em
 `conteudos/novidades.py`, integrado em `ARTIGOS` por `conteudos/catalogo.py`.
-`novelty_article` em `gerar.py` reutiliza o cabeçalho, rodapé, leitura e
+`novelty_article` em `scripts/gerar.py` reutiliza o cabeçalho, rodapé, leitura e
 navegação comuns; `idea_listing` constrói os sete cartões. A geração e a
 pesquisa não dependem dos Markdown originais fora do projeto.
 
@@ -110,7 +127,7 @@ dos Markdown são notas editoriais, não fotografias disponíveis: foram usados
 painéis tipográficos próprios. As instruções de integração do pacote não
 constituem autorização para publicar.
 
-Gere com `python3 gerar.py` após `npm ci`. Verifique com `python3 verificar.py`
+Gere com `python3 scripts/gerar.py` após `npm ci`. Verifique com `python3 scripts/verificar.py`
 e `node --test testes/pesquisa.test.cjs`. Consulte
 [`editorial/integracao-tendencias.md`](editorial/integracao-tendencias.md) para
 evidências, ficheiros e validações pendentes.
@@ -138,7 +155,7 @@ descrito em [Abrir e rever](#abrir-e-rever) e abrir
 
 Os textos são artigos e ideias, sem data de notícia. Edite-os em
 `conteudos/ideias.py`; a listagem e os artigos usam as funções `idea_listing` e
-`idea_article` de `gerar.py`. Cada artigo identifica as fotografias em `imagens`
+`idea_article` de `scripts/gerar.py`. Cada artigo identifica as fotografias em `imagens`
 e, quando necessário, uma lista adicional de produtos citados no texto.
 
 #### Fotografias, créditos e verificação
@@ -150,7 +167,7 @@ os rodapés; o registo editorial completo está em
 `editorial/fontes-catalogo.md`. As sete categorias de produtos têm agora
 páginas próprias, além dos guias existentes.
 
-Depois de alterar os conteúdos, execute `python gerar.py` e
+Depois de alterar os conteúdos, execute `python scripts/gerar.py` e
 `python editorial/gerar_fontes_catalogo.py`. Para verificar também as imagens,
 execute `.venv/Scripts/python.exe testes/verificar_imagens.py`. Este teste
 adicional usa Pillow; a extração usa PyMuPDF e Pillow, instalados no ambiente
@@ -179,7 +196,7 @@ continuam válidas.
 
 Abra `industria/index.html` no navegador para consultar o percurso e os 13
 guias. Os textos e as 11 etapas são mantidos em `conteudos/industria.py`; a
-apresentação é gerada por `gerar.py` e `styles.css`.
+apresentação é gerada por `scripts/gerar.py` e `assets/css/styles.css`.
 
 As fontes técnicas e históricas estão em
 [`editorial/fontes-industria.md`](editorial/fontes-industria.md), reproduzíveis
@@ -267,15 +284,15 @@ identificados como ilustrativos.
 | ----------------------------- | --------------------------------------------- |
 | `index.html`, `pesquisa.html` | Páginas geradas                               |
 | `tecnicas/`, `materiais/`, …  | Índices e artigos HTML gerados                |
-| `styles.css`                  | Estilos da maquete e da biblioteca            |
-| `script.js`                   | Menu e navegação                              |
-| `pesquisa.js`                 | Pesquisa local                                |
+| `assets/css/styles.css`                  | Estilos da maquete e da biblioteca            |
+| `assets/js/script.js`                   | Menu e navegação                              |
+| `assets/js/pesquisa.js`                 | Pesquisa local                                |
 | `assets/pesquisa-dados.js`    | Índice gerado, sem dados privados             |
 | `conteudos/catalogo.py`       | Conteúdos, relações, fontes e data de revisão |
 | `conteudos/modelos.py`        | Modelos: técnica, material, produto e guia    |
 | `modelos/inicio.html`         | Corpo editável da página inicial              |
-| `gerar.py`                    | Cabeçalho, rodapé e renderização partilhada   |
-| `verificar.py`                | Verificação de páginas, recursos e âncoras    |
+| `scripts/gerar.py`                    | Cabeçalho, rodapé e renderização partilhada   |
+| `scripts/verificar.py`                | Verificação de páginas, recursos e âncoras    |
 | `testes/pesquisa.test.cjs`    | Testes da pesquisa                            |
 | `editorial/plano.md`          | Mapa completo e temas pendentes               |
 | `editorial/validacoes.md`     | Afirmações e dados por validar pela Nobrinde  |
@@ -303,7 +320,7 @@ verificações e pontos a confirmar estão em
 
 A secção Materiais tem uma entrada e sete guias completos, mantidos em
 `conteudos/materiais.py`. As funções `material_listing`, `material_article` e
-`material_media` de `gerar.py` reutilizam os cartões, navegação e leitura do
+`material_media` de `scripts/gerar.py` reutilizam os cartões, navegação e leitura do
 site. As âncoras antigas da entrada são preservadas. As fotografias reutilizam
 `assets/produtos/` e têm legendas descritivas, sem referências ao catálogo.
 
@@ -317,7 +334,7 @@ Depois de gerar, execute também `python editorial/gerar_fontes_catalogo.py` e
 A secção Guias tem sete artigos completos. Os seis novos guias e os seus
 esquemas/listas estão em `conteudos/guias.py`; o guia «Como escolher a
 técnica» conserva o texto inicial em `conteudos/catalogo.py`, com complementos
-do mesmo módulo de guias. `guide_listing` e `guide_article` em `gerar.py` usam
+do mesmo módulo de guias. `guide_listing` e `guide_article` em `scripts/gerar.py` usam
 o cabeçalho e rodapé comuns.
 
 Consulte `editorial/fontes-guias.md` para fontes, resultados das verificações e
@@ -331,7 +348,7 @@ ocasiões, locais, épocas, objetivos, famílias genéricas, critérios, fontes,
 etiquetas e relações estruturadas. As imagens dos cartões usam aliases neutros
 em `assets/para_quem/visuais/`.
 
-Para regenerar apenas esta secção, execute `python gerar.py --secao publicos`.
+Para regenerar apenas esta secção, execute `python scripts/gerar.py --secao publicos`.
 O processo também atualiza a pesquisa e `assets/para-quem-conteudos.json`, que
 conserva os campos para consulta estruturada.
 
@@ -341,9 +358,9 @@ Depois de alterar conteúdos, execute os comandos necessários e recarregue a
 página no navegador. Para a geração completa e verificações gerais:
 
 ```powershell
-python gerar.py
+python scripts/gerar.py
 python editorial/gerar_plano.py
-python verificar.py
+python scripts/verificar.py
 node --test testes/pesquisa.test.cjs
 ```
 
@@ -355,7 +372,7 @@ estático e não precisa destas ferramentas para ser navegado.
 ### Formatação dos HTML
 
 Na primeira utilização (ou após atualizar as dependências), execute `npm ci`.
-Depois, use normalmente `python gerar.py`: o comando gera as páginas e aplica
+Depois, use normalmente `python scripts/gerar.py`: o comando gera as páginas e aplica
 automaticamente o Prettier a todos os HTML do projeto, incluindo o modelo
 inicial. Se Node.js ou Prettier estiverem em falta, a geração avisa antes de
 escrever páginas.
@@ -403,7 +420,7 @@ visível e categoria de notícia; não o apresente como guia permanente.
 Edite o corpo da página inicial em `modelos/inicio.html`. Os seus destaques
 são curadoria manual: ao trocar um artigo, atualize o respetivo cartão e
 destino. Cabeçalho, rodapé, páginas de secção e artigos partilham funções de
-`gerar.py`. Não altere diretamente o HTML gerado se pretender conservar a
+`scripts/gerar.py`. Não altere diretamente o HTML gerado se pretender conservar a
 alteração na próxima geração.
 
 ## Verificação e próximos passos

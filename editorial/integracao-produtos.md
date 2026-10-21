@@ -19,7 +19,7 @@ foram usados na nova redação. O documento comercial local não foi aberto.
 
 - `conteudos/produtos.py` é a fonte única dos seis guias e da coleção transversal.
   A adaptação `NOVOS_ARTIGOS` mantém o contrato do índice existente.
-- `render_produtos.py` gera a entrada, os guias e o JSON público.
+- `scripts/render_produtos.py` gera a entrada, os guias e o JSON público.
 - A entrada tem uma grelha única de seis cartões, orientação de escolha e uma
   ligação separada para Premium. Todas as sete rotas anteriores e as âncoras
   `canetas`, `bebidas`, `texteis`, `sacos`, `tecnologia`, `escritorio` e `premium`
@@ -68,10 +68,10 @@ o que comparar ou confirmar, sem converter essas perguntas em promessas.
 
 ## Geração e preservação do âmbito
 
-Foi executada a geração completa `python gerar.py`, após reparar uma falha na
+Foi executada a geração completa `python scripts/gerar.py`, após reparar uma falha na
 neutralização de etiquetas HTML. A geração e a validação completa terminaram
 com sucesso. Para a versão final, preservou-se o conteúdo anterior das páginas
-alheias a Produtos e executou-se `python gerar.py --secao produtos`. Este modo
+alheias a Produtos e executou-se `python scripts/gerar.py --secao produtos`. Este modo
 regenera os oito HTML de Produtos, pesquisa e JSON, aplicando às restantes páginas
 apenas correções de identidade ou de destinos já órfãos.
 
@@ -82,9 +82,9 @@ apenas as páginas públicas geradas, excluindo cópias editoriais privadas.
 
 ## Verificações
 
-- `python gerar.py`: geração completa bem-sucedida; geração final também feita
+- `python scripts/gerar.py`: geração completa bem-sucedida; geração final também feita
   com `--secao produtos` para preservar o âmbito.
-- `python verificar.py`: 78 páginas, 2715 ligações e recursos locais válidos na
+- `python scripts/verificar.py`: 78 páginas, 2715 ligações e recursos locais válidos na
   versão final; H1, idioma, ficheiros, IDs e âncoras válidos.
 - `node --test testes/pesquisa.test.cjs`: dez testes aprovados, incluindo sinónimos
   das sete entradas de Produtos e regressão das restantes técnicas.

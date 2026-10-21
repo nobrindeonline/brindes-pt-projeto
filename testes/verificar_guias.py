@@ -11,7 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from conteudos.guias import GUIAS, GRUPOS_GUIAS, FONTES_GUIAS_META, DATA_REVISAO_GUIAS
 from conteudos.guias_imagens import IMAGENS_GUIAS, fotos_publicas_guias
-from render_guias import dados_guias, texto_guia, data_pt
+from scripts.render_guias import dados_guias, texto_guia, data_pt
 
 ids={g['id'] for g in GUIAS}
 assert len(ids)==len(GUIAS)==7

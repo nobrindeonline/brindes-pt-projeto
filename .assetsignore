@@ -5,6 +5,9 @@ node_modules
 .vscode
 __pycache__
 conteudos/
+scripts/
+docs/
+arquivo/
 editorial/
 modelos/
 testes/

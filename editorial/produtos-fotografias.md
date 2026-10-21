@@ -9,7 +9,7 @@ ficheiros eliminados e não houve commit, push ou publicação.
 
 Analisaram-se a entrada, a fonte semântica `conteudos/produtos.py`, o índice Python
 `conteudos/catalogo.py`, as relações de imagens de `conteudos/recursos.py`,
-`render_produtos.py`, as funções de geração de páginas, cartões, imagens e pesquisa,
+`scripts/render_produtos.py`, as funções de geração de páginas, cartões, imagens e pesquisa,
 e os testes. Não foi aberto o documento comercial local nem foram utilizados
 os seus dados na redação ou na escolha dos novos textos alternativos.
 
@@ -80,12 +80,12 @@ resistência, sustentabilidade e compatibilidade automática de técnicas.
 
 ## Geração e verificações finais
 
-- `python gerar.py`: preparação de 17 visuais e geração completa de 78 páginas
+- `python scripts/gerar.py`: preparação de 17 visuais e geração completa de 78 páginas
   bem-sucedidas. Os geradores de imagens antigas respeitam a remoção do manifesto.
-- A versão final foi produzida com `python gerar.py --secao produtos`, preservando
+- A versão final foi produzida com `python scripts/gerar.py --secao produtos`, preservando
   os textos anteriores das outras secções e aplicando apenas as correções de
   referências autorizadas e os novos créditos.
-- `python verificar.py`: 78 páginas; 2712 ligações e recursos locais válidos.
+- `python scripts/verificar.py`: 78 páginas; 2712 ligações e recursos locais válidos.
 - `node --test testes/pesquisa.test.cjs`: dez testes aprovados.
 - `python testes/verificar_produtos.py`: cartões, guias, fontes, pesquisa semântica,
   exportação e nomes públicos neutros consistentes.

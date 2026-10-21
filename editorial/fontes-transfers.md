@@ -22,7 +22,7 @@ Verificações após integração: 72 páginas, 2717 ligações/recursos válido
 
 ## Âmbito e decisões
 
-Cinco páginas locais, geradas por `gerar.py` a partir de `conteudos/transfers.py`:
+Cinco páginas locais, geradas por `scripts/gerar.py` a partir de `conteudos/transfers.py`:
 
 - `tecnicas/transfers.html`: entrada e quatro cartões distintos.
 - `tecnicas/transfer-serigrafico.html`.
@@ -73,7 +73,7 @@ Nenhum proxy Gmail/Bing foi usado como fonte ou para obter imagens.
 
 ## Ficheiros de implementação
 
-`conteudos/transfers.py`, `conteudos/catalogo.py`, `gerar.py`, `styles.css`,
+`conteudos/transfers.py`, `conteudos/catalogo.py`, `scripts/gerar.py`, `assets/css/styles.css`,
 `testes/pesquisa.test.cjs`, `assets/pesquisa-dados.js`, este registo,
 `editorial/imagens-por-confirmar.md`, `editorial/plano.md` e `README.md`.
 
@@ -88,7 +88,7 @@ A regeneração de `index.html` também repõe uma frase já presente no modelo
 ## Verificações
 
 - Geração com Prettier local concluída.
-- `python verificar.py`: 72 páginas, 2715 ligações/recursos locais válidos.
+- `python scripts/verificar.py`: 72 páginas, 2715 ligações/recursos locais válidos.
 - Verificação de imagens: 190 utilizações, 32 ficheiros; dimensões e textos
   alternativos válidos. As imagens não autorizadas de Transfers não são carregadas.
 - Verificação existente de Materiais aprovada.

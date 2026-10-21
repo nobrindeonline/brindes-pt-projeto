@@ -2,7 +2,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
-const { find } = require('../pesquisa.js');
+const { find } = require('../assets/js/pesquisa.js');
 const context = { window: {} };
 vm.runInNewContext(fs.readFileSync(require.resolve('../assets/pesquisa-dados.js'), 'utf8'), context);
 const entries = context.window.BRINDES_SEARCH;

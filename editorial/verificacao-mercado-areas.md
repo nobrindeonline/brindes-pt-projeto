@@ -2,8 +2,8 @@
 
 Data: 14 de outubro de 2026. Trabalho local; não houve publicação remota.
 
-- `python gerar.py --secao mercado`: 30 páginas geradas e formatadas, incluindo a entrada, seis áreas, seis guias complementares e dezassete perfis. Pesquisa atualizada apenas para Mercado.
-- `python verificar.py`: **110 páginas; 4 185 ligações/recursos locais**. Títulos, idioma, recursos e âncoras válidos.
+- `python scripts/gerar.py --secao mercado`: 30 páginas geradas e formatadas, incluindo a entrada, seis áreas, seis guias complementares e dezassete perfis. Pesquisa atualizada apenas para Mercado.
+- `python scripts/verificar.py`: **110 páginas; 4 185 ligações/recursos locais**. Títulos, idioma, recursos e âncoras válidos.
 - `python testes/verificar_mercado.py`: **seis áreas, 24 associações, quinze perfis selecionados e dois complementares**. Cada cartão liga ao perfil canónico; MUKUA não tem perfil duplicado; JHK não usa o logótipo Velilla.
 - `node --test testes/pesquisa.test.cjs`: **12 testes aprovados**, sem falhas.
 - `npm.cmd run format:check`: todos os HTML conformes.
@@ -29,4 +29,4 @@ As seis áreas têm quatro empresas cada, na ordem editorial proposta. As repeti
 
 Fontes, mapeamento por área, papéis atribuídos e inventário dos logótipos: [fontes-mercado.md](fontes-mercado.md).
 
-Regenerar com `python gerar.py --secao mercado` e `python editorial/gerar_fontes_mercado.py`. O inventário editorial tem suporte em `editorial/gerar_plano.py`; nesta revisão, foi atualizado apenas o bloco Mercado de `editorial/plano.md`.
+Regenerar com `python scripts/gerar.py --secao mercado` e `python editorial/gerar_fontes_mercado.py`. O inventário editorial tem suporte em `editorial/gerar_plano.py`; nesta revisão, foi atualizado apenas o bloco Mercado de `editorial/plano.md`.

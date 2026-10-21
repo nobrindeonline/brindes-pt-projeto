@@ -1,11 +1,13 @@
 """Valida as páginas geradas, recursos e destinos/âncoras de ligações internas."""
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
 from collections import Counter
 from conteudos.catalogo import ARTIGOS, SECCOES
 
-ROOT=Path(__file__).resolve().parent
+ROOT=Path(__file__).resolve().parents[1]
 class Page(HTMLParser):
     def __init__(self, file):
         super().__init__()

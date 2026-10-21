@@ -7,7 +7,7 @@ conformação metalúrgica a quente nem atribui à Nobrinde equipamentos ou serv
 
 - Fonte editorial: `conteudos/termogravura.py`.
 - Registo de artigo, fontes e relações: `conteudos/catalogo.py`.
-- Geração: `gerar.py`, reutilizando cabeçalho, rodapé, índice, cartões, referências,
+- Geração: `scripts/gerar.py`, reutilizando cabeçalho, rodapé, índice, cartões, referências,
   esquema de processo e lista responsiva existentes.
 - Página: `tecnicas/termogravura.html`.
 - Listagem e etiqueta «Termogravura» no grupo «Gravação e relevo» passam a ter destino.
@@ -59,9 +59,9 @@ foi estendida a esta pasta.
 
 ## Verificações e pendências
 
-- `python gerar.py`: 67 páginas geradas e formatadas.
+- `python scripts/gerar.py`: 67 páginas geradas e formatadas.
 - `python editorial/gerar_plano.py`: estado de Termogravura atualizado.
-- `python verificar.py`: 67 páginas; 2476 ligações/recursos locais válidos.
+- `python scripts/verificar.py`: 67 páginas; 2476 ligações/recursos locais válidos.
 - `node --test testes/pesquisa.test.cjs`: cinco testes aprovados.
 - `python testes/verificar_materiais.py`: aprovado.
 - `.venv/Scripts/python.exe testes/verificar_imagens.py`: 185 utilizações,

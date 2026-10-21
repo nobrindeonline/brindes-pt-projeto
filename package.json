@@ -2,6 +2,8 @@
   "name": "brindes-pt",
   "private": true,
   "scripts": {
+    "build": "python scripts/gerar.py",
+    "check": "python scripts/verificar_tudo.py",
     "format": "prettier --write \"**/*.html\"",
     "format:check": "prettier --check \"**/*.html\""
   },

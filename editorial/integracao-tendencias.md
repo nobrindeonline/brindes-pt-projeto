@@ -45,9 +45,9 @@ de uma referência no fornecedor não demonstra oferta ou disponibilidade na Nob
 
 - `conteudos/novidades.py`: quatro artigos, fontes, categorias, data e pendentes.
 - `conteudos/catalogo.py`: registo dos quatro artigos para geração e pesquisa.
-- `gerar.py`: renderização de artigos com parágrafos, listas, destaque, fontes,
+- `scripts/gerar.py`: renderização de artigos com parágrafos, listas, destaque, fontes,
   índice interno, data, nota editorial e ligações; novos cartões na listagem.
-- `styles.css`: apresentação dos painéis tipográficos e ajustes responsivos locais.
+- `assets/css/styles.css`: apresentação dos painéis tipográficos e ajustes responsivos locais.
 - `tendencias/index.html`: sete cartões e explicação das categorias editoriais.
 - `tendencias/smart-collection-pf-concept.html`.
 - `tendencias/calculadora-lcd-mo2845.html`.
@@ -65,7 +65,7 @@ Uma futura geração integral voltará a reproduzir a legenda prevista no modelo
 ## Verificações realizadas
 
 - Geração pelo gerador Python existente e formatação pelo Prettier fixado no projeto.
-- `python3 verificar.py`: 65 páginas e 2297 ligações/recursos locais válidos;
+- `python3 scripts/verificar.py`: 65 páginas e 2297 ligações/recursos locais válidos;
   um H1 por página, idioma pt-PT, destinos internos e âncoras verificados.
 - `python3 testes/verificar_materiais.py`: passou.
 - `node --test testes/pesquisa.test.cjs`: quatro testes passaram.

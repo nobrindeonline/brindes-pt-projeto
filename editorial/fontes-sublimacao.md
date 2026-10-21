@@ -43,8 +43,8 @@ Fontes e geração:
 - `conteudos/sublimacao.py` (novo).
 - `conteudos/catalogo.py` (registo e relações inversas).
 - `conteudos/recursos.py` e `conteudos/apresentacao_recursos.py` (caminhos movidos).
-- `gerar.py` (data de revisão, caminhos e integração das imagens autorizadas).
-- `styles.css` (limite de largura das imagens de Sublimação).
+- `scripts/gerar.py` (data de revisão, caminhos e integração das imagens autorizadas).
+- `assets/css/styles.css` (limite de largura das imagens de Sublimação).
 - `assets/pesquisa-dados.js` (pesquisa).
 - `testes/pesquisa.test.cjs` (regressão: técnica e equipamentos, com/sem acentos).
 
