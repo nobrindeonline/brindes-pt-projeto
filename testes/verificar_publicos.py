@@ -5,10 +5,11 @@ from urllib.parse import unquote, urlsplit
 import json
 import re
 import sys
+import hashlib
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from conteudos.publicos import PUBLICOS
+from conteudos.publicos import PUBLICOS, FONTES_PUBLICOS
 
 
 class Page(HTMLParser):
@@ -48,8 +49,10 @@ forbidden = re.compile(
 listing_path = ROOT / 'publicos' / 'index.html'
 listing = listing_path.read_text(encoding='utf-8')
 listing_page = Page(listing)
-assert listing.count('class="audience-card"') == len(PUBLICOS) == 8
-assert len(listing_page.images) == 8
+assert listing.count('class="audience-card"') == len(PUBLICOS) == 11
+assert len(listing_page.images) == 11
+novos = {'criancas', 'agricultura', 'animais'}
+assert novos <= {a['id'] for a in PUBLICOS}
 
 structured = json.loads((ROOT / 'assets' / 'para-quem-conteudos.json').read_text(encoding='utf-8'))
 search_text = (ROOT / 'assets' / 'pesquisa-dados.js').read_text(encoding='utf-8')
@@ -58,7 +61,7 @@ search_by_url = {entry['url']: entry for entry in search}
 source_text = (ROOT / 'conteudos' / 'publicos.py').read_text(encoding='utf-8')
 
 required = {'destinatário', 'ocasiões', 'famílias_de_artigos', 'critérios', 'fontes', 'etiquetas'}
-assert len(structured['destinos']) == 8
+assert len(structured['destinos']) == 11
 assert {item['id'] for item in structured['destinos']} == {item['id'] for item in PUBLICOS}
 
 for audience in PUBLICOS:
@@ -67,7 +70,7 @@ for audience in PUBLICOS:
     page = Page(text)
     record = next(item for item in structured['destinos'] if item['id'] == audience['id'])
     assert required <= record.keys()
-    assert record['data_revisao'] == '2026-10-14'
+    assert record['data_revisao'] == audience['data_revisao']
     assert any(image['alt'] == audience['imagem']['alt'] for image in listing_page.images)
     image_path = ROOT / audience['imagem']['url']
     assert image_path.is_file()
@@ -76,7 +79,12 @@ for audience in PUBLICOS:
         'destinatarios', 'ocasioes', 'familias', 'distribuicao',
         'criterios', 'faq', 'relacionados',
     ))
-    assert 'fontes' not in page.ids
+    assert ('fontes' in page.ids) == bool(audience.get('mostrar_fontes') and audience.get('exibir_bibliografia', True))
+    if audience['id'] in novos:
+        assert {'personalizacao', 'cuidados'} <= page.ids
+        assert record['personalizacao'] == audience['personalizacao']
+        assert record['cuidados'] == audience['cuidados']
+        assert '../creditos-imagens.html#para-quem-novos' not in page.links
     assert 'Fontes, âmbito e revisão' not in text
     assert 'documentary-date' not in text
     assert not forbidden.search(text), audience['id']
@@ -103,7 +111,7 @@ for audience in PUBLICOS:
         assert {'destinatário', 'ocasião', 'local', 'época', 'objetivo'} <= occasion.keys()
         assert occasion['texto_editorial']
     for reference in record['fontes']:
-        assert reference['data_consulta'] == '2026-10-14'
+        assert reference['data_consulta'] == FONTES_PUBLICOS[reference['id']]['data_consulta']
         if f'[{reference["id"]}]' in json.dumps(record, ensure_ascii=False):
             assert reference['url'] in text
     for href in page.links:
@@ -119,4 +127,12 @@ assert not forbidden.search(listing)
 assert not forbidden.search(json.dumps(structured, ensure_ascii=False))
 assert not forbidden.search(source_text)
 assert not forbidden.search(json.dumps(search_by_url['publicos/index.html'], ensure_ascii=False))
-print('OK: oito guias, estrutura consultável, fontes datadas, imagens, ligações e pesquisa sem dados comerciais.')
+records = json.loads((ROOT/'editorial/publicos-novos-imagens.json').read_text(encoding='utf-8'))
+assert len(records) == 5
+for image in records:
+    assert image['id'] in novos
+    original, public = ROOT/image['original'], ROOT/image['publico']
+    assert hashlib.sha256(original.read_bytes()).hexdigest() == image['sha256']
+    assert original.read_bytes() == public.read_bytes()
+assert 'id="para-quem-novos"' in (ROOT/'creditos-imagens.html').read_text(encoding='utf-8')
+print('OK: onze guias; três novos públicos com cuidados, fontes, imagens íntegras, pesquisa e ligações válidas.')

@@ -533,3 +533,7 @@ PUBLICOS = [
         fotografia=imagem('associacoes-organizacoes-comunitarias.jpg', 'Caderno e caneta colocados sobre fundo branco.', 367, 367),
     ),
 ]
+
+from conteudos.publicos_novos import criar, FONTES as FONTES_PUBLICOS_NOVOS
+FONTES_PUBLICOS.update(FONTES_PUBLICOS_NOVOS)
+PUBLICOS.extend(criar(publico, ocasiao, imagem, imagem_contexto))

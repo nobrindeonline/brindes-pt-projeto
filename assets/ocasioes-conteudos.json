@@ -1,0 +1,736 @@
+{
+  "schema_version": "1.0",
+  "idioma": "pt-PT",
+  "data_revisao": "2026-10-21",
+  "secao": "Ocasiões e Sazonalidade",
+  "fontes": {
+    "tudor": {
+      "titulo": "Celebrações e presentes na corte Tudor",
+      "entidade": "Historic Royal Palaces",
+      "url": "https://www.hrp.org.uk/blog/christmas-in-the-tudor-court/",
+      "ambito": "Corte inglesa no século XVI; não é uma origem universal dos presentes.",
+      "data_consulta": "2026-10-21"
+    },
+    "vitoriano": {
+      "titulo": "Tradições natalícias vitorianas",
+      "entidade": "Victoria and Albert Museum",
+      "url": "https://www.vam.ac.uk/articles/victorian-christmas-traditions",
+      "ambito": "Transformações no Natal britânico do século XIX, sem extrapolação para Portugal.",
+      "data_consulta": "2026-10-21"
+    },
+    "clima": {
+      "titulo": "Normais climatológicas",
+      "entidade": "IPMA",
+      "url": "https://www.ipma.pt/pt/oclima/normais.clima/",
+      "ambito": "Médias climatológicas por estação de observação; não são previsão para um evento.",
+      "data_consulta": "2026-10-21"
+    },
+    "torres": {
+      "titulo": "O Carnaval Torriense: as origens de uma tradição antiga",
+      "entidade": "Câmara Municipal de Torres Vedras",
+      "url": "https://cm-tvedras.pt/artigos/detalhes/carnaval-torriense-as-origens-de-uma-tradicao-antiga",
+      "ambito": "História local de Torres Vedras; não descreve todos os carnavais portugueses.",
+      "data_consulta": "2026-10-21"
+    },
+    "podence": {
+      "titulo": "Festa de Carnaval dos Caretos de Podence",
+      "entidade": "MatrizPCI — Inventário Nacional do Património Cultural Imaterial",
+      "url": "https://matrizpci.patrimoniocultural.gov.pt/InventarioNacional/DetalheFicha/461",
+      "ambito": "Manifestação da comunidade de Podence, incluindo formas locais de participação.",
+      "data_consulta": "2026-10-21"
+    },
+    "calor": {
+      "titulo": "Recomendações à população sobre calor",
+      "entidade": "Direção-Geral da Saúde",
+      "url": "https://www.dgs.pt/em-destaque/recomendacoes-a-populacao-calor.aspx",
+      "ambito": "Orientação de saúde pública; não comprova a proteção de qualquer artigo.",
+      "data_consulta": "2026-10-21"
+    },
+    "circular": {
+      "titulo": "Economia circular",
+      "entidade": "Agência Europeia do Ambiente",
+      "url": "https://www.eea.europa.eu/en/topics/in-depth/circular-economy",
+      "ambito": "Enquadramento geral de utilização prolongada de produtos e materiais.",
+      "data_consulta": "2026-10-21"
+    },
+    "cosmeticos": {
+      "titulo": "Utilização de cosméticos",
+      "entidade": "Food and Drug Administration",
+      "url": "https://www.fda.gov/cosmetics/resources-consumers-cosmetics/using-cosmetics-safely",
+      "ambito": "Orientação de utilização norte-americana; não certifica a pintura ilustrada nem substitui requisitos aplicáveis em Portugal.",
+      "data_consulta": "2026-10-21"
+    },
+    "brinquedos": {
+      "titulo": "Escolha e utilização de brinquedos",
+      "entidade": "Comissão Europeia",
+      "url": "https://ec.europa.eu/docsroom/documents/6791/attachments/1/translations",
+      "ambito": "Idade, capacidades, avisos e supervisão; não valida os artigos fotografados.",
+      "data_consulta": "2026-10-21"
+    }
+  },
+  "artigos": [
+    {
+      "id": "natal",
+      "sec": "ocasioes",
+      "tipo": "ocasiao",
+      "titulo": "Natal",
+      "resumo": "Prepare agradecimentos e encontros de fim de ano, relacionando destinatário, utilidade, mensagem e apresentação, sem presumir uma celebração igual para todos.",
+      "imagem": {
+        "url": "assets/produtos/visuais/casa-cartao.jpg",
+        "alt": "Manta clara enrolada com uma figura de peluche castanha com hastes.",
+        "width": 700,
+        "height": 700,
+        "legenda": "Objeto de apresentação com motivo figurativo. A imagem não comprova composição, cuidados ou adequação infantil."
+      },
+      "conteudo": [
+        {
+          "id": "contexto",
+          "titulo": "Natal e encontros de fim de ano",
+          "paragrafos": [
+            "Uma oferta pode integrar um agradecimento, um encontro de equipa, uma atividade de associação ou uma entrega de fim de ano. Comece pelo gesto pretendido: agradecer uma colaboração não exige o mesmo artigo que apoiar uma oficina ou acolher participantes.",
+            "Confirme se a referência ao Natal faz sentido para quem recebe. Uma mensagem de agradecimento ou de fim de ano pode permitir uma participação mais inclusiva, sem reduzir todas as pessoas a uma tradição religiosa ou familiar."
+          ]
+        },
+        {
+          "id": "historia",
+          "titulo": "Presentes: histórias diferentes, sem origem única",
+          "paragrafos": [
+            "A troca de presentes não começou na época vitoriana. Historic Royal Palaces documenta ofertas de Ano Novo na corte inglesa de Henrique VIII, no século XVI. Trata-se de um contexto de corte, anterior ao século XIX, não de uma descrição de todas as famílias ou países. [tudor]",
+            "O V&A descreve a crescente centralidade do Natal na Grã-Bretanha vitoriana e a deslocação de práticas de oferta ligadas ao Ano Novo para a celebração natalícia. A mudança britânica não estabelece uma origem universal nem explica, por si só, as práticas portuguesas. [vitoriano]",
+            "As tradições pessoais e familiares e o uso contemporâneo de artigos em ações de comunicação são planos diferentes. As fontes históricas consultadas não demonstram a data de início de brindes promocionais de Natal em Portugal."
+          ]
+        },
+        {
+          "id": "destinatarios",
+          "titulo": "Quem oferece, quem recebe e com que objetivo",
+          "paragrafos": [
+            "Equipas podem agradecer a trabalhadores, colaboradores ou clientes; escolas e associações podem preparar encontros para famílias e participantes; municípios podem apoiar iniciativas comunitárias. A escolha deve partir da relação concreta e do modo como a pessoa receberá o objeto.",
+            "Diferencie uma entrega individual de uma mesa de materiais numa atividade aberta. Num agradecimento, a mensagem pessoal pode ter mais significado que acrescentar peças a um conjunto. Num encontro, a prioridade pode ser facilitar a participação, sem oferta para levar."
+          ]
+        },
+        {
+          "id": "artigos",
+          "titulo": "Exemplos ligados à ocasião",
+          "paragrafos": [
+            "Caderno e instrumento de escrita: podem acompanhar uma mensagem de continuidade para o ano seguinte, quando a pessoa usa apontamentos. Uma agenda datada exige confirmar o período e a rotina; não é equivalente a um caderno sem datas.",
+            "Caneca ou outro recipiente: pode fazer sentido numa pausa ou contexto doméstico, avaliando pega, limpeza e instruções. A apresentação natalícia não demonstra aptidão para bebidas quentes ou conservação térmica.",
+            "Manta, pequeno objeto para casa ou conjunto de uso pessoal: considere o espaço que ocupa e o que a pessoa terá de transportar. Uma caixa e um cartão podem reunir peças complementares; não é preciso aumentar o conjunto para tornar o agradecimento claro."
+          ]
+        },
+        {
+          "id": "escolha",
+          "titulo": "Escolher pelo uso e pela forma de entrega",
+          "paragrafos": [
+            "Confirme destinatários, variantes e necessidades de acessibilidade. Num grupo, podem existir preferências culturais e formas de utilização diferentes; permita recusar a oferta sem prejudicar a participação.",
+            "Observe o objeto e a apresentação juntos. Teste abertura, leitura da mensagem, espaço interior e transporte até casa. Separe entrega em mão de envio: uma caixa de apresentação não demonstra proteção durante expedição."
+          ]
+        },
+        {
+          "id": "planeamento",
+          "titulo": "Planear mensagem, preparação e distribuição",
+          "paragrafos": [
+            "Defina primeiro a ocasião de entrega e confirme, para esse projeto, tempos de aprovação, personalização, montagem e transporte. Não há um prazo universal de produção aplicável a todos os artigos.",
+            "Reveja nomes, idiomas, data e lista de destinatários antes da aprovação. Se houver vários locais ou turnos, prepare identificação dos conjuntos e responsáveis pela entrega. Decida antecipadamente o destino de artigos não levantados."
+          ]
+        },
+        {
+          "id": "impactos",
+          "titulo": "Agradecimento, inclusão e responsabilidade",
+          "paragrafos": [
+            "O objetivo de agradecer não prova fidelização, notoriedade ou vendas. Pode recolher apreciações voluntárias sobre utilidade e apresentação, sem tratar a entrega como evidência de um resultado promocional.",
+            "A Agência Europeia do Ambiente enquadra a utilização prolongada de produtos e materiais na economia circular. [circular] Para esta oferta, avalie necessidade, embalagem, cuidados e uso posterior; um motivo festivo ou material não comprova menor impacto ambiental."
+          ]
+        },
+        {
+          "id": "personalizacao",
+          "titulo": "Mensagem e personalização",
+          "paragrafos": [
+            "Escolha uma mensagem legível à dimensão real e confirme se deve aparecer no objeto ou apenas no cartão. Uma apresentação que se retira depois da entrega pode permitir que o artigo continue a ser usado noutros contextos.",
+            "Identifique material, acabamento e zona antes de escolher a técnica. Em conjuntos, cada componente pode exigir uma avaliação diferente; a compatibilidade não se transfere automaticamente do artigo para a embalagem."
+          ]
+        }
+      ],
+      "perguntas_frequentes": [
+        [
+          "Oferecer no Natal exige uma mensagem religiosa?",
+          "Não. Confirme o contexto e os destinatários; um agradecimento de fim de ano pode corresponder melhor à iniciativa."
+        ],
+        [
+          "Uma oferta de fim de ano tem de ser um conjunto?",
+          "Não. Um artigo útil, uma mensagem ou uma atividade sem objeto podem cumprir o propósito escolhido."
+        ],
+        [
+          "A prática de oferecer presentes nasceu no século XIX?",
+          "Não. As fontes aqui usadas documentam contextos britânicos anteriores e transformações vitorianas, sem uma origem universal."
+        ]
+      ],
+      "fontes": [
+        "tudor",
+        "vitoriano",
+        "circular"
+      ],
+      "relacionados": [
+        "embalagem-e-apresentacao",
+        "casa-decoracao-e-cuidados-pessoais",
+        "artigos-de-escritorio",
+        "empresas",
+        "associacoes-organizacoes-comunitarias",
+        "como-avaliar-uma-maquete",
+        "montagem-embalagem-expedicao"
+      ],
+      "tags": "Natal fim de ano agradecimento presentes apresentação embalagem encontros",
+      "data_revisao": "2026-10-21",
+      "imagem_cartao": {
+        "url": "assets/ocasioes/Natal/brindesparaonatal_cabazdenatal.jpg",
+        "alt": "Dois cabazes com alimentos embalados, laços e figuras decorativas natalícias.",
+        "width": 700,
+        "height": 325,
+        "legenda": "Imagem ilustrativa de apresentação natalícia."
+      },
+      "exemplos": [
+        {
+          "id": "natal-ornamentos",
+          "titulo": "Ornamentos para uma decoração partilhada",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/natal-ornamentos.jpg",
+            "alt": "Seis pequenos ornamentos com motivos natalícios e cordões para pendurar.",
+            "width": 300,
+            "height": 301,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Uma atividade de associação, escola ou equipa em que os participantes decoram um espaço comum, se essa celebração fizer sentido para o grupo.",
+          "motivo": "O objeto fica ligado a uma ação concreta: escolher onde o colocar e compor a decoração. Pode também acompanhar um cartão para levar para casa, sem exigir um conjunto volumoso.",
+          "confirmar": "Observe dimensões, forma de suspensão, armazenamento e eventuais peças destacáveis. Um ornamento decorativo não deve ser tratado automaticamente como brinquedo. Confirme se o desenho e o espaço de personalização permitem uma mensagem legível.",
+          "relacionado": "casa-decoracao-e-cuidados-pessoais"
+        },
+        {
+          "id": "natal-adereco",
+          "titulo": "Adereços para uma participação breve",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/natal-adereco.jpg",
+            "alt": "Bandolete vermelha com duas pequenas figuras natalícias presas a molas.",
+            "width": 300,
+            "height": 300,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Um momento de animação ou fotografia num encontro, com utilização voluntária e possibilidade de participar sem adereço.",
+          "motivo": "Pode marcar visualmente o momento festivo sem acrescentar uma peça de vestuário completa. Faz mais sentido quando há uma atividade preparada do que numa entrega sem contexto.",
+          "confirmar": "Verifique ajuste, fixações, conforto e instruções para o utilizador previsto. Combine como será distribuído e guardado; não deduza adequação infantil ou resistência das molas pela imagem.",
+          "relacionado": "eventos-identificacao-e-premios"
+        },
+        {
+          "id": "natal-gorro",
+          "titulo": "Gorros numa atividade de grupo",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/natal-gorro.jpg",
+            "alt": "Gorro vermelho com faixa e pompom brancos.",
+            "width": 500,
+            "height": 500,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Uma equipa de acolhimento ou um grupo que escolheu uma apresentação festiva para um encontro.",
+          "motivo": "Uma peça visual comum pode ajudar a reconhecer o grupo durante a atividade. Se o objetivo for apenas acompanhar um agradecimento pessoal, um cartão ou outro artigo pode ter mais utilidade.",
+          "confirmar": "Confirme medidas, composição e cuidados da peça, bem como a visibilidade da mensagem quando está colocada. A forma de gorro natalício não demonstra proteção contra frio nem torna a utilização obrigatória.",
+          "relacionado": "texteis"
+        }
+      ],
+      "url": "ocasioes/natal.html"
+    },
+    {
+      "id": "inverno",
+      "sec": "ocasioes",
+      "tipo": "ocasiao",
+      "titulo": "Inverno",
+      "resumo": "Pense nas deslocações, no frio, na chuva e no contraste entre espaços interiores e exteriores. A estação orienta perguntas, sem garantir propriedades dos artigos.",
+      "imagem": {
+        "url": "assets/produtos/visuais/bebidas-cartao.jpg",
+        "alt": "Três canecas brancas com pegas e interiores azul, vermelho e preto.",
+        "width": 300,
+        "height": 301,
+        "legenda": "Recipientes para contextos de pausa. A imagem não comprova limites de temperatura ou conservação térmica."
+      },
+      "conteudo": [
+        {
+          "id": "contexto",
+          "titulo": "Uma estação, várias condições de utilização",
+          "paragrafos": [
+            "Uma receção em espaço aquecido, uma deslocação diária e um evento no exterior colocam perguntas diferentes. Identifique onde o artigo será usado e se a pessoa terá de o transportar, guardar molhado ou utilizar com outras peças de roupa.",
+            "O IPMA disponibiliza normais climatológicas de temperatura e precipitação por locais de observação. São uma referência de clima, não uma previsão para a data da atividade. Consulte também a informação meteorológica pertinente ao planeamento. [clima]"
+          ]
+        },
+        {
+          "id": "historia",
+          "titulo": "Contexto climático sem uma tradição inventada",
+          "paragrafos": [
+            "As fontes selecionadas para este guia não estabelecem uma tradição geral de oferecer brindes no Inverno. O foco é a preparação de atividades e deslocações, e não uma suposta origem histórica da oferta sazonal.",
+            "Uma campanha de acolhimento, uma formação ou um encontro comunitário podem decorrer nesta estação sem partilharem a mesma história ou finalidade. Quando uma iniciativa invoca um costume local, deve identificar a comunidade e a fonte que o documenta."
+          ]
+        },
+        {
+          "id": "destinatarios",
+          "titulo": "Quem organiza e quem utiliza",
+          "paragrafos": [
+            "Organizações, escolas, associações e municípios podem preparar materiais para equipas, visitantes ou participantes. Distinga quem permanece no interior, quem entra e sai e quem trabalha num espaço exterior.",
+            "Os objetivos podem ser acolher, organizar o transporte de materiais ou identificar uma equipa. A decisão de oferecer um objeto deve acompanhar esses objetivos; não substitui a organização do local nem os equipamentos necessários à atividade."
+          ]
+        },
+        {
+          "id": "artigos",
+          "titulo": "Artigos para situações concretas",
+          "paragrafos": [
+            "Canecas e recipientes com tampa: para pausas ou deslocações, avalie o local de consumo, a abertura e a limpeza. A tampa pode servir apenas para beber e não tornar o recipiente estanque dentro de um saco.",
+            "Peças têxteis e acessórios: num encontro ou uso diário, o corte e as medidas devem permitir o movimento previsto com outras camadas. A aparência espessa não comprova proteção contra frio, chuva ou vento.",
+            "Sacos e bolsas: podem organizar documentos e equipamento no percurso. Confirme acessos e dimensões úteis; a construção visual ou um revestimento não provam impermeabilidade do conjunto.",
+            "Cadernos e materiais de reunião: em atividades interiores, podem ser mais pertinentes que um artigo associado ao frio. A estação não obriga a que todas as escolhas tenham uma função climática."
+          ]
+        },
+        {
+          "id": "escolha",
+          "titulo": "Avaliar utilização, conforto e limites",
+          "paragrafos": [
+            "Observe como se abre, segura e guarda o objeto nas condições previstas. Numa peça vestível, ensaie posição da mensagem e ajuste; num saco, verifique fechos e o espaço para o conteúdo habitual.",
+            "Se for necessária proteção profissional ou um desempenho perante intempéries, procure a documentação aplicável ao artigo. Não apresente vestuário promocional como equipamento de proteção apenas por ser usado no exterior."
+          ]
+        },
+        {
+          "id": "planeamento",
+          "titulo": "Planear alternativas para o local e a entrega",
+          "paragrafos": [
+            "Defina um ponto de entrega adequado ao percurso e uma alternativa se a atividade mudar de espaço. Confirme armazenamento, acesso ao recinto e distribuição por turnos, evitando que a recolha de um artigo dificulte a circulação.",
+            "Aprove variantes e medidas antes de confirmar a personalização. Valide prazos de cada etapa e do transporte para o projeto concreto; o calendário deve comportar as aprovações necessárias, sem prometer um tempo fixo de produção."
+          ]
+        },
+        {
+          "id": "impactos",
+          "titulo": "Utilidade depois da estação",
+          "paragrafos": [
+            "Pergunte se o objeto continuará a ser usado quando a atividade terminar. A utilização prolongada integra o enquadramento de circularidade da Agência Europeia do Ambiente. [circular] Isso não demonstra uma vantagem ambiental do artigo escolhido.",
+            "Analise embalagem, possibilidade de limpeza, armazenamento e destino final. Não confunda a intenção de apoiar participantes com proteção efetivamente prestada ou com satisfação demonstrada; recolha informação sobre uso e dificuldades se quiser avaliar a iniciativa."
+          ]
+        },
+        {
+          "id": "personalizacao",
+          "titulo": "Personalizar sem comprometer utilização",
+          "paragrafos": [
+            "Observe a mensagem com a peça vestida ou com o recipiente na posição de consumo. Punhos, costuras, pegas e fechos podem reduzir a área visível ou acessível.",
+            "Confirme a técnica no material e acabamento concretos, incluindo o cuidado posterior. Não cubra instruções, marcações ou zonas funcionais para aumentar a área do desenho."
+          ]
+        }
+      ],
+      "perguntas_frequentes": [
+        [
+          "Um saco revestido é impermeável?",
+          "Não se conclui isso do revestimento. Fechos, costuras e condições de utilização do artigo completo precisam de documentação."
+        ],
+        [
+          "Uma caneca é obrigatória numa oferta de Inverno?",
+          "Não. Escolha pela rotina e pelo local de utilização; um material de reunião pode ser mais útil."
+        ],
+        [
+          "As médias de clima permitem garantir o tempo no dia do evento?",
+          "Não. Normais climatológicas e previsão para uma data têm funções diferentes. [clima]"
+        ]
+      ],
+      "fontes": [
+        "clima",
+        "circular"
+      ],
+      "relacionados": [
+        "garrafas-copos-e-canecas",
+        "texteis",
+        "sacos-e-mochilas",
+        "mobilidade-ferramentas-e-seguranca",
+        "eventos",
+        "como-escolher-o-material",
+        "materiais-texteis"
+      ],
+      "tags": "Inverno frio chuva deslocações interiores exterior camadas roupa transporte",
+      "data_revisao": "2026-10-21",
+      "imagem_cartao": {
+        "url": "assets/ocasioes/Inverno/ChatGPT-Image-18-de-fev.-de-2026-15_33_35.jpg",
+        "alt": "Gorro, luvas, manta, chinelos, caderno, calendário, recipientes e saco sobre uma superfície clara.",
+        "width": 1536,
+        "height": 1024,
+        "legenda": "Composição ilustrativa de artigos num contexto de Inverno."
+      },
+      "exemplos": [
+        {
+          "id": "inverno-manta",
+          "titulo": "Mantas para pausas e deslocações",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/inverno-manta.jpg",
+            "alt": "Manta preta com padrão de linhas claras, dobrada e presa com uma fita branca.",
+            "width": 300,
+            "height": 300,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Uma entrega individual para uso doméstico, pausas ou viagens, quando a pessoa dispõe de espaço para levar e guardar a peça.",
+          "motivo": "Pode continuar a ter uma função depois do encontro. A escolha é mais pertinente quando corresponde a uma rotina conhecida do que quando apenas se associa a palavra Inverno a uma oferta.",
+          "confirmar": "Meça a manta aberta e dobrada, observe como se guarda e consulte composição e cuidados. Espessura aparente e padrão não quantificam isolamento térmico. Planeie a personalização tendo em conta a face visível nas duas posições.",
+          "relacionado": "casa-decoracao-e-cuidados-pessoais"
+        },
+        {
+          "id": "inverno-meias",
+          "titulo": "Meias para uma oferta pessoal",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/inverno-meias.jpg",
+            "alt": "Dois pés com meias de padrões claros, uma vermelha e outra azul-escura.",
+            "width": 300,
+            "height": 301,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Um conjunto pessoal ou doméstico, se houver informação suficiente sobre tamanhos e preferências de quem recebe.",
+          "motivo": "O volume reduzido pode simplificar a apresentação e o transporte. O interesse está no uso real da peça, não numa promessa genérica de conforto para todas as pessoas.",
+          "confirmar": "Confirme gama de tamanhos, composição, costuras e lavagem. A imagem não demonstra propriedades térmicas ou antiderrapantes. Se não conhecer o tamanho, considere uma alternativa que não dependa dessa informação.",
+          "relacionado": "texteis"
+        }
+      ],
+      "url": "ocasioes/inverno.html"
+    },
+    {
+      "id": "carnaval",
+      "sec": "ocasioes",
+      "tipo": "ocasiao",
+      "titulo": "Carnaval",
+      "resumo": "Relacione tradições locais, desfiles e participação com identificação, materiais de apoio e recordações, distinguindo-os de máscaras, fantasias e equipamentos.",
+      "imagem": {
+        "url": "assets/para_quem/visuais/contexto-identificacao.jpg",
+        "alt": "Pulseiras de várias cores com um fecho escuro, com uma pulseira azul em primeiro plano.",
+        "width": 300,
+        "height": 300,
+        "legenda": "Exemplo de identificação de participantes; não é uma fotografia de uma tradição carnavalesca nem prova controlo de acesso."
+      },
+      "conteudo": [
+        {
+          "id": "contexto",
+          "titulo": "Organização e participação em celebrações locais",
+          "paragrafos": [
+            "Desfiles, festas de associação, atividades escolares e encontros comunitários podem reunir participantes, equipas e público visitante com necessidades diferentes. Comece pelo programa e pelo papel de cada pessoa.",
+            "O Carnaval não é apresentado aqui como uma ocasião universal de troca de presentes. Um artigo pode apoiar a identificação, reunir materiais de uma oficina ou recordar uma participação, mas pode também ser desnecessário."
+          ]
+        },
+        {
+          "id": "historia",
+          "titulo": "Carnavais portugueses: exemplos com território",
+          "paragrafos": [
+            "A história municipal de Torres Vedras distingue a festa de rua organizada em 1912 da organização continuada a partir de 1923. Esta cronologia descreve o caso torriense, não uma data de nascimento de todos os carnavais. [torres]",
+            "O Inventário Nacional de Património Cultural Imaterial situa a Festa de Carnaval dos Caretos de Podence na comunidade desta aldeia de Macedo de Cavaleiros, no ciclo festivo de Inverno. Documenta também a participação comunitária e atividades paralelas. [podence]",
+            "Estes exemplos mostram por que é necessário confirmar tradições, linguagem e imagem com a organização local. O facto de uma celebração ter história documentada não prova uma tradição de distribuição de brindes nem autoriza a usar qualquer símbolo fora do seu contexto."
+          ]
+        },
+        {
+          "id": "destinatarios",
+          "titulo": "Papéis diferentes dentro do evento",
+          "paragrafos": [
+            "Associações e grupos podem preparar materiais para quem desfila; escolas podem organizar oficinas e saídas; municípios e organizadores podem apoiar equipas de acolhimento e participantes. Os visitantes não precisam necessariamente do mesmo conjunto.",
+            "Defina se pretende identificar uma função, facilitar uma atividade ou criar uma memória. Não prometa que um objeto aumenta participação ou preserva uma tradição: esses resultados exigem observação e evidência próprias."
+          ]
+        },
+        {
+          "id": "artigos",
+          "titulo": "Exemplos pela função que cumprem",
+          "paragrafos": [
+            "Fitas, cartões e pulseiras: podem diferenciar grupos ou apoiar a receção. A cor e a impressão devem ser legíveis, mas o objeto não garante autenticidade ou controlo de acesso sem um processo definido.",
+            "Têxteis para equipas: uma mensagem comum pode ajudar a reconhecer quem presta apoio. Considere a peça vestida com outras camadas e o movimento durante o percurso, em vez de avaliar apenas a peça pousada.",
+            "Sacos e cadernos de atividade: podem reunir materiais ou guardar registos numa oficina. Para uma recordação, uma peça gráfica pode relacionar-se com a edição e com a comunidade, desde que a imagem e o texto sejam revistos localmente."
+          ]
+        },
+        {
+          "id": "escolha",
+          "titulo": "Separar comunicação, disfarce e proteção",
+          "paragrafos": [
+            "Um artigo promocional não equivale a uma máscara, fantasia ou equipamento de proteção. Visibilidade, ajuste, materiais e condições de utilização devem ser avaliados no objeto concreto; a mensagem festiva não demonstra adequação.",
+            "Quando participam crianças, confirme idades, avisos, acompanhamento e o modo de entregar cada peça ao adulto responsável. A distribuição indiferenciada pode ignorar as diferenças entre o público de uma oficina e o de um desfile."
+          ]
+        },
+        {
+          "id": "planeamento",
+          "titulo": "Programa, edição e distribuição",
+          "paragrafos": [
+            "Confirme o calendário e o percurso da edição em causa com a organização. Este guia não fixa datas anuais nem substitui o programa local.",
+            "Reveja nomes dos grupos, idiomas, cores de identificação e forma de entrega. Ensaie a receção com os materiais colocados como serão usados. Confirme tempos de aprovação e preparação para cada projeto e preveja alterações de percurso ou local."
+          ]
+        },
+        {
+          "id": "impactos",
+          "titulo": "Respeito cultural e destino dos materiais",
+          "paragrafos": [
+            "Evite reduzir uma tradição local a uma imagem genérica de festa. Ouça a organização e permita formas de participação sem receber ou vestir um artigo.",
+            "O enquadramento da economia circular valoriza usar produtos e materiais durante mais tempo. [circular] Decida que partes podem voltar a ser utilizadas noutra edição e quais necessitam de atualização. Uma mensagem datada pode limitar esse uso, mas não há um resultado ambiental quantificado sem avaliação.",
+            "Separe objetivos promocionais da participação observada. Contar peças distribuídas não explica quem as utilizou nem qual foi o significado cultural da iniciativa."
+          ]
+        },
+        {
+          "id": "personalizacao",
+          "titulo": "Personalizar para leitura em movimento",
+          "paragrafos": [
+            "Use hierarquia simples: função da equipa ou grupo primeiro, informação complementar depois. Teste a leitura à distância prevista e com o artigo na posição real de utilização.",
+            "A técnica deve ser avaliada no suporte e no acabamento concretos. Em peças vestíveis, preserve zonas funcionais e avisos; no cartão, não cubra furos, fechos ou informação necessária."
+          ]
+        }
+      ],
+      "perguntas_frequentes": [
+        [
+          "Todos os carnavais portugueses têm as mesmas tradições?",
+          "Não. Os exemplos de Torres Vedras e Podence têm contextos próprios; confirme a tradição e a programação locais."
+        ],
+        [
+          "Uma pulseira garante acesso ao desfile ou recinto?",
+          "Não. Só pode ter esse papel dentro do processo definido pela organização, sem garantia automática pela cor ou pela impressão."
+        ],
+        [
+          "É necessário distribuir uma recordação?",
+          "Não. Materiais partilhados numa atividade, informação ou participação sem oferta podem corresponder melhor ao objetivo."
+        ]
+      ],
+      "fontes": [
+        "torres",
+        "podence",
+        "circular",
+        "brinquedos",
+        "cosmeticos"
+      ],
+      "relacionados": [
+        "eventos-identificacao-e-premios",
+        "texteis",
+        "sacos-e-mochilas",
+        "criancas",
+        "associacoes-organizacoes-comunitarias",
+        "camaras-municipais",
+        "serigrafia"
+      ],
+      "tags": "Carnaval Entrudo Podence Torres Vedras desfiles máscaras grupos participação pulseiras",
+      "data_revisao": "2026-10-21",
+      "imagem_cartao": {
+        "url": "assets/ocasioes/Carnaval/-1576168.jpg",
+        "alt": "Copos e fitas com padrões coloridos e mensagens de Carnaval.",
+        "width": 1080,
+        "height": 1080,
+        "legenda": "Exemplos visuais de artigos com motivos de Carnaval, sem representar uma tradição local portuguesa."
+      },
+      "exemplos": [
+        {
+          "id": "carnaval-mascara",
+          "titulo": "Máscaras para compor uma personagem",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/carnaval-mascara.jpg",
+            "alt": "Máscara de olhos amarela e verde com padrão geométrico.",
+            "width": 300,
+            "height": 300,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Uma oficina ou atividade de caracterização em que a organização selecionou o artigo para os participantes concretos.",
+          "motivo": "Pode servir de ponto de partida para uma personagem e relacionar a preparação com a participação na atividade. Não representa automaticamente uma tradição portuguesa nem substitui a revisão dos símbolos locais.",
+          "confirmar": "Avalie ajuste, aberturas, sistema de fixação e instruções. Não se trata de proteção respiratória. Para utilização por crianças, respeite idades, capacidades e avisos do artigo; a orientação europeia de brinquedos não certifica esta máscara. [brinquedos]",
+          "relacionado": "criancas"
+        },
+        {
+          "id": "carnaval-pintura",
+          "titulo": "Pintura para uma atividade de caracterização",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/carnaval-pintura.jpg",
+            "alt": "Aplicador de várias cores com tampa transparente, acompanhado por outras combinações de cores.",
+            "width": 300,
+            "height": 301,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Um momento organizado de caracterização, apenas depois de confirmar o uso previsto, os destinatários e o modo de aplicação.",
+          "motivo": "Pode acompanhar uma escolha de cores ou personagem sem acrescentar uma peça de roupa. O seu interesse depende da atividade e da vontade de participar; uma alternativa sem aplicação na pele deve continuar disponível.",
+          "confirmar": "Consulte rótulo, ingredientes, avisos, zonas de aplicação e remoção. A FDA recomenda seguir as instruções, não partilhar maquilhagem e não a usar junto dos olhos se não for destinada a essa zona. É orientação geral norte-americana, não aprovação deste artigo para Portugal. [cosmeticos]",
+          "relacionado": "como-avaliar-uma-maquete"
+        },
+        {
+          "id": "carnaval-capa",
+          "titulo": "Capas para atividades de representação",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/carnaval-capa.jpg",
+            "alt": "Capa vermelha com desenho amarelo, estrelas e uma mensagem de super-heroína.",
+            "width": 300,
+            "height": 300,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Uma dinâmica de representação ou desfile de um grupo que definiu personagens, movimento e acompanhamento.",
+          "motivo": "Uma capa permite construir uma apresentação visual sem exigir um conjunto completo de fantasia. A imagem ou mensagem pode ligar-se à atividade, desde que respeite as escolhas e os participantes.",
+          "confirmar": "Confirme tamanho, comprimento, fecho e liberdade de movimentos no percurso previsto. Não deduza comportamento perante chama, proteção ou adequação etária pela fotografia; o adulto responsável deve conservar os avisos e instruções aplicáveis. [brinquedos]",
+          "relacionado": "texteis"
+        }
+      ],
+      "url": "ocasioes/carnaval.html"
+    },
+    {
+      "id": "verao",
+      "sec": "ocasioes",
+      "tipo": "ocasiao",
+      "titulo": "Verão",
+      "resumo": "Prepare artigos para turismo, viagens, praia, festivais e atividades ao ar livre, pensando no percurso completo e nas condições documentadas de utilização.",
+      "imagem": {
+        "url": "assets/produtos/visuais/texteis-bones.jpg",
+        "alt": "Quatro bonés nas cores branca, preta, azul-escura e verde-escura.",
+        "width": 300,
+        "height": 300,
+        "legenda": "Exemplos de acessórios de vestuário. A fotografia não demonstra proteção solar ou desempenho perante calor e água."
+      },
+      "conteudo": [
+        {
+          "id": "contexto",
+          "titulo": "Atividades e percursos de utilização",
+          "paragrafos": [
+            "Uma visita turística, uma sessão desportiva, um festival e um dia de praia têm transportes, permanências e locais de entrega diferentes. Escolha pelo percurso: levar, utilizar, limpar e voltar a guardar.",
+            "Não se estabelece neste guia uma tradição histórica comum de oferecer brindes de Verão. Turismo, lazer e campanhas sazonais têm contextos próprios; não foi encontrada, nas fontes selecionadas, uma origem única que justifique essa afirmação."
+          ]
+        },
+        {
+          "id": "destinatarios",
+          "titulo": "Quem prepara a ação e quem recebe",
+          "paragrafos": [
+            "Equipas de alojamento podem acolher hóspedes; associações e municípios podem apoiar atividades; clubes e organizadores podem preparar materiais para participantes e voluntários. Distinga quem chega de viagem de quem permanece no recinto.",
+            "Acolher, informar e identificar são objetivos diferentes. Um material de orientação pode ser mais pertinente na chegada; uma recordação pode ser avaliada no final, quando a pessoa já conhece o peso e o espaço de que dispõe."
+          ]
+        },
+        {
+          "id": "artigos",
+          "titulo": "Exemplos de artigos e razões de escolha",
+          "paragrafos": [
+            "Garrafas e recipientes: podem acompanhar uma rotina de bebida quando há condições para os encher e limpar. Observe abertura, transporte e utilização indicada. A capacidade, a tampa ou a aparência não comprovam estanquidade ou conservação térmica.",
+            "Sacos e bolsas: podem reunir objetos num passeio ou organizar equipamento numa viagem. Escolha pela dimensão do conteúdo e pelo acesso; não deduza proteção contra água, areia ou quedas pelo nome da bolsa.",
+            "Bonés, t-shirts e toalhas: podem apoiar identificação de equipa ou uma atividade de lazer. Avalie ajuste, medidas e cuidados; a utilização ao sol não demonstra proteção solar.",
+            "Jogos e acessórios de exterior: relacione-os com espaço, tempo de preparação e possibilidade de guardar depois da atividade. Uma cadeira ou saco volumoso pode ser inadequado para quem se desloca a pé ou tem bagagem limitada."
+          ]
+        },
+        {
+          "id": "escolha",
+          "titulo": "Calor, sol, água e alimentação",
+          "paragrafos": [
+            "As recomendações da DGS para o calor incluem informação sobre hidratação e exposição solar. [calor] A organização deve consultar a orientação atual para a atividade; distribuir um artigo não equivale a assegurar proteção ou condições de saúde.",
+            "Confirme instruções de exposição, limpeza e armazenamento do artigo concreto. Num recipiente de refeição ou bebida, o contacto alimentar e a temperatura permitida não se deduzem do material aparente. Se o uso exigir proteção solar ou resistência à água, procure documentação específica."
+          ]
+        },
+        {
+          "id": "planeamento",
+          "titulo": "Entregar no momento em que faz sentido",
+          "paragrafos": [
+            "Mapeie pontos de chegada, atividade e saída. Um objeto entregue cedo pode acompanhar a atividade, mas também aumentar o que a pessoa transporta; uma entrega final pode ser mais simples se não for necessário durante o programa.",
+            "Confirme acesso ao recinto, armazenamento e entrega por grupos ou turnos. Valide, por projeto, aprovação da arte, preparação, montagem e transporte. Não presuma um prazo universal nem um calendário turístico igual em todos os destinos."
+          ]
+        },
+        {
+          "id": "impactos",
+          "titulo": "Utilidade, participação e responsabilidade",
+          "paragrafos": [
+            "A reutilização e a utilização prolongada integram o enquadramento de economia circular. [circular] Verifique se há condições reais de limpeza, transporte e uso posterior, em vez de tratar a palavra reutilizável como prova de menor impacto.",
+            "Considere embalagem, recolha de sobras e destino no fim de vida. Permita participar sem receber um artigo e reveja idiomas e acessibilidade da mensagem para visitantes.",
+            "Se avaliar a ação, distinga quantidade entregue de utilização observada. Registe como recolheu opiniões e a quem perguntou; esses dados não demonstram automaticamente efeitos em vendas ou fidelização."
+          ]
+        },
+        {
+          "id": "personalizacao",
+          "titulo": "Mensagem que acompanha o uso",
+          "paragrafos": [
+            "Num saco ou boné, observe a posição do desenho com o objeto utilizado. Numa garrafa, avalie a área exterior e a leitura ao segurar, preservando zonas de contacto e informação técnica.",
+            "Confirme a técnica, o acabamento e os cuidados do conjunto personalizado. O comportamento documentado do objeto sem personalização não permite concluir o comportamento de qualquer aplicação."
+          ]
+        }
+      ],
+      "perguntas_frequentes": [
+        [
+          "Um boné promocional garante proteção solar?",
+          "Não. A imagem ou a utilização em atividades de Verão não comprovam esse desempenho."
+        ],
+        [
+          "Uma garrafa resolve o planeamento de hidratação de um evento?",
+          "Não. A disponibilidade de bebida, o local e a atividade exigem organização própria e consulta das orientações pertinentes."
+        ],
+        [
+          "Um artigo reutilizável tem sempre menor impacto?",
+          "Não se estabelece uma conclusão sem âmbito e avaliação. Considere produção, transporte, uso, cuidados e destino final do artigo concreto."
+        ]
+      ],
+      "fontes": [
+        "calor",
+        "circular",
+        "brinquedos"
+      ],
+      "relacionados": [
+        "desporto-lazer-e-exterior",
+        "garrafas-copos-e-canecas",
+        "sacos-e-mochilas",
+        "texteis",
+        "turismo-alojamento",
+        "clubes-desportivos",
+        "como-escolher-brindes-para-um-evento"
+      ],
+      "tags": "Verão turismo praia viagens festivais calor sol água transporte atividades exterior",
+      "data_revisao": "2026-10-21",
+      "imagem_cartao": {
+        "url": "assets/ocasioes/Verao/images.jpg",
+        "alt": "Chapéu, toalha azul, óculos escuros e copo de água sobre madeira junto ao mar.",
+        "width": 738,
+        "height": 387,
+        "legenda": "Composição de praia; não comprova proteção solar dos acessórios."
+      },
+      "exemplos": [
+        {
+          "id": "verao-chinelos",
+          "titulo": "Chinelos quando o uso é conhecido",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/verao-chinelos.jpg",
+            "alt": "Pares de chinelos de enfiar o pé, apresentados em várias cores.",
+            "width": 300,
+            "height": 306,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Uma oferta ligada a estadia ou lazer em que se conhecem o tamanho e as condições em que a pessoa pretende usar o calçado.",
+          "motivo": "Podem corresponder a uma necessidade concreta de uso pessoal e ocupar pouco espaço numa apresentação. Perdem pertinência se o tamanho ou o contexto forem desconhecidos.",
+          "confirmar": "Verifique medidas, ajuste, sola e instruções para as superfícies previstas. A associação a praia ou piscina não demonstra aderência em piso molhado. A personalização deve ser avaliada sem comprometer a utilização.",
+          "relacionado": "texteis"
+        },
+        {
+          "id": "verao-almofada",
+          "titulo": "Almofadas insufláveis para pausas e viagens",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/verao-almofada.jpg",
+            "alt": "Almofadas retangulares coloridas com válvula lateral.",
+            "width": 300,
+            "height": 301,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Uma deslocação ou pausa em que o destinatário valoriza poder guardar o objeto com pouco volume, se essa for uma característica confirmada do artigo.",
+          "motivo": "A forma de encher, esvaziar e guardar faz parte da escolha. Pode ser mais útil para quem o transporta consigo do que um objeto volumoso que fica sem utilização no percurso.",
+          "confirmar": "Confirme dimensões em uso, válvula, método de enchimento, limpeza e armazenamento. Não apresente uma almofada como equipamento de flutuação ou proteção aquática; a aparência insuflável não demonstra essa finalidade.",
+          "relacionado": "sacos-e-mochilas"
+        },
+        {
+          "id": "verao-disco",
+          "titulo": "Discos para uma atividade recreativa",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/verao-disco.jpg",
+            "alt": "Cinco discos redondos nas cores verde, laranja, vermelho, preto e azul.",
+            "width": 300,
+            "height": 301,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Uma atividade de grupo num espaço onde a organização tenha previsto área e regras de jogo.",
+          "motivo": "O artigo pode ser usado durante a própria iniciativa, em vez de ficar apenas como recordação. Antes de preparar uma entrega individual, avalie se materiais partilhados no local cumprem o mesmo objetivo.",
+          "confirmar": "Considere o espaço de utilização, outros participantes, instruções e arrumação depois do jogo. Não atribua idade indicada ou resistência pelo aspeto. Para brinquedos, a orientação europeia recomenda respeitar idade, capacidades e supervisão. [brinquedos]",
+          "relacionado": "desporto-lazer-e-exterior"
+        },
+        {
+          "id": "verao-praia",
+          "titulo": "Conjuntos para brincar na areia",
+          "imagem": {
+            "url": "assets/ocasioes/visuais/verao-praia.jpg",
+            "alt": "Baldes de várias cores com pequenas pás e formas de brincar na areia.",
+            "width": 300,
+            "height": 301,
+            "legenda": "Exemplo ilustrativo. A fotografia não comprova composição, desempenho ou adequação a uma idade."
+          },
+          "contexto": "Uma atividade de praia ou de areia preparada para crianças acompanhadas, com escolha do conjunto pelo adulto responsável.",
+          "motivo": "Pode dar suporte a uma tarefa concreta, como construir e moldar em grupo. A utilidade depende do local e de como as peças são reunidas e guardadas; não é uma oferta necessária em todas as visitas.",
+          "confirmar": "Confirme idade indicada, peças incluídas, avisos e forma de limpeza. A orientação europeia recomenda respeitar as indicações e acompanhar a utilização dos brinquedos. Não deduza aptidão para contacto com alimentos nem função de proteção na água. [brinquedos]",
+          "relacionado": "criancas"
+        }
+      ],
+      "url": "ocasioes/verao.html"
+    }
+  ]
+}

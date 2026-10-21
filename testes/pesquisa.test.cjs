@@ -7,6 +7,19 @@ const context = { window: {} };
 vm.runInNewContext(fs.readFileSync(require.resolve('../assets/pesquisa-dados.js'), 'utf8'), context);
 const entries = context.window.BRINDES_SEARCH;
 
+test('Ocasiões distingue épocas e tradições dos públicos', () => {
+  for (const [query, slug] of [
+    ['Natal presentes vitoriana', 'natal'],
+    ['Inverno chuva deslocações', 'inverno'],
+    ['Carnaval Podence Torres Vedras', 'carnaval'],
+    ['Verão turismo festivais', 'verao'],
+    ['ornamentos gorros', 'natal'],
+    ['manta meias', 'inverno'],
+    ['pintura capa', 'carnaval'],
+    ['almofadas discos', 'verao'],
+  ]) assert.ok(find(entries, query).some(e => e.url === `ocasioes/${slug}.html`), query);
+});
+
 test('Guias indexa perguntas, critérios e evidência sem exemplos comerciais', () => {
   for (const [query, slug] of [
     ['PDF vetorial', 'como-preparar-um-logotipo'],
@@ -82,7 +95,7 @@ test('sublimação encontra a técnica e preserva o guia de equipamentos', () =>
   }
 });
 
-test('Para quem encontra os oito guias por destinatário e contexto', () => {
+test('Para quem encontra os onze guias por destinatário e contexto', () => {
   for (const [query, slug] of [
     ['integração colaboradores', 'empresas'],
     ['feiras locais voluntários', 'camaras-municipais'],
@@ -92,6 +105,9 @@ test('Para quem encontra os oito guias por destinatário e contexto', () => {
     ['expositores inscrição participantes', 'eventos'],
     ['hóspedes visitas guiadas', 'turismo-alojamento'],
     ['voluntários sensibilização comunidade', 'associacoes-organizacoes-comunitarias'],
+    ['crianças desenho supervisão', 'criancas'],
+    ['agricultura cooperativas formação', 'agricultura'],
+    ['animais tutores abrigos', 'animais'],
   ]) {
     assert.ok(find(entries, query).some(entry => entry.url === `publicos/${slug}.html`), query);
   }

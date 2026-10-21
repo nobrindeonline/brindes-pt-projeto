@@ -5,6 +5,7 @@ from conteudos.termogravura import TERMOGRAVURA, FONTES_TERMOGRAVURA
 from conteudos.ideias import IDEIAS
 from conteudos.novidades import NOVIDADES
 from conteudos.publicos import PUBLICOS
+from conteudos.ocasioes import OCASIOES, SECCAO_OCASIOES
 DATA_REVISAO = '2026-09-24'
 FONTES = {
  'pad': ('midocean — Tampografia', 'https://www.midocean.com/benelux/us/eur/content/printing-technique-pad-print'),
@@ -73,8 +74,10 @@ SECCOES = [
  ('novidades','Tecnologia e novidades','As novidades devem indicar a data, a origem da informação e a aplicação concreta. Ainda não existem notícias publicadas nesta biblioteca.', 'Tecnologia|Novidades do setor|Tendências anuais')]},
 ]
 
+SECCOES.insert(next(i for i,s in enumerate(SECCOES) if s['id']=='publicos') + 1, SECCAO_OCASIOES)
+
 # Secções de texto: (título, texto). Problemas: (sinal, verificação sugerida).
-ARTIGOS = PUBLICOS + IDEIAS + NOVIDADES + NOVOS_ARTIGOS + [
+ARTIGOS = PUBLICOS + OCASIOES + IDEIAS + NOVIDADES + NOVOS_ARTIGOS + [
  {'id':'tampografia','sec':'tecnicas','tipo':'tecnica','titulo':'Tampografia','resumo':'Um tampão de silicone transfere tinta para o objeto. Uma opção a considerar em pequenas áreas e formas que exigem adaptação à superfície.',
  'seccoes':[
  ('Como funciona','O desenho é preparado num cliché. O tampão recolhe a tinta e transfere-a para a peça; a impressão de várias cores envolve passagens e alinhamento próprios. [pad]'),

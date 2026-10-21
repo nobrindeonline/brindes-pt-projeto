@@ -12,6 +12,7 @@ requirements={
  'produtos':'Variantes; utilização; materiais; áreas acessíveis; técnicas condicionais; problemas e ligações aos guias.',
  'guias':'Pergunta e objetivo; passos verificáveis; exemplos de arte autorizados; problemas; fontes e revisão técnica.',
  'publicos':'Necessidades próprias desse público; critérios; exemplos de utilização; produtos e guias relacionados, sem duplicar textos.',
+ 'ocasioes':'Contexto e fontes geográficas da época; destinatários; utilidade dos exemplos; planeamento; inclusão; impactos sem promessas; ligações a públicos e famílias de produtos.',
  'industria':'Descrição do processo/equipamento; fontes primárias; fotografias autorizadas; relações entre etapas. História: datas e contexto português documentados.',
  'mercado':'Atividade e âmbito geográfico; fontes públicas atuais; utilidade editorial; data de revisão. Excluir dados internos.',
  'tendencias':'Data de publicação; acontecimento ou questão concreta; fontes atuais; âmbito de alegações ambientais; distinção dos guias permanentes.',

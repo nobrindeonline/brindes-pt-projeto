@@ -1,0 +1,57 @@
+[
+  {
+    "id": "criancas",
+    "original": "assets/para_quem/Crianças/ig_0_nb149721_CAIXA-COM-12-LAPIS-DE-COR.jpg",
+    "publico": "assets/para_quem/visuais/criancas.jpg",
+    "width": 300,
+    "height": 301,
+    "sha256": "dacf3dc4240cb23f32f62e872fd3f4d6277011be35edba65ef5fd64627b7edd0",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "criancas",
+    "original": "assets/para_quem/Crianças/ig_0_nb138398_YO-YO-DE-MADEIRA.jpg",
+    "publico": "assets/para_quem/visuais/criancas-jogo.jpg",
+    "width": 300,
+    "height": 301,
+    "sha256": "b0d966c689a580846a20d283db55174dcf3be7df7479f1065dbaadb069ad7644",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "agricultura",
+    "original": "assets/para_quem/Agricultura/ig_0_nb223945_POCKET-KNIFE-AGRICULTURA.jpg",
+    "publico": "assets/para_quem/visuais/agricultura.jpg",
+    "width": 300,
+    "height": 300,
+    "sha256": "d23752d962dba35043d75055bbdfaa1460b139345605a4a3fc73177d69740466",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "animais",
+    "original": "assets/para_quem/Animais/ig_0_nb222808_DISPENSADOR-BOLSAS-RUCIN.jpg",
+    "publico": "assets/para_quem/visuais/animais.jpg",
+    "width": 300,
+    "height": 301,
+    "sha256": "953be7c2743b5c1e6b9d39420499614f1f5be283181cef2fbc9d942bd9728a33",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "animais",
+    "original": "assets/para_quem/Animais/ig_0_nb179672_COLAR-REFLECTANTE-MUTTLEY.jpg",
+    "publico": "assets/para_quem/visuais/animais-coleira.jpg",
+    "width": 250,
+    "height": 250,
+    "sha256": "ac1cfbe103d23f31ef7bcbf5edc682af696eaf7162226c702bb7c72761025cd0",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  }
+]

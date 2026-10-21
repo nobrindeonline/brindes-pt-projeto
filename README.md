@@ -7,6 +7,42 @@
 
 ## Atualizações
 
+### Ocasiões e Sazonalidade — 21 de outubro de 2026
+
+A nova entrada `ocasioes/index.html` reúne quatro cartões e guias próprios:
+`natal.html`, `inverno.html`, `carnaval.html` e `verao.html`. Está separada de
+Para quem e integrada na navegação partilhada, na página inicial e na pesquisa.
+
+Edite `conteudos/ocasioes.py`; o renderizador é `scripts/render_ocasioes.py`.
+São reutilizadas quatro imagens locais, identificadas nos dados, sem criar
+ficheiros de imagem novos. O JSON público é `assets/ocasioes-conteudos.json`.
+Fontes, âmbito, limitações e verificações estão em `editorial/ocasioes-2026-10-21.md`.
+
+Use `npm.cmd run build` para geração completa, necessária quando muda a navegação
+global. Para posteriores alterações apenas aos guias, pode usar
+`python scripts/gerar.py --secao ocasioes`. Verifique com `npm.cmd run check`.
+Nas três páginas novas de Para quem, a bibliografia final e a ligação de créditos
+no corpo ficam ocultas conforme preferência confirmada; as referências inline,
+os dados de fontes e os créditos gerais mantêm-se.
+
+### Para quem — Crianças, Agricultura e Animais — 21 de outubro de 2026
+
+A secção tem onze guias, incluindo `publicos/criancas.html`,
+`publicos/agricultura.html` e `publicos/animais.html`. Os oito guias anteriores
+mantêm as rotas e os conteúdos. A integração dos novos temas está em
+`conteudos/publicos_novos.py`, carregado por `conteudos/publicos.py`.
+
+Os três novos guias usam os cartões e a leitura existentes, acrescentando
+personalização, cuidados e fontes com âmbito explícito. O gerador inclui estes
+campos na pesquisa e em `assets/para-quem-conteudos.json`.
+As imagens locais de `assets/para_quem` são selecionadas em
+`conteudos/publicos_imagens.py`; o preparador copia-as sem transformação para
+aliases neutros em `visuais/` e regista a origem no manifesto editorial.
+
+Gere com `python scripts/gerar.py --secao publicos` e verifique com
+`npm.cmd run check`. Consulte `editorial/publicos-novos-2026-10-21.md` para
+fontes, escolha de imagens e limites. Não foram criadas páginas sazonais.
+
 ### Organização dos ficheiros — 21 de outubro de 2026
 
 - `scripts/`: gerador, renderizadores e verificadores gerais.

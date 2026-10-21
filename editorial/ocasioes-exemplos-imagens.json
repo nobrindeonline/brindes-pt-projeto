@@ -1,0 +1,134 @@
+[
+  {
+    "id": "natal-ornamentos",
+    "original": "assets/ocasioes/Natal/ig_0_nb199206_SET-DE-6-ORNAMENTOS-DE-NATAL.jpg",
+    "publico": "assets/ocasioes/visuais/natal-ornamentos.jpg",
+    "width": 300,
+    "height": 301,
+    "sha256": "a8edb7c7a7975f142e13bdf63e03386f368347ab611b874af32b123055ac0444",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "natal-adereco",
+    "original": "assets/ocasioes/Natal/ig_0_nb214743_ADERECO-PAIS-NATAL.jpg",
+    "publico": "assets/ocasioes/visuais/natal-adereco.jpg",
+    "width": 300,
+    "height": 300,
+    "sha256": "fe8ea8758a08aa33a2f0297209b4122f851f1e05c39c9f57e613adcd294e17d6",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "natal-gorro",
+    "original": "assets/ocasioes/Natal/z_nb233034_GORRO-DE-NATAL_IP_5.jpg",
+    "publico": "assets/ocasioes/visuais/natal-gorro.jpg",
+    "width": 500,
+    "height": 500,
+    "sha256": "4ad68f8192e3df86b00e219091e0ff545bc868f0054b28bff6db10360a8a2d51",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "inverno-manta",
+    "original": "assets/ocasioes/Inverno/ig_0_nb221597_MANTA-VIAGEM-BASICA.jpg",
+    "publico": "assets/ocasioes/visuais/inverno-manta.jpg",
+    "width": 300,
+    "height": 300,
+    "sha256": "af1e5388e57a68277841c7b8718736e90de3b9e410a73306e5cb4dc8c1a3d897",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "inverno-meias",
+    "original": "assets/ocasioes/Inverno/ig_0_nb293088_MEIAS-DE-INVERNO-UNISSEXO.jpg",
+    "publico": "assets/ocasioes/visuais/inverno-meias.jpg",
+    "width": 300,
+    "height": 301,
+    "sha256": "871b76f1030e30d4c10facbfa1e59c941571b8abb271e5e2b11f56d42d992524",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "carnaval-mascara",
+    "original": "assets/ocasioes/Carnaval/ig_0_nb177444_MASCARA-EM-EVA-C-ELASTICO-PERSONALIZAVEL.jpg",
+    "publico": "assets/ocasioes/visuais/carnaval-mascara.jpg",
+    "width": 300,
+    "height": 300,
+    "sha256": "cfce9ddf47d033c9ebd00f4a230b20294098945e873dee9c1a276e50e83bda7e",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "carnaval-pintura",
+    "original": "assets/ocasioes/Carnaval/ig_0_nb203770_STICK-PINTURA-CORPORAL.jpg",
+    "publico": "assets/ocasioes/visuais/carnaval-pintura.jpg",
+    "width": 300,
+    "height": 301,
+    "sha256": "e069646eebce2afb9a96b207e8ada0a4fcfda62f0220a40fa90278cf4ced2702",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "carnaval-capa",
+    "original": "assets/ocasioes/Carnaval/ig_0_nb302148_CAPA-SUPER-HEROI-PARA-CRIANCA-PERSONALIZAVEL.jpg",
+    "publico": "assets/ocasioes/visuais/carnaval-capa.jpg",
+    "width": 300,
+    "height": 300,
+    "sha256": "dfeaa9c7e5be421d59a47c83e4878fe7ce2ef4495c09c282bec1c8011dc40317",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "verao-chinelos",
+    "original": "assets/ocasioes/Verao/ig_0_nb168468_CHINELOS-BRASILEIRA.jpg",
+    "publico": "assets/ocasioes/visuais/verao-chinelos.jpg",
+    "width": 300,
+    "height": 306,
+    "sha256": "009b3b89efcbb91cf810702b75c7b7427944e648795a9c8d749a9c6db981f016",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "verao-almofada",
+    "original": "assets/ocasioes/Verao/ig_0_nb190089_ALMOFADA-INSUFLAVEL.jpg",
+    "publico": "assets/ocasioes/visuais/verao-almofada.jpg",
+    "width": 300,
+    "height": 301,
+    "sha256": "38d8973b847f92fb1caaa0f0144df470dd1ec8595f741817480c6d67d271bce6",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "verao-disco",
+    "original": "assets/ocasioes/Verao/ig_0_nb204550_DISCO-VOADOR-DE-21-CM-DE-DIAMETRO..jpg",
+    "publico": "assets/ocasioes/visuais/verao-disco.jpg",
+    "width": 300,
+    "height": 301,
+    "sha256": "dc4d0a4b5aec4bf040b0044a69adc5fedb659e437d9a85ab1d2e9451a4e7dfed",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  },
+  {
+    "id": "verao-praia",
+    "original": "assets/ocasioes/Verao/ig_0_nb204705_SET-DE-PRAIA-INFANTIL-EM-4-CORES-DIFERENTES.-DOIS-SETS-DE-PR.jpg",
+    "publico": "assets/ocasioes/visuais/verao-praia.jpg",
+    "width": 300,
+    "height": 301,
+    "sha256": "0f5b3f5b31d9c79e1b5499498e41cda38e1fe86053dd2abc91c273ad32860b11",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Nenhuma: cópia integral."
+  }
+]

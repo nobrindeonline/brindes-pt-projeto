@@ -22,6 +22,9 @@
 /* Produtos reutiliza a grelha e a leitura da biblioteca. */
 .product-family-list{padding-top:12px}
 .products-grid{align-items:stretch}
+/* Quatro ocasiões, com o mesmo cartão e proporções da biblioteca. */
+.ideas-grid.occasion-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+@media(max-width:620px){.ideas-grid.occasion-grid{grid-template-columns:1fr}}
 .product-family-card{height:100%;scroll-margin-top:110px}
 .product-media .idea-images{height:240px}
 .product-media img{height:auto;max-height:190px;max-width:100%;width:auto}

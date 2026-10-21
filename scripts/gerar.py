@@ -21,6 +21,9 @@ from conteudos.ideias import IDEIAS
 from conteudos.novidades import NOVIDADES
 from conteudos.sublimacao import IMAGENS_SUBLIMACAO
 from conteudos.publicos import PUBLICOS, FONTES_PUBLICOS, DATA_REVISAO_PUBLICOS
+from conteudos.publicos_imagens import CREDITOS as CREDITOS_PUBLICOS
+from conteudos.ocasioes import CREDITOS as CREDITOS_OCASIOES
+from scripts.render_ocasioes import entrada as entrada_ocasioes, pagina as pagina_ocasiao, dados as dados_ocasioes
 from conteudos.industria import INDUSTRIA, AREAS_INDUSTRIA, ETAPAS, GRUPOS_INDUSTRIA, PROCESSOS_INDUSTRIA, DATA_REVISAO as DATA_REVISAO_INDUSTRIA, DATA_REVISAO_TEXTO
 from conteudos.tampografia import PASSOS as PASSOS_TAMPOGRAFIA, IMAGENS as IMAGENS_TAMPOGRAFIA
 from conteudos.serigrafia import PASSOS as PASSOS_SERIGRAFIA
@@ -230,6 +233,19 @@ def public_article(a):
         ('faq','Perguntas frequentes', faq),
         ('relacionados','Guias, materiais e técnicas relacionados', '<div class="context-links">'+related+'</div>'),
     ]
+    adicionais = []
+    for chave, titulo in [('personalizacao','Personalização e apresentação'), ('cuidados','Cuidados e limites')]:
+        if a.get(chave):
+            adicionais.append((chave, titulo, '<ul>' + ''.join('<li>' + public_text(t) + '</li>' for t in a[chave]) + '</ul>'))
+    if a.get('mostrar_fontes') and a.get('exibir_bibliografia', True):
+        fontes = '<p>Os exemplos de artigos e ocasiões são propostas editoriais. As referências abaixo sustentam apenas os cuidados identificados, dentro do âmbito indicado.</p><ul class="sources">'
+        for chave in a['fontes']:
+            f = FONTES_PUBLICOS[chave]
+            fontes += '<li>' + link(f['url'], f['titulo']) + ' — ' + escape(f['entidade']) + '<p>' + escape(f['ambito']) + '</p><p>Consulta: <time datetime="' + f['data_consulta'] + '">' + f['data_consulta'] + '</time></p></li>'
+        adicionais.append(('fontes','Fontes e âmbito', fontes + '</ul>'))
+    sections[5:5] = adicionais
+    if a.get('creditos_imagens'):
+        visual_context += '<p>' + link('../creditos-imagens.html#' + a['creditos_imagens'], 'Créditos das imagens ilustrativas') + '</p>'
     toc=''.join(link('#'+id,title) for id,title,_ in sections)
     content='<nav class="crumb" aria-label="Percurso">'+link('../index.html','Início')+' / '+link('index.html','Para quem')+' / '+escape(a['titulo'])+'</nav><div class="page-intro"><span class="eyebrow">Guia de contexto · Para quem</span><h1>'+escape(a['titulo'])+'</h1><p>'+escape(a['resumo'])+'</p></div><div class="reading-layout"><aside class="contents"><strong>Neste guia</strong><nav aria-label="Índice do artigo">'+toc+'</nav></aside><article class="reading audience-reading"><section class="guide-answer"><h2>Em resumo</h2><p>'+escape(a['resumo'])+' As famílias apresentadas são possibilidades a avaliar, não artigos obrigatórios.</p></section>'+visual_context+''.join('<section id="'+id+'"><h2>'+title+'</h2>'+text+'</section>' for id,title,text in sections)+'</article></div><a class="back-to-ideas" href="index.html">← Voltar a Para quem</a>'
     body=content
@@ -255,12 +271,13 @@ def dados_publicos():
             'imagem':audience['imagem'],
             'relacionados':[dict(item,url=item['url']) for item in audience['relacionados']],
             'data_revisao':audience['data_revisao'],
+            **({key: audience[key] for key in ['personalizacao', 'cuidados']} if audience.get('mostrar_fontes') else {}),
         })
     return json.dumps({
         'schema_version':'1.0',
         'idioma':'pt-PT',
         'secao':'Para quem',
-        'data_revisao':DATA_REVISAO_PUBLICOS,
+        'data_revisao':max(a['data_revisao'] for a in PUBLICOS),
         'destinos':destinations,
     },ensure_ascii=False,indent=2)+'\n'
 
@@ -322,6 +339,9 @@ def montagem_hub(a):
     write(url(a),shell(a['titulo'],a['resumo'],body,'../','tecnicas'))
 
 def page_article(a):
+    if a['sec']=='ocasioes':
+        write(url(a), pagina_ocasiao(a, BY_ID, shell, link, card))
+        return
     if a['sec']=='mercado':
         write(url(a), pagina_mercado(a, shell, card, BY_ID, link))
         return
@@ -613,6 +633,9 @@ def industry_listing(s):
     write('industria/index.html',shell('Indústria',section_description,intro+'<div class="industry-areas">'+cards+'</div>'+group_links,'../','industria',robots='index, follow'))
 
 def page_section(s):
+    if s['id']=='ocasioes':
+        write('ocasioes/index.html', entrada_ocasioes(shell, link))
+        return
     if s['id']=='mercado':
         write('mercado/index.html', entrada_mercado(shell, card))
         return
@@ -679,6 +702,7 @@ def search_page():
                 ' '.join(audience['critérios']),
                 ' '.join(item['pergunta']+' '+item['resposta'] for item in audience['perguntas_frequentes']),
                 ' '.join(audience['etiquetas']),
+                ' '.join(audience.get('personalizacao', []) + audience.get('cuidados', [])),
             ])
             continue
         if article_id=='crachas-automaticos':
@@ -724,7 +748,7 @@ def atualizar_pesquisa_mercado(perfis, incluir_entrada=False):
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--secao', choices=['produtos','guias','publicos','industria','mercado'], help='Regenera a secção indicada e os índices, preservando o conteúdo das outras páginas.')
+    parser.add_argument('--secao', choices=['produtos','guias','publicos','industria','mercado','ocasioes'], help='Regenera a secção indicada e os índices, preservando o conteúdo das outras páginas.')
     parser.add_argument('--preservar-entrada', action='store_true', help='Com --secao mercado, gera os artigos e atualiza a pesquisa da secção, preservando a entrada e as outras páginas.')
     args = parser.parse_args()
     if args.preservar_entrada and args.secao!='mercado':
@@ -741,6 +765,10 @@ if __name__=='__main__':
         subprocess.run([image_python, str(ROOT/'editorial/preparar_imagens_produtos.py')], cwd=ROOT, check=True)
     if not args.secao or args.secao=='guias':
         subprocess.run([image_python, str(ROOT/'editorial/preparar_imagens_guias.py')], cwd=ROOT, check=True)
+    if not args.secao or args.secao=='publicos':
+        subprocess.run([image_python, str(ROOT/'editorial/preparar_imagens_publicos.py')], cwd=ROOT, check=True)
+    if not args.secao or args.secao=='ocasioes':
+        subprocess.run([image_python, str(ROOT/'editorial/preparar_imagens_ocasioes.py')], cwd=ROOT, check=True)
     if not args.secao or args.secao=='mercado':
         preparar_imagens_mercado(ROOT)
     for section in SECCOES:
@@ -779,12 +807,23 @@ if __name__=='__main__':
         write('assets/guias-conteudos.json', dados_guias())
     if not args.secao or args.secao=='publicos':
         write('assets/para-quem-conteudos.json', dados_publicos())
+    if not args.secao or args.secao=='ocasioes':
+        write('assets/ocasioes-conteudos.json', dados_ocasioes())
     if not args.secao:
-        write('creditos-imagens.html',shell('Créditos de imagens','Autores, fontes, licenças e alterações das fotografias utilizadas no brindes.pt.',creditos() + CREDITOS_PRODUTOS + CREDITOS_GUIAS))
+        write('creditos-imagens.html',shell('Créditos de imagens','Autores, fontes, licenças e alterações das fotografias utilizadas no brindes.pt.',creditos() + CREDITOS_PRODUTOS + CREDITOS_GUIAS + CREDITOS_PUBLICOS + CREDITOS_OCASIOES))
+    elif args.secao in ('publicos','ocasioes'):
+        path = ROOT/'creditos-imagens.html'
+        previous = path.read_text(encoding='utf-8')
+        id, credits = ('para-quem-novos', CREDITOS_PUBLICOS) if args.secao=='publicos' else ('ocasioes-ilustrativas', CREDITOS_OCASIOES)
+        pattern = r'<section\b[^>]*id="'+id+r'"[^>]*>.*?</section>'
+        updated = re.sub(pattern, lambda _: credits, previous, flags=re.S) if re.search(pattern, previous, re.S) else previous.replace('</main>', credits + '</main>')
+        write('creditos-imagens.html', updated)
     if args.secao=='mercado':
         outputs=[url(a) for a in selected_market] if args.preservar_entrada else ['mercado/index.html']+[url(a) for a in MERCADO]
     elif args.secao=='publicos':
-        outputs=['publicos/index.html']+['publicos/'+a['id']+'.html' for a in PUBLICOS]+['pesquisa.html']
+        outputs=['publicos/index.html']+['publicos/'+a['id']+'.html' for a in PUBLICOS]+['pesquisa.html','creditos-imagens.html']
+    elif args.secao=='ocasioes':
+        outputs=['ocasioes/index.html']+[url(a) for a in ARTIGOS if a['sec']=='ocasioes']+['pesquisa.html','creditos-imagens.html']
     elif args.secao=='industria':
         outputs=['industria/index.html','pesquisa.html']+['industria/'+a['id']+'.html' for a in INDUSTRIA + AREAS_INDUSTRIA]
     else:

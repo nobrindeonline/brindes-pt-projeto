@@ -32,18 +32,18 @@ Para completar novos artigos: Descrição e fontes do processo; equipamento; com
 
 - **Bordado**: Pronto para revisão local — `/tecnicas/bordado.html`.
 - **Transfers**: Pronto para revisão local — `/tecnicas/transfers.html`.
-- **DTF**: Pronto para revisão local — `/tecnicas/dtf.html`.
 - **Sublimação**: Pronto para revisão local — `/tecnicas/tecnica-sublimacao.html`.
-- **Transfer Serigráfico**: Pronto para revisão local — `/tecnicas/transfer-serigrafico.html`.
-- **Transfer Digital**: Guia local com exemplo documentado — `/tecnicas/transfer-digital.html`; definição do sistema Nobrinde por confirmar.
-- **Transfer Digital com Base**: Guia local — `/tecnicas/transfer-digital-com-base.html`; significado e construção da base por confirmar, sem assumir branco sob CMYK.
 - **Transferência cerâmica**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
 
 ### Outras aplicações
 
 - **Doming**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
 - **Troquelagem**: Pronto para revisão local — `/tecnicas/tecnica-troquelagem.html`.
-- **Crachás tipo pin/botão**: Pronto para revisão local — `/tecnicas/crachas-automaticos.html`; alcance da automação e componentes dependem do sistema escolhido.
+- **Crachás tipo pin/botão**: Pronto para revisão local — `/tecnicas/crachas-automaticos.html`.
+
+### Costura, Argolagem e Encadernação
+
+- **Costura, Argolagem e Encadernação**: Pronto para revisão local — `/tecnicas/costura-argolagem-e-encadernacao.html`.
 
 ## Materiais
 
@@ -85,57 +85,81 @@ Para completar novos artigos: Propriedades e composição; acabamentos; técnica
 
 Para completar novos artigos: Variantes; utilização; materiais; áreas acessíveis; técnicas condicionais; problemas e ligações aos guias.
 
+### Papelaria, escritório e escrita
+
+- **Papelaria, escritório e escrita**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+
+### Tecnologia e acessórios digitais
+
+- **Tecnologia e acessórios digitais**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+
+### Bebidas, refeições e cozinha
+
+- **Bebidas, refeições e cozinha**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+
+### Sacos, mochilas e viagem
+
+- **Sacos, mochilas e viagem**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+
+### Têxtil, vestuário e acessórios
+
+- **Têxtil, vestuário e acessórios**: Por validar pela Nobrinde — reunir conteúdo e fontes antes de criar página.
+
+### Casa, decoração e cuidados pessoais
+
+- **Casa, decoração e cuidados pessoais**: Pronto para revisão local — `/produtos/casa-decoracao-e-cuidados-pessoais.html`.
+
+### Desporto, lazer e exterior
+
+- **Desporto, lazer e exterior**: Pronto para revisão local — `/produtos/desporto-lazer-e-exterior.html`.
+
+### Eventos, identificação e prémios
+
+- **Eventos, identificação e prémios**: Pronto para revisão local — `/produtos/eventos-identificacao-e-premios.html`.
+
+### Mobilidade, ferramentas e segurança
+
+- **Mobilidade, ferramentas e segurança**: Pronto para revisão local — `/produtos/mobilidade-ferramentas-e-seguranca.html`.
+
+### Embalagem e apresentação
+
+- **Embalagem e apresentação**: Pronto para revisão local — `/produtos/embalagem-e-apresentacao.html`.
+
 ### Canetas e escrita
 
 - **Canetas e escrita**: Pronto para revisão local — `/produtos/canetas-e-escrita.html`.
-
-### Garrafas, copos e canecas
-
-- **Garrafas, copos e canecas**: Pronto para revisão local — `/produtos/garrafas-copos-e-canecas.html`.
-
-### Têxteis
-
-- **Têxteis**: Pronto para revisão local — `/produtos/texteis.html`.
-
-### Sacos e mochilas
-
-- **Sacos e mochilas**: Pronto para revisão local — `/produtos/sacos-e-mochilas.html`.
-
-### Tecnologia
-
-- **Tecnologia**: Pronto para revisão local — `/produtos/tecnologia.html`.
 
 ### Artigos de escritório
 
 - **Artigos de escritório**: Pronto para revisão local — `/produtos/artigos-de-escritorio.html`.
 
-### Brindes premium
+### Premium: seleção transversal
 
-- **Brindes premium**: Pronto para revisão local — `/produtos/brindes-premium.html`.
+- **Premium: seleção transversal**: Pronto para revisão local — `/produtos/brindes-premium.html`.
 
-## Guias práticos e problemas
+## Guias práticos
 
 Índice: `/guias/index.html`
 
 Para completar novos artigos: Pergunta e objetivo; passos verificáveis; exemplos de arte autorizados; problemas; fontes e revisão técnica.
 
-### Escolher o brinde
+### Escolher
 
-- **Como escolher a técnica**: Pronto para revisão local — `/guias/como-escolher-a-tecnica.html`.
 - **Como escolher brindes para um evento**: Pronto para revisão local — `/guias/como-escolher-brindes-para-um-evento.html`.
 - **Como escolher o material de um brinde**: Pronto para revisão local — `/guias/como-escolher-o-material.html`.
+- **Como escolher a técnica**: Pronto para revisão local — `/guias/como-escolher-a-tecnica.html`.
 
-### Preparar a arte
+### Preparar ficheiros e cor
 
 - **Como preparar um logótipo para personalização**: Pronto para revisão local — `/guias/como-preparar-um-logotipo.html`.
 - **Pantone, CMYK e a cor final do brinde**: Pronto para revisão local — `/guias/pantone-cmyk-e-cor-final.html`.
 
-### Verificar e aprovar
+### Rever antes de produzir
 
 - **Como avaliar uma maquete antes da produção**: Pronto para revisão local — `/guias/como-avaliar-uma-maquete.html`.
 - **Problemas comuns na personalização e como os prevenir**: Pronto para revisão local — `/guias/problemas-comuns-na-personalizacao.html`.
 
-## Brindes por público e utilização
+## Para quem
 
 Índice: `/publicos/index.html`
 
@@ -165,38 +189,63 @@ Para completar novos artigos: Necessidades próprias desse público; critérios;
 
 - **Eventos**: Pronto para revisão local — `/publicos/eventos.html`.
 
+### Turismo e alojamento
+
+- **Turismo e alojamento**: Pronto para revisão local — `/publicos/turismo-alojamento.html`.
+
+### Associações e organizações comunitárias
+
+- **Associações e organizações comunitárias**: Pronto para revisão local — `/publicos/associacoes-organizacoes-comunitarias.html`.
+
+## Ocasiões e Sazonalidade
+
+Índice: `/ocasioes/index.html`
+
+Para completar novos artigos: Contexto e fontes geográficas da época; destinatários; utilidade dos exemplos; planeamento; inclusão; impactos sem promessas; ligações a públicos e famílias de produtos.
+
+### Natal
+
+- **Natal**: Pronto para revisão local — `/ocasioes/natal.html`.
+
+### Inverno
+
+- **Inverno**: Pronto para revisão local — `/ocasioes/inverno.html`.
+
+### Carnaval
+
+- **Carnaval**: Pronto para revisão local — `/ocasioes/carnaval.html`.
+
+### Verão
+
+- **Verão**: Pronto para revisão local — `/ocasioes/verao.html`.
+
 ## Indústria, processos e história
 
 Índice: `/industria/index.html`
 
 Para completar novos artigos: Descrição do processo/equipamento; fontes primárias; fotografias autorizadas; relações entre etapas. História: datas e contexto português documentados.
 
-### Percurso de uma encomenda
-
-- **O percurso de uma encomenda**: Pronto para revisão local — `/industria/index.html#fluxo`.
-
-### Processos e máquinas
+### Impressão e marcação
 
 - **Máquinas de tampografia**: Pronto para revisão local — `/industria/maquinas-de-tampografia.html`.
 - **Equipamentos de serigrafia**: Pronto para revisão local — `/industria/equipamentos-de-serigrafia.html`.
 - **Máquinas de gravação a laser**: Pronto para revisão local — `/industria/maquinas-de-gravacao-laser.html`.
 - **Impressoras UV para objetos**: Pronto para revisão local — `/industria/impressoras-uv.html`.
-- **Máquinas de bordado**: Pronto para revisão local — `/industria/maquinas-de-bordado.html`.
 - **DTF e prensas térmicas**: Pronto para revisão local — `/industria/dtf-e-prensas-termicas.html`.
-- **Sublimação e transferência por calor**: Pronto para revisão local — `/industria/sublimacao.html`.
-- **Troquelagem e preparação de embalagens**: Pronto para revisão local — `/industria/troquelagem.html`.
-- **Costura industrial e aplicação de acessórios**: Pronto para revisão local — `/industria/costura-industrial.html`.
+- **Equipamento de sublimação**: Pronto para revisão local — `/industria/sublimacao.html`.
+- **Prensas para crachás tipo pin e emblemas**: Pronto para revisão local — `/industria/producao-de-crachas.html`.
+
+### Processos têxteis
+
+- **Máquinas de bordado**: Pronto para revisão local — `/industria/maquinas-de-bordado.html`.
+- **Costura industrial**: Pronto para revisão local — `/industria/costura-industrial.html`.
+
+### Corte, montagem e acabamento
+
+- **Troquelagem**: Pronto para revisão local — `/industria/troquelagem.html`.
 - **Encadernação e argolagem**: Pronto para revisão local — `/industria/encadernacao-e-argolagem.html`.
-- **Costura, Argolagem e Encadernação**: hub pronto para revisão local — `/tecnicas/costura-argolagem-e-encadernacao.html`, com três guias completos: `/tecnicas/tecnica-costura-industrial.html`, `/tecnicas/argolagem.html` e `/tecnicas/encadernacao.html`. Fontes e âmbito em `editorial/fontes-montagem.md`; serviços da Nobrinde sujeitos a confirmação.
-- **Prensas para crachás e emblemas**: Pronto para revisão local — `/industria/producao-de-crachas.html`.
-
-### Montagem e acabamentos
-
 - **Montagem e acabamentos**: Pronto para revisão local — `/industria/montagem-e-acabamentos.html`.
-
-### História dos brindes
-
-- **História dos brindes e dos objetos promocionais**: Pronto para revisão local — `/industria/historia-dos-brindes.html`.
+- **Montagem, embalagem e expedição**: Pronto para revisão local — `/industria/montagem-embalagem-expedicao.html`.
 
 ## Mercado e fornecedores
 

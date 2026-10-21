@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "idioma": "pt-PT",
   "secao": "Para quem",
-  "data_revisao": "2026-10-14",
+  "data_revisao": "2026-10-21",
   "destinos": [
     {
       "id": "empresas",
@@ -1292,6 +1292,570 @@
         }
       ],
       "data_revisao": "2026-10-14"
+    },
+    {
+      "id": "criancas",
+      "titulo": "Crianças",
+      "url": "publicos/criancas.html",
+      "resumo": "Relacione idade, atividade e acompanhamento com artigos de desenho, escrita, jogos, transporte e vestuário. A escolha começa pela criança e pelo contexto de utilização.",
+      "destinatário": [
+        {
+          "destinatário": "Crianças pequenas e adultos responsáveis",
+          "necessidade": "Nas primeiras idades, o adulto recebe e avalia o material antes de o disponibilizar. Um conjunto destinado à família não deve ser confundido com um objeto para a criança levar à boca ou usar sem acompanhamento."
+        },
+        {
+          "destinatário": "Crianças em contexto pré-escolar e escolar",
+          "necessidade": "Desenho, escrita e atividades orientadas pedem materiais que correspondam à tarefa e às capacidades identificadas pela equipa educativa. O nível escolar ajuda a organizar a atividade, mas não certifica a adequação do artigo."
+        },
+        {
+          "destinatário": "Clubes, festas e eventos familiares",
+          "necessidade": "A organização precisa de distinguir participantes de idades diferentes, acompanhantes e equipas. Um objeto para guardar uma recordação e um material usado durante uma oficina têm durações de uso distintas."
+        }
+      ],
+      "ocasiões": [
+        {
+          "destinatário": [
+            "Crianças",
+            "Adultos responsáveis"
+          ],
+          "ocasião": "Oficina de desenho ou leitura",
+          "local": "Sala de atividades ou biblioteca",
+          "época": "Na sessão preparada pela equipa",
+          "objetivo": "Apoiar uma tarefa concreta, com materiais e instruções escolhidos para o grupo.",
+          "texto_editorial": "A ocasião destina-se a crianças e a adultos responsáveis e pode decorrer em contextos como sala de atividades ou biblioteca. O momento — na sessão preparada pela equipa — ajuda a enquadrar o objetivo de apoiar uma tarefa concreta, com materiais e instruções escolhidos para o grupo."
+        },
+        {
+          "destinatário": [
+            "Participantes",
+            "Acompanhantes"
+          ],
+          "ocasião": "Atividade de clube ou evento familiar",
+          "local": "Espaço de receção e área de atividade",
+          "época": "Antes da atividade e no momento de saída",
+          "objetivo": "Distinguir o material utilizado no local da recordação levada para casa.",
+          "texto_editorial": "A ocasião destina-se a participantes e a acompanhantes e pode decorrer em contextos como espaço de receção e área de atividade. O momento — antes da atividade e no momento de saída — ajuda a enquadrar o objetivo de distinguir o material utilizado no local da recordação levada para casa."
+        },
+        {
+          "destinatário": [
+            "Turmas",
+            "Equipa educativa"
+          ],
+          "ocasião": "Projeto escolar",
+          "local": "Escola ou espaço educativo",
+          "época": "Ao longo das sessões do projeto",
+          "objetivo": "Permitir que os trabalhos e registos sejam guardados e retomados noutra sessão.",
+          "texto_editorial": "A ocasião destina-se a turmas e a equipa educativa e pode decorrer em contextos como escola ou espaço educativo. O momento — ao longo das sessões do projeto — ajuda a enquadrar o objetivo de permitir que os trabalhos e registos sejam guardados e retomados noutra sessão."
+        }
+      ],
+      "imagens_contexto": [
+        {
+          "url": "assets/para_quem/visuais/criancas-jogo.jpg",
+          "alt": "Objeto redondo de duas metades com um cordão branco.",
+          "width": 300,
+          "height": 301,
+          "legenda": "Exemplo de um objeto de jogo. A fotografia não permite confirmar idade indicada, material ou segurança do cordão."
+        }
+      ],
+      "famílias_de_artigos": [
+        {
+          "destinatário": "Quem desenha ou escreve numa atividade orientada",
+          "objetivo": "Uma caixa de lápis acompanha uma oficina de desenho; um caderno permite continuar os registos noutra sessão. A escolha deve acompanhar o gesto e o suporte utilizados, e não apenas o tema da impressão.",
+          "famílias": [
+            "Lápis e instrumentos de escrita",
+            "Cadernos",
+            "Blocos de desenho"
+          ]
+        },
+        {
+          "destinatário": "Participantes em jogos e atividades de grupo",
+          "objetivo": "Um jogo pode apoiar uma dinâmica quando a equipa explica as regras, gere as peças e acompanha a utilização. Um objeto com finalidade de brincar deve ser avaliado nesse âmbito; chamá-lo brinde não demonstra adequação.",
+          "famílias": [
+            "Jogos",
+            "Artigos de atividade"
+          ]
+        },
+        {
+          "destinatário": "Crianças que transportam trabalhos ou participam em clubes",
+          "objetivo": "Um saco pode reunir desenhos no final da sessão; uma peça têxtil pode identificar um grupo. Verifique medidas, modo de vestir e de transportar, evitando assumir que um tamanho serve todas as crianças.",
+          "famílias": [
+            "Sacos",
+            "Peças têxteis"
+          ]
+        }
+      ],
+      "distribuição": [
+        "Combine com a equipa a idade e o tipo de acompanhamento, antes de preparar os conjuntos.",
+        "Separe o material entregue ao adulto do material colocado na zona da atividade. Mantenha os avisos e as instruções disponíveis depois de abrir.",
+        "Distribua por grupo e tarefa, permitindo recusar o artigo. Uma atividade de leitura pode precisar apenas de material partilhado no local.",
+        "Escolha se o desenho fica no caderno, no saco ou num cartão de acompanhamento; não precisa de repetir a mesma mensagem em todas as peças."
+      ],
+      "critérios": [
+        "Identifique quem utiliza efetivamente o objeto: criança, adulto ou ambos. Faixas etárias de organização não substituem a idade indicada para o artigo.",
+        "Num instrumento de desenho, observe pega, tampa, consumíveis e tipo de superfície de uso. Num saco ou peça de vestuário, confirme tamanho e forma de colocação.",
+        "A finalidade de brincar e as características concretas merecem avaliação própria. A referência europeia trata brinquedos, não todos os artigos oferecidos a crianças. [seguranca-brinquedos]"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Um artigo com um desenho infantil é adequado a qualquer idade?",
+          "resposta": "Não. A apresentação não demonstra idade, composição ou segurança. Consulte a indicação do artigo e a utilização prevista com a equipa responsável."
+        },
+        {
+          "pergunta": "Dar o artigo através de um adulto resolve todos os riscos?",
+          "resposta": "Não. A entrega mediada permite explicar o uso, mas não substitui documentação, escolha adequada ou acompanhamento."
+        },
+        {
+          "pergunta": "É preciso oferecer um brinquedo numa festa infantil?",
+          "resposta": "Não. Um registo da atividade, um caderno ou nenhum objeto podem corresponder melhor ao objetivo. A proposta depende da ocasião, não de uma regra de oferta."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "seguranca-brinquedos",
+          "titulo": "Segurança dos brinquedos na União Europeia",
+          "entidade": "Comissão Europeia",
+          "url": "https://single-market-economy.ec.europa.eu/sectors/toys/toy-safety_en",
+          "data_consulta": "2026-10-21",
+          "ambito": "Enquadramento de segurança dos brinquedos. Não classifica nem comprova a conformidade dos artigos ilustrados; não deve ser estendido a todos os produtos infantis."
+        },
+        {
+          "id": "cuidados-brinquedos",
+          "titulo": "Escolha e utilização de brinquedos",
+          "entidade": "Comissão Europeia",
+          "url": "https://ec.europa.eu/docsroom/documents/6791/attachments/1/translations",
+          "data_consulta": "2026-10-21",
+          "ambito": "Orientação para brinquedos: idade, capacidades, peças pequenas, avisos e supervisão. Não é uma certificação de um artigo nem uma recomendação de idades para os exemplos desta página."
+        }
+      ],
+      "etiquetas": [
+        "crianças",
+        "infantil",
+        "famílias",
+        "desenho",
+        "jogos",
+        "supervisão"
+      ],
+      "imagem": {
+        "url": "assets/para_quem/visuais/criancas.jpg",
+        "alt": "Estojo cilíndrico aberto com lápis de várias cores.",
+        "width": 300,
+        "height": 301
+      },
+      "relacionados": [
+        {
+          "titulo": "Escolas e educação",
+          "url": "publicos/escolas.html"
+        },
+        {
+          "titulo": "Canetas e escrita",
+          "url": "produtos/canetas-e-escrita.html"
+        },
+        {
+          "titulo": "Artigos de escritório",
+          "url": "produtos/artigos-de-escritorio.html"
+        },
+        {
+          "titulo": "Sacos e mochilas",
+          "url": "produtos/sacos-e-mochilas.html"
+        },
+        {
+          "titulo": "Materiais têxteis",
+          "url": "materiais/materiais-texteis.html"
+        },
+        {
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        }
+      ],
+      "data_revisao": "2026-10-21",
+      "personalizacao": [
+        "Num desenho para uma atividade, separe o espaço da mensagem do espaço onde a criança trabalha. Um logótipo grande pode reduzir a área útil do papel ou da peça.",
+        "Meça o desenho na variante concreta e avalie a técnica com o material e o acabamento. Não cubra instruções, avisos ou informação necessária ao adulto."
+      ],
+      "cuidados": [
+        "Para brinquedos, a Comissão Europeia recomenda respeitar idade e capacidades, acompanhar a utilização e evitar peças pequenas destacáveis em brinquedos para menores de três anos. Estas orientações não certificam nenhum objeto ilustrado. [cuidados-brinquedos]",
+        "Observe partes destacáveis, cordões e utilização previsível. A supervisão não torna adequado um artigo que não corresponda à criança ou às instruções. Para contacto direto com crianças pequenas, procure documentação específica em vez de deduzir aptidão pela forma.",
+        "Brinquedos partidos ou com desgaste devem ser retirados da utilização, segundo a orientação europeia. Guarde as instruções e não deixe embalagens plásticas disponíveis para brincar. [cuidados-brinquedos]"
+      ]
+    },
+    {
+      "id": "agricultura",
+      "titulo": "Agricultura",
+      "url": "publicos/agricultura.html",
+      "resumo": "Diferencie agricultores, cooperativas, equipas, participantes de feiras e visitantes. Os artigos de comunicação podem apoiar uma ocasião sem substituir ferramentas ou proteção no trabalho.",
+      "destinatário": [
+        {
+          "destinatário": "Agricultores e equipas de explorações",
+          "necessidade": "Uma reunião, sessão de formação ou encontro técnico pode justificar apontamentos e informação de acompanhamento. A utilização em trabalho de campo é uma questão diferente, com requisitos que não se deduzem do caráter promocional."
+        },
+        {
+          "destinatário": "Cooperativas, associações e organizações agrícolas",
+          "necessidade": "As equipas podem precisar de reunir documentação, identificar quem acolhe ou preparar uma campanha. A mensagem deve indicar o propósito da iniciativa e o contacto de informação pertinente."
+        },
+        {
+          "destinatário": "Visitantes e participantes em feiras e demonstrações",
+          "necessidade": "Considere quem passa por um espaço informativo, quem participa numa sessão e quem entra numa exploração. O mesmo conjunto não serve necessariamente todos estes percursos."
+        }
+      ],
+      "ocasiões": [
+        {
+          "destinatário": [
+            "Agricultores",
+            "Formandos"
+          ],
+          "ocasião": "Formação ou encontro técnico",
+          "local": "Sala de reunião ou espaço de formação",
+          "época": "Durante as sessões e na consulta posterior",
+          "objetivo": "Facilitar o registo de apontamentos e a organização da informação.",
+          "texto_editorial": "A ocasião destina-se a agricultores e a formandos e pode decorrer em contextos como sala de reunião ou espaço de formação. O momento — durante as sessões e na consulta posterior — ajuda a enquadrar o objetivo de facilitar o registo de apontamentos e a organização da informação."
+        },
+        {
+          "destinatário": [
+            "Visitantes",
+            "Equipas organizadoras"
+          ],
+          "ocasião": "Feira ou mostra agrícola",
+          "local": "Recinto e espaço de atendimento",
+          "época": "Nos horários definidos pela organização",
+          "objetivo": "Reunir informação e identificar os pontos de acolhimento.",
+          "texto_editorial": "A ocasião destina-se a visitantes e a equipas organizadoras e pode decorrer em contextos como recinto e espaço de atendimento. O momento — nos horários definidos pela organização — ajuda a enquadrar o objetivo de reunir informação e identificar os pontos de acolhimento."
+        },
+        {
+          "destinatário": [
+            "Participantes",
+            "Responsáveis pela visita"
+          ],
+          "ocasião": "Visita ou demonstração",
+          "local": "Percurso autorizado pela exploração",
+          "época": "No momento de receção e no final",
+          "objetivo": "Distinguir comunicação e recordação de materiais usados na operação agrícola.",
+          "texto_editorial": "A ocasião destina-se a participantes e a responsáveis pela visita e pode decorrer em contextos como percurso autorizado pela exploração. O momento — no momento de receção e no final — ajuda a enquadrar o objetivo de distinguir comunicação e recordação de materiais usados na operação agrícola."
+        }
+      ],
+      "imagens_contexto": [
+        {
+          "url": "assets/para_quem/visuais/agricultura.jpg",
+          "alt": "Acessório dobrável com lâmina aberta e cabo castanho.",
+          "width": 300,
+          "height": 300,
+          "legenda": "Imagem de um acessório individual com lâmina. Não demonstra aptidão para trabalho agrícola e não representa uma proposta para distribuir a crianças ou a todos os visitantes."
+        }
+      ],
+      "famílias_de_artigos": [
+        {
+          "destinatário": "Participantes em formação e reuniões",
+          "objetivo": "Um caderno e uma caneta dão suporte a exercícios e notas. Um calendário pode manter visível a programação confirmada da associação; não deve ser apresentado como recomendação agronómica ou calendário de tratamentos.",
+          "famílias": [
+            "Cadernos",
+            "Canetas",
+            "Calendários"
+          ]
+        },
+        {
+          "destinatário": "Visitantes de feiras e ações de comunicação",
+          "objetivo": "Um saco ajuda a reunir os materiais recolhidos no percurso. Uma garrafa pode ser considerada para uso pessoal numa jornada prolongada, desde que se conheçam as instruções e a forma de limpeza.",
+          "famílias": [
+            "Sacos",
+            "Garrafas",
+            "Material informativo"
+          ]
+        },
+        {
+          "destinatário": "Equipas de receção e participantes de campanhas",
+          "objetivo": "Bonés ou vestuário com uma mensagem comum podem apoiar identificação visual. Escolha o corte e a tabela de medidas; esta finalidade não demonstra proteção solar, resistência ao trabalho ou aptidão para operar equipamentos.",
+          "famílias": [
+            "Bonés",
+            "Vestuário promocional",
+            "Artigos de identificação"
+          ]
+        }
+      ],
+      "distribuição": [
+        "Entregue materiais num ponto de receção, formação ou saída, de acordo com o percurso da atividade.",
+        "Numa demonstração, confirme com o responsável onde é permitido parar, receber e guardar objetos. Um presente não deve interferir com uma tarefa ou equipamento.",
+        "Separe destinatários adultos de grupos escolares ou familiares; artigos com lâminas não são materiais de distribuição geral numa visita.",
+        "Prepare a informação por sessão e idioma quando necessário, mantendo um modo de participação sem oferta física."
+      ],
+      "critérios": [
+        "Defina se o artigo serve numa feira, numa reunião ou durante uma tarefa. Se a utilização prevista for profissional, procure os requisitos próprios desse uso.",
+        "Em vestuário, confirme medidas e movimentos com as camadas de roupa previstas. Não deduza resistência a sujidade, lavagem, calor ou intempéries pela aparência.",
+        "A função de proteção exige avaliação própria. O enquadramento europeu de EPI refere produtos destinados a proteger contra riscos; não valida peças promocionais. [epi-contexto]",
+        "Em visitas, os riscos da exploração e o acompanhamento são definidos pela organização. A orientação do HSE destaca riscos para crianças e visitantes, sem equivaler a regras portuguesas nem a aprovação do percurso. [visitas-agricolas]"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Um boné promocional é equipamento de proteção?",
+          "resposta": "A presença de uma mensagem ou a utilização numa exploração não demonstra essa função. Confirme a finalidade e a documentação exigida para a tarefa."
+        },
+        {
+          "pergunta": "Um acessório com lâmina pode ser apresentado como ferramenta agrícola?",
+          "resposta": "Não apenas pela imagem ou pelo tema da oferta. Aptidão para uma operação, limites e utilização profissional precisam de documentação específica."
+        },
+        {
+          "pergunta": "Todas as visitas devem receber o mesmo conjunto?",
+          "resposta": "Não. Formação técnica, visita escolar e feira aberta têm percursos, destinatários e necessidades diferentes."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "epi-contexto",
+          "titulo": "Equipamento de proteção individual",
+          "entidade": "Comissão Europeia",
+          "url": "https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/personal-protective-equipment-ppe_en",
+          "data_consulta": "2026-10-21",
+          "ambito": "O enquadramento de EPI aplica-se a produtos destinados a proteger de riscos. Não atribui proteção a bonés, vestuário promocional ou acessórios."
+        },
+        {
+          "id": "visitas-agricolas",
+          "titulo": "Crianças e público em explorações agrícolas",
+          "entidade": "Health and Safety Executive",
+          "url": "https://www.hse.gov.uk/agriculture/topics/children.htm",
+          "data_consulta": "2026-10-21",
+          "ambito": "Orientação britânica sobre riscos para crianças e visitantes. Usada para distinguir zonas de trabalho e visitas, sem transpor disposições legais britânicas para Portugal."
+        }
+      ],
+      "etiquetas": [
+        "agricultura",
+        "agricultores",
+        "cooperativas",
+        "feiras agrícolas",
+        "formação",
+        "demonstrações"
+      ],
+      "imagem": {
+        "url": "assets/para_quem/visuais/agricultura.jpg",
+        "alt": "Acessório dobrável com lâmina aberta e cabo castanho.",
+        "width": 300,
+        "height": 300
+      },
+      "relacionados": [
+        {
+          "titulo": "Eventos",
+          "url": "publicos/eventos.html"
+        },
+        {
+          "titulo": "Vestuário e acessórios",
+          "url": "produtos/texteis.html"
+        },
+        {
+          "titulo": "Garrafas e recipientes",
+          "url": "produtos/garrafas-copos-e-canecas.html"
+        },
+        {
+          "titulo": "Escritório e organização",
+          "url": "produtos/artigos-de-escritorio.html"
+        },
+        {
+          "titulo": "Mobilidade e ferramentas",
+          "url": "produtos/mobilidade-ferramentas-e-seguranca.html"
+        },
+        {
+          "titulo": "Materiais têxteis",
+          "url": "materiais/materiais-texteis.html"
+        },
+        {
+          "titulo": "Bordado",
+          "url": "tecnicas/bordado.html"
+        }
+      ],
+      "data_revisao": "2026-10-21",
+      "personalizacao": [
+        "Num caderno ou calendário, dê prioridade à leitura das datas e ao espaço para notas. Revise a programação antes da impressão.",
+        "Para identificar equipas, teste a mensagem com a peça vestida. Bordado ou impressão dependem do tecido, da construção e da área acessível; não altere zonas funcionais ou marcações necessárias."
+      ],
+      "cuidados": [
+        "Os exemplos desta página são artigos de comunicação. Ferramentas profissionais, vestuário de trabalho e EPI devem ser escolhidos através de uma avaliação separada da tarefa.",
+        "Não atribua isolamento, proteção química, resistência mecânica ou homologação pelo nome do artigo. Uma fotografia de uma lâmina não informa sobre o seu uso permitido.",
+        "Confirme armazenamento e distribuição com quem gere a exploração. Se o artigo não tiver utilidade fora de uma tarefa especializada, prefira uma alternativa de comunicação compatível com a ocasião."
+      ]
+    },
+    {
+      "id": "animais",
+      "titulo": "Animais",
+      "url": "publicos/animais.html",
+      "resumo": "Escolha para tutores, equipas, instituições e eventos, separando materiais destinados às pessoas de acessórios utilizados diretamente por animais.",
+      "destinatário": [
+        {
+          "destinatário": "Tutores e famílias",
+          "necessidade": "Podem receber informação, materiais para transportar documentos ou acessórios ligados a uma rotina concreta. Espécie, porte e comportamento só são relevantes para adequação animal quando o objeto for efetivamente usado pelo animal."
+        },
+        {
+          "destinatário": "Clínicas veterinárias, lojas e equipas de atendimento",
+          "necessidade": "Uma ação informativa pode precisar de materiais de consulta e de identificação da equipa. Um objeto promocional não substitui aconselhamento clínico nem demonstra benefício para a saúde."
+        },
+        {
+          "destinatário": "Associações, abrigos e voluntários",
+          "necessidade": "Campanhas, acolhimento e ações de adoção exigem informação clara e organização. Distinga o material de participação dos equipamentos que a instituição usa nos cuidados aos animais."
+        }
+      ],
+      "ocasiões": [
+        {
+          "destinatário": [
+            "Tutores",
+            "Equipas de atendimento"
+          ],
+          "ocasião": "Ação informativa",
+          "local": "Ponto de atendimento ou sessão de esclarecimento",
+          "época": "Na entrega de informação revista pela equipa",
+          "objetivo": "Permitir que a pessoa leve instruções e contactos úteis para consulta.",
+          "texto_editorial": "A ocasião destina-se a tutores e a equipas de atendimento e pode decorrer em contextos como ponto de atendimento ou sessão de esclarecimento. O momento — na entrega de informação revista pela equipa — ajuda a enquadrar o objetivo de permitir que a pessoa leve instruções e contactos úteis para consulta."
+        },
+        {
+          "destinatário": [
+            "Voluntários",
+            "Visitantes"
+          ],
+          "ocasião": "Campanha ou evento de associação",
+          "local": "Espaço autorizado pela organização",
+          "época": "Na receção e durante a participação",
+          "objetivo": "Identificar funções e reunir materiais sem entregar indiscriminadamente acessórios aos animais.",
+          "texto_editorial": "A ocasião destina-se a voluntários e a visitantes e pode decorrer em contextos como espaço autorizado pela organização. O momento — na receção e durante a participação — ajuda a enquadrar o objetivo de identificar funções e reunir materiais sem entregar indiscriminadamente acessórios aos animais."
+        },
+        {
+          "destinatário": [
+            "Tutores",
+            "Organização"
+          ],
+          "ocasião": "Passeio ou encontro acompanhado",
+          "local": "Ponto de encontro e percurso definido",
+          "época": "No início ou no final da atividade",
+          "objetivo": "Relacionar o artigo com uma rotina concreta do tutor.",
+          "texto_editorial": "A ocasião destina-se a tutores e à organização e pode decorrer em contextos como ponto de encontro e percurso definido. O momento — no início ou no final da atividade — ajuda a enquadrar o objetivo de relacionar o artigo com uma rotina concreta do tutor."
+        }
+      ],
+      "imagens_contexto": [
+        {
+          "url": "assets/para_quem/visuais/animais-coleira.jpg",
+          "alt": "Coleira preta com fecho, argola e faixa verde, com outras variantes ao fundo.",
+          "width": 250,
+          "height": 250,
+          "legenda": "A fotografia mostra um formato de acessório, sem comprovar ajuste, material, resistência ou desempenho da faixa."
+        }
+      ],
+      "famílias_de_artigos": [
+        {
+          "destinatário": "Tutores que levam informação para casa",
+          "objetivo": "Um saco ou pasta pode reunir folhetos e documentos; um caderno permite registar perguntas para uma consulta. A utilidade está na organização da informação pela pessoa, não numa alegação de saúde para o animal.",
+          "famílias": [
+            "Sacos",
+            "Pastas",
+            "Cadernos",
+            "Cartões informativos"
+          ]
+        },
+        {
+          "destinatário": "Equipas e participantes de campanhas",
+          "objetivo": "Peças têxteis, crachás ou fitas podem identificar voluntários e funções de apoio. Uma mensagem curta ajuda a reconhecer o papel da pessoa, sem prometer maior adesão à campanha.",
+          "famílias": [
+            "Têxteis identificativos",
+            "Crachás",
+            "Fitas",
+            "Artigos de participação"
+          ]
+        },
+        {
+          "destinatário": "Tutores em passeios",
+          "objetivo": "Um dispensador de sacos acompanha uma tarefa executada pelo tutor. Verifique abertura, reposição e fixação ao equipamento utilizado; não é um brinquedo para o animal.",
+          "famílias": [
+            "Dispensadores de sacos",
+            "Bolsas para tutores"
+          ]
+        },
+        {
+          "destinatário": "Animais, através de um tutor responsável",
+          "objetivo": "Coleiras, recipientes ou brinquedos precisam de avaliação própria antes da distribuição. Separe a escolha da mensagem da verificação de espécie, dimensões, contacto, desgaste e instruções. Não ofereça a mesma variante a todos os animais de um evento.",
+          "famílias": [
+            "Acessórios de identificação",
+            "Recipientes",
+            "Brinquedos próprios para utilização documentada"
+          ]
+        }
+      ],
+      "distribuição": [
+        "Na receção, identifique se o destinatário é a pessoa, a equipa ou o animal. Entregue acessórios ao tutor com as instruções.",
+        "Em abrigos e associações, confirme as necessidades com a equipa antes de preparar conjuntos: armazenamento, limpeza e rotinas podem tornar uma oferta pouco útil.",
+        "Mantenha os acessórios e respetivas embalagens fora do alcance dos animais até serem avaliados pelo responsável.",
+        "Não inclua produtos de cuidado, alimentação ou primeiros socorros apenas por aparecerem numa fotografia de conjunto; o conteúdo e a utilização exigem verificação própria."
+      ],
+      "critérios": [
+        "Para artigos humanos, confirme volume, legibilidade e facilidade de transporte; não é preciso escolher um acessório animal para comunicar sobre animais.",
+        "Para uso direto, identifique espécie, porte, modo de utilização e instruções. Uma superfície brilhante não demonstra visibilidade certificada, nem um material com aspeto macio demonstra ausência de toxicidade.",
+        "A orientação consultada para brinquedos de cães relaciona dimensão e tipo de boca com a escolha e recomenda observar desgaste. Não valida as fotografias desta página nem outras espécies. [acessorios-caes]"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Todos os artigos numa campanha sobre animais são para os animais?",
+          "resposta": "Não. Sacos, documentos, cadernos e identificação de voluntários destinam-se normalmente às pessoas. Esta distinção deve estar clara na entrega."
+        },
+        {
+          "pergunta": "Uma tigela dobrável é automaticamente adequada a alimento ou água?",
+          "resposta": "Não. Forma e fotografia não demonstram composição, aptidão para o contacto previsto ou método de limpeza. Procure a documentação do artigo."
+        },
+        {
+          "pergunta": "Uma coleira com faixa brilhante oferece proteção garantida?",
+          "resposta": "Não. Confirme ajuste, fecho, finalidade e documentação; a imagem não quantifica visibilidade nem comprova função de proteção."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "acessorios-caes",
+          "titulo": "Cuidados na escolha de brinquedos para cães",
+          "entidade": "UK Pet Food — associação setorial",
+          "url": "https://www.ukpetfood.org/static/65de2abb-a72d-4d6f-8a4b638b53087fb9/25c59779-b16c-414a-8ed87b154cce6391/Choking-Hazards.pdf",
+          "data_consulta": "2026-10-21",
+          "ambito": "Ficha de orientação para cães, incluindo dimensão, desgaste e supervisão de brinquedos. Não é norma, ensaio ou validação para outras espécies, coleiras ou recipientes."
+        }
+      ],
+      "etiquetas": [
+        "animais",
+        "tutores",
+        "veterinária",
+        "abrigos",
+        "adoção",
+        "passeios",
+        "coleiras"
+      ],
+      "imagem": {
+        "url": "assets/para_quem/visuais/animais.jpg",
+        "alt": "Dispensadores em forma de osso com pequenas argolas, apresentados em várias cores.",
+        "width": 300,
+        "height": 301
+      },
+      "relacionados": [
+        {
+          "titulo": "Associações e organizações comunitárias",
+          "url": "publicos/associacoes-organizacoes-comunitarias.html"
+        },
+        {
+          "titulo": "Sacos e mochilas",
+          "url": "produtos/sacos-e-mochilas.html"
+        },
+        {
+          "titulo": "Eventos e identificação",
+          "url": "produtos/eventos-identificacao-e-premios.html"
+        },
+        {
+          "titulo": "Têxteis",
+          "url": "produtos/texteis.html"
+        },
+        {
+          "titulo": "Plásticos",
+          "url": "materiais/plasticos.html"
+        },
+        {
+          "titulo": "Tampografia",
+          "url": "tecnicas/tampografia.html"
+        }
+      ],
+      "data_revisao": "2026-10-21",
+      "personalizacao": [
+        "Em materiais informativos, coloque a mensagem da campanha junto da indicação de quem deve esclarecer dúvidas. Não transforme o texto num conselho clínico sem revisão apropriada.",
+        "Num acessório animal, confirme com a documentação se existe uma zona e um processo permitidos para personalizar. Preserve fechos, instruções e a função do objeto. Em têxteis de equipa, avalie a técnica no tecido concreto."
+      ],
+      "cuidados": [
+        "Não declare um artigo não tóxico, resistente à mordida ou próprio para uma espécie pela aparência. A aptidão depende do artigo e da utilização real.",
+        "Para brinquedos de cães, a ficha consultada recomenda supervisão e verificação frequente do estado; dimensão e desgaste podem alterar a utilização. Não se estendem estas orientações automaticamente a coleiras, recipientes ou a outras espécies. [acessorios-caes]",
+        "Quando houver dúvidas sobre adequação ao animal ou sobre um artigo de cuidado, procure orientação do médico veterinário antes de o disponibilizar. A oferta não deve funcionar como experiência para avaliar segurança."
+      ]
     }
   ]
 }
