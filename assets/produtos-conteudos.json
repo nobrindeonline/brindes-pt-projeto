@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "idioma": "pt-PT",
   "site": "brindes.pt",
-  "data_revisao": "2026-10-12",
+  "data_revisao": "2026-10-21",
   "conteudos": [
     {
       "id": "canetas-e-escrita",
@@ -10,7 +10,7 @@
       "ancora": "canetas",
       "titulo": "Canetas e escrita",
       "categoria": "familia",
-      "resumo": "Compare o tipo de escrita, o mecanismo, a recarga e o espaço livre no corpo antes de escolher a marca.",
+      "resumo": "Da esferográfica ao marcador: conheça diferenças de traço, mecanismo, consumíveis e personalização dos instrumentos de escrita.",
       "sinonimos": [
         "esferográfica",
         "esferografica",
@@ -32,7 +32,7 @@
       "tipos": [
         {
           "nome": "Esferográficas",
-          "descricao": "Instrumentos de ponta esférica; a Pilot descreve variantes com tinta de base oleosa. Identifique o tipo de tinta na documentação.",
+          "descricao": "Instrumentos de ponta esférica; a documentação descreve variantes com tinta de base oleosa. Identifique o tipo de tinta na documentação.",
           "comparar": "Botão, rotação ou tampa; traço, pega e recarga.",
           "contexto": "Anotações rápidas, receção e uso diário.",
           "citacoes": [
@@ -46,7 +46,7 @@
         },
         {
           "nome": "Rollerballs e canetas de gel",
-          "descricao": "A Pilot descreve rollerballs com tinta aquosa ou de gel. O nome do tipo não basta para deduzir o tempo de secagem.",
+          "descricao": "A documentação descreve rollerballs com tinta aquosa ou de gel. O nome do tipo não basta para deduzir o tempo de secagem.",
           "comparar": "Tinta, traço no papel habitual, tampa e recarga.",
           "contexto": "Escrita prolongada, apontamentos e oferta individual.",
           "citacoes": [
@@ -63,6 +63,12 @@
           "descricao": "Compare um lápis que se afia com uma lapiseira que recebe minas; os consumíveis e a preparação para escrever diferem.",
           "comparar": "Dureza e diâmetro da mina, avanço e borracha.",
           "contexto": "Desenho, formação e tarefas em que apagar seja útil."
+        },
+        {
+          "nome": "Marcadores e sublinhadores",
+          "descricao": "Uma ponta fina para anotar e uma ponta biselada para destacar texto resolvem tarefas diferentes. Experimente a tinta no papel ou na superfície prevista, observando transparência no verso e secagem.",
+          "comparar": "Formato da ponta, tampa, largura do traço e superfície de escrita indicada.",
+          "contexto": "Leitura, estudo, apresentação e marcação temporária conforme o instrumento."
         }
       ],
       "usos_contextos": [
@@ -108,7 +114,7 @@
       "tecnicas_relacionadas": [
         {
           "id": "tampografia",
-          "condicoes": "A Inkcups descreve aplicações em canetas; tinta, tampão e acabamento exigem avaliação do artigo.",
+          "condicoes": "A referência descreve aplicações em canetas; tinta, tampão e acabamento exigem avaliação do artigo.",
           "estatuto": "possibilidade_geral",
           "compatibilidade_confirmada": false,
           "titulo": "Tampografia",
@@ -142,14 +148,16 @@
       "criterios_escolha": [
         "Teste o traço no papel habitual e observe falhas, manchas e conforto.",
         "Acione o mecanismo e verifique se o clip interfere com a marca.",
-        "Compare a recarga compatível e a forma de substituição; cargas semelhantes não são necessariamente intercambiáveis."
+        "Compare a recarga compatível e a forma de substituição; cargas semelhantes não são necessariamente intercambiáveis.",
+        "Escolha primeiro a tarefa: texto contínuo, apontamentos rápidos, desenho ou destaque. Só depois avalie mecanismo, pega e apresentação.",
+        "No lápis, experimente a dureza no papel habitual; na lapiseira, verifique diâmetro e forma de carregar a mina. O corpo semelhante não torna os consumíveis equivalentes."
       ],
       "limitacoes": [
         "Não atribua comprimento de escrita, resistência da tinta ou vida útil sem documentação.",
         "Uma maquete ampliada pode ocultar texto ilegível; reveja a marca à escala real."
       ],
       "cuidados": [
-        "Siga as instruções de fecho, armazenamento e substituição de consumíveis. A Pilot identifica variantes recarregáveis, não toda a família."
+        "Siga as instruções de fecho, armazenamento e substituição de consumíveis. A referência identifica variantes recarregáveis, não toda a família."
       ],
       "perguntas_antes_de_decidir": [
         "Que papel e duração de escrita são habituais?",
@@ -174,24 +182,24 @@
       "fontes": [
         {
           "id": "prodball",
-          "titulo": "Ballpoint pens",
-          "entidade": "Pilot Europe",
+          "titulo": "Esferográficas — variantes",
+          "entidade": "Documentação técnica de referência",
           "url": "https://www.pilotpen.eu/our-products/ballpoint-pens/",
           "data_consulta": "2026-10-12",
           "ambito": "Variantes com tinta de base oleosa e recarga; não generalizar a todos os instrumentos."
         },
         {
           "id": "prodroller",
-          "titulo": "Rollerball Pens — perguntas frequentes",
-          "entidade": "Pilot Pen Australia",
+          "titulo": "Rollerballs — perguntas frequentes",
+          "entidade": "Documentação técnica de referência",
           "url": "https://pilotpen.com.au/pens/categories/rollerball",
           "data_consulta": "2026-10-12",
           "ambito": "Tinta aquosa ou de gel em rollerballs; não estabelece desempenho de todas as canetas."
         },
         {
           "id": "prodpad",
-          "titulo": "Pad Printing 101 — The Ultimate Guide",
-          "entidade": "Inkcups",
+          "titulo": "Guia de tampografia",
+          "entidade": "Documentação técnica de referência",
           "url": "https://www.inkcups.com/pad-printing-guide/",
           "data_consulta": "2026-10-12",
           "ambito": "Transferência com tampão e aplicações em objetos; não confirma aplicação num artigo."
@@ -212,9 +220,14 @@
           "id": "artigos-de-escritorio",
           "titulo": "Artigos de escritório",
           "url": "produtos/artigos-de-escritorio.html"
+        },
+        {
+          "id": "embalagem-e-apresentacao",
+          "titulo": "Embalagem e apresentação",
+          "url": "produtos/embalagem-e-apresentacao.html"
         }
       ],
-      "data_revisao": "2026-10-12",
+      "data_revisao": "2026-10-21",
       "url": "produtos/canetas-e-escrita.html",
       "imagens": {
         "cartao": {
@@ -253,7 +266,7 @@
       "ancora": "bebidas",
       "titulo": "Garrafas, copos e canecas",
       "categoria": "familia",
-      "resumo": "Distinga transporte e consumo à mesa; compare formato, abertura, tampa, limpeza e zonas de personalização.",
+      "resumo": "Garrafas, copos, canecas, recipientes térmicos, lancheiras e utensílios: distinga consumo, transporte, preparação e limpeza.",
       "sinonimos": [
         "recipientes de bebida",
         "garrafa",
@@ -290,6 +303,38 @@
           "descricao": "A pega e o formato de consumo fazem parte da escolha; compare a posição da mensagem com ambas as mãos.",
           "comparar": "Pega, base, peso e acesso ao interior.",
           "contexto": "Bebidas à mesa e pausas no trabalho."
+        },
+        {
+          "nome": "Recipientes térmicos e copos de viagem",
+          "descricao": "Distinga o recipiente destinado a beber em movimento do destinado a guardar a bebida até ao serviço. Observe bocal, acionamento da tampa e possibilidade de o transportar fechado; a descrição térmica não indica um número de horas.",
+          "comparar": "Acesso ao bocal, desmontagem das juntas e condições documentadas de transporte.",
+          "contexto": "Percursos diários, pausas e deslocações."
+        },
+        {
+          "nome": "Garrafas para atividade desportiva",
+          "descricao": "Um bocal de acionamento rápido e um gargalo largo oferecem experiências de uso distintas. Teste a pega e a abertura sem deduzir estanquidade pelo aspeto da tampa.",
+          "comparar": "Forma de agarrar, bocal, limpeza e encaixe no suporte previsto.",
+          "contexto": "Atividade física e uso em deslocação."
+        },
+        {
+          "nome": "Lancheiras e caixas de refeição",
+          "descricao": "Uma caixa rígida organiza o alimento; uma bolsa exterior transporta essa caixa. Identifique divisórias, peças removíveis e fechos. Contacto alimentar e modo de aquecimento dependem das instruções do artigo.",
+          "comparar": "Dimensões internas, encaixe da refeição, separação de alimentos e acesso para lavar.",
+          "contexto": "Refeições fora de casa e pausas no trabalho.",
+          "citacoes": [
+            {
+              "campo": "descricao",
+              "fontes": [
+                "prodalimentos"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Utensílios de cozinha e acessórios de bar",
+          "descricao": "Talheres, espátulas, tábuas, abre-garrafas e saca-rolhas devem ser escolhidos pela tarefa e pela pega. Um conjunto pode reunir peças com materiais e cuidados diferentes.",
+          "comparar": "Acesso para limpar, arrumação, bordos e partes que tocam em alimentos.",
+          "contexto": "Preparação, serviço e utilização à mesa."
         }
       ],
       "usos_contextos": [
@@ -375,14 +420,15 @@
       "criterios_escolha": [
         "Compare capacidade com dimensões e peso; verifique o encaixe no local de uso.",
         "Peça instruções sobre bebidas quentes, temperatura, fecho e transporte.",
-        "Observe desmontagem e acesso ao bocal, juntas e palhinha."
+        "Observe desmontagem e acesso ao bocal, juntas e palhinha.",
+        "Separe contacto alimentar, transporte e aquecimento: a aptidão para um destes usos não demonstra a aptidão para os outros. A referência institucional abrange recipientes e utensílios, sem validar um artigo concreto."
       ],
       "limitacoes": [
         "“Térmico” não quantifica duração de conservação da temperatura; procure ensaio e condições do artigo.",
         "Não atribua estanquidade, resistência a quedas ou uso em micro-ondas pelo material."
       ],
       "cuidados": [
-        "A Stanley recomenda consultar as instruções antes de lavar à máquina e separar componentes quando essa lavagem é permitida. Isto não confirma os cuidados de outros artigos.",
+        "A referência de cuidados recomenda consultar as instruções antes de lavar à máquina e separar componentes quando essa lavagem é permitida. Isto não confirma os cuidados de outros artigos.",
         "Confirme também os cuidados do acabamento personalizado."
       ],
       "perguntas_antes_de_decidir": [
@@ -408,11 +454,19 @@
       "fontes": [
         {
           "id": "prodwash",
-          "titulo": "How To Clean Your Stanley 1913 Products",
-          "entidade": "Stanley 1913",
+          "titulo": "Cuidados de recipientes de bebida",
+          "entidade": "Documentação técnica de referência",
           "url": "https://ca.stanley1913.com/blogs/how-to-guides/how-to-properly-clean-your-stanley-products",
           "data_consulta": "2026-10-12",
           "ambito": "Cuidados dos recipientes do fabricante e consulta das instruções antes de lavar à máquina."
+        },
+        {
+          "id": "prodalimentos",
+          "titulo": "Materiais em contacto com alimentos",
+          "entidade": "Comissão Europeia",
+          "url": "https://food.ec.europa.eu/food-safety/chemical-safety/food-contact-materials_en",
+          "data_consulta": "2026-10-21",
+          "ambito": "Recipientes, utensílios e embalagens destinados a contacto alimentar. Enquadramento geral; não comprova a conformidade de qualquer artigo ilustrado."
         }
       ],
       "relacionados": [
@@ -430,9 +484,19 @@
           "id": "sacos-e-mochilas",
           "titulo": "Sacos e mochilas",
           "url": "produtos/sacos-e-mochilas.html"
+        },
+        {
+          "id": "casa-decoracao-e-cuidados-pessoais",
+          "titulo": "Casa, decoração e cuidados pessoais",
+          "url": "produtos/casa-decoracao-e-cuidados-pessoais.html"
+        },
+        {
+          "id": "desporto-lazer-e-exterior",
+          "titulo": "Desporto, lazer e exterior",
+          "url": "produtos/desporto-lazer-e-exterior.html"
         }
       ],
-      "data_revisao": "2026-10-12",
+      "data_revisao": "2026-10-21",
       "url": "produtos/garrafas-copos-e-canecas.html",
       "imagens": {
         "cartao": {
@@ -465,6 +529,13 @@
         ]
       },
       "citacoes": [
+        {
+          "campo": "criterios_escolha",
+          "indice": 3,
+          "fontes": [
+            "prodalimentos"
+          ]
+        },
         {
           "campo": "cuidados",
           "indice": 0,
@@ -529,6 +600,18 @@
           "descricao": "Observe painéis, costuras e ajuste; o desenho deve caber numa zona acessível.",
           "comparar": "Forma dos painéis, ajuste e posição das costuras.",
           "contexto": "Identificação de equipas e uso recorrente."
+        },
+        {
+          "nome": "Roupa de trabalho e de desporto",
+          "descricao": "Uma peça de identificação de equipa e uma peça destinada a uma tarefa física podem exigir cortes e movimentos diferentes. Faça a prova com os gestos e as camadas de roupa previstos; roupa de trabalho não equivale automaticamente a equipamento de proteção.",
+          "comparar": "Liberdade de movimentos, bolsos, fechos e posição da mensagem durante a atividade.",
+          "contexto": "Equipas, tarefas profissionais e prática recreativa."
+        },
+        {
+          "nome": "Chapéus, cachecóis e outros acessórios",
+          "descricao": "A forma de vestir e ajustar pode deixar a área personalizada dobrada ou parcialmente escondida. Observe o artigo colocado, em vez de medir apenas a peça estendida.",
+          "comparar": "Ajuste, costuras, contacto com a pele e leitura na posição de uso.",
+          "contexto": "Complemento de vestuário e identificação de grupos."
         }
       ],
       "usos_contextos": [
@@ -584,7 +667,7 @@
         },
         {
           "id": "bordado",
-          "condicoes": "A Madeira relaciona resultado com tecido, estabilização e densidade de pontos; confirmar desenho e suporte.",
+          "condicoes": "A referência de bordado relaciona o resultado com tecido, estabilização e densidade de pontos; confirmar desenho e suporte.",
           "estatuto": "possibilidade_geral",
           "compatibilidade_confirmada": false,
           "titulo": "Bordado",
@@ -610,7 +693,9 @@
       "criterios_escolha": [
         "Gramagem é massa por área, habitualmente expressa em g/m², e difere de espessura. O âmbito do ensaio ASTM D3776 é a massa por unidade de área do tecido.",
         "Compare peito, comprimento e manga na tabela da peça; observe o corte numa amostra.",
-        "Examine costuras e remates, e o comportamento após o cuidado previsto quando este for decisivo."
+        "Examine costuras e remates, e o comportamento após o cuidado previsto quando este for decisivo.",
+        "Composição identifica fibras; construção descreve como se organiza o tecido; corte define a forma da peça. Registe estes três aspetos separadamente.",
+        "Os cuidados indicados na etiqueta abrangem tratamentos distintos. Uma temperatura de passagem a ferro não deve ser deduzida apenas da fibra."
       ],
       "limitacoes": [
         "Mais gramagem não prova, por si só, conforto ou durabilidade superiores.",
@@ -642,8 +727,8 @@
       "fontes": [
         {
           "id": "prodknit",
-          "titulo": "Knit Basics",
-          "entidade": "CottonWorks / Cotton Incorporated",
+          "titulo": "Estruturas de malha",
+          "entidade": "Documentação técnica de referência",
           "url": "https://cottonworks.com/learning-hub/knitting/knit-basics/",
           "data_consulta": "2026-10-12",
           "ambito": "Estrutura de malha e diferenças de construção; não comprova desempenho de uma peça."
@@ -658,8 +743,8 @@
         },
         {
           "id": "prodemb",
-          "titulo": "FAQ — tecido, estabilização e bordado",
-          "entidade": "Madeira",
+          "titulo": "Bordado — suporte e estabilização",
+          "entidade": "Documentação técnica de referência",
           "url": "https://www.madeira.com/en-in/service/support/faq",
           "data_consulta": "2026-10-12",
           "ambito": "Influência do suporte, estabilizador, agulha e densidade de pontos."
@@ -688,9 +773,19 @@
           "id": "sacos-e-mochilas",
           "titulo": "Sacos e mochilas",
           "url": "produtos/sacos-e-mochilas.html"
+        },
+        {
+          "id": "desporto-lazer-e-exterior",
+          "titulo": "Desporto, lazer e exterior",
+          "url": "produtos/desporto-lazer-e-exterior.html"
+        },
+        {
+          "id": "mobilidade-ferramentas-e-seguranca",
+          "titulo": "Mobilidade, ferramentas e segurança",
+          "url": "produtos/mobilidade-ferramentas-e-seguranca.html"
         }
       ],
-      "data_revisao": "2026-10-12",
+      "data_revisao": "2026-10-21",
       "url": "produtos/texteis.html",
       "imagens": {
         "cartao": {
@@ -728,6 +823,13 @@
           "indice": 0,
           "fontes": [
             "prodmass"
+          ]
+        },
+        {
+          "campo": "criterios_escolha",
+          "indice": 4,
+          "fontes": [
+            "prodcare"
           ]
         },
         {
@@ -784,6 +886,30 @@
           "descricao": "Compare organização interior e ajuste em vez de escolher apenas pela dimensão exterior.",
           "comparar": "Compartimentos, acolchoamento, alças e fechos.",
           "contexto": "Deslocações diárias e transporte de equipamento."
+        },
+        {
+          "nome": "Sacos dobráveis",
+          "descricao": "A forma de dobrar e guardar condiciona o espaço ocupado entre utilizações. Uma bolsa integrada, um fecho ou uma tira de retenção oferecem formas diferentes de arrumação.",
+          "comparar": "Sequência de dobra, volume guardado e facilidade de voltar a abrir.",
+          "contexto": "Compras e transporte ocasional."
+        },
+        {
+          "nome": "Sacos térmicos e bolsas de refeição",
+          "descricao": "Distinga o espaço para recipientes do revestimento interior e de eventuais elementos de frio. Uma aparência almofadada ou metalizada não demonstra desempenho térmico nem adequação a contacto direto com alimentos.",
+          "comparar": "Medidas úteis, abertura, limpeza do interior e condições de utilização indicadas.",
+          "contexto": "Transporte de refeições segundo as instruções dos recipientes e da bolsa."
+        },
+        {
+          "nome": "Sacos de desporto e bolsas para computador",
+          "descricao": "Uma abertura ampla facilita retirar peças volumosas; uma bolsa de equipamento privilegia encaixe e acesso aos compartimentos. Verifique se separar calçado, roupa ou acessórios exige divisórias próprias.",
+          "comparar": "Dimensões internas, fechos, alça e distribuição do conteúdo.",
+          "contexto": "Treino, deslocações diárias e transporte de equipamento."
+        },
+        {
+          "nome": "Malas e acessórios de viagem",
+          "descricao": "Uma mala com rodas, uma bolsa de higiene e um identificador de bagagem têm funções distintas. Organize o percurso de uso: transportar, abrir, encontrar e voltar a guardar.",
+          "comparar": "Pegas, rodas se existirem, divisórias, fecho e medidas relevantes para o percurso.",
+          "contexto": "Viagens e estadias; requisitos de transporte devem ser confirmados para a viagem concreta."
         }
       ],
       "usos_contextos": [
@@ -851,7 +977,7 @@
         },
         {
           "id": "bordado",
-          "condicoes": "Avaliar agulha, estabilização e acesso; a Madeira identifica a influência do tecido e da densidade de pontos.",
+          "condicoes": "Avaliar agulha, estabilização e acesso; a referência de bordado identifica a influência do tecido e da densidade de pontos.",
           "estatuto": "possibilidade_geral",
           "compatibilidade_confirmada": false,
           "titulo": "Bordado",
@@ -877,7 +1003,9 @@
       "criterios_escolha": [
         "Teste abertura e conforto das alças com o conteúdo esperado.",
         "Observe uniões das alças, fundo, remates, forro e fechos.",
-        "Peça documentação ou ensaio se carga ou proteção contra água forem decisivas."
+        "Peça documentação ou ensaio se carga ou proteção contra água forem decisivas.",
+        "Capacidade nominal e encaixe útil respondem a perguntas diferentes: use as dimensões do conteúdo e simule a abertura com os compartimentos ocupados.",
+        "Coloque o saco na posição habitual de uso e retire um objeto do fundo. Este ensaio simples revela acessos incómodos que uma fotografia não mostra."
       ],
       "limitacoes": [
         "Gramagem, volume e densidade do fio não equivalem a carga máxima.",
@@ -885,7 +1013,7 @@
         "Uma passagem ou cabo USB não prova que exista bateria incluída."
       ],
       "cuidados": [
-        "A Osprey desaconselha lavagem à máquina para as mochilas abrangidas pelo seu guia; não é uma regra para todos os sacos. Consulte os cuidados do artigo escolhido.",
+        "A referência de cuidados desaconselha lavagem à máquina para as mochilas abrangidas pelo seu guia; não é uma regra para todos os sacos. Consulte os cuidados do artigo escolhido.",
         "Confirme limpeza do forro, fechos e personalização e a forma de secar antes de guardar."
       ],
       "perguntas_antes_de_decidir": [
@@ -911,16 +1039,16 @@
       "fontes": [
         {
           "id": "prodemb",
-          "titulo": "FAQ — tecido, estabilização e bordado",
-          "entidade": "Madeira",
+          "titulo": "Bordado — suporte e estabilização",
+          "entidade": "Documentação técnica de referência",
           "url": "https://www.madeira.com/en-in/service/support/faq",
           "data_consulta": "2026-10-12",
           "ambito": "Influência do suporte, estabilizador, agulha e densidade de pontos."
         },
         {
           "id": "prodpack",
-          "titulo": "How to Clean Your Osprey Backpack",
-          "entidade": "Osprey",
+          "titulo": "Cuidados de mochilas — âmbito específico",
+          "entidade": "Documentação técnica de referência",
           "url": "https://www.osprey.com/gb/how-to-clean-your-osprey-backpack",
           "data_consulta": "2026-10-12",
           "ambito": "Limpeza das mochilas abrangidas pelo guia; não estender a todos os sacos."
@@ -941,9 +1069,19 @@
           "id": "como-escolher-a-tecnica",
           "titulo": "Como escolher a técnica",
           "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "id": "desporto-lazer-e-exterior",
+          "titulo": "Desporto, lazer e exterior",
+          "url": "produtos/desporto-lazer-e-exterior.html"
+        },
+        {
+          "id": "embalagem-e-apresentacao",
+          "titulo": "Embalagem e apresentação",
+          "url": "produtos/embalagem-e-apresentacao.html"
         }
       ],
-      "data_revisao": "2026-10-12",
+      "data_revisao": "2026-10-21",
       "url": "produtos/sacos-e-mochilas.html",
       "imagens": {
         "cartao": {
@@ -1038,6 +1176,26 @@
           "descricao": "Podem resolver posicionamento sem carregar nem comunicar com o dispositivo.",
           "comparar": "Encaixe, estabilidade, ajuste e uso com capa.",
           "contexto": "Secretária, videochamadas e organização."
+        },
+        {
+          "nome": "Cabos de ligação",
+          "descricao": "O encaixe físico é apenas o primeiro passo. Separe o conector de cada ponta, o transporte de energia, a transferência de dados e uma eventual saída de imagem. O formato USB-C não identifica por si só estas funções.",
+          "comparar": "Comprimento útil, pontas, função documentada e espaço junto às portas.",
+          "contexto": "Ligação entre os equipamentos efetivamente utilizados.",
+          "citacoes": [
+            {
+              "campo": "descricao",
+              "fontes": [
+                "produsb"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Acessórios para computador e telemóvel",
+          "descricao": "Tapetes, capas e bolsas organizam ou acompanham o equipamento; adaptadores e concentradores acrescentam ligações quando suportadas. Não trate um acessório passivo como um dispositivo eletrónico.",
+          "comparar": "Medidas, recortes, ventilação, acesso a comandos e portas necessárias.",
+          "contexto": "Secretária, trabalho móvel e arrumação."
         }
       ],
       "usos_contextos": [
@@ -1122,7 +1280,9 @@
       "criterios_escolha": [
         "Porta, cabo e dispositivo devem suportar a função pretendida em ambas as extremidades.",
         "Para carregamento sem fios, verifique a identificação e certificação no registo público do Wireless Power Consortium; não atribua certificação por uma fotografia.",
-        "Separe autonomia documentada de capacidade nominal da bateria e registe as condições declaradas."
+        "Separe autonomia documentada de capacidade nominal da bateria e registe as condições declaradas.",
+        "Para áudio, ensaie os comandos, a captação de voz se existir microfone e o método de ligação no ambiente previsto. Uma função de reprodução não implica função de chamada.",
+        "Registe a combinação completa para carregamento: dispositivo, fonte de alimentação, cabo e função pretendida. Uma porta visualmente igual pode ter capacidades diferentes."
       ],
       "limitacoes": [
         "Não prometa autonomia ou velocidade sem dados e condições do dispositivo concreto.",
@@ -1193,9 +1353,14 @@
           "id": "artigos-de-escritorio",
           "titulo": "Artigos de escritório",
           "url": "produtos/artigos-de-escritorio.html"
+        },
+        {
+          "id": "mobilidade-ferramentas-e-seguranca",
+          "titulo": "Mobilidade, ferramentas e segurança",
+          "url": "produtos/mobilidade-ferramentas-e-seguranca.html"
         }
       ],
-      "data_revisao": "2026-10-12",
+      "data_revisao": "2026-10-21",
       "url": "produtos/tecnologia.html",
       "imagens": {
         "cartao": {
@@ -1233,6 +1398,13 @@
           "indice": 1,
           "fontes": [
             "prodqi"
+          ]
+        },
+        {
+          "campo": "criterios_escolha",
+          "indice": 4,
+          "fontes": [
+            "produsb"
           ]
         }
       ]
@@ -1279,7 +1451,7 @@
         },
         {
           "nome": "Sistemas apagáveis",
-          "descricao": "A Rocketbook documenta um sistema com páginas sintéticas, caneta específica e limpeza húmida; não generalize esse método a todos os cadernos apagáveis.",
+          "descricao": "A referência documenta um sistema com páginas sintéticas, caneta específica e limpeza húmida; não generalize esse método a todos os cadernos apagáveis.",
           "comparar": "Consumível compatível, apagamento e conservação dos registos.",
           "contexto": "Notas temporárias com método de manutenção próprio.",
           "citacoes": [
@@ -1290,6 +1462,18 @@
               ]
             }
           ]
+        },
+        {
+          "nome": "Calendários de mesa e de parede",
+          "descricao": "O calendário mostra uma sequência de datas; a agenda acrescenta espaço de registo. Um modelo de mesa precisa de apoio estável, enquanto um de parede exige observar fixação e leitura à distância.",
+          "comparar": "Período abrangido, tamanho dos números, mudança de folha e espaço para notas.",
+          "contexto": "Planeamento partilhado, receção ou secretária."
+        },
+        {
+          "nome": "Organização de secretária",
+          "descricao": "Porta-canetas, tabuleiros e pequenos organizadores separam objetos por frequência de uso. Verifique se o acesso continua fácil com o conjunto completo e se a base cabe na secretária.",
+          "comparar": "Profundidade, estabilidade, divisórias e facilidade de retirar o conteúdo.",
+          "contexto": "Postos de trabalho, espaços de atendimento e estudo."
         }
       ],
       "usos_contextos": [
@@ -1303,7 +1487,7 @@
             "papel",
             "cartão"
           ],
-          "confirmar": "A Holmen distingue gramagem, espessura e rigidez como propriedades e ensaios diferentes.",
+          "confirmar": "A referência distingue gramagem, espessura e rigidez como propriedades e ensaios diferentes.",
           "guia": {
             "id": "papel-e-cartao",
             "titulo": "Papel e cartão",
@@ -1383,7 +1567,9 @@
       "criterios_escolha": [
         "Confirme se a contagem é de folhas ou páginas e quais são utilizáveis.",
         "Teste abertura e passagem de página com os acessórios.",
-        "Identifique canetas, recargas, folhas de reposição ou panos incluídos e a sua substituição."
+        "Identifique canetas, recargas, folhas de reposição ou panos incluídos e a sua substituição.",
+        "Num caderno para notas rápidas, teste a abertura com uma mão; para consulta frequente, observe como se encontra uma página já preenchida.",
+        "Uma agenda datada pode deixar de ser útil antes de terminar o papel. Distinga organização por dia, semana e mês de um bloco sem datas."
       ],
       "limitacoes": [
         "Não atribua compatibilidade de escrita ou apagamento sem instruções do sistema.",
@@ -1424,16 +1610,16 @@
       "fontes": [
         {
           "id": "prodnotes",
-          "titulo": "Rocketbook Core — instruções de utilização",
-          "entidade": "Rocketbook Help Center",
+          "titulo": "Sistema apagável — instruções de utilização",
+          "entidade": "Documentação técnica de referência",
           "url": "https://rocketbookhelp.zendesk.com/hc/en-us/articles/360004098373-Rocketbook-Core",
           "data_consulta": "2026-10-12",
           "ambito": "Sistema específico com páginas sintéticas, caneta própria e limpeza húmida; não aplicável a todos os cadernos apagáveis."
         },
         {
           "id": "prodboard",
-          "titulo": "General Technical Information About Paperboard",
-          "entidade": "Holmen Iggesund",
+          "titulo": "Informação técnica sobre cartão",
+          "entidade": "Documentação técnica de referência",
           "url": "https://www.iggesund.com/insights/paperboard-know-how/general-technical-information/",
           "data_consulta": "2026-10-12",
           "ambito": "Diferenças entre gramagem, espessura e ensaios de rigidez do cartão."
@@ -1459,9 +1645,19 @@
           "id": "encadernacao",
           "titulo": "Encadernação",
           "url": "tecnicas/encadernacao.html"
+        },
+        {
+          "id": "embalagem-e-apresentacao",
+          "titulo": "Embalagem e apresentação",
+          "url": "produtos/embalagem-e-apresentacao.html"
+        },
+        {
+          "id": "eventos-identificacao-e-premios",
+          "titulo": "Eventos, identificação e prémios",
+          "url": "produtos/eventos-identificacao-e-premios.html"
         }
       ],
-      "data_revisao": "2026-10-12",
+      "data_revisao": "2026-10-21",
       "url": "produtos/artigos-de-escritorio.html",
       "imagens": {
         "cartao": {
@@ -1569,7 +1765,7 @@
             "papel",
             "cartão"
           ],
-          "confirmar": "Avaliar encaixe e proteção; a Holmen distingue gramagem, espessura e rigidez.",
+          "confirmar": "Avaliar encaixe e proteção; a referência distingue gramagem, espessura e rigidez.",
           "guia": {
             "id": "papel-e-cartao",
             "titulo": "Papel e cartão",
@@ -1657,8 +1853,8 @@
       "fontes": [
         {
           "id": "prodboard",
-          "titulo": "General Technical Information About Paperboard",
-          "entidade": "Holmen Iggesund",
+          "titulo": "Informação técnica sobre cartão",
+          "entidade": "Documentação técnica de referência",
           "url": "https://www.iggesund.com/insights/paperboard-know-how/general-technical-information/",
           "data_consulta": "2026-10-12",
           "ambito": "Diferenças entre gramagem, espessura e ensaios de rigidez do cartão."
@@ -1699,10 +1895,1397 @@
           "id": "como-avaliar-uma-maquete",
           "titulo": "Como avaliar uma maquete antes da produção",
           "url": "guias/como-avaliar-uma-maquete.html"
+        },
+        {
+          "id": "embalagem-e-apresentacao",
+          "titulo": "Embalagem e apresentação",
+          "url": "produtos/embalagem-e-apresentacao.html"
         }
       ],
       "data_revisao": "2026-10-12",
       "url": "produtos/brindes-premium.html"
+    },
+    {
+      "id": "casa-decoracao-e-cuidados-pessoais",
+      "slug": "casa-decoracao-e-cuidados-pessoais",
+      "ancora": "casa",
+      "titulo": "Casa, decoração e cuidados pessoais",
+      "categoria": "familia",
+      "resumo": "Objetos para organizar, decorar, preparar tarefas domésticas e acompanhar rotinas de cuidado pessoal: escolha pela função e pelo local de utilização.",
+      "sinonimos": [
+        "casa",
+        "decoração",
+        "manta",
+        "vela",
+        "organizador",
+        "espelho",
+        "escova",
+        "necessaire",
+        "higiene",
+        "cuidados pessoais"
+      ],
+      "nomes_alternativos": [
+        "casa",
+        "decoração",
+        "manta",
+        "vela",
+        "organizador",
+        "espelho",
+        "escova",
+        "necessaire",
+        "higiene",
+        "cuidados pessoais"
+      ],
+      "tipos": [
+        {
+          "nome": "Organização e decoração",
+          "descricao": "Caixas de arrumação, pequenos organizadores e objetos decorativos diferem na relação com o espaço. Uma peça exposta precisa de ser legível e estável no local previsto; uma peça de arrumação deve permitir encontrar e retirar o conteúdo.",
+          "comparar": "Base, dimensões, abertura e espaço ocupado com o conteúdo.",
+          "contexto": "Secretária, quarto, receção ou outras zonas interiores."
+        },
+        {
+          "nome": "Têxteis para casa",
+          "descricao": "Mantas, toalhas e acessórios têxteis são escolhidos pela dimensão em uso e pela forma de guardar. Uma manta dobrada pode mostrar uma zona diferente da que fica visível quando estendida.",
+          "comparar": "Medidas abertas, volume guardado, textura e etiqueta de cuidados.",
+          "contexto": "Acolhimento, descanso e utilização doméstica."
+        },
+        {
+          "nome": "Cozinha e pequenas tarefas",
+          "descricao": "Pegas, panos e acessórios de preparação não devem ser confundidos com recipientes de refeição. No caso de uma pega destinada a contacto com calor, a aparência acolchoada não demonstra proteção térmica.",
+          "comparar": "Pega, área de utilização, limpeza e instruções específicas.",
+          "contexto": "Preparação e arrumação; veja também o guia de bebidas e refeições."
+        },
+        {
+          "nome": "Velas e elementos decorativos com chama",
+          "descricao": "Distinga uma vela destinada a arder de um objeto apenas decorativo. O local de colocação faz parte da escolha: deve ser possível afastar materiais inflamáveis.",
+          "comparar": "Base, instruções de uso e distância a objetos próximos.",
+          "contexto": "Ambientes interiores onde seja possível cumprir as condições de utilização.",
+          "citacoes": [
+            {
+              "campo": "descricao",
+              "fontes": [
+                "prodvelas"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Acessórios de cuidado pessoal",
+          "descricao": "Espelhos, escovas, pentes e bolsas de higiene acompanham rotinas diferentes. Observe se a pessoa precisa de ver, agarrar, abrir ou limpar o objeto com uma mão. Um acessório não deve ser apresentado como tratamento de saúde.",
+          "comparar": "Abertura, pega, bordos, arrumação e limpeza das partes de contacto.",
+          "contexto": "Uso pessoal, viagens e organização de pequenos objetos."
+        }
+      ],
+      "usos_contextos": [
+        "Escolha uma tarefa concreta e o local onde o objeto ficará. Um organizador para uso diário e um objeto decorativo exigem critérios diferentes.",
+        "Em conjuntos, identifique cada peça: a bolsa não descreve o material, os cuidados ou a função do seu conteúdo."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Tecidos e enchimentos",
+          "materiais": [
+            "fibras têxteis"
+          ],
+          "confirmar": "Identifique exterior, forro e eventual enchimento separadamente.",
+          "guia": {
+            "id": "materiais-texteis",
+            "titulo": "Têxteis",
+            "url": "materiais/materiais-texteis.html"
+          }
+        },
+        {
+          "parte": "Partes rígidas e pegas",
+          "materiais": [
+            "plásticos"
+          ],
+          "confirmar": "Observe uniões, peças desmontáveis e acabamento nas zonas de contacto.",
+          "guia": {
+            "id": "plasticos",
+            "titulo": "Plásticos",
+            "url": "materiais/plasticos.html"
+          }
+        },
+        {
+          "parte": "Bases e recipientes decorativos",
+          "materiais": [
+            "vidro",
+            "cerâmica"
+          ],
+          "confirmar": "Estabilidade e integridade devem ser observadas no objeto completo, não deduzidas do material.",
+          "guia": {
+            "id": "vidro-e-ceramica",
+            "titulo": "Vidro e cerâmica",
+            "url": "materiais/vidro-e-ceramica.html"
+          }
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Face exterior ou painel têxtil",
+          "condicao": "Escolha uma zona visível durante a utilização e acessível sem desmontagem indevida."
+        },
+        {
+          "nome": "Bolsa ou embalagem",
+          "condicao": "A personalização exterior não deve ocultar instruções nem dificultar abertura."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "serigrafia",
+          "condicoes": "Pode ser avaliada em painéis têxteis ou superfícies acessíveis, conforme tinta, acabamento e cuidados.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        },
+        {
+          "id": "bordado",
+          "condicoes": "Avalie espessura, acesso ao verso e posição de uso; uma manta com enchimento exige análise da construção.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Bordado",
+          "url": "tecnicas/bordado.html"
+        },
+        {
+          "id": "tampografia",
+          "condicoes": "Avalie objetos rígidos pela curvatura, suporte e aderência, mantendo livres as zonas de contacto relevantes.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Tampografia",
+          "url": "tecnicas/tampografia.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Meça a peça aberta e guardada; a fotografia pode mostrar apenas uma destas posições.",
+        "Teste acesso e limpeza com o objeto no local previsto. Uma superfície decorativa recortada pode tornar a manutenção menos prática.",
+        "Para contacto com alimentos, procure instruções próprias para esse uso. A Comissão Europeia inclui utensílios e louça no âmbito dos materiais de contacto alimentar."
+      ],
+      "limitacoes": [
+        "Não atribua proteção térmica a uma pega ou luva de cozinha com base na fotografia.",
+        "Um acessório de cuidado pessoal não demonstra efeitos de saúde, higiene ou bem-estar por integrar esta família."
+      ],
+      "cuidados": [
+        "Siga a etiqueta de cuidados de mantas e outros têxteis; tratamentos de lavagem e secagem devem ser identificados na peça.",
+        "Apague velas quando não houver vigilância e mantenha-as afastadas de materiais inflamáveis."
+      ],
+      "perguntas_antes_de_decidir": [
+        "Que tarefa e espaço vai servir?",
+        "Como se abre e limpa?",
+        "Que parte fica visível em uso?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Uma manta e a sua bolsa têm os mesmos cuidados?",
+          "resposta": "Não necessariamente. Identifique os materiais e as instruções de cada parte."
+        },
+        {
+          "pergunta": "Uma pega acolchoada protege de qualquer temperatura?",
+          "resposta": "A fotografia e a espessura aparente não demonstram esse desempenho. Procure as instruções e os limites do artigo."
+        },
+        {
+          "pergunta": "A decoração pode ser aplicada numa zona de contacto alimentar?",
+          "resposta": "A zona e o processo precisam de avaliação específica para a utilização prevista; não generalize a adequação da face exterior ao interior."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "prodvelas",
+          "titulo": "Segurança na utilização de velas",
+          "entidade": "Governo do Reino Unido",
+          "url": "https://www.gov.uk/government/publications/fire-safety-when-celebrating/fire-safety-when-celebrating-accessible",
+          "data_consulta": "2026-10-21",
+          "ambito": "Orientação doméstica sobre chama e materiais inflamáveis; não é um ensaio nem instruções de uma vela específica."
+        },
+        {
+          "id": "prodcare",
+          "titulo": "Care Labelling Symbols",
+          "entidade": "GINETEX",
+          "url": "https://www.ginetex.net/userfiles/files/gin_bro_gb_rz_brochure_web.pdf",
+          "data_consulta": "2026-10-12",
+          "ambito": "Significado das instruções de cuidado; os símbolos não são reproduzidos."
+        },
+        {
+          "id": "prodalimentos",
+          "titulo": "Materiais em contacto com alimentos",
+          "entidade": "Comissão Europeia",
+          "url": "https://food.ec.europa.eu/food-safety/chemical-safety/food-contact-materials_en",
+          "data_consulta": "2026-10-21",
+          "ambito": "Recipientes, utensílios e embalagens destinados a contacto alimentar. Enquadramento geral; não comprova a conformidade de qualquer artigo ilustrado."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "garrafas-copos-e-canecas",
+          "titulo": "Garrafas, copos e canecas",
+          "url": "produtos/garrafas-copos-e-canecas.html"
+        },
+        {
+          "id": "texteis",
+          "titulo": "Têxteis",
+          "url": "produtos/texteis.html"
+        },
+        {
+          "id": "embalagem-e-apresentacao",
+          "titulo": "Embalagem e apresentação",
+          "url": "produtos/embalagem-e-apresentacao.html"
+        },
+        {
+          "id": "como-escolher-o-material",
+          "titulo": "Como escolher o material de um brinde",
+          "url": "guias/como-escolher-o-material.html"
+        }
+      ],
+      "data_revisao": "2026-10-21",
+      "url": "produtos/casa-decoracao-e-cuidados-pessoais.html",
+      "imagens": {
+        "cartao": {
+          "url": "assets/produtos/visuais/casa-cartao.jpg",
+          "alt": "Manta clara enrolada com uma figura de peluche castanha à volta.",
+          "width": 700,
+          "height": 700,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/produtos/visuais/casa-pega.jpg",
+            "alt": "Três luvas de cozinha acolchoadas, nas cores vermelha, azul e branca.",
+            "width": 300,
+            "height": 301,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "tipos"
+          }
+        ]
+      },
+      "citacoes": [
+        {
+          "campo": "criterios_escolha",
+          "indice": 2,
+          "fontes": [
+            "prodalimentos"
+          ]
+        },
+        {
+          "campo": "cuidados",
+          "indice": 0,
+          "fontes": [
+            "prodcare"
+          ]
+        },
+        {
+          "campo": "cuidados",
+          "indice": 1,
+          "fontes": [
+            "prodvelas"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desporto-lazer-e-exterior",
+      "slug": "desporto-lazer-e-exterior",
+      "ancora": "desporto",
+      "titulo": "Desporto, lazer e exterior",
+      "categoria": "familia",
+      "resumo": "Da atividade recreativa ao piquenique: distinga objetos para transportar, jogar, sentar e acompanhar o tempo passado no exterior.",
+      "sinonimos": [
+        "desporto",
+        "praia",
+        "piquenique",
+        "campismo",
+        "cadeira dobrável",
+        "jogos",
+        "lazer",
+        "exterior"
+      ],
+      "nomes_alternativos": [
+        "desporto",
+        "praia",
+        "piquenique",
+        "campismo",
+        "cadeira dobrável",
+        "jogos",
+        "lazer",
+        "exterior"
+      ],
+      "tipos": [
+        {
+          "nome": "Atividade física e transporte",
+          "descricao": "Sacos de desporto, toalhas e recipientes de bebida acompanham a atividade, mas não desempenham a mesma função. Comece pelo conteúdo a transportar e pelos momentos de uso antes e depois do exercício.",
+          "comparar": "Acesso, compartimentos, forma de transportar e separação de objetos.",
+          "contexto": "Treino recreativo e atividades de grupos."
+        },
+        {
+          "nome": "Praia e piquenique",
+          "descricao": "Toalhas, mantas, bolsas e conjuntos de refeição podem formar uma seleção coerente se houver espaço para os guardar e limpar. Identifique o que fica no chão, o que toca em alimentos e o que apenas transporta.",
+          "comparar": "Dimensões abertas, arrumação depois de usar e peças laváveis.",
+          "contexto": "Pausas ao ar livre e convívios."
+        },
+        {
+          "nome": "Cadeiras e acessórios de campismo",
+          "descricao": "Uma cadeira dobrável alterna entre uma posição de transporte e uma posição de uso. Observe a sequência de abertura, os pontos de apoio e a forma de guardar; o tamanho da bolsa não descreve o assento aberto.",
+          "comparar": "Dimensões abertas e fechadas, estabilidade no piso previsto e carga documentada.",
+          "contexto": "Permanência em espaços exteriores adequados às instruções do artigo."
+        },
+        {
+          "nome": "Jogos e atividades recreativas",
+          "descricao": "Jogos de mesa portáteis, bolas e pequenos acessórios requerem regras de uso e arrumação diferentes. Conte as peças e avalie como se conservam juntas depois da atividade.",
+          "comparar": "Espaço necessário, peças pequenas, idade indicada e facilidade de guardar.",
+          "contexto": "Convívio, pausas e participação em grupo."
+        }
+      ],
+      "usos_contextos": [
+        "Planeie uma sequência completa: levar, abrir, utilizar, limpar e guardar. Um artigo útil no destino pode ser pouco prático durante o percurso.",
+        "Em atividades organizadas, distinga materiais de participação dos que a equipa precisa para trabalhar."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Painéis, assentos e bolsas",
+          "materiais": [
+            "materiais têxteis"
+          ],
+          "confirmar": "Identifique a construção e o cuidado de cada peça; uma bolsa não descreve o assento.",
+          "guia": {
+            "id": "materiais-texteis",
+            "titulo": "Têxteis",
+            "url": "materiais/materiais-texteis.html"
+          }
+        },
+        {
+          "parte": "Estruturas, uniões e ferragens",
+          "materiais": [
+            "metais"
+          ],
+          "confirmar": "Observe articulações, pontos de apoio e instruções de montagem.",
+          "guia": {
+            "id": "metais",
+            "titulo": "Metais",
+            "url": "materiais/metais.html"
+          }
+        },
+        {
+          "parte": "Apoios e peças moldadas",
+          "materiais": [
+            "plásticos"
+          ],
+          "confirmar": "Identifique zonas móveis, encaixes e eventuais peças de substituição.",
+          "guia": {
+            "id": "plasticos",
+            "titulo": "Plásticos",
+            "url": "materiais/plasticos.html"
+          }
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Painel de saco ou tecido",
+          "condicao": "Escolha uma área acessível e visível na posição real de utilização."
+        },
+        {
+          "nome": "Bolsa de transporte",
+          "condicao": "A mensagem pode ficar guardada durante o uso; decida se esse é o efeito pretendido."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "serigrafia",
+          "condicoes": "Avalie tinta, acabamento e flexão do painel; o uso no exterior não é uma garantia de resistência da impressão.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        },
+        {
+          "id": "transfers",
+          "condicoes": "Verifique a modalidade e a compatibilidade com calor e pressão, sem atingir estruturas ou revestimentos sensíveis.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Transfers",
+          "url": "tecnicas/transfers.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Numa cadeira, observe a abertura completa e o contacto dos apoios com o piso previsto, seguindo as instruções.",
+        "Para um jogo, avalie tempo de preparação, número de peças e arrumação após a atividade.",
+        "Em sacos e bolsas, ensaie o percurso com o conteúdo habitual em vez de escolher apenas pela capacidade nominal."
+      ],
+      "limitacoes": [
+        "Um artigo recreativo não equivale a equipamento de proteção. A referência europeia distingue produtos usados ou segurados para proteger contra riscos.",
+        "Não deduza proteção solar, impermeabilidade ou resistência ao vento do nome da família ou da imagem."
+      ],
+      "cuidados": [
+        "Antes de guardar, siga as instruções de limpeza e secagem de cada componente; não atribua o mesmo tratamento ao tecido e à estrutura.",
+        "Interrompa a utilização se uma articulação não abrir ou fechar como previsto e consulte as instruções em vez de forçar o mecanismo."
+      ],
+      "perguntas_antes_de_decidir": [
+        "Quanto espaço ocupa aberto e fechado?",
+        "Que piso e percurso estão previstos?",
+        "Que carga ou condições de uso estão documentadas?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Uma cadeira para exterior pode ficar sempre à chuva?",
+          "resposta": "A designação não confirma exposição permanente. Consulte condições de utilização e armazenamento."
+        },
+        {
+          "pergunta": "Uma bolsa térmica mantém qualquer refeição segura?",
+          "resposta": "O desempenho e as condições de transporte precisam de documentação; a bolsa não substitui as instruções de conservação do alimento."
+        },
+        {
+          "pergunta": "Um acessório desportivo é equipamento de proteção?",
+          "resposta": "Só a finalidade e a documentação aplicáveis permitem avaliar essa função, não a associação ao desporto.",
+          "citacoes": [
+            {
+              "campo": "resposta",
+              "fontes": [
+                "prodprotecao"
+              ]
+            }
+          ]
+        }
+      ],
+      "fontes": [
+        {
+          "id": "prodprotecao",
+          "titulo": "Equipamento de proteção individual",
+          "entidade": "Comissão Europeia",
+          "url": "https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/personal-protective-equipment-ppe_en",
+          "data_consulta": "2026-10-21",
+          "ambito": "Distingue equipamento destinado a proteger de riscos e o seu enquadramento. Não certifica os produtos ou fotografias desta biblioteca."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "sacos-e-mochilas",
+          "titulo": "Sacos e mochilas",
+          "url": "produtos/sacos-e-mochilas.html"
+        },
+        {
+          "id": "garrafas-copos-e-canecas",
+          "titulo": "Garrafas, copos e canecas",
+          "url": "produtos/garrafas-copos-e-canecas.html"
+        },
+        {
+          "id": "texteis",
+          "titulo": "Têxteis",
+          "url": "produtos/texteis.html"
+        },
+        {
+          "id": "clubes-desportivos",
+          "titulo": "Clubes desportivos",
+          "url": "publicos/clubes-desportivos.html"
+        }
+      ],
+      "data_revisao": "2026-10-21",
+      "url": "produtos/desporto-lazer-e-exterior.html",
+      "imagens": {
+        "cartao": {
+          "url": "assets/produtos/visuais/desporto-cartao.jpg",
+          "alt": "Cadeira dobrável azul com estrutura escura e exemplos em outras cores.",
+          "width": 300,
+          "height": 301,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/produtos/visuais/desporto-saco.jpg",
+            "alt": "Saco preto e cinzento com duas pegas, alça comprida e bolso lateral.",
+            "width": 300,
+            "height": 301,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "usos"
+          }
+        ]
+      },
+      "citacoes": [
+        {
+          "campo": "limitacoes",
+          "indice": 0,
+          "fontes": [
+            "prodprotecao"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eventos-identificacao-e-premios",
+      "slug": "eventos-identificacao-e-premios",
+      "ancora": "eventos",
+      "titulo": "Eventos, identificação e prémios",
+      "categoria": "familia",
+      "resumo": "Fitas, cartões, pulseiras, pins e distinções apoiam identificação, participação e reconhecimento. Separe o objeto físico do sistema em que será usado.",
+      "sinonimos": [
+        "evento",
+        "identificação",
+        "crachá",
+        "fita",
+        "lanyard",
+        "cartão",
+        "pulseira",
+        "pin",
+        "troféu",
+        "medalha"
+      ],
+      "nomes_alternativos": [
+        "evento",
+        "identificação",
+        "crachá",
+        "fita",
+        "lanyard",
+        "cartão",
+        "pulseira",
+        "pin",
+        "troféu",
+        "medalha"
+      ],
+      "tipos": [
+        {
+          "nome": "Fitas, crachás e cartões",
+          "descricao": "A fita suspende; o porta-cartões contém; o cartão apresenta a informação. Defina o conjunto pela orientação, pelo ponto de fixação e pela facilidade de ler o nome sem rodar o suporte.",
+          "comparar": "Formato útil, abertura, orientação horizontal ou vertical e fixação.",
+          "contexto": "Receção, sessões e identificação de equipas."
+        },
+        {
+          "nome": "Pulseiras de participação",
+          "descricao": "Uma pulseira pode distinguir grupos por cor ou informação impressa. Isso não demonstra que impeça transferência entre pessoas, que seja inviolável ou que comunique com um leitor.",
+          "comparar": "Fecho, ajuste, legibilidade e processo de verificação utilizado.",
+          "contexto": "Participação em atividades e organização de grupos."
+        },
+        {
+          "nome": "Pins e crachás tipo botão",
+          "descricao": "Um pin ou botão prende-se ao vestuário e pode transmitir uma mensagem curta. A área pequena favorece desenhos simples; o sistema de fixação condiciona colocação e remoção.",
+          "comparar": "Ponta, fecho, verso e leitura à dimensão final.",
+          "contexto": "Identificação visual e expressão de participação."
+        },
+        {
+          "nome": "Troféus e medalhas",
+          "descricao": "O troféu é normalmente apresentado com uma base ou apoio; a medalha pode ser suspensa numa fita ou guardada num estojo. Distinga uma mensagem comum do nome e da data individuais.",
+          "comparar": "Base, arestas, espaço de inscrição, suspensão e embalagem.",
+          "contexto": "Reconhecimento, participação e cerimónias."
+        }
+      ],
+      "usos_contextos": [
+        "Separe participante, equipa e distinção: cada papel pode precisar de informação e formato próprios.",
+        "Para uma entrega individual, organize nome, texto e sequência de distribuição antes de preparar as inscrições."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Fitas e cordões",
+          "materiais": [
+            "materiais têxteis"
+          ],
+          "confirmar": "Observe largura, costura e forma de união aos acessórios.",
+          "guia": {
+            "id": "materiais-texteis",
+            "titulo": "Têxteis",
+            "url": "materiais/materiais-texteis.html"
+          }
+        },
+        {
+          "parte": "Cartões e suportes flexíveis",
+          "materiais": [
+            "papel",
+            "cartão"
+          ],
+          "confirmar": "Confirme dimensão, espessura e leitura dentro do porta-cartões.",
+          "guia": {
+            "id": "papel-e-cartao",
+            "titulo": "Papel e cartão",
+            "url": "materiais/papel-e-cartao.html"
+          }
+        },
+        {
+          "parte": "Medalhas e ferragens",
+          "materiais": [
+            "metais"
+          ],
+          "confirmar": "Identifique acabamento e partes móveis; aparência dourada não identifica a liga.",
+          "guia": {
+            "id": "metais",
+            "titulo": "Metais",
+            "url": "materiais/metais.html"
+          }
+        },
+        {
+          "parte": "Placas e troféus transparentes",
+          "materiais": [
+            "vidro",
+            "outros materiais transparentes"
+          ],
+          "confirmar": "A fotografia não distingue vidro de outros materiais transparentes; consulte a composição.",
+          "guia": {
+            "id": "vidro-e-ceramica",
+            "titulo": "Vidro e cerâmica",
+            "url": "materiais/vidro-e-ceramica.html"
+          }
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Frente de cartão ou crachá",
+          "condicao": "Hierarquize nome, função e informação essencial, sem cobrir furos ou fixações."
+        },
+        {
+          "nome": "Face de medalha ou troféu",
+          "condicao": "Meça o espaço efetivo e reveja acentos, nomes e data antes de produzir."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "impressao-uv",
+          "condicoes": "Avalie superfície e fixação de placas e cartões, preservando a função das zonas de leitura.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Impressão digital UV",
+          "url": "tecnicas/impressao-uv.html"
+        },
+        {
+          "id": "gravacao-a-laser",
+          "condicoes": "Avalie a composição e o revestimento, bem como contraste e dimensão dos caracteres.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Gravação a laser",
+          "url": "tecnicas/gravacao-a-laser.html"
+        },
+        {
+          "id": "crachas-automaticos",
+          "condicoes": "Este guia trata a montagem de crachás tipo pin/botão; não descreve todos os cartões e sistemas de identificação.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Crachás tipo pin/botão",
+          "url": "tecnicas/crachas-automaticos.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Leia uma amostra à distância prevista e com a fita colocada; o texto pode parecer suficiente apenas quando está pousado.",
+        "Distinga impressão fixa de informação individual. Nomes longos e funções extensas devem caber no mesmo esquema.",
+        "Se existir controlo eletrónico, documente separadamente cartão, leitor e sistema. A imagem de um crachá não demonstra essa função."
+      ],
+      "limitacoes": [
+        "Uma cor ou impressão não garante autenticidade nem controlo de acesso.",
+        "Num sistema que trate dados pessoais, a informação às pessoas faz parte do processo. A referência da CNIL apresenta um exemplo de informação para acesso por cartão."
+      ],
+      "cuidados": [
+        "Verifique fechos e pontas antes da distribuição, de acordo com as instruções do conjunto.",
+        "Guarde troféus e medalhas com separação entre peças quando o contacto puder marcar as superfícies; teste a apresentação com o conjunto real."
+      ],
+      "perguntas_antes_de_decidir": [
+        "Que informação tem de ser lida?",
+        "Há nomes individuais?",
+        "O objeto identifica ou integra um sistema de acesso?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Uma pulseira prova que uma pessoa tem autorização?",
+          "resposta": "O objeto só tem esse papel dentro do processo de validação definido pela organização; não o garante por si só."
+        },
+        {
+          "pergunta": "Qualquer fita serve para qualquer porta-cartões?",
+          "resposta": "Verifique o encaixe, a orientação e o comportamento do conjunto colocado."
+        },
+        {
+          "pergunta": "É possível gravar qualquer troféu transparente?",
+          "resposta": "Não presuma composição ou resposta à gravação pela transparência; avalie o material e uma amostra."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "prodacessos",
+          "titulo": "Informação aos titulares em sistemas de acesso por cartão",
+          "entidade": "CNIL",
+          "url": "https://cnil.fr/fr/RGPD-exemple-information-acces-aux-locaux-professionnels-par-badge",
+          "data_consulta": "2026-10-21",
+          "ambito": "Exemplo institucional de informação sobre tratamento de dados num sistema de acesso. Não demonstra capacidade eletrónica de um cartão ou crachá."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "eventos",
+          "titulo": "Eventos",
+          "url": "publicos/eventos.html"
+        },
+        {
+          "id": "crachas-automaticos",
+          "titulo": "Crachás tipo pin/botão",
+          "url": "tecnicas/crachas-automaticos.html"
+        },
+        {
+          "id": "embalagem-e-apresentacao",
+          "titulo": "Embalagem e apresentação",
+          "url": "produtos/embalagem-e-apresentacao.html"
+        },
+        {
+          "id": "como-preparar-um-logotipo",
+          "titulo": "Como preparar um logótipo para personalização",
+          "url": "guias/como-preparar-um-logotipo.html"
+        }
+      ],
+      "data_revisao": "2026-10-21",
+      "url": "produtos/eventos-identificacao-e-premios.html",
+      "imagens": {
+        "cartao": {
+          "url": "assets/produtos/visuais/eventos-cartao.jpg",
+          "alt": "Porta-cartões horizontal transparente suspenso numa fita escura por uma mola.",
+          "width": 300,
+          "height": 301,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/produtos/visuais/eventos-medalhas.jpg",
+            "alt": "Três medalhas redondas com superfícies lisas em tons prateado, dourado e acobreado.",
+            "width": 300,
+            "height": 301,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "tipos"
+          },
+          {
+            "url": "assets/produtos/visuais/eventos-trofeu.jpg",
+            "alt": "Placa redonda transparente apoiada numa base retangular transparente.",
+            "width": 300,
+            "height": 300,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "zonas"
+          }
+        ]
+      },
+      "citacoes": [
+        {
+          "campo": "limitacoes",
+          "indice": 1,
+          "fontes": [
+            "prodacessos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mobilidade-ferramentas-e-seguranca",
+      "slug": "mobilidade-ferramentas-e-seguranca",
+      "ancora": "mobilidade",
+      "titulo": "Mobilidade, ferramentas e segurança",
+      "categoria": "familia",
+      "resumo": "Acessórios de deslocação, lanternas, pequenas ferramentas e artigos de visibilidade têm funções distintas. Escolha pela tarefa e pela documentação do objeto concreto.",
+      "sinonimos": [
+        "automóvel",
+        "bicicleta",
+        "lanterna",
+        "ferramenta",
+        "multifunções",
+        "fita métrica",
+        "refletor",
+        "colete",
+        "mobilidade",
+        "segurança"
+      ],
+      "nomes_alternativos": [
+        "automóvel",
+        "bicicleta",
+        "lanterna",
+        "ferramenta",
+        "multifunções",
+        "fita métrica",
+        "refletor",
+        "colete",
+        "mobilidade",
+        "segurança"
+      ],
+      "tipos": [
+        {
+          "nome": "Acessórios para automóvel e bicicleta",
+          "descricao": "Suportes, organizadores, bolsas e pequenos acessórios devem ser avaliados no ponto de instalação. Um encaixe que funciona num local pode interferir com comandos ou com a utilização noutro.",
+          "comparar": "Fixação, dimensões, acesso e possibilidade de remover sem dificultar a utilização.",
+          "contexto": "Arrumação e apoio à deslocação no equipamento compatível."
+        },
+        {
+          "nome": "Lanternas",
+          "descricao": "Uma luz de mão, uma luz de apoio e uma luz para montar num veículo não têm necessariamente a mesma finalidade. Observe como se aciona o interruptor e como se troca ou recarrega a alimentação.",
+          "comparar": "Formato do feixe, apoio, alimentação e instruções de uso.",
+          "contexto": "Iluminação de proximidade e tarefas previstas para o artigo."
+        },
+        {
+          "nome": "Ferramentas pequenas e multifunções",
+          "descricao": "Uma ferramenta individual privilegia uma operação; um conjunto dobrável reúne peças que se abrem de formas diferentes. Conte as funções úteis para a tarefa e observe o acesso a cada peça, sem assumir aptidão profissional.",
+          "comparar": "Pega, abertura, bloqueios quando existam e instruções para cada operação.",
+          "contexto": "Pequenas tarefas compatíveis com o objeto e com as competências de quem o utiliza."
+        },
+        {
+          "nome": "Fitas métricas",
+          "descricao": "Observe a escala, a extremidade de apoio, a forma de recolher e o acesso ao travão se existir. Uma graduação impressa não demonstra precisão ou aptidão para uma medição regulamentada.",
+          "comparar": "Legibilidade, unidades, comprimento útil e recolha controlada.",
+          "contexto": "Medições adequadas à documentação do instrumento."
+        },
+        {
+          "nome": "Artigos refletores e de proteção",
+          "descricao": "Distinga um acessório com uma zona refletora de um equipamento destinado a proteger de um risco. Óculos ou coletes fotografados não permitem identificar nível de proteção ou conformidade.",
+          "comparar": "Finalidade, instruções, tamanho e documentação aplicável ao artigo.",
+          "contexto": "Utilizações expressamente previstas na documentação, sem extrapolar pela aparência.",
+          "citacoes": [
+            {
+              "campo": "descricao",
+              "fontes": [
+                "prodprotecao"
+              ]
+            }
+          ]
+        }
+      ],
+      "usos_contextos": [
+        "Defina uma tarefa e o local de utilização antes de escolher o número de funções.",
+        "Se o objeto tiver uma função de proteção, separe essa avaliação da escolha da mensagem ou da embalagem."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Peças de trabalho, lâminas e articulações",
+          "materiais": [
+            "metais"
+          ],
+          "confirmar": "Identifique cada peça e respetivo uso; uma carcaça metálica não descreve todas as ferramentas.",
+          "guia": {
+            "id": "metais",
+            "titulo": "Metais",
+            "url": "materiais/metais.html"
+          }
+        },
+        {
+          "parte": "Pegas, invólucros e apoios",
+          "materiais": [
+            "plásticos"
+          ],
+          "confirmar": "Observe textura, encaixes e espaço disponível para agarrar.",
+          "guia": {
+            "id": "plasticos",
+            "titulo": "Plásticos",
+            "url": "materiais/plasticos.html"
+          }
+        },
+        {
+          "parte": "Bolsas e painéis vestíveis",
+          "materiais": [
+            "materiais têxteis"
+          ],
+          "confirmar": "Não deduza a composição ou função de faixas pela cor e brilho.",
+          "guia": {
+            "id": "materiais-texteis",
+            "titulo": "Têxteis",
+            "url": "materiais/materiais-texteis.html"
+          }
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Invólucro ou pega livre",
+          "condicao": "Mantenha legíveis escalas, instruções e informação técnica; não cubra zonas de preensão necessárias."
+        },
+        {
+          "nome": "Bolsa de transporte",
+          "condicao": "Pode receber a mensagem sem intervir no mecanismo, desde que o processo seja adequado ao material."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "gravacao-a-laser",
+          "condicoes": "Avalie revestimento e zona de aplicação sem atingir arestas de trabalho, mecanismos ou informação técnica.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Gravação a laser",
+          "url": "tecnicas/gravacao-a-laser.html"
+        },
+        {
+          "id": "tampografia",
+          "condicoes": "Avalie aderência e curvatura do invólucro, evitando botões e apoios.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Tampografia",
+          "url": "tecnicas/tampografia.html"
+        },
+        {
+          "id": "transfers",
+          "condicoes": "Em peças vestíveis, confirme se a intervenção é permitida e onde pode ser feita; não cubra zonas funcionais ou refletoras.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Transfers",
+          "url": "tecnicas/transfers.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Experimente abrir e fechar cada peça com controlo. O número de funções não explica a facilidade de utilização.",
+        "Numa lanterna, verifique se os comandos podem ser usados na posição prevista e como se acede à alimentação.",
+        "Para proteção, procure finalidade e documentação aplicáveis. O enquadramento europeu de EPI é específico para produtos destinados a proteger de riscos."
+      ],
+      "limitacoes": [
+        "Não atribua homologação, precisão, resistência à água ou isolamento elétrico pelo nome do ficheiro ou aspeto.",
+        "Um acessório luminoso ou refletor não deve ser apresentado como substituto de equipamento exigido para uma utilização específica."
+      ],
+      "cuidados": [
+        "Respeite as instruções de lâminas, articulações e alimentação; guarde as peças na posição indicada.",
+        "Observe danos e funcionamento antes de utilizar. Não use a personalização para ocultar marcações de segurança."
+      ],
+      "perguntas_antes_de_decidir": [
+        "Qual é a tarefa?",
+        "Como se abre e fixa?",
+        "Que função e limites estão documentados?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Mais funções tornam uma ferramenta mais adequada?",
+          "resposta": "Não necessariamente. Acesso, pega e utilidade de cada peça para a tarefa são critérios mais úteis."
+        },
+        {
+          "pergunta": "Uma faixa brilhante demonstra proteção certificada?",
+          "resposta": "Não. A imagem não permite avaliar documentação, finalidade nem desempenho."
+        },
+        {
+          "pergunta": "Pode personalizar-se um equipamento de proteção?",
+          "resposta": "É necessário confirmar se o procedimento e a zona são permitidos para esse equipamento e preservam as suas funções."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "prodprotecao",
+          "titulo": "Equipamento de proteção individual",
+          "entidade": "Comissão Europeia",
+          "url": "https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/personal-protective-equipment-ppe_en",
+          "data_consulta": "2026-10-21",
+          "ambito": "Distingue equipamento destinado a proteger de riscos e o seu enquadramento. Não certifica os produtos ou fotografias desta biblioteca."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "tecnologia",
+          "titulo": "Tecnologia",
+          "url": "produtos/tecnologia.html"
+        },
+        {
+          "id": "metais",
+          "titulo": "Metais",
+          "url": "materiais/metais.html"
+        },
+        {
+          "id": "materiais-texteis",
+          "titulo": "Têxteis",
+          "url": "materiais/materiais-texteis.html"
+        },
+        {
+          "id": "como-escolher-a-tecnica",
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        }
+      ],
+      "data_revisao": "2026-10-21",
+      "url": "produtos/mobilidade-ferramentas-e-seguranca.html",
+      "imagens": {
+        "cartao": {
+          "url": "assets/produtos/visuais/mobilidade-cartao.jpg",
+          "alt": "Ferramenta dobrável com várias peças abertas em torno de um corpo cinzento.",
+          "width": 300,
+          "height": 301,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/produtos/visuais/mobilidade-fita.jpg",
+            "alt": "Fita graduada parcialmente estendida de uma caixa preta e clara.",
+            "width": 300,
+            "height": 301,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "criterios"
+          },
+          {
+            "url": "assets/produtos/visuais/mobilidade-colete.jpg",
+            "alt": "Peça sem mangas amarela com duas faixas cinzentas horizontais e abertura frontal.",
+            "width": 300,
+            "height": 301,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "limites"
+          }
+        ]
+      },
+      "citacoes": [
+        {
+          "campo": "criterios_escolha",
+          "indice": 2,
+          "fontes": [
+            "prodprotecao"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "embalagem-e-apresentacao",
+      "slug": "embalagem-e-apresentacao",
+      "ancora": "embalagem",
+      "titulo": "Embalagem e apresentação",
+      "categoria": "familia",
+      "resumo": "Caixas, sacos, estojos, separadores e cartões organizam a entrega de um artigo ou conjunto. A escolha começa pelo encaixe e pela experiência de abrir.",
+      "sinonimos": [
+        "embalagem",
+        "caixa",
+        "saco de apresentação",
+        "estojo",
+        "separador",
+        "cartão",
+        "acondicionamento",
+        "conjunto"
+      ],
+      "nomes_alternativos": [
+        "embalagem",
+        "caixa",
+        "saco de apresentação",
+        "estojo",
+        "separador",
+        "cartão",
+        "acondicionamento",
+        "conjunto"
+      ],
+      "tipos": [
+        {
+          "nome": "Sacos e bolsas de apresentação",
+          "descricao": "Uma abertura simples facilita retirar o artigo; cordões, abas ou fechos alteram a forma de acesso. Observe se as pegas suportam o modo de transporte previsto e se o conteúdo fica exposto.",
+          "comparar": "Boca, fundo, pegas e posição do objeto dentro do saco.",
+          "contexto": "Entrega em mão e apresentação de conjuntos."
+        },
+        {
+          "nome": "Caixas dobráveis e caixas rígidas",
+          "descricao": "As dobras, abas e tampas definem a sequência de montagem e abertura. A classificação técnica de caixas de cartão descreve construções; não comprova por si só resistência ou proteção.",
+          "comparar": "Medidas internas, fecho, montagem e forma de retirar o artigo.",
+          "contexto": "Apresentação individual, conjuntos e organização da entrega.",
+          "citacoes": [
+            {
+              "campo": "descricao",
+              "fontes": [
+                "prodcaixas"
+              ]
+            }
+          ]
+        },
+        {
+          "nome": "Estojos",
+          "descricao": "Um estojo pode acompanhar um artigo durante o uso ou servir apenas na entrega. Verifique o espaço livre junto a pegas, clips e tampas e a forma como o objeto é retirado.",
+          "comparar": "Abertura, apoio interno, fecho e volume guardado.",
+          "contexto": "Instrumentos de escrita, pequenos acessórios e conjuntos."
+        },
+        {
+          "nome": "Separadores e elementos de encaixe",
+          "descricao": "Uma divisória separa objetos; um encaixe procura mantê-los numa posição definida. Teste o conjunto real para perceber se uma peça roda, sai do lugar ou dificulta retirar outra.",
+          "comparar": "Folgas, acesso dos dedos, orientação e montagem.",
+          "contexto": "Conjuntos com vários componentes."
+        },
+        {
+          "nome": "Cartões e informação de acompanhamento",
+          "descricao": "Um cartão pode apresentar a mensagem ou indicar como começar a usar o objeto. Separe essa mensagem das instruções essenciais e confirme que estas continuam disponíveis depois de abrir.",
+          "comparar": "Leitura, posição, idiomas necessários e relação com a abertura.",
+          "contexto": "Acolhimento e apresentação informativa."
+        }
+      ],
+      "usos_contextos": [
+        "Distinga entrega em mão de expedição. A embalagem de apresentação pode precisar de acondicionamento exterior para o percurso.",
+        "Monte um exemplar com todos os componentes e percorra a abertura como alguém que ainda não conhece o conjunto."
+      ],
+      "materiais_componentes": [
+        {
+          "parte": "Paredes e separadores",
+          "materiais": [
+            "papel",
+            "cartão"
+          ],
+          "confirmar": "Identifique espessura, construção e acabamento. Gramagem e rigidez são propriedades distintas.",
+          "guia": {
+            "id": "papel-e-cartao",
+            "titulo": "Papel e cartão",
+            "url": "materiais/papel-e-cartao.html"
+          },
+          "citacoes": [
+            {
+              "campo": "confirmar",
+              "fontes": [
+                "prodboard"
+              ]
+            }
+          ]
+        },
+        {
+          "parte": "Estojos e caixas com partes rígidas",
+          "materiais": [
+            "madeira",
+            "bambu"
+          ],
+          "confirmar": "A aparência não identifica a espécie, a composição ou o tratamento; confirme o material.",
+          "guia": {
+            "id": "madeira-e-bambu",
+            "titulo": "Madeira e bambu",
+            "url": "materiais/madeira-e-bambu.html"
+          }
+        },
+        {
+          "parte": "Bolsas e fitas",
+          "materiais": [
+            "materiais têxteis"
+          ],
+          "confirmar": "Observe costuras, cordões e forma de união às outras peças.",
+          "guia": {
+            "id": "materiais-texteis",
+            "titulo": "Têxteis",
+            "url": "materiais/materiais-texteis.html"
+          }
+        }
+      ],
+      "zonas_personalizacao": [
+        {
+          "nome": "Tampa ou face exterior",
+          "condicao": "Observe a orientação antes e depois de abrir, evitando dobragens que atravessem informação essencial."
+        },
+        {
+          "nome": "Cartão e separadores",
+          "condicao": "Verifique se a mensagem fica visível ou escondida pelo artigo e se há espaço para retirar cada peça."
+        }
+      ],
+      "tecnicas_relacionadas": [
+        {
+          "id": "impressao-uv",
+          "condicoes": "Avalie acabamento e aderência da face escolhida; a impressão não deve impedir dobras ou fechos.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Impressão digital UV",
+          "url": "tecnicas/impressao-uv.html"
+        },
+        {
+          "id": "serigrafia",
+          "condicoes": "Avalie a superfície, a tinta e a montagem, incluindo eventuais painéis têxteis.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Serigrafia",
+          "url": "tecnicas/serigrafia.html"
+        },
+        {
+          "id": "gravacao-a-laser",
+          "condicoes": "Em suportes adequados, ensaie material, revestimento e efeito; a aparência de madeira não basta.",
+          "estatuto": "possibilidade_geral",
+          "compatibilidade_confirmada": false,
+          "titulo": "Gravação a laser",
+          "url": "tecnicas/gravacao-a-laser.html"
+        }
+      ],
+      "criterios_escolha": [
+        "Meça o artigo na posição embalada e com os acessórios. A medida exterior da caixa não é o espaço interior útil.",
+        "Abra, retire e volte a colocar cada componente; folgas pequenas podem bloquear o acesso e folgas grandes podem permitir movimento.",
+        "Se houver transporte, documente o percurso e os ensaios relevantes; uma construção visualmente robusta não demonstra proteção contra impacto.",
+        "Defina como se separam os componentes depois do uso, sem afirmar reciclabilidade apenas pela aparência."
+      ],
+      "limitacoes": [
+        "Apresentação cuidada não é garantia de qualidade do artigo nem de proteção durante o transporte.",
+        "Uma embalagem para contacto direto com alimentos requer avaliação para esse uso; a designação de caixa ou saco de oferta não o demonstra."
+      ],
+      "cuidados": [
+        "Guarde os componentes segundo as instruções dos materiais e do artigo; não reutilize uma embalagem danificada para uma função que não foi avaliada.",
+        "Mantenha as instruções do objeto acessíveis depois de retirar a apresentação exterior."
+      ],
+      "perguntas_antes_de_decidir": [
+        "O conjunto cabe com todos os acessórios?",
+        "Como se retira cada peça?",
+        "A entrega é em mão ou envolve transporte?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Uma caixa de apresentação serve para expedir?",
+          "resposta": "Pode precisar de proteção exterior e de avaliação do percurso. A apresentação, por si só, não demonstra aptidão para expedição."
+        },
+        {
+          "pergunta": "Mais gramagem significa mais proteção?",
+          "resposta": "Não basta. Construção, encaixe e comportamento do conjunto também precisam de avaliação."
+        },
+        {
+          "pergunta": "O que distingue apresentação de premium?",
+          "resposta": "A apresentação é uma dimensão concreta de escolha. Premium continua a ser uma designação editorial transversal, sem garantia automática de qualidade."
+        }
+      ],
+      "fontes": [
+        {
+          "id": "prodcaixas",
+          "titulo": "Sistemas construtivos de caixas de cartão",
+          "entidade": "FEFCO",
+          "url": "https://www.fefco.org/technical-information/fefco-code",
+          "data_consulta": "2026-10-21",
+          "ambito": "Classificação de construções de embalagem de cartão. Identificar uma forma não demonstra resistência, proteção ou reciclabilidade."
+        },
+        {
+          "id": "prodboard",
+          "titulo": "Informação técnica sobre cartão",
+          "entidade": "Documentação técnica de referência",
+          "url": "https://www.iggesund.com/insights/paperboard-know-how/general-technical-information/",
+          "data_consulta": "2026-10-12",
+          "ambito": "Diferenças entre gramagem, espessura e ensaios de rigidez do cartão."
+        },
+        {
+          "id": "prodalimentos",
+          "titulo": "Materiais em contacto com alimentos",
+          "entidade": "Comissão Europeia",
+          "url": "https://food.ec.europa.eu/food-safety/chemical-safety/food-contact-materials_en",
+          "data_consulta": "2026-10-21",
+          "ambito": "Recipientes, utensílios e embalagens destinados a contacto alimentar. Enquadramento geral; não comprova a conformidade de qualquer artigo ilustrado."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "brindes-premium",
+          "titulo": "Premium: seleção transversal",
+          "url": "produtos/brindes-premium.html"
+        },
+        {
+          "id": "papel-e-cartao",
+          "titulo": "Papel e cartão",
+          "url": "materiais/papel-e-cartao.html"
+        },
+        {
+          "id": "canetas-e-escrita",
+          "titulo": "Canetas e escrita",
+          "url": "produtos/canetas-e-escrita.html"
+        },
+        {
+          "id": "sacos-e-mochilas",
+          "titulo": "Sacos e mochilas",
+          "url": "produtos/sacos-e-mochilas.html"
+        },
+        {
+          "id": "montagem-e-acabamentos",
+          "titulo": "Montagem e acabamentos",
+          "url": "industria/montagem-e-acabamentos.html"
+        }
+      ],
+      "data_revisao": "2026-10-21",
+      "url": "produtos/embalagem-e-apresentacao.html",
+      "imagens": {
+        "cartao": {
+          "url": "assets/produtos/visuais/embalagem-cartao.jpg",
+          "alt": "Caixa retangular clara com padrão de veios e pega superior.",
+          "width": 300,
+          "height": 301,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/produtos/visuais/embalagem-transporte.jpg",
+            "alt": "Embalagem alta escura com duas pegas e duas aberturas na parte inferior.",
+            "width": 300,
+            "height": 300,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "tipos"
+          }
+        ]
+      },
+      "citacoes": [
+        {
+          "campo": "limitacoes",
+          "indice": 1,
+          "fontes": [
+            "prodalimentos"
+          ]
+        }
+      ]
+    }
+  ],
+  "areas": [
+    {
+      "id": "papelaria",
+      "titulo": "Papelaria, escritório e escrita",
+      "resumo": "Canetas, lápis, cadernos, agendas, calendários e acessórios para escrever e organizar a secretária.",
+      "guias": [
+        "canetas-e-escrita",
+        "artigos-de-escritorio"
+      ],
+      "imagem": "artigos-de-escritorio"
+    },
+    {
+      "id": "tecnologia",
+      "titulo": "Tecnologia e acessórios digitais",
+      "resumo": "Áudio, carregamento, cabos e suportes: compare funções, ligações e condições de utilização.",
+      "guias": [
+        "tecnologia"
+      ],
+      "imagem": "tecnologia"
+    },
+    {
+      "id": "bebidas",
+      "titulo": "Bebidas, refeições e cozinha",
+      "resumo": "Garrafas, copos, canecas, lancheiras e utensílios: distinga consumo, transporte, preparação e limpeza.",
+      "guias": [
+        "garrafas-copos-e-canecas"
+      ],
+      "imagem": "garrafas-copos-e-canecas"
+    },
+    {
+      "id": "sacos",
+      "titulo": "Sacos, mochilas e viagem",
+      "resumo": "Compare alças, fechos, compartimentos e espaço útil para o conteúdo que pretende transportar.",
+      "guias": [
+        "sacos-e-mochilas"
+      ],
+      "imagem": "sacos-e-mochilas"
+    },
+    {
+      "id": "texteis",
+      "titulo": "Têxtil, vestuário e acessórios",
+      "resumo": "T-shirts, polos, casacos e bonés: conheça os critérios de composição, corte, medidas e cuidados.",
+      "guias": [
+        "texteis"
+      ],
+      "imagem": "texteis"
+    },
+    {
+      "id": "casa",
+      "titulo": "Casa, decoração e cuidados pessoais",
+      "resumo": "Organização, decoração, têxteis para casa e acessórios de cuidado pessoal: conheça funções, formatos e critérios de utilização.",
+      "guias": [
+        "casa-decoracao-e-cuidados-pessoais"
+      ],
+      "imagem": "casa-decoracao-e-cuidados-pessoais"
+    },
+    {
+      "id": "desporto",
+      "titulo": "Desporto, lazer e exterior",
+      "resumo": "Artigos para atividade física, praia, piquenique, jogos e campismo: distinga transporte, conforto e utilização recreativa.",
+      "guias": [
+        "desporto-lazer-e-exterior"
+      ],
+      "imagem": "desporto-lazer-e-exterior"
+    },
+    {
+      "id": "eventos",
+      "titulo": "Eventos, identificação e prémios",
+      "resumo": "Fitas, cartões, pulseiras, pins, medalhas e troféus: identifique participantes e prepare momentos de reconhecimento.",
+      "guias": [
+        "eventos-identificacao-e-premios"
+      ],
+      "imagem": "eventos-identificacao-e-premios"
+    },
+    {
+      "id": "mobilidade",
+      "titulo": "Mobilidade, ferramentas e segurança",
+      "resumo": "Acessórios de deslocação, lanternas, ferramentas pequenas e artigos de visibilidade: escolha pela tarefa e pela documentação.",
+      "guias": [
+        "mobilidade-ferramentas-e-seguranca"
+      ],
+      "imagem": "mobilidade-ferramentas-e-seguranca"
+    },
+    {
+      "id": "embalagem",
+      "titulo": "Embalagem e apresentação",
+      "resumo": "Caixas, sacos, estojos, separadores e cartões: avalie encaixe, proteção, abertura e apresentação de conjuntos.",
+      "guias": [
+        "embalagem-e-apresentacao"
+      ],
+      "imagem": "embalagem-e-apresentacao"
     }
   ]
 }

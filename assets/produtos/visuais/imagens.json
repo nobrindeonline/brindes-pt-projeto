@@ -169,5 +169,128 @@
         "secao": "materiais"
       }
     ]
+  },
+  "casa-decoracao-e-cuidados-pessoais": {
+    "cartao": {
+      "url": "assets/produtos/visuais/casa-cartao.jpg",
+      "alt": "Manta clara enrolada com uma figura de peluche castanha à volta.",
+      "width": 700,
+      "height": 700,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/produtos/visuais/casa-pega.jpg",
+        "alt": "Três luvas de cozinha acolchoadas, nas cores vermelha, azul e branca.",
+        "width": 300,
+        "height": 301,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "tipos"
+      }
+    ]
+  },
+  "desporto-lazer-e-exterior": {
+    "cartao": {
+      "url": "assets/produtos/visuais/desporto-cartao.jpg",
+      "alt": "Cadeira dobrável azul com estrutura escura e exemplos em outras cores.",
+      "width": 300,
+      "height": 301,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/produtos/visuais/desporto-saco.jpg",
+        "alt": "Saco preto e cinzento com duas pegas, alça comprida e bolso lateral.",
+        "width": 300,
+        "height": 301,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "usos"
+      }
+    ]
+  },
+  "eventos-identificacao-e-premios": {
+    "cartao": {
+      "url": "assets/produtos/visuais/eventos-cartao.jpg",
+      "alt": "Porta-cartões horizontal transparente suspenso numa fita escura por uma mola.",
+      "width": 300,
+      "height": 301,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/produtos/visuais/eventos-medalhas.jpg",
+        "alt": "Três medalhas redondas com superfícies lisas em tons prateado, dourado e acobreado.",
+        "width": 300,
+        "height": 301,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "tipos"
+      },
+      {
+        "url": "assets/produtos/visuais/eventos-trofeu.jpg",
+        "alt": "Placa redonda transparente apoiada numa base retangular transparente.",
+        "width": 300,
+        "height": 300,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "zonas"
+      }
+    ]
+  },
+  "mobilidade-ferramentas-e-seguranca": {
+    "cartao": {
+      "url": "assets/produtos/visuais/mobilidade-cartao.jpg",
+      "alt": "Ferramenta dobrável com várias peças abertas em torno de um corpo cinzento.",
+      "width": 300,
+      "height": 301,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/produtos/visuais/mobilidade-fita.jpg",
+        "alt": "Fita graduada parcialmente estendida de uma caixa preta e clara.",
+        "width": 300,
+        "height": 301,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "criterios"
+      },
+      {
+        "url": "assets/produtos/visuais/mobilidade-colete.jpg",
+        "alt": "Peça sem mangas amarela com duas faixas cinzentas horizontais e abertura frontal.",
+        "width": 300,
+        "height": 301,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "limites"
+      }
+    ]
+  },
+  "embalagem-e-apresentacao": {
+    "cartao": {
+      "url": "assets/produtos/visuais/embalagem-cartao.jpg",
+      "alt": "Caixa retangular clara com padrão de veios e pega superior.",
+      "width": 300,
+      "height": 301,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/produtos/visuais/embalagem-transporte.jpg",
+        "alt": "Embalagem alta escura com duas pegas e duas aberturas na parte inferior.",
+        "width": 300,
+        "height": 300,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "tipos"
+      }
+    ]
   }
 }

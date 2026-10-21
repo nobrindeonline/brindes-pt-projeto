@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from conteudos.produtos import FONTES_PRODUTOS
 
-linhas = ['# Fontes de Produtos — 12 de outubro de 2026', '',
+linhas = ['# Fontes de Produtos — atualização de 21 de outubro de 2026', '',
           'Registo gerado da bibliografia em `conteudos/produtos.py`. As páginas públicas',
           'apresentam apenas as fontes técnicas, o seu âmbito e as datas documentais.', '',
           'As páginas HTML, os documentos USB-IF e GINETEX e as instruções dos fabricantes',

@@ -5,6 +5,20 @@ explícitas; nenhuma técnica está confirmada para um artigo específico.
 DATA_PRODUTOS = '2026-10-12'
 
 def fonte(titulo, entidade, url, ambito):
+    # A referência continua verificável pelo URL; a apresentação pública é neutra.
+    titulos_neutros = {
+        'Pilot Pen Australia': 'Rollerballs — perguntas frequentes',
+        'Pilot Europe': 'Esferográficas — variantes',
+        'Inkcups': 'Guia de tampografia',
+        'Stanley 1913': 'Cuidados de recipientes de bebida',
+        'Madeira': 'Bordado — suporte e estabilização',
+        'Osprey': 'Cuidados de mochilas — âmbito específico',
+        'Rocketbook Help Center': 'Sistema apagável — instruções de utilização',
+        'Holmen Iggesund': 'Informação técnica sobre cartão',
+        'CottonWorks / Cotton Incorporated': 'Estruturas de malha',
+    }
+    if entidade in titulos_neutros:
+        titulo, entidade = titulos_neutros[entidade], 'Documentação técnica de referência'
     return dict(titulo=titulo, entidade=entidade, url=url, data_consulta=DATA_PRODUTOS, ambito=ambito)
 
 FONTES_PRODUTOS = {
@@ -51,19 +65,19 @@ PRODUTOS = [
  guia('canetas-e-escrita','canetas','Canetas e escrita',
   'Compare o tipo de escrita, o mecanismo, a recarga e o espaço livre no corpo antes de escolher a marca.',
   ['esferográfica','esferografica','rollerball','caneta de gel','lapiseira','lápis','instrumentos de escrita'],
-  [variante('Esferográficas','Instrumentos de ponta esférica; a Pilot descreve variantes com tinta de base oleosa. Identifique o tipo de tinta na documentação. [prodball]', 'Botão, rotação ou tampa; traço, pega e recarga.', 'Anotações rápidas, receção e uso diário.'),
-   variante('Rollerballs e canetas de gel','A Pilot descreve rollerballs com tinta aquosa ou de gel. O nome do tipo não basta para deduzir o tempo de secagem. [prodroller]', 'Tinta, traço no papel habitual, tampa e recarga.', 'Escrita prolongada, apontamentos e oferta individual.'),
+  [variante('Esferográficas','Instrumentos de ponta esférica; a documentação descreve variantes com tinta de base oleosa. Identifique o tipo de tinta na documentação. [prodball]', 'Botão, rotação ou tampa; traço, pega e recarga.', 'Anotações rápidas, receção e uso diário.'),
+   variante('Rollerballs e canetas de gel','A documentação descreve rollerballs com tinta aquosa ou de gel. O nome do tipo não basta para deduzir o tempo de secagem. [prodroller]', 'Tinta, traço no papel habitual, tampa e recarga.', 'Escrita prolongada, apontamentos e oferta individual.'),
    variante('Lápis e lapiseiras','Compare um lápis que se afia com uma lapiseira que recebe minas; os consumíveis e a preparação para escrever diferem.', 'Dureza e diâmetro da mina, avanço e borracha.', 'Desenho, formação e tarefas em que apagar seja útil.')],
   ['Numa distribuição ampla, teste escrita e leitura da mensagem sem depender da embalagem.', 'Num conjunto individual, compare instrumento, recarga e estojo; confirme o que está incluído.'],
   [componente('Corpo e tampa',['plásticos'],'plasticos','Identificar polímero, pintura e revestimento.'),
    componente('Corpo, clip e ponteira',['metais'],'metais','Distinguir metal de base e acabamento; verificar cada componente.')],
   [zona('Corpo','Medir espaço livre, curvatura e orientação em relação ao clip.'),zona('Clip ou tampa','Confirmar dimensão, mobilidade e acesso.')],
-  [tecnica('tampografia','A Inkcups descreve aplicações em canetas; tinta, tampão e acabamento exigem avaliação do artigo. [prodpad]'),
+  [tecnica('tampografia','A referência descreve aplicações em canetas; tinta, tampão e acabamento exigem avaliação do artigo. [prodpad]'),
    tecnica('gravacao-a-laser','Avaliar superfície e efeito numa amostra; metal pintado não equivale a metal sem revestimento.'),
    tecnica('impressao-uv','Confirmar acesso, aderência, curvatura e legibilidade à dimensão final.')],
   ['Teste o traço no papel habitual e observe falhas, manchas e conforto.', 'Acione o mecanismo e verifique se o clip interfere com a marca.', 'Compare a recarga compatível e a forma de substituição; cargas semelhantes não são necessariamente intercambiáveis.'],
   ['Não atribua comprimento de escrita, resistência da tinta ou vida útil sem documentação.', 'Uma maquete ampliada pode ocultar texto ilegível; reveja a marca à escala real.'],
-  ['Siga as instruções de fecho, armazenamento e substituição de consumíveis. A Pilot identifica variantes recarregáveis, não toda a família. [prodball]'],
+  ['Siga as instruções de fecho, armazenamento e substituição de consumíveis. A referência identifica variantes recarregáveis, não toda a família. [prodball]'],
   ['Que papel e duração de escrita são habituais?','O mecanismo e a pega são confortáveis?','Qual é a recarga compatível?','A marca cabe na área medida?'],
   [faq('Uma caneta metálica pode sempre ser gravada?','Não. Metal de base, revestimento e efeito pretendido devem ser avaliados na superfície concreta.'),
    faq('O diâmetro da ponta é igual à largura do traço?','Não use os valores como equivalentes sem confirmação. Compare o traço indicado e teste no papel habitual.'),
@@ -86,7 +100,7 @@ PRODUTOS = [
    tecnica('tecnica-sublimacao','Exige suporte e revestimento adequados; não se presume que qualquer caneca de cerâmica aceite o processo.')],
   ['Compare capacidade com dimensões e peso; verifique o encaixe no local de uso.', 'Peça instruções sobre bebidas quentes, temperatura, fecho e transporte.', 'Observe desmontagem e acesso ao bocal, juntas e palhinha.'],
   ['“Térmico” não quantifica duração de conservação da temperatura; procure ensaio e condições do artigo.', 'Não atribua estanquidade, resistência a quedas ou uso em micro-ondas pelo material.'],
-  ['A Stanley recomenda consultar as instruções antes de lavar à máquina e separar componentes quando essa lavagem é permitida. Isto não confirma os cuidados de outros artigos. [prodwash]', 'Confirme também os cuidados do acabamento personalizado.'],
+  ['A referência de cuidados recomenda consultar as instruções antes de lavar à máquina e separar componentes quando essa lavagem é permitida. Isto não confirma os cuidados de outros artigos. [prodwash]', 'Confirme também os cuidados do acabamento personalizado.'],
   ['Vai ser transportado ou usado à mesa?','Que bebida e temperatura estão previstas?','Como se desmonta a tampa?','Que cuidados exigem corpo e marca?'],
   [faq('Uma tampa torna o copo estanque?','Não. Pode haver abertura para beber; confirme estanquidade e posição permitida no transporte.'),
    faq('Pode ir à máquina de lavar loiça?','Só quando as instruções do artigo e da personalização o permitirem; confirme todas as peças.'),
@@ -104,7 +118,7 @@ PRODUTOS = [
    componente('Forro, punhos e painéis',['materiais têxteis'],'materiais-texteis','Identificar cada parte; a composição do exterior não descreve todos os acessórios.')],
   [zona('Peito, costas ou manga','Medir no tamanho escolhido; verificar bolsos, costuras e proporção nos diferentes tamanhos.'),zona('Painel de boné','Confirmar curvatura, costuras e acesso ao verso.')],
   [tecnica('serigrafia','Avaliar fibras, acabamento, cor, tinta e cura.'),
-   tecnica('bordado','A Madeira relaciona resultado com tecido, estabilização e densidade de pontos; confirmar desenho e suporte. [prodemb]'),
+   tecnica('bordado','A referência de bordado relaciona o resultado com tecido, estabilização e densidade de pontos; confirmar desenho e suporte. [prodemb]'),
    tecnica('transfers','Escolher a modalidade após conhecer composição, acabamento, aplicação de calor e cuidados.')],
   ['Gramagem é massa por área, habitualmente expressa em g/m², e difere de espessura. O âmbito do ensaio ASTM D3776 é a massa por unidade de área do tecido. [prodmass]', 'Compare peito, comprimento e manga na tabela da peça; observe o corte numa amostra.', 'Examine costuras e remates, e o comportamento após o cuidado previsto quando este for decisivo.'],
   ['Mais gramagem não prova, por si só, conforto ou durabilidade superiores.', 'Não deduza encolhimento, resistência da cor ou proteção contra intempéries sem documentação ou ensaio.'],
@@ -127,11 +141,11 @@ PRODUTOS = [
    componente('Argolas e ferragens',['metais'],'metais','Observar acabamento e fixação; não deduzir resistência da aparência.')],
   [zona('Painel frontal ou traseiro','Medir zona sem costuras e acesso ao verso; bolsos e forros podem dificultar a aplicação.'),zona('Bolso exterior','Confirmar área e fixação sem afetar o fecho.')],
   [tecnica('serigrafia','Confirmar superfície, acabamento, acesso e separação de camadas.'),
-   tecnica('bordado','Avaliar agulha, estabilização e acesso; a Madeira identifica a influência do tecido e da densidade de pontos. [prodemb]'),
+   tecnica('bordado','Avaliar agulha, estabilização e acesso; a referência de bordado identifica a influência do tecido e da densidade de pontos. [prodemb]'),
    tecnica('transfers','Verificar revestimentos, sensibilidade ao calor e área plana para a modalidade escolhida.')],
   ['Teste abertura e conforto das alças com o conteúdo esperado.', 'Observe uniões das alças, fundo, remates, forro e fechos.', 'Peça documentação ou ensaio se carga ou proteção contra água forem decisivas.'],
   ['Gramagem, volume e densidade do fio não equivalem a carga máxima.', 'Um bolso para equipamento não demonstra proteção contra quedas nem impermeabilidade.', 'Uma passagem ou cabo USB não prova que exista bateria incluída.'],
-  ['A Osprey desaconselha lavagem à máquina para as mochilas abrangidas pelo seu guia; não é uma regra para todos os sacos. Consulte os cuidados do artigo escolhido. [prodpack]', 'Confirme limpeza do forro, fechos e personalização e a forma de secar antes de guardar.'],
+  ['A referência de cuidados desaconselha lavagem à máquina para as mochilas abrangidas pelo seu guia; não é uma regra para todos os sacos. Consulte os cuidados do artigo escolhido. [prodpack]', 'Confirme limpeza do forro, fechos e personalização e a forma de secar antes de guardar.'],
   ['O que vai ser transportado e com que medidas?','As alças e fechos funcionam com esse conteúdo?','Que carga e proteção estão documentadas?','O painel está acessível?'],
   [faq('Um saco mais pesado suporta mais carga?','Não necessariamente. Avalie construção, uniões e componentes; peça dados de carga quando necessários.'),
    faq('O tamanho exterior garante que o portátil cabe?','Não. Confirme medidas úteis do compartimento e teste o equipamento ou as suas dimensões.'),
@@ -166,9 +180,9 @@ PRODUTOS = [
   ['caderno','bloco de notas','agenda','pasta','organizador','secretária','papelaria','caderno apagável'],
   [variante('Cadernos, blocos e agendas','Distinga folhas destacáveis, encadernação permanente e organização por datas; confirme o período de uma agenda datada.', 'Formato útil, pauta, folhas ou páginas, abertura e encadernação.', 'Apontamentos, planeamento e formação.'),
    variante('Pastas e organizadores','Compare o conteúdo a guardar e o acesso; não deduza acessórios incluídos da apresentação.', 'Compartimentos, fecho e dimensões internas.', 'Reuniões e organização de documentos.'),
-   variante('Sistemas apagáveis','A Rocketbook documenta um sistema com páginas sintéticas, caneta específica e limpeza húmida; não generalize esse método a todos os cadernos apagáveis. [prodnotes]', 'Consumível compatível, apagamento e conservação dos registos.', 'Notas temporárias com método de manutenção próprio.')],
+   variante('Sistemas apagáveis','A referência documenta um sistema com páginas sintéticas, caneta específica e limpeza húmida; não generalize esse método a todos os cadernos apagáveis. [prodnotes]', 'Consumível compatível, apagamento e conservação dos registos.', 'Notas temporárias com método de manutenção próprio.')],
   ['Teste o papel com o instrumento habitual e observe a leitura no verso.', 'Num conjunto de reunião, confirme acessórios e encaixe da documentação.'],
-  [componente('Folhas e capa de papel ou cartão',['papel','cartão'],'papel-e-cartao','A Holmen distingue gramagem, espessura e rigidez como propriedades e ensaios diferentes. [prodboard]'),
+  [componente('Folhas e capa de papel ou cartão',['papel','cartão'],'papel-e-cartao','A referência distingue gramagem, espessura e rigidez como propriedades e ensaios diferentes. [prodboard]'),
    componente('Capa revestida',['pele','imitação de pele'],'pele-e-imitacao-de-pele','Identificar suporte, revestimento e acabamento.'),
    componente('Espiral, ferragens e fechos',['metais'],'metais','Verificar abertura, saliências e proximidade da marca.')],
   [zona('Capa','Medir espaço livre de elástico, espiral, fechos e acessórios; identificar a camada exterior.'),zona('Folhas ou separadores','Confirmar possibilidade e processo de impressão e montagem.')],
@@ -192,7 +206,7 @@ PRODUTOS = [
    variante('Apresentação cuidada','Observe mensagem, acabamento e experiência de abrir e guardar.', 'Proteção, legibilidade e destino da embalagem.', 'Ocasiões em que a forma de entrega tenha significado.')],
   ['Defina destinatário, ocasião e função antes da apresentação.', 'Use critérios verificáveis numa amostra: abertura, encaixe, toque e legibilidade.'],
   [componente('Artigo principal',['materiais da família escolhida'],'como-escolher-o-material','Identificar materiais de cada parte e usar o guia da família.'),
-   componente('Caixa e separadores',['papel','cartão'],'papel-e-cartao','Avaliar encaixe e proteção; a Holmen distingue gramagem, espessura e rigidez. [prodboard]')],
+   componente('Caixa e separadores',['papel','cartão'],'papel-e-cartao','Avaliar encaixe e proteção; a referência distingue gramagem, espessura e rigidez. [prodboard]')],
   [zona('Artigo principal','Usar áreas e condições do guia da família.'),zona('Embalagem e cartão','Confirmar área, contraste e relação com a marca; manter instruções legíveis.')],
   [tecnica('gravacao-a-laser','Considerar apenas para superfície identificada e avaliada.'),tecnica('termogravura','Avaliar suporte e efeito; não é um indicador automático de qualidade.'),tecnica('impressao-uv','Confirmar acesso e aderência em cada componente.')],
   ['Compare utilidade e facilidade de manutenção para o destinatário.', 'Observe consistência visual, remates, encaixe e leitura numa amostra.', 'Identifique componentes, instruções e consumíveis.'],
@@ -204,6 +218,11 @@ PRODUTOS = [
    faq('A coleção tem técnicas ou materiais exclusivos?','Não. Abrange várias famílias; cada componente mantém as suas condições de personalização.')],
   ['prodboard'], ['canetas-e-escrita','garrafas-copos-e-canecas','texteis','sacos-e-mochilas','tecnologia','artigos-de-escritorio','como-avaliar-uma-maquete'], categoria='colecao_editorial'),
 ]
+
+from conteudos.produtos_complementos import completar
+completar(PRODUTOS, FONTES_PRODUTOS, guia=guia, variante=variante, componente=componente,
+          zona=zona, tecnica=tecnica, faq=faq)
+
 
 def textos_publicos(valor):
     if isinstance(valor,str):
@@ -229,4 +248,4 @@ def exportacao_publica():
     for g in conteudos:
         g['url']='produtos/'+g['slug']+'.html'
         g['fontes']=[dict(id=k,**FONTES_PRODUTOS[k]) for k in g['fontes']]
-    return dict(schema_version='1.0',idioma='pt-PT',site='brindes.pt',data_revisao=DATA_PRODUTOS,conteudos=conteudos)
+    return dict(schema_version='1.0',idioma='pt-PT',site='brindes.pt',data_revisao=max(g['data_revisao'] for g in PRODUTOS),conteudos=conteudos)

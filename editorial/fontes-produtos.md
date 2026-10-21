@@ -1,4 +1,4 @@
-# Fontes de Produtos — 12 de outubro de 2026
+# Fontes de Produtos — atualização de 21 de outubro de 2026
 
 Registo gerado da bibliografia em `conteudos/produtos.py`. As páginas públicas
 apresentam apenas as fontes técnicas, o seu âmbito e as datas documentais.
@@ -10,40 +10,40 @@ Não se usaram métodos, limites ou resultados do texto integral dessa norma.
 
 ## prodroller
 
-- Título: Rollerball Pens — perguntas frequentes
-- Entidade: Pilot Pen Australia
+- Título: Rollerballs — perguntas frequentes
+- Entidade: Documentação técnica de referência
 - URL: https://pilotpen.com.au/pens/categories/rollerball
 - Consulta: 2026-10-12
 - Âmbito: Tinta aquosa ou de gel em rollerballs; não estabelece desempenho de todas as canetas.
 
 ## prodball
 
-- Título: Ballpoint pens
-- Entidade: Pilot Europe
+- Título: Esferográficas — variantes
+- Entidade: Documentação técnica de referência
 - URL: https://www.pilotpen.eu/our-products/ballpoint-pens/
 - Consulta: 2026-10-12
 - Âmbito: Variantes com tinta de base oleosa e recarga; não generalizar a todos os instrumentos.
 
 ## prodpad
 
-- Título: Pad Printing 101 — The Ultimate Guide
-- Entidade: Inkcups
+- Título: Guia de tampografia
+- Entidade: Documentação técnica de referência
 - URL: https://www.inkcups.com/pad-printing-guide/
 - Consulta: 2026-10-12
 - Âmbito: Transferência com tampão e aplicações em objetos; não confirma aplicação num artigo.
 
 ## prodwash
 
-- Título: How To Clean Your Stanley 1913 Products
-- Entidade: Stanley 1913
+- Título: Cuidados de recipientes de bebida
+- Entidade: Documentação técnica de referência
 - URL: https://ca.stanley1913.com/blogs/how-to-guides/how-to-properly-clean-your-stanley-products
 - Consulta: 2026-10-12
 - Âmbito: Cuidados dos recipientes do fabricante e consulta das instruções antes de lavar à máquina.
 
 ## prodknit
 
-- Título: Knit Basics
-- Entidade: CottonWorks / Cotton Incorporated
+- Título: Estruturas de malha
+- Entidade: Documentação técnica de referência
 - URL: https://cottonworks.com/learning-hub/knitting/knit-basics/
 - Consulta: 2026-10-12
 - Âmbito: Estrutura de malha e diferenças de construção; não comprova desempenho de uma peça.
@@ -66,16 +66,16 @@ Não se usaram métodos, limites ou resultados do texto integral dessa norma.
 
 ## prodemb
 
-- Título: FAQ — tecido, estabilização e bordado
-- Entidade: Madeira
+- Título: Bordado — suporte e estabilização
+- Entidade: Documentação técnica de referência
 - URL: https://www.madeira.com/en-in/service/support/faq
 - Consulta: 2026-10-12
 - Âmbito: Influência do suporte, estabilizador, agulha e densidade de pontos.
 
 ## prodpack
 
-- Título: How to Clean Your Osprey Backpack
-- Entidade: Osprey
+- Título: Cuidados de mochilas — âmbito específico
+- Entidade: Documentação técnica de referência
 - URL: https://www.osprey.com/gb/how-to-clean-your-osprey-backpack
 - Consulta: 2026-10-12
 - Âmbito: Limpeza das mochilas abrangidas pelo guia; não estender a todos os sacos.
@@ -98,16 +98,56 @@ Não se usaram métodos, limites ou resultados do texto integral dessa norma.
 
 ## prodnotes
 
-- Título: Rocketbook Core — instruções de utilização
-- Entidade: Rocketbook Help Center
+- Título: Sistema apagável — instruções de utilização
+- Entidade: Documentação técnica de referência
 - URL: https://rocketbookhelp.zendesk.com/hc/en-us/articles/360004098373-Rocketbook-Core
 - Consulta: 2026-10-12
 - Âmbito: Sistema específico com páginas sintéticas, caneta própria e limpeza húmida; não aplicável a todos os cadernos apagáveis.
 
 ## prodboard
 
-- Título: General Technical Information About Paperboard
-- Entidade: Holmen Iggesund
+- Título: Informação técnica sobre cartão
+- Entidade: Documentação técnica de referência
 - URL: https://www.iggesund.com/insights/paperboard-know-how/general-technical-information/
 - Consulta: 2026-10-12
 - Âmbito: Diferenças entre gramagem, espessura e ensaios de rigidez do cartão.
+
+## prodalimentos
+
+- Título: Materiais em contacto com alimentos
+- Entidade: Comissão Europeia
+- URL: https://food.ec.europa.eu/food-safety/chemical-safety/food-contact-materials_en
+- Consulta: 2026-10-21
+- Âmbito: Recipientes, utensílios e embalagens destinados a contacto alimentar. Enquadramento geral; não comprova a conformidade de qualquer artigo ilustrado.
+
+## prodprotecao
+
+- Título: Equipamento de proteção individual
+- Entidade: Comissão Europeia
+- URL: https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/personal-protective-equipment-ppe_en
+- Consulta: 2026-10-21
+- Âmbito: Distingue equipamento destinado a proteger de riscos e o seu enquadramento. Não certifica os produtos ou fotografias desta biblioteca.
+
+## prodcaixas
+
+- Título: Sistemas construtivos de caixas de cartão
+- Entidade: FEFCO
+- URL: https://www.fefco.org/technical-information/fefco-code
+- Consulta: 2026-10-21
+- Âmbito: Classificação de construções de embalagem de cartão. Identificar uma forma não demonstra resistência, proteção ou reciclabilidade.
+
+## prodvelas
+
+- Título: Segurança na utilização de velas
+- Entidade: Governo do Reino Unido
+- URL: https://www.gov.uk/government/publications/fire-safety-when-celebrating/fire-safety-when-celebrating-accessible
+- Consulta: 2026-10-21
+- Âmbito: Orientação doméstica sobre chama e materiais inflamáveis; não é um ensaio nem instruções de uma vela específica.
+
+## prodacessos
+
+- Título: Informação aos titulares em sistemas de acesso por cartão
+- Entidade: CNIL
+- URL: https://cnil.fr/fr/RGPD-exemple-information-acces-aux-locaux-professionnels-par-badge
+- Consulta: 2026-10-21
+- Âmbito: Exemplo institucional de informação sobre tratamento de dados num sistema de acesso. Não demonstra capacidade eletrónica de um cartão ou crachá.

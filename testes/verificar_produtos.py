@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT))
 from conteudos.produtos import PRODUTOS, FONTES_PRODUTOS, textos_publicos
 from conteudos.produtos_imagens import fotos_publicas, IMAGENS
 from render_produtos import dados_publicos
+from conteudos.produtos_areas import AREAS
 from conteudos.catalogo import ARTIGOS
 
 
@@ -36,10 +37,26 @@ class Pagina(HTMLParser):
 
 index = Pagina((ROOT/'produtos/index.html').read_text(encoding='utf-8'))
 familias = [g for g in PRODUTOS if g['categoria'] == 'familia']
-assert len(familias) == len(index.cards) == 6
-assert {c['id'] for c in index.cards} == {g['ancora'] for g in familias}
+assert len(familias) == 11 and len(index.cards) == 10
+assert len(AREAS) == 10
+assert [c['id'] for c in index.cards] == [a['id'] for a in AREAS]
+assert all(a['id'] in index.ids for a in AREAS)
 assert {g['slug'] + '.html' for g in familias} <= set(index.links)
-assert len(index.images) == 6
+assert len(index.images) == 10
+html_index = (ROOT/'produtos/index.html').read_text(encoding='utf-8')
+blocos = re.findall(r'<article\b[^>]*class="idea-card product-family-card"[^>]*>(.*?)</article>', html_index, re.S)
+assert len(blocos) == 10
+for area, bloco in zip(AREAS, blocos):
+    cartao = Pagina(bloco)
+    assert len(cartao.images) == 1 and cartao.links
+    assert re.search(r'<h2>\s*' + re.escape(area['titulo']) + r'\s*</h2>', bloco)
+    assert '<p>' in bloco and 'idea-read-more' in bloco
+    assert area['guias'] and all(id in {g['id'] for g in PRODUTOS} for id in area['guias'])
+    assert area['guias'][0] + '.html' in cartao.links
+    for img in cartao.images:
+        assert img['alt'] and (ROOT/'produtos'/img['src']).is_file()
+assert not re.search(r'<nav\b[^>]*aria-label="[Áá]reas de produtos"', html_index)
+assert {'canetas', 'escritorio'} <= set(index.ids)
 assert len(index.ids) == len(set(index.ids))
 assert 'premium' in index.ids and 'brindes-premium.html' in index.links
 entries = json.loads((ROOT/'assets/pesquisa-dados.js').read_text(encoding='utf-8').split('=', 1)[1].strip().removesuffix(';'))
@@ -48,10 +65,15 @@ by_id = {a['id']: a for a in ARTIGOS}
 exportado = (ROOT/'assets/produtos-conteudos.json').read_text(encoding='utf-8')
 assert exportado == dados_publicos(by_id), 'Exportação divergiu da fonte'
 dados = json.loads(exportado)
+novos = {'casa-decoracao-e-cuidados-pessoais', 'desporto-lazer-e-exterior',
+         'eventos-identificacao-e-premios', 'mobilidade-ferramentas-e-seguranca',
+         'embalagem-e-apresentacao'}
+assert novos <= {id for g in PRODUTOS for id in g['relacionados']}
+assert 'brindes-premium' not in {id for a in AREAS for id in a['guias']}
 fotografias = fotos_publicas()
 originais = [f['original'] for s in IMAGENS.values() for f in [s['cartao'], *s['artigo']]]
 assert all(original not in exportado for original in originais)
-assert len(dados['conteudos']) == 7 and dados['schema_version'] == '1.0'
+assert len(dados['conteudos']) == 12 and dados['schema_version'] == '1.0'
 proibidos = re.compile(r'nobrinde|catalogue|catálogo|\bSKU\b|PDF\s+p\.|disponível na nossa|revisão editorial|aprovação interna', re.I)
 assert not proibidos.search(exportado)
 assert not re.search(r'\[[a-z]+\]', exportado), 'Citações devem estar em campos estruturados'
@@ -96,4 +118,9 @@ for g in PRODUTOS:
     assert all(s in entry['text'] for s in g['sinonimos']), g['id']
     assert entry['text'] == ' '.join(textos_publicos(g)), 'Pesquisa divergiu da fonte semântica'
 assert not Pagina((ROOT/'produtos/brindes-premium.html').read_text(encoding='utf-8')).images
-print('OK: seis cartões com fotografias e coleção transversal; 11 visuais nos guias; rotas, fontes, pesquisa e JSON consistentes, sem nomes de origem públicos.')
+assert dados['areas'] == json.loads(json.dumps(AREAS))
+for area in AREAS:
+    for destino, _ in area.get('links', []):
+        assert (ROOT/destino).is_file(), destino
+assert all(a['titulo'] in by_url['produtos/index.html']['text'] for a in AREAS)
+print('OK: dez cartões completos e ordenados com imagem, título, descrição e destino; rotas, pesquisa e JSON consistentes.')

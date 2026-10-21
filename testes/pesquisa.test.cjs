@@ -33,6 +33,13 @@ test('Produtos encontra sinónimos e critérios específicos das famílias', () 
     ['USB-C', 'tecnologia'],
     ['papelaria', 'artigos-de-escritorio'],
     ['coleccao', 'brindes-premium'],
+    ['velas manta', 'casa-decoracao-e-cuidados-pessoais'],
+    ['cadeira piquenique', 'desporto-lazer-e-exterior'],
+    ['pulseiras medalhas', 'eventos-identificacao-e-premios'],
+    ['lanternas ferramentas', 'mobilidade-ferramentas-e-seguranca'],
+    ['separadores encaixe', 'embalagem-e-apresentacao'],
+    ['lancheiras utensílios', 'garrafas-copos-e-canecas'],
+    ['dobráveis viagem', 'sacos-e-mochilas'],
   ]) {
     assert.ok(find(entries, query).some(e => e.url === `produtos/${slug}.html`), query);
   }

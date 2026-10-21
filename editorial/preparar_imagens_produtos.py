@@ -34,7 +34,7 @@ def preparar(foto, familia, uso):
     registos.append(dict(familia=familia, uso=uso, original=foto['original'],
         publico=dados['url'], sha256=digest, width=width, height=height,
         autoria=None, licenca=None,
-        utilizacao_local='Fotografias das seis pastas expressamente indicadas pelo utilizador em 2026-10-12.',
+        utilizacao_local='Fotografias locais de Produtos selecionadas para os guias; revisão de 2026-10-21.',
         transformacoes='Nenhuma: cópia binária sob nome público neutro.'))
     return dados
 
@@ -45,3 +45,4 @@ for id, selecao in IMAGENS.items():
 (destino/'imagens.json').write_text(json.dumps(publico, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 (ROOT/'editorial/produtos-imagens.json').write_text(json.dumps(registos, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print(f'Preparadas {len(registos)} imagens ilustrativas, sem alteração dos originais.')
+

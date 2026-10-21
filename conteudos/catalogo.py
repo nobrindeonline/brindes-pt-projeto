@@ -222,7 +222,8 @@ for artigo in ARTIGOS:
 # Produtos deriva da fonte sem?ntica; as ?ncoras antigas mant?m-se.
 sec_produtos = next(s for s in SECCOES if s['id'] == 'produtos')
 sec_produtos['resumo'] = 'Compreenda e compare famílias de brindes pela utilização, construção e personalização.'
-sec_produtos['grupos'] = [(g['ancora'], g['titulo'], g['resumo'], g['titulo']) for g in PRODUTOS]
+from conteudos.produtos_areas import AREAS
+sec_produtos['grupos'] = [(a['id'], a['titulo'], a['resumo'], a['titulo']) for a in AREAS] + [(g['ancora'], g['titulo'], g['resumo'], g['titulo']) for g in PRODUTOS if g['ancora'] in ('canetas', 'escritorio', 'premium')]
 
 from conteudos.mercado import MERCADO, AREAS as TEMAS_MERCADO
 ARTIGOS.extend(MERCADO)

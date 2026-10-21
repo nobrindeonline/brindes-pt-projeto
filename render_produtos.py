@@ -4,8 +4,16 @@ import json
 import re
 from conteudos.produtos import PRODUTOS, FONTES_PRODUTOS, exportacao_publica
 from conteudos.produtos_imagens import fotos_publicas
+from conteudos.produtos_areas import AREAS
 
 POR_ID = {g['id']: g for g in PRODUTOS}
+
+
+def data_legivel(iso):
+    ano, mes, dia = iso.split('-')
+    meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
+             'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+    return f'{int(dia)} de {meses[int(mes)-1]} de {ano}'
 
 
 def media(foto, caption=False):
@@ -37,7 +45,7 @@ def render_guia(g, artigos, shell, link, card):
 
     secoes = []
     tipos = ''.join('<div class="product-variant"><h3>' + escape(v['nome']) + '</h3><p>' +
-        referencias(v['descricao']) + '</p><p><strong>Compare:</strong> ' + referencias(v['comparar']) +
+        referencias(v['descricao']) + '</p><p><strong>Aspetos que distinguem as opções:</strong> ' + referencias(v['comparar']) +
         '</p><p><strong>Contexto possível:</strong> ' + referencias(v['contexto']) + '</p></div>' for v in g['tipos'])
     secoes.append(('tipos', 'Tipos e variantes' if g['categoria'] == 'familia' else 'Formas de compor a seleção', tipos))
     secoes.append(('usos', 'Usos e contextos', lista(g['usos_contextos'])))
@@ -58,7 +66,7 @@ def render_guia(g, artigos, shell, link, card):
     fontes = '<p>As referências sustentam os factos identificados no texto. Os tipos, contextos e critérios de escolha são orientação editorial; as instruções de um fabricante aplicam-se ao seu próprio âmbito.</p><ul class="sources">'
     for k in g['fontes']:
         f = FONTES_PRODUTOS[k]
-        fontes += '<li id="fonte-' + k + '">' + link(f['url'], f['titulo']) + '<br>' + escape(f['entidade']) + ' · Consulta: <time datetime="' + f['data_consulta'] + '">12 de outubro de 2026</time><p>' + escape(f['ambito']) + '</p></li>'
+        fontes += '<li id="fonte-' + k + '">' + link(f['url'], f['titulo']) + '<br>' + escape(f['entidade']) + ' · Consulta: <time datetime="' + f['data_consulta'] + '">' + data_legivel(f['data_consulta']) + '</time><p>' + escape(f['ambito']) + '</p></li>'
     secoes.append(('fontes', 'Fontes e âmbito', fontes + '</ul>'))
     toc = ''.join(link('#' + id, titulo) for id, titulo, _ in secoes)
     fotografias = fotos_publicas().get(g['id'], {}).get('artigo', [])
@@ -66,30 +74,41 @@ def render_guia(g, artigos, shell, link, card):
         ''.join(media(f, True) for f in fotografias if f['secao'] == id) + '</section>' for id, titulo, texto in secoes)
     etiqueta = 'Família de produtos' if g['categoria'] == 'familia' else 'Coleção editorial · Várias famílias'
     intro = '<nav class="crumb" aria-label="Percurso">' + link('../index.html','Início') + ' / ' + link('index.html','Produtos') + ' / <span>' + escape(g['titulo']) + '</span></nav>'
-    intro += '<div class="page-intro"><span class="eyebrow">' + etiqueta + '</span><h1>' + escape(g['titulo']) + '</h1><p>' + escape(g['resumo']) + '</p><p class="documentary-date">Revisão documental: <time datetime="' + g['data_revisao'] + '">12 de outubro de 2026</time></p></div>'
+    area = next((a for a in AREAS if g['id'] in a.get('guias', [])), None)
+    if area:
+        intro += '<p class="context-links">' + link('index.html#' + area['id'], area['titulo']) + '</p>'
+    intro += '<div class="page-intro"><span class="eyebrow">' + etiqueta + '</span><h1>' + escape(g['titulo']) + '</h1><p>' + escape(g['resumo']) + '</p><p class="documentary-date">Revisão documental: <time datetime="' + g['data_revisao'] + '">' + data_legivel(g['data_revisao']) + '</time></p></div>'
     relacionados = '<section><h2>Continue a explorar</h2><div class="article-grid">' + ''.join(card(artigos[id], '../') for id in g['relacionados']) + '</div></section>'
     conteudo = intro + '<div class="reading-layout"><aside class="contents"><strong>Neste guia</strong><nav aria-label="Índice do artigo">' + toc + '</nav></aside><article class="reading">' + corpo + '</article></div>' + relacionados + '<a class="back-to-ideas" href="index.html">← Voltar a Produtos</a>'
     return shell(g['titulo'], g['resumo'], conteudo, '../', 'produtos')
 
 
 def render_entrada(shell, link):
-    familias = [g for g in PRODUTOS if g['categoria'] == 'familia']
     fotografias = fotos_publicas()
-    cards = ''.join('<article class="idea-card product-family-card" id="' + g['ancora'] + '">' +
-        media(fotografias[g['id']]['cartao']) + '<div class="idea-card-copy"><span class="eyebrow">Guia de família</span><h2>' +
-        escape(g['titulo']) + '</h2><p>' + escape(g['resumo']) + '</p><a class="link idea-read-more" href="' +
-        g['slug'] + '.html" aria-label="Explorar o guia: ' + escape(g['titulo'], quote=True) +
-        '">Explorar o guia <span aria-hidden="true">→</span></a></div></article>' for g in familias)
-    intro = '<nav class="crumb" aria-label="Percurso">' + link('../index.html','Início') + ' / Produtos</nav><div class="page-intro"><span class="eyebrow">Compreender e comparar</span><h1>Produtos</h1><p>Explore famílias de brindes pela utilização, construção e personalização. Cada guia ajuda a comparar variantes e a preparar as perguntas sobre o artigo escolhido.</p></div>'
-    grelha = '<section class="product-family-list" aria-label="Guias das famílias"><div class="ideas-grid products-grid">' + cards + '</div></section>'
-    ajuda = '<section class="note"><h2>Ainda não sabe por onde começar?</h2><p>Defina a utilização e quem vai receber o artigo. Depois compare materiais e a área onde pretende a mensagem.</p><div class="context-links">' + link('../guias/como-escolher-brindes-para-um-evento.html','Escolher pelo uso num evento') + link('../publicos/index.html','Pensar no destinatário') + link('../guias/como-escolher-o-material.html','Comparar materiais') + link('../guias/como-escolher-a-tecnica.html','Escolher a personalização') + '</div></section>'
+    cards = []
+    for area in AREAS:
+        if 'guias' in area:
+            destinos = [(POR_ID[id]['slug'] + '.html', POR_ID[id]['titulo']) for id in area['guias']]
+            foto = fotografias[area['imagem']]['cartao']
+        else:
+            destinos = [('../' + url, titulo) for url, titulo in area['links']]
+            foto = area['visual']
+        aliases = '<span id="canetas"></span><span id="escritorio"></span>' if area['id'] == 'papelaria' else ''
+        links = ''.join('<a class="link idea-read-more" href="' + escape(url, quote=True) + '">' + escape(titulo) + ' <span aria-hidden="true">→</span></a>' for url, titulo in destinos)
+        cards.append('<article class="idea-card product-family-card" id="' + area['id'] + '">' + aliases +
+            media(foto) + '<div class="idea-card-copy"><span class="eyebrow">Área de produtos</span><h2>' +
+            escape(area['titulo']) + '</h2><p>' + escape(area['resumo']) + '</p>' + links + '</div></article>')
+    intro = '<nav class="crumb" aria-label="Percurso">' + link('../index.html','Início') + ' / Produtos</nav><div class="page-intro"><span class="eyebrow">Compreender e comparar</span><h1>Produtos</h1><p>Explore dez áreas pela utilização, construção e personalização. Cada cartão liga a um guia de produto ou a conteúdo relacionado já disponível na biblioteca.</p></div>'
+    grelha = '<section class="product-family-list" aria-label="Áreas de produtos"><div class="ideas-grid products-grid">' + ''.join(cards) + '</div></section>'
+    ajuda = '<section class="note"><h2>Escolher pelo destinatário ou pela ocasião</h2><p>Públicos, setores profissionais e ocasiões ajudam a definir o uso. Não são famílias de produtos. Explore crianças e contexto escolar em Para quem; procure temas sazonais em Para quem e Tendências.</p><div class="context-links">' + link('../publicos/index.html','Para quem') + link('../tendencias/index.html','Tendências') + link('../guias/como-escolher-o-material.html','Comparar materiais') + link('../guias/como-escolher-a-tecnica.html','Escolher a personalização') + '</div></section>'
     premium = POR_ID['brindes-premium']
     colecao = '<section id="premium" class="product-collection"><span class="eyebrow">Seleção transversal</span><h2>Premium: utilidade e apresentação</h2><p>' + escape(premium['resumo']) + ' A designação não garante qualidade superior.</p>' + link('brindes-premium.html','Explorar a coleção editorial →') + '</section>'
-    return shell('Produtos', 'Guias para compreender e comparar seis famílias de brindes e uma seleção editorial transversal.', intro + grelha + ajuda + colecao, '../', 'produtos')
+    return shell('Produtos', 'Dez áreas para explorar produtos, com guias de famílias e ligações relacionadas.', intro + grelha + ajuda + colecao, '../', 'produtos')
 
 
 def dados_publicos(artigos):
     dados = exportacao_publica()
+    dados['areas'] = AREAS
     fotografias = fotos_publicas()
     def destino(id):
         a = artigos[id]

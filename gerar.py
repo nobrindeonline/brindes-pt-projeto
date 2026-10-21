@@ -762,8 +762,11 @@ if __name__=='__main__':
             neutral = pagina_publica(repaired) if 'nobrinde' in repaired.lower() else corrigir_ligacoes(repaired)
             if path == 'creditos-imagens.html':
                 section_id, credits = ('produtos-ilustrativos', CREDITOS_PRODUTOS) if args.secao=='produtos' else ('guias-ilustrativos', CREDITOS_GUIAS)
-                neutral = re.sub(r'<section\b[^>]*id="'+section_id+r'"[^>]*>.*?</section>', '', neutral, flags=re.S)
-                neutral = neutral.replace('</main>', credits + '</main>')
+                pattern = r'<section\b[^>]*id="'+section_id+r'"[^>]*>.*?</section>'
+                if re.search(pattern, neutral, re.S):
+                    neutral = re.sub(pattern, lambda _: credits, neutral, flags=re.S)
+                else:
+                    neutral = neutral.replace('</main>', credits + '</main>')
             if neutral != previous: target.write_text(neutral, encoding='utf-8')
     if args.secao=='mercado':
         atualizar_pesquisa_mercado(MERCADO, incluir_entrada=not args.preservar_entrada)

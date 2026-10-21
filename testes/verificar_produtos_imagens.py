@@ -8,10 +8,13 @@ from PIL import Image
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from conteudos.produtos_imagens import IMAGENS, fotos_publicas
+from conteudos.produtos_areas import AREAS
 
 expected_folders = dict(zip(
     ['canetas-e-escrita','garrafas-copos-e-canecas','texteis','sacos-e-mochilas','tecnologia','artigos-de-escritorio'],
-    ['CanetaseEscrita','GarrafasCoposCanecas','Texteis','SacoseMochilas','Tecnologia','Artigosdeescritorio']))
+    ['Papelaria, escritório e escrita','Bebidas, refeições e cozinha','Têxtil, vestuário e acessórios','Sacos, mochilas e viagem','Tecnologia e acessórios digitais','Papelaria, escritório e escrita']))
+expected_folders.update({a['guias'][0]: a['titulo'] for a in AREAS
+    if a['id'] in ['casa', 'desporto', 'eventos', 'mobilidade', 'embalagem']})
 public=fotos_publicas()
 used=[]
 for id, selecao in IMAGENS.items():
@@ -30,9 +33,16 @@ for id, selecao in IMAGENS.items():
         assert asset['funcao']=='ilustrativa' and asset['fonte_tecnica'] is False
         assert not any(s in json.dumps(asset).lower() for s in ['nb2','nobrinde','mah','rpet','sku'])
         used.append(asset['url'])
-assert len(used)==len(set(used))==17, 'Não repetir fotografias entre cartões e artigos'
+assert len(used)==len(set(used))==29, 'Não repetir fotografias entre cartões e artigos'
 records=json.loads((ROOT/'editorial/produtos-imagens.json').read_text(encoding='utf-8'))
-assert len(records)==17 and all(r['autoria'] is None and r['licenca'] is None for r in records)
+assert len(records)==29 and all(r['autoria'] is None and r['licenca'] is None for r in records)
 credits=(ROOT/'creditos-imagens.html').read_text(encoding='utf-8')
 assert credits.count('id="produtos-ilustrativos"')==1
-print('OK: 17 fotografias das pastas corretas, sem recorte, conversão, repetição ou alteração dos originais; créditos e proporções documentados.')
+for area in AREAS:
+    if 'visual' not in area:
+        continue
+    foto = area['visual']
+    with Image.open(ROOT/foto['url']) as image:
+        assert image.size == (foto['width'], foto['height'])
+        image.verify()
+print('OK: 29 fotografias das dez áreas, decodificadas e sem alteração dos originais; créditos e proporções documentados.')

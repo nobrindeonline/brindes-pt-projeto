@@ -7,6 +7,28 @@
 
 ## Atualizações
 
+### Produtos — 21 de outubro de 2026
+
+A entrada apresenta dez cartões visuais. As cinco áreas antes ligadas a
+conteúdos provisórios têm guias próprios: Casa, Desporto, Eventos, Mobilidade
+e Embalagem. As seis famílias anteriores e a coleção transversal Premium
+conservam os URLs; os guias existentes foram desenvolvidos com novas variantes
+e critérios. A secção tem agora doze artigos.
+
+Edite `conteudos/produtos.py`, `conteudos/produtos_complementos.py` e
+`conteudos/produtos_areas.py`. A seleção das 29 imagens locais está em
+`conteudos/produtos_imagens.py`; todas usam cópias públicas neutras e preservam
+os originais das dez pastas. Não se deduzem materiais ou certificações dos
+nomes dos ficheiros.
+
+Execute `python gerar.py --secao produtos`,
+`python editorial/gerar_fontes_produtos.py`, `python verificar.py`,
+`python testes/verificar_produtos.py`,
+`.venv/Scripts/python.exe testes/verificar_produtos_imagens.py` e
+`node --test testes/pesquisa.test.cjs`.
+O relatório da revisão, fontes e limites está em
+`editorial/produtos-guias-2026-10-21.md`.
+
 ### Mercado — 14 de outubro de 2026
 
 A entrada `mercado/index.html` reúne seis áreas de produto: Papelaria e
