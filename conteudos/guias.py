@@ -1,8 +1,8 @@
 """Guias: fonte de leitura, pesquisa e dados estruturados."""
 
-DATA_REVISAO_GUIAS = '2026-10-12'
+DATA_REVISAO_GUIAS = '2026-10-22'
 INTRO_GUIAS = 'Escolha o percurso que corresponde à sua dúvida: definir o artigo e a personalização, preparar a arte ou rever a proposta antes de produzir.'
-RESUMO_GUIAS = 'Sete guias para escolher, preparar ficheiros e cor e rever antes de produzir.'
+RESUMO_GUIAS = 'Guias para escolher, preparar ficheiros e cor e rever antes de produzir.'
 
 FONTES_GUIAS_META = {'adobevetor': {'titulo': 'Understand raster and vector files',
                 'entidade': 'Adobe',
@@ -542,6 +542,12 @@ GUIAS = [{'id': 'como-escolher-brindes-para-um-evento',
   'links_contexto': [{'titulo': 'Serigrafia', 'url': 'tecnicas/serigrafia.html'},
                      {'titulo': 'Impressão digital UV', 'url': 'tecnicas/impressao-uv.html'},
                      {'titulo': 'Bordado', 'url': 'tecnicas/bordado.html'}]}]
+
+from conteudos.guia_standard import GUIA as GUIA_STANDARD, FONTES as FONTES_STANDARD
+
+FONTES_GUIAS_META.update(FONTES_STANDARD)
+FONTES_GUIAS.update({k: (f['entidade'] + ' — ' + f['titulo'], f['url']) for k, f in FONTES_STANDARD.items()})
+GUIAS.insert(0, GUIA_STANDARD)
 
 GRUPOS_GUIAS = [('escolher', 'Escolher', 'Uso e destinatários primeiro; material e técnica depois.', 'Escolher'),
  ('cor',

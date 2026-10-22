@@ -1,5 +1,16 @@
 [
   {
+    "guia": "produto-standard-ou-a-medida",
+    "uso": "cartao",
+    "original": "assets/guias/MedidavsStandard/images.jpg",
+    "publico": "assets/guias/visuais/standard-medida-cartao.jpg",
+    "sha256": "d8183bdd54a8e58ae02c561826a64d66863e94451a976a0602be3dca7e9d7d58",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Imagem fornecida para o cartão do guia standard ou à medida, solicitada em 2026-10-22."
+  },
+  {
     "guia": "como-escolher-a-tecnica",
     "uso": "cartao",
     "original": "assets/guias/ComoEscolheraTecnica/images.jpg",

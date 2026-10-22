@@ -9,6 +9,8 @@ def foto(pasta, ficheiro, nome_publico, alt, secao=None, legenda=None):
                 alt=alt, secao=secao, legenda=legenda)
 
 IMAGENS_GUIAS = {
+ 'produto-standard-ou-a-medida': dict(cartao=foto('MedidavsStandard','images.jpg','standard-medida-cartao.jpg',
+     'Dois sacos claros com cordão, de dimensões diferentes, um deles apoiado numa mão, sob uma pergunta sobre o tamanho do projeto.'), artigo=[]),
  'como-escolher-a-tecnica': dict(cartao=foto('ComoEscolheraTecnica','images.jpg','tecnica-cartao.jpg',
      'Três t-shirts, cinzenta, escura e branca, penduradas em cabides com desenhos na frente.'), artigo=[]),
  'como-escolher-brindes-para-um-evento': dict(cartao=foto('ComoEscolherBrindesEvento','brindes-para-feiras.jpg','evento-cartao.jpg',

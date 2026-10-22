@@ -3,13 +3,14 @@
   "idioma": "pt-PT",
   "site": "brindes.pt",
   "introducao": "Escolha o percurso que corresponde à sua dúvida: definir o artigo e a personalização, preparar a arte ou rever a proposta antes de produzir.",
-  "data_revisao": "2026-10-12",
+  "data_revisao": "2026-10-22",
   "percursos": [
     {
       "id": "escolher",
       "titulo": "Escolher",
       "resumo": "Uso e destinatários primeiro; material e técnica depois.",
       "guias": [
+        "produto-standard-ou-a-medida",
         "como-escolher-brindes-para-um-evento",
         "como-escolher-o-material",
         "como-escolher-a-tecnica"
@@ -35,6 +36,281 @@
     }
   ],
   "guias": [
+    {
+      "id": "produto-standard-ou-a-medida",
+      "slug": "produto-standard-ou-a-medida",
+      "url": "guias/produto-standard-ou-a-medida.html",
+      "titulo": "Produto standard ou à medida?",
+      "categoria": "Escolher",
+      "resumo": "Distinga um produto existente, a personalização gráfica, a adaptação e o desenvolvimento à medida. Decida a partir da função e dos requisitos.",
+      "resposta_breve": {
+        "texto": "Um produto standard parte de um desenho existente; um personalizado recebe elementos gráficos; um adaptado altera características da solução; um desenvolvido à medida nasce de requisitos específicos. Personalizar não significa desenvolver à medida. Escolha o nível de intervenção que resolve a necessidade e confirme o que precisa de validar.",
+        "fontes": []
+      },
+      "ordem_leitura": [
+        "parte-0",
+        "parte-1",
+        "parte-2",
+        "parte-3",
+        "parte-4",
+        "parte-5",
+        "parte-6",
+        "parte-7",
+        "parte-8",
+        "parte-9",
+        "parte-10"
+      ],
+      "passos": [
+        {
+          "id": "parte-0",
+          "titulo": "A decisão começa na necessidade",
+          "texto": "Este guia ajuda a decidir quanto é preciso intervir num produto. Descreva o uso, os destinatários e o resultado esperado antes de escolher uma forma. As quatro categorias são uma convenção editorial para comparar o âmbito do trabalho; não são uma classificação legal nem uma escala de qualidade.",
+          "fontes": []
+        },
+        {
+          "id": "parte-1",
+          "titulo": "Quatro níveis de intervenção, com exemplos",
+          "texto": "Produto standard: parte de um desenho e de uma construção já existentes. Exemplo hipotético: escolher um estojo existente cuja dimensão e fecho servem o conteúdo previsto.\n\nProduto personalizado: recebe um logótipo ou uma mensagem, sem alteração estrutural relevante. No mesmo exemplo, aplica-se uma mensagem na frente do estojo.\n\nProduto adaptado: parte de uma solução existente e altera cor, dimensões, material, componentes ou embalagem. Por exemplo, ajustar a altura do estojo para acomodar um objeto mais comprido, depois de avaliar a viabilidade.\n\nProduto desenvolvido à medida: o desenho, os requisitos e a construção são desenvolvidos para uma necessidade específica. Por exemplo, conceber um estojo com alojamentos e sistema de fecho definidos para um conjunto particular. São exemplos imaginados, sem referência a artigos comerciais.",
+          "fontes": []
+        },
+        {
+          "id": "parte-2",
+          "titulo": "Grau de ajuste e significado de exclusivo",
+          "texto": "O ajuste pode ser apenas visual ou envolver dimensões, materiais, componentes, funcionamento, embalagem e integração com outros elementos. Identifique cada característica que muda: uma alteração aparentemente pequena pode afetar fabrico e montagem.\n\nExclusividade do projeto significa aqui que o desenho ou a combinação de características foi criada para aquele objetivo. Exclusividade contratual corresponde a um acordo que restringe a utilização ou disponibilização a terceiros, nas condições acordadas. Convém definir objeto, duração, território e utilizações permitidas.\n\nProteção legal é uma questão distinta. O INPI descreve o registo de desenhos ou modelos como proteção da aparência do produto, sujeito a requisitos e procedimentos. Desenvolver à medida não confirma por si só proteção, titularidade ou exclusividade legal. Este guia não avalia direitos de um caso concreto.",
+          "fontes": [
+            "concecaofabrico",
+            "designinpi"
+          ]
+        },
+        {
+          "id": "parte-3",
+          "titulo": "Como decidir o nível de intervenção",
+          "texto": "O produto existente já resolve a necessidade? Se sim, verifique se uma personalização visual é suficiente. Se não, escreva que característica tem mesmo de mudar e porquê.\n\nO ajuste afeta materiais, funcionamento, ferramentas ou processo de produção? Uma adaptação pode ser suficiente, mas deve ser avaliada como alteração técnica. Se os requisitos exigirem outra construção, considere desenvolver o conceito. Quem pode usar o desenho e em que condições? O que deve ser validado numa amostra antes da produção? Registe estas respostas antes de aprovar o âmbito.",
+          "fontes": []
+        },
+        {
+          "id": "parte-4",
+          "titulo": "Comparar diferenciação, controlo e desenvolvimento",
+          "texto": "Diferenciação: no standard, a identidade vem da escolha e do contexto; no personalizado, também da arte aplicada; no adaptado, das características alteradas; à medida, pode estender-se à construção. Nenhum destes níveis assegura exclusividade contratual.\n\nControlo sobre o desenho: o standard conserva uma base definida; a personalização permite decidir a aplicação gráfica dentro dos limites do suporte; a adaptação permite rever características acordadas; à medida, o conceito pode ser definido desde o início, sujeito à viabilidade.\n\nEsforço de desenvolvimento: escolher e verificar uma solução existente difere de preparar arte, rever especificações ou desenvolver e ensaiar uma construção. Aumentar o âmbito pode exigir mais decisões e validações; não existe uma duração comum a todos os projetos.",
+          "fontes": [
+            "desenvolvimento"
+          ]
+        },
+        {
+          "id": "parte-5",
+          "titulo": "Comparar investimento, quantidade e prazo",
+          "texto": "Investimento inicial: separe seleção e preparação gráfica de desenho, protótipos, ferramentas e testes que sejam necessários. Custo total: inclua desenvolvimento, produção, embalagem, transporte, alterações e utilização prevista; não compare apenas o custo de uma unidade.\n\nQuantidade: a quantidade estimada influencia a escolha de processos e a distribuição do investimento inicial pelas unidades. Prazo: uma solução existente também exige confirmação e preparação; adaptar ou desenvolver pode acrescentar ciclos de amostra e aprovação. Materiais, geometria e processo condicionam a análise, sem valores universais.",
+          "fontes": [
+            "concecaofabrico"
+          ]
+        },
+        {
+          "id": "parte-6",
+          "titulo": "Comparar flexibilidade, riscos e reutilização",
+          "texto": "Flexibilidade: num standard ou personalizado, pode ser possível escolher outra base, mas há limites à alteração da construção. Numa adaptação ou num desenvolvimento, mudar o desenho exige rever impactos, sobretudo depois de preparar ferramentas ou iniciar produção.\n\nRiscos: no standard, confirme adequação ao uso; no personalizado, legibilidade e compatibilidade da aplicação; no adaptado, desempenho das características alteradas; à medida, também a viabilidade do conjunto. Reutilização: uma base existente pode servir novos contextos, enquanto um desenho específico pode continuar útil em projetos repetidos. Confirme direitos, conservação de ficheiros, disponibilidade de componentes e condições de reutilização de ferramentas.",
+          "fontes": []
+        },
+        {
+          "id": "parte-7",
+          "titulo": "Da definição do pedido à entrega",
+          "texto": "1. Defina objetivo, destinatários, uso e requisitos verificáveis. 2. Avalie a viabilidade e identifique restrições. 3. Desenvolva o conceito e as especificações. 4. Escolha materiais e processos compatíveis.\n\n5. Crie um protótipo para responder às dúvidas relevantes: forma, encaixe, manuseamento ou funcionamento. Pode não reproduzir o material ou o processo final; registe os seus limites. 6. Valide uma amostra representativa e os ensaios necessários. A prototipagem integra o desenvolvimento, mas a sequência concreta depende do projeto.\n\n7. Aprove alterações por escrito, com versão identificada. 8. Prepare produção e pontos de controlo. 9. Controle a qualidade pelos critérios acordados. 10. Planeie embalagem, identificação, transporte e entrega desde o início. Esta sequência é uma proposta editorial e pode exigir regressar a etapas anteriores.",
+          "fontes": [
+            "desenvolvimento"
+          ]
+        },
+        {
+          "id": "parte-8",
+          "titulo": "Custos e planeamento",
+          "texto": "Peça uma discriminação do que está incluído: desenho, protótipos, ferramentas, testes, produção e embalagem. Defina também como serão avaliadas alterações e novas amostras. A seleção do material e do processo deve acompanhar as decisões de desenho, pois estas afetam a possibilidade de fabricar e montar a peça.\n\nTrabalhe com marcos de decisão: requisitos aceites, conceito revisto, amostra aprovada e produção autorizada. Registe dependências e margem para corrigir problemas. Custos, quantidades e prazos dependem do produto, dos materiais, dos processos e do âmbito; não há um valor aplicável a todos os pedidos.",
+          "fontes": [
+            "concecaofabrico"
+          ]
+        },
+        {
+          "id": "parte-9",
+          "titulo": "Qualidade, desenho, ficheiros e ferramentas",
+          "texto": "Defina por escrito dimensões, materiais, tolerâncias, acabamento e critérios de aceitação. Identifique a amostra aprovada, a versão dos ficheiros e os testes que demonstram a função prevista. Uma imagem não confirma resistência, composição ou desempenho.\n\nAcorde como aprovar alterações e quem autoriza a passagem à produção. Clarifique a utilização e entrega dos ficheiros, a titularidade ou direitos de utilização do desenho, e as restrições de partilha. Registe separadamente a propriedade, guarda, manutenção e reutilização de moldes e ferramentas, incluindo acesso futuro. Pagar o desenvolvimento não deve ser tratado como confirmação suficiente dessas condições.\n\nPara proteção da aparência em Portugal, consulte os requisitos do INPI; essa informação não substitui a definição das condições do projeto nem determina a propriedade das ferramentas.",
+          "fontes": [
+            "designinpi"
+          ]
+        },
+        {
+          "id": "parte-10",
+          "titulo": "Sustentabilidade e ciclo de vida",
+          "texto": "Compare a mesma função e o mesmo cenário de utilização: durabilidade esperada, limpeza, possibilidade de reparação, reutilização, materiais, separação de componentes, embalagem e fim de vida. Durabilidade, reparação e reciclagem são dimensões reconhecidas no enquadramento europeu de ecodesign.\n\nUm produto standard não é automaticamente mais sustentável, nem um desenvolvimento à medida o é por permitir ajustes. Peça evidência sobre os aspetos relevantes e considere desperdício de produção, transporte e uso real. Um ajuste de tamanho pode melhorar a adequação, mas a imagem de dois tamanhos não demonstra benefício ambiental.",
+          "fontes": [
+            "ciclodevida"
+          ]
+        }
+      ],
+      "casos": [],
+      "erros": [
+        {
+          "erro": "Confundir logótipo com desenvolvimento",
+          "prevencao": {
+            "texto": "Descreva separadamente a arte gráfica e as alterações ao desenho ou à construção.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Interpretar à medida como exclusivo",
+          "prevencao": {
+            "texto": "Defina direitos e restrições de utilização; confirme separadamente a proteção legal aplicável.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Aprovar apenas a aparência",
+          "prevencao": {
+            "texto": "Relacione amostra, especificações e testes com os requisitos de utilização.",
+            "fontes": []
+          }
+        }
+      ],
+      "checklist": [
+        "Objetivo e destinatários.",
+        "Utilização prevista e requisitos funcionais.",
+        "Dimensões úteis, tolerâncias e interfaces.",
+        "Materiais, componentes e acabamento.",
+        "Quantidade estimada e variantes.",
+        "Data necessária e etapas de aprovação.",
+        "Personalização: ficheiros, posição, dimensão e cor.",
+        "Embalagem, identificação e condições de entrega.",
+        "Protótipos, amostras e testes necessários.",
+        "Critérios de aprovação e responsável por cada decisão.",
+        "Direitos de utilização do desenho e ficheiros; condições de exclusividade, se pretendidas.",
+        "Propriedade, guarda e reutilização de ferramentas; tratamento de alterações."
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Personalizar com um logótipo torna o produto feito à medida?",
+          "resposta": {
+            "texto": "Não. Se a construção se mantém e apenas recebe elementos gráficos, trata-se de personalização no sentido usado neste guia.",
+            "fontes": []
+          }
+        },
+        {
+          "pergunta": "Um produto feito à medida é automaticamente exclusivo?",
+          "resposta": {
+            "texto": "Não. Um desenho criado para um projeto não confirma restrições de utilização por terceiros. Acorde essas condições e avalie separadamente os direitos de proteção aplicáveis.",
+            "fontes": [
+              "designinpi"
+            ]
+          }
+        },
+        {
+          "pergunta": "Quando é útil criar um protótipo?",
+          "resposta": {
+            "texto": "Quando há dúvidas de forma, encaixe, utilização ou funcionamento que precisam de ser verificadas antes de avançar. Defina o que o protótipo permite avaliar e o que exige uma amostra do processo final.",
+            "fontes": [
+              "desenvolvimento"
+            ]
+          }
+        },
+        {
+          "pergunta": "O que devo aprovar antes da produção?",
+          "resposta": {
+            "texto": "A versão do desenho e da arte, especificações, materiais, dimensões e tolerâncias, acabamento, amostra representativa, testes e critérios de aceitação, embalagem e alterações acordadas. Identifique o responsável pela autorização.",
+            "fontes": []
+          }
+        }
+      ],
+      "esquema": [
+        {
+          "titulo": "Necessidade",
+          "descricao": "Defina a função e os requisitos."
+        },
+        {
+          "titulo": "Intervenção",
+          "descricao": "Escolha, personalize, adapte ou desenvolva."
+        },
+        {
+          "titulo": "Validação",
+          "descricao": "Aprove especificações e amostra antes de produzir."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-escolher-o-material",
+          "titulo": "Como escolher o material de um brinde",
+          "url": "guias/como-escolher-o-material.html"
+        },
+        {
+          "id": "como-escolher-a-tecnica",
+          "titulo": "Como escolher a técnica",
+          "url": "guias/como-escolher-a-tecnica.html"
+        },
+        {
+          "id": "como-avaliar-uma-maquete",
+          "titulo": "Como avaliar uma maquete antes da produção",
+          "url": "guias/como-avaliar-uma-maquete.html"
+        }
+      ],
+      "links_contexto": [
+        {
+          "titulo": "Materiais",
+          "url": "materiais/index.html"
+        },
+        {
+          "titulo": "Técnicas",
+          "url": "tecnicas/index.html"
+        },
+        {
+          "titulo": "Produtos",
+          "url": "produtos/index.html"
+        },
+        {
+          "titulo": "Da ideia à entrega",
+          "url": "industria/da-ideia-a-entrega.html"
+        }
+      ],
+      "fontes": [
+        {
+          "id": "designinpi",
+          "titulo": "Pedir o registo de um desenho ou modelo",
+          "entidade": "INPI / Justiça.gov.pt",
+          "url": "https://justica.gov.pt/Servicos/Pedir-o-registo-de-um-desenho-ou-modelo",
+          "data_consulta": "2026-10-22",
+          "ambito": "Registo da aparência do produto em Portugal e requisitos do pedido. Não determina titularidade contratual, ferramentas ou exclusividade de um projeto concreto."
+        },
+        {
+          "id": "desenvolvimento",
+          "titulo": "Product Design and Development",
+          "entidade": "NIST",
+          "url": "https://www.nist.gov/mep/product-design-and-development",
+          "data_consulta": "2026-10-22",
+          "ambito": "Enquadramento geral de desenvolvimento, prototipagem e passagem ao fabrico. A sequência de aprovação proposta neste guia é editorial."
+        },
+        {
+          "id": "concecaofabrico",
+          "titulo": "DFMA Tips",
+          "entidade": "Universidade da Florida — Design Laboratory",
+          "url": "https://web.mae.ufl.edu/designlab/DFMA%20Tips/DFMA%20Tips.htm",
+          "data_consulta": "2026-10-22",
+          "ambito": "Relação entre decisões de desenho, materiais, fabrico, montagem e custos. Não estabelece valores, quantidades ou prazos para brindes."
+        },
+        {
+          "id": "ciclodevida",
+          "titulo": "Ecodesign requirements for more sustainable products",
+          "entidade": "Conselho da União Europeia",
+          "url": "https://www.consilium.europa.eu/en/policies/ecodesign-requirements-for-more-sustainable-products/",
+          "data_consulta": "2026-10-22",
+          "ambito": "Durabilidade, reutilização, reparação e reciclagem como dimensões do ecodesign. Não certifica produtos nem demonstra superioridade ambiental de uma opção."
+        }
+      ],
+      "data_revisao": "2026-10-22",
+      "imagens": {
+        "cartao": {
+          "url": "assets/guias/visuais/standard-medida-cartao.jpg",
+          "alt": "Dois sacos claros com cordão, de dimensões diferentes, um deles apoiado numa mão, sob uma pergunta sobre o tamanho do projeto.",
+          "width": 335,
+          "height": 597,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": []
+      }
+    },
     {
       "id": "como-escolher-brindes-para-um-evento",
       "slug": "como-escolher-brindes-para-um-evento",

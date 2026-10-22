@@ -1,4 +1,15 @@
 {
+  "produto-standard-ou-a-medida": {
+    "cartao": {
+      "url": "assets/guias/visuais/standard-medida-cartao.jpg",
+      "alt": "Dois sacos claros com cordão, de dimensões diferentes, um deles apoiado numa mão, sob uma pergunta sobre o tamanho do projeto.",
+      "width": 335,
+      "height": 597,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": []
+  },
   "como-escolher-a-tecnica": {
     "cartao": {
       "url": "assets/guias/visuais/tecnica-cartao.jpg",

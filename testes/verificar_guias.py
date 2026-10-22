@@ -1,4 +1,4 @@
-"""Contrato editorial dos sete Guias: fontes, identidade, rotas, pesquisa e dados."""
+"""Contrato editorial dos Guias: fontes, identidade, rotas, pesquisa e dados."""
 from pathlib import Path
 from html.parser import HTMLParser
 from datetime import date
@@ -14,7 +14,7 @@ from conteudos.guias_imagens import IMAGENS_GUIAS, fotos_publicas_guias
 from scripts.render_guias import dados_guias, texto_guia, data_pt
 
 ids={g['id'] for g in GUIAS}
-assert len(ids)==len(GUIAS)==7
+assert len(ids)==len(GUIAS)==8
 assert len(GRUPOS_GUIAS)==3
 assert {g['tema'] for g in GUIAS}=={theme for _,_,_,theme in GRUPOS_GUIAS}
 forbidden=re.compile(r'nobrinde|catálogo|catalogue|produtos_guia|synex|gratox|chalmer|bastien|farnes|larsen|emphy|\bSKU\b|auditoria|procedimento interno',re.I)
@@ -32,7 +32,7 @@ class Page(HTMLParser):
 
 listing=(ROOT/'guias/index.html').read_text(encoding='utf-8')
 index=Page(listing)
-assert index.cards==7 and len(index.images)==7
+assert index.cards==len(GUIAS) and len(index.images)==len(IMAGENS_GUIAS)
 assert all(g['id']+'.html' in index.links for g in GUIAS)
 assert all(id in index.ids for id,_,_,_ in GRUPOS_GUIAS)
 assert not forbidden.search(listing)
@@ -43,7 +43,7 @@ assert public==dados_guias(), 'Os dados devem derivar da fonte, sem cópia manua
 assert not forbidden.search(public)
 assert not re.search(r'\[[a-z]+\]',public), 'As fontes devem estar em campos estruturados'
 data=json.loads(public)
-assert len(data['guias'])==7 and len(data['percursos'])==3
+assert len(data['guias'])==len(GUIAS) and len(data['percursos'])==3
 assert {g['id'] for g in data['guias']}==ids
 for g in GUIAS:
     html=(ROOT/'guias'/(g['id']+'.html')).read_text(encoding='utf-8')
@@ -76,4 +76,4 @@ for id,selection in IMAGENS_GUIAS.items():
         assert all(part in [p.name for p in (ROOT/Path(*path.parts[:n])).iterdir()] for n,part in enumerate(path.parts[1:],1)),f['original']
 credits=(ROOT/'creditos-imagens.html').read_text(encoding='utf-8')
 assert credits.count('id="guias-ilustrativos"')==1
-print('OK: sete guias, três percursos, fontes e datas, imagens, pesquisa e JSON consistentes; sem referências proibidas.')
+print('OK: oito guias, três percursos, fontes e datas, imagens, pesquisa e JSON consistentes; sem referências proibidas.')

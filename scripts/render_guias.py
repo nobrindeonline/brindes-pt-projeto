@@ -1,4 +1,4 @@
-"""HTML, pesquisa e JSON público derivados da fonte revista dos sete Guias."""
+"""HTML, pesquisa e JSON público derivados da fonte revista dos Guias."""
 from html import escape
 from datetime import date
 import copy

@@ -1,6 +1,6 @@
 # Fontes dos Guias
 
-Revisão efetiva do conteúdo: 2026-10-12.
+Revisão efetiva do conteúdo: 2026-10-22.
 
 Registo gerado a partir de `conteudos/guias.py`. As páginas públicas mostram
 a bibliografia e as datas documentais, sem os registos internos de execução.
@@ -68,3 +68,35 @@ a bibliografia e as datas documentais, sem os registos internos de execução.
 - URL: https://www.inkcups.com/pad-printing-guide/
 - Consulta: 2026-10-12
 - Âmbito: Mecanismo de transferência por tampão e papel da geometria; não confirma compatibilidade de um artigo.
+
+## designinpi
+
+- Título: Pedir o registo de um desenho ou modelo
+- Entidade: INPI / Justiça.gov.pt
+- URL: https://justica.gov.pt/Servicos/Pedir-o-registo-de-um-desenho-ou-modelo
+- Consulta: 2026-10-22
+- Âmbito: Registo da aparência do produto em Portugal e requisitos do pedido. Não determina titularidade contratual, ferramentas ou exclusividade de um projeto concreto.
+
+## desenvolvimento
+
+- Título: Product Design and Development
+- Entidade: NIST
+- URL: https://www.nist.gov/mep/product-design-and-development
+- Consulta: 2026-10-22
+- Âmbito: Enquadramento geral de desenvolvimento, prototipagem e passagem ao fabrico. A sequência de aprovação proposta neste guia é editorial.
+
+## concecaofabrico
+
+- Título: DFMA Tips
+- Entidade: Universidade da Florida — Design Laboratory
+- URL: https://web.mae.ufl.edu/designlab/DFMA%20Tips/DFMA%20Tips.htm
+- Consulta: 2026-10-22
+- Âmbito: Relação entre decisões de desenho, materiais, fabrico, montagem e custos. Não estabelece valores, quantidades ou prazos para brindes.
+
+## ciclodevida
+
+- Título: Ecodesign requirements for more sustainable products
+- Entidade: Conselho da União Europeia
+- URL: https://www.consilium.europa.eu/en/policies/ecodesign-requirements-for-more-sustainable-products/
+- Consulta: 2026-10-22
+- Âmbito: Durabilidade, reutilização, reparação e reciclagem como dimensões do ecodesign. Não certifica produtos nem demonstra superioridade ambiental de uma opção.
