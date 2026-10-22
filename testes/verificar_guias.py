@@ -14,7 +14,7 @@ from conteudos.guias_imagens import IMAGENS_GUIAS, fotos_publicas_guias
 from scripts.render_guias import dados_guias, texto_guia, data_pt
 
 ids={g['id'] for g in GUIAS}
-assert len(ids)==len(GUIAS)==8
+assert len(ids)==len(GUIAS)==9
 assert len(GRUPOS_GUIAS)==3
 assert {g['tema'] for g in GUIAS}=={theme for _,_,_,theme in GRUPOS_GUIAS}
 forbidden=re.compile(r'nobrinde|catálogo|catalogue|produtos_guia|synex|gratox|chalmer|bastien|farnes|larsen|emphy|\bSKU\b|auditoria|procedimento interno',re.I)
@@ -45,7 +45,10 @@ assert not re.search(r'\[[a-z]+\]',public), 'As fontes devem estar em campos est
 data=json.loads(public)
 assert len(data['guias'])==len(GUIAS) and len(data['percursos'])==3
 assert {g['id'] for g in data['guias']}==ids
+selected=sys.argv[sys.argv.index('--guia')+1] if '--guia' in sys.argv else None
+if selected: assert selected in ids
 for g in GUIAS:
+    if selected and g['id']!=selected: continue
     html=(ROOT/'guias'/(g['id']+'.html')).read_text(encoding='utf-8')
     page=Page(html)
     assert not forbidden.search(html),g['id']
@@ -76,4 +79,4 @@ for id,selection in IMAGENS_GUIAS.items():
         assert all(part in [p.name for p in (ROOT/Path(*path.parts[:n])).iterdir()] for n,part in enumerate(path.parts[1:],1)),f['original']
 credits=(ROOT/'creditos-imagens.html').read_text(encoding='utf-8')
 assert credits.count('id="guias-ilustrativos"')==1
-print('OK: oito guias, três percursos, fontes e datas, imagens, pesquisa e JSON consistentes; sem referências proibidas.')
+print('OK: nove guias no índice e nos dados; '+('guia '+selected+' verificado' if selected else 'artigos verificados')+'; fontes, imagens e pesquisa consistentes.')

@@ -1,0 +1,88 @@
+[
+  {
+    "objeto": "botao-washington",
+    "ficheiro": "assets/Industria/Historiadosbrindes/download.jpg",
+    "sha256": "dcc6b3070aad23f9d73bc1df86745d82d6b7855728491ddb30e8b95430385b7b",
+    "dimensoes": [
+      452,
+      450
+    ],
+    "transformacoes": "Nenhuma; ficheiro original.",
+    "origem_fotografica": null,
+    "autor": null,
+    "licenca": null,
+    "data_exemplar": null,
+    "instituicao_detentora_exemplar": null,
+    "fontes_contexto": [
+      "hist_gw",
+      "hist_mount"
+    ],
+    "uso": "galeria",
+    "solicitacao_local": "2026-10-22",
+    "publicacao_autorizada_documentalmente": false
+  },
+  {
+    "objeto": "saco-coshocton",
+    "ficheiro": "assets/Industria/Historiadosbrindes/images.jpg",
+    "sha256": "58d51e7e07bf419f0b3164bbbf8bf15c1bfdaeb102f4911b15fcaf0fa0556aec",
+    "dimensoes": [
+      333,
+      351
+    ],
+    "transformacoes": "Nenhuma; ficheiro original.",
+    "origem_fotografica": null,
+    "autor": null,
+    "licenca": null,
+    "data_exemplar": null,
+    "instituicao_detentora_exemplar": null,
+    "fontes_contexto": [
+      "hist_saco"
+    ],
+    "uso": "galeria e cart?o",
+    "solicitacao_local": "2026-10-22",
+    "publicacao_autorizada_documentalmente": false
+  },
+  {
+    "objeto": "espelho-publicitario",
+    "ficheiro": "assets/Industria/Historiadosbrindes/s-l1200.jpg",
+    "sha256": "9b4c768428e7ba2189a3dc0eb10df7306dbdd5eec27661028c340061b57b2c36",
+    "dimensoes": [
+      556,
+      647
+    ],
+    "transformacoes": "Nenhuma; ficheiro original.",
+    "origem_fotografica": null,
+    "autor": null,
+    "licenca": null,
+    "data_exemplar": null,
+    "instituicao_detentora_exemplar": null,
+    "fontes_contexto": [
+      "hist_espelhos",
+      "hist_coca"
+    ],
+    "uso": "galeria",
+    "solicitacao_local": "2026-10-22",
+    "publicacao_autorizada_documentalmente": false
+  },
+  {
+    "objeto": "reguas-publicitarias",
+    "ficheiro": "assets/Industria/Historiadosbrindes/il_300x300.8284988972_rrvq.webp",
+    "sha256": "0c9e9a2cbddf91736cdb4b03fbae3d0e55f165c757b0709198880bd1ef9fc869",
+    "dimensoes": [
+      300,
+      300
+    ],
+    "transformacoes": "Nenhuma; ficheiro original.",
+    "origem_fotografica": null,
+    "autor": null,
+    "licenca": null,
+    "data_exemplar": null,
+    "instituicao_detentora_exemplar": null,
+    "fontes_contexto": [
+      "hist_regua"
+    ],
+    "uso": "galeria",
+    "solicitacao_local": "2026-10-22",
+    "publicacao_autorizada_documentalmente": false
+  }
+]

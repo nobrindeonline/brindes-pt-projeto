@@ -1,5 +1,7 @@
 """Guias independentes sobre equipamentos, operações e organização da produção."""
 
+from conteudos.historia_brindes import HISTORIA, FONTES as FONTES_HISTORIA
+
 DATA_REVISAO = "2026-10-14"
 DATA_REVISAO_TEXTO = "14 de outubro de 2026"
 
@@ -73,6 +75,8 @@ FONTES_INDUSTRIA = {
         "https://environment.ec.europa.eu/strategy/circular-economy/ecodesign-sustainable-products-regulation_en",
     ),
 }
+
+FONTES_INDUSTRIA.update({k: (f['entidade']+' ? '+f['titulo'], f['url']) for k,f in FONTES_HISTORIA.items()})
 
 
 def processo(
@@ -329,37 +333,7 @@ INDUSTRIA = [
         tags="montagem junção componentes acabamento revisão conjunto apresentação",
         passos=["Definir componentes e operações", "Montar e rever o conjunto", "Preparar para acondicionamento"],
     ),
-    dict(
-        id="historia-dos-brindes",
-        sec="industria",
-        tipo="historia",
-        titulo="História dos objetos promocionais e comemorativos",
-        resumo="Uma leitura cronológica dos objetos oferecidos, comemorativos e promocionais, distinguindo práticas antigas da indústria moderna.",
-        imagem_cartao={
-            "src": "assets/Industria/Historiadosbrindes/1557239744369.jpg",
-            "alt": "Livro aberto com desenhos de um anfiteatro antigo e de edifícios modernos, acompanhado das datas 336 d.C. e 2019.",
-            "width": 1081,
-            "height": 720,
-        },
-        data_revisao=DATA_REVISAO,
-        data_revisao_texto=DATA_REVISAO_TEXTO,
-        seccoes=[
-            ("Antes do conceito moderno de brinde", "Presentear, oferecer uma lembrança, assinalar uma ocasião e identificar uma pessoa ou grupo são práticas com finalidades diferentes. Objetos ligados a estas práticas não devem ser tratados retroativamente como brindes promocionais: a designação depende do contexto histórico, cultural e da intenção documentada. Não existe, nas fontes consultadas, base suficiente para apontar um primeiro brinde universal."),
-            ("Imagens e objetos antes da produção em série", "Ao longo do tempo, objetos e imagens puderam circular como ofertas, recordações, marcas de pertença ou sinais de identificação. A forma, o valor e o significado dependiam da comunidade e da ocasião; por isso, sem uma fonte específica, não se atribuem datas, funções ou origens a um objeto isolado. A UNESCO documenta a continuidade de uma técnica tradicional chinesa de impressão a partir de blocos gravados, mostrando uma tradição de reprodução gráfica artesanal — não uma origem dos brindes. [ind_history_unesco]"),
-            ("Impressão, comércio e reprodução", "Com a expansão de métodos de impressão e de circuitos comerciais, imagens e mensagens puderam ser reproduzidas em suportes distintos. Um impresso publicitário, uma lembrança comemorativa e um objeto oferecido por uma instituição podiam partilhar meios de produção sem terem a mesma finalidade. A distinção entre o objeto, a mensagem e a circunstância da distribuição continua essencial."),
-            ("Séculos XIX e XX: escala e organização profissional", "A mecanização e a produção em maior escala alteraram a quantidade e a repetibilidade possíveis em vários setores, mas não eliminaram a produção artesanal. A história publicada pela PPAI regista uma reunião de fabricantes de artigos publicitários em Chicago, em 1903, para formar uma associação. É um marco documentado da organização profissional nos Estados Unidos, não a invenção do brinde, nem uma cronologia universal do setor. [ind_history_ppai]"),
-            ("Personalização industrial e métodos diversos", "Ao longo do século XX, métodos como impressão, gravação, costura e montagem passaram a coexistir em fluxos de produção com diferentes níveis de preparação e escala. Cada processo deixou marcas próprias no objeto e dependia do equipamento, do material e dos consumíveis. Não houve uma substituição linear do artesanal pelo industrial; métodos distintos continuaram a responder a necessidades diferentes."),
-            ("Fluxos digitais e produção contemporânea", "A preparação digital de grafismos e ficheiros tornou possível rever e encaminhar imagens por fluxos de trabalho informatizados; os processos físicos continuam, porém, a depender da tecnologia escolhida e do suporte real. Impressão digital, gravação, bordado e transfer não são etapas intercambiáveis, e a adoção de um ficheiro digital não garante por si só cor, aderência, detalhe ou compatibilidade."),
-            ("Escolha de materiais e responsabilidade", "Hoje, a seleção pode considerar utilização, vida útil esperada, reparação, reutilização, composição e fim de vida, além da mensagem e do método de personalização. São critérios a avaliar caso a caso: não permitem classificar automaticamente um material ou objeto como sustentável. O Regulamento (UE) 2024/1781 estabelece um quadro europeu de conceção ecológica para produtos sustentáveis; a sua existência não certifica um objeto promocional concreto. [ind_history_espr]"),
-            ("Como interpretar esta cronologia", "As categorias “presente”, “lembrança”, “objeto comemorativo”, “artigo institucional” e “brinde promocional” variam entre épocas e culturas. As fontes aqui citadas sustentam exemplos delimitados — uma tradição de impressão, um marco associativo e um quadro regulamentar — e não uma história completa de todas as regiões ou a origem única dos objetos oferecidos."),
-        ],
-        fontes=["ind_history_unesco", "ind_history_ppai", "ind_history_espr"],
-        problemas=[],
-        relacionados=["da-ideia-a-entrega", "maquinas-e-processos"],
-        ancoras=["industria/index.html#historia"],
-        tags="história objetos promocionais publicidade Portugal comemoração identificação",
-        passos=["Presentear, comemorar e identificar", "Reproduzir imagens e mensagens", "Organizar a produção promocional", "Avaliar materiais e usos atuais"],
-    ),
+    HISTORIA,
 ]
 
 AREAS_INDUSTRIA = [

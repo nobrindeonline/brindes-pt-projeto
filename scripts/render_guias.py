@@ -72,6 +72,8 @@ def artigo_guia(g, artigos, shell, link):
     sections=[]
     for id,(title,text) in zip(section_ids,g['seccoes']):
         parts=''.join('<p>'+referencias(p)+'</p>' for p in text.split('\n\n'))
+        for subtitle,detail in g.get('subseccoes',{}).get(id,[]):
+            parts+='<h3>'+escape(subtitle)+'</h3>'+''.join('<p>'+referencias(p)+'</p>' for p in detail.split('\n\n'))
         parts+=''.join(imagem(f) for f in photos if f['secao']==id)
         sections.append((id,title,parts))
     if g['casos']:
@@ -81,17 +83,21 @@ def artigo_guia(g, artigos, shell, link):
             casos.append((c['id'],c['titulo'],text))
         sections=[sections[0],*casos,*sections[1:]]
     errors='<div class="troubleshooting">'+''.join('<div><h3>'+escape(t)+'</h3><p>'+referencias(p)+'</p></div>' for t,p in g['problemas'])+'</div>'
-    sections.append(('problemas','Erros frequentes e prevenção',errors))
+    sections.append(('problemas',g.get('titulo_problemas','Erros frequentes e prevenção'),errors))
     checklist='<ul class="guide-checklist">'+''.join('<li>'+escape(p)+'</li>' for p in g['confirmar'])+'</ul>'
     if g['id']=='como-escolher-a-tecnica': checklist='<span id="parte-6" class="anchor-alias"></span>'+checklist
-    sections.append(('confirmar','Lista de verificação antes de avançar',checklist))
+    sections.append(('confirmar',g.get('titulo_checklist','Lista de verificação antes de avançar'),checklist))
     faq=''.join('<details class="guide-faq"><summary>'+escape(f['pergunta'])+'</summary><p>'+referencias(f['resposta'])+'</p></details>' for f in g['perguntas_frequentes'])
     sections.append(('faq','Perguntas frequentes',faq))
-    sources='<p>Os passos e as listas são recomendações editoriais. As fontes sustentam os princípios identificados; condições de artigo, material, arte e processo precisam de confirmação específica.</p><ul class="sources">'
+    sources='<p>'+escape(g.get('ambito_fontes','Os passos e as listas são recomendações editoriais. As fontes sustentam os princípios identificados; condições de artigo, material, arte e processo precisam de confirmação específica.'))+'</p><ul class="sources">'
     for key in g['fontes']:
         f=FONTES_GUIAS_META[key]
         sources+='<li id="fonte-'+key+'">'+link(f['url'],f['titulo'])+'<br>'+escape(f['entidade'])+' · Consulta: <time datetime="'+f['data_consulta']+'">'+data_pt(f['data_consulta'])+'</time><p>'+escape(f['ambito'])+'</p></li>'
     sections.append(('fontes','Fontes, âmbito e revisão',sources+'</ul><p class="documentary-date">Conteúdo revisto em <time datetime="'+g['data_revisao']+'">'+data_pt(g['data_revisao'])+'</time>.</p>'))
+    if g.get('ordem_seccoes'):
+        by_id={id:(id,title,text) for id,title,text in sections}
+        assert set(g['ordem_seccoes'])==set(by_id) and len(g['ordem_seccoes'])==len(by_id)
+        sections=[by_id[id] for id in g['ordem_seccoes']]
     toc=''.join(link('#'+id,title) for id,title,_ in sections)
     body='<section id="resposta" class="guide-answer"><h2>Resposta breve</h2><p>'+referencias(g['resposta_breve'])+'</p></section>'+esquema(g)
     body+=''.join('<section id="'+id+'"><h2>'+escape(title)+'</h2>'+text+'</section>' for id,title,text in sections)
@@ -109,7 +115,7 @@ def texto_guia(g):
             for x in v: yield from textos(x)
         elif isinstance(v,dict):
             for k,x in v.items():
-                if k not in ('id','fontes','relacionados','ancoras','data_revisao','ids_seccoes','links_contexto'): yield from textos(x)
+                if k not in ('id','fontes','relacionados','ancoras','data_revisao','ids_seccoes','links_contexto','ordem_seccoes'): yield from textos(x)
         elif isinstance(v,tuple):
             for x in v: yield from textos(x)
     return ' '.join(textos(g))
@@ -125,9 +131,10 @@ def dados_guias():
         g=copy.deepcopy(original)
         ids=g.get('ids_seccoes',[f'parte-{n}' for n in range(len(g['seccoes']))])
         order=[ids[0],*[c['id'] for c in g['casos']],*ids[1:]] if g['casos'] else ids
+        if g.get('ordem_seccoes'): order=g['ordem_seccoes']
         result.append(dict(id=g['id'],slug=g['id'],url='guias/'+g['id']+'.html',titulo=g['titulo'],
             categoria=g['tema'],resumo=g['resumo'],resposta_breve=texto(g['resposta_breve']),ordem_leitura=order,
-            passos=[dict(id=id,titulo=t,**texto(p)) for id,(t,p) in zip(ids,g['seccoes'])],
+            passos=[dict(id=id,titulo=t,**texto(p),**({'subseccoes':[dict(titulo=st,**texto(sp)) for st,sp in g['subseccoes'][id]]} if id in g.get('subseccoes',{}) else {})) for id,(t,p) in zip(ids,g['seccoes'])],
             casos=[dict(id=c['id'],titulo=c['titulo'],sinal=texto(c['sinal']),verificar=texto(c['verificar']),evidencia=texto(c['evidencia'])) for c in g['casos']],
             erros=[dict(erro=t,prevencao=texto(p)) for t,p in g['problemas']],checklist=g['confirmar'],
             perguntas_frequentes=[dict(pergunta=f['pergunta'],resposta=texto(f['resposta'])) for f in g['perguntas_frequentes']],

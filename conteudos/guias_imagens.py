@@ -9,6 +9,14 @@ def foto(pasta, ficheiro, nome_publico, alt, secao=None, legenda=None):
                 alt=alt, secao=secao, legenda=legenda)
 
 IMAGENS_GUIAS = {
+ 'psicologia-dos-brindes': dict(cartao=foto('PsicologiadosBrindes','brindes-para-ativacoes-de-marca.webp','psicologia-cartao.webp',
+     'Quatro pessoas junto a uma mesa num evento, observando um saco, uma garrafa e um estojo.'),
+     artigo=[foto('PsicologiadosBrindes','porque-amamos-um-brinde.jpg','psicologia-surpresa.jpg',
+         'Homem com a boca aberta e as mãos levantadas, atrás de uma garrafa, auscultadores e um ecrã.', 'reconhecimento',
+         'Imagem ilustrativa de surpresa perante um conjunto de objetos.'),
+         foto('PsicologiadosBrindes','Novidades-e-tendencias-em-brindes-customizados-para-feiras-e-eventos.png','psicologia-entrega.png',
+         'Duas pessoas num evento, uma delas a entregar um saco claro com um desenho de folhas.', 'exemplos',
+         'Imagem ilustrativa de uma entrega num evento. O desenho de folhas não comprova a composição ou o desempenho ambiental do saco; a cena não documenta a satisfação de destinatários.')]),
  'produto-standard-ou-a-medida': dict(cartao=foto('MedidavsStandard','images.jpg','standard-medida-cartao.jpg',
      'Dois sacos claros com cordão, de dimensões diferentes, um deles apoiado numa mão, sob uma pergunta sobre o tamanho do projeto.'), artigo=[]),
  'como-escolher-a-tecnica': dict(cartao=foto('ComoEscolheraTecnica','images.jpg','tecnica-cartao.jpg',

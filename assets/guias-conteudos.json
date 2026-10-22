@@ -10,6 +10,7 @@
       "titulo": "Escolher",
       "resumo": "Uso e destinatários primeiro; material e técnica depois.",
       "guias": [
+        "psicologia-dos-brindes",
         "produto-standard-ou-a-medida",
         "como-escolher-brindes-para-um-evento",
         "como-escolher-o-material",
@@ -36,6 +37,309 @@
     }
   ],
   "guias": [
+    {
+      "id": "psicologia-dos-brindes",
+      "slug": "psicologia-dos-brindes",
+      "url": "guias/psicologia-dos-brindes.html",
+      "titulo": "Psicologia dos Brindes",
+      "categoria": "Escolher",
+      "resumo": "Como a utilidade, a adequação ao público, o valor percebido e o contexto podem influenciar a receção de uma oferta.",
+      "resposta_breve": {
+        "texto": "Um brinde pode ser mais valorizado quando faz sentido para quem o recebe, funciona bem e é apresentado num contexto adequado. A reação depende do objeto, da pessoa e da relação com quem oferece; nenhum artigo garante satisfação, reconhecimento da marca ou reciprocidade.",
+        "fontes": []
+      },
+      "ordem_leitura": [
+        "introducao",
+        "fatores",
+        "marca",
+        "reconhecimento",
+        "problemas",
+        "exemplos",
+        "confirmar",
+        "avaliar",
+        "conclusao",
+        "faq",
+        "ambito",
+        "fontes"
+      ],
+      "passos": [
+        {
+          "id": "introducao",
+          "titulo": "Porque é que alguns brindes são mais valorizados?",
+          "texto": "O mesmo objeto pode ser útil para uma pessoa e dispensável para outra. A receção depende do que se oferece, de quem recebe, do momento e da forma de apresentação. Por isso, escolher exige olhar para a utilização e para o significado da oferta.\n\nEste guia reúne fatores para orientar essa decisão. Os estudos citados analisam situações delimitadas de troca de presentes ou ofertas comerciais. As perguntas e os exemplos que se seguem são recomendações editoriais; não constituem um modelo capaz de prever a reação de cada destinatário.",
+          "fontes": []
+        },
+        {
+          "id": "fatores",
+          "titulo": "O que influencia a forma como um brinde é recebido?",
+          "texto": "Observe a oferta do ponto de vista de quem a vai receber. Os seis fatores abaixo ajudam a organizar a escolha e a identificar o que precisa de confirmar num exemplo concreto.",
+          "fontes": [],
+          "subseccoes": [
+            {
+              "titulo": "Utilidade e frequência de uso",
+              "texto": "Comece pela tarefa que o objeto pode ajudar a realizar. Um artigo fácil de transportar, limpar, guardar ou utilizar pode ajustar-se melhor à rotina do destinatário. A frequência de uso depende dessa rotina: um objeto para uma necessidade ocasional também pode ser pertinente.\n\nNos estudos de Baskin e colegas, quem oferecia e quem recebia não atribuía a mesma importância à facilidade prática de usar a oferta. É evidência sobre os contextos estudados; a recomendação de experimentar um brinde nas condições reais de utilização é uma aplicação editorial, não uma previsão de sucesso.",
+              "fontes": [
+                "psicoutilidade"
+              ]
+            },
+            {
+              "titulo": "Adequação ao público: interesses, hábitos e necessidades",
+              "texto": "Uma profissão, faixa etária ou ocasião não define todas as preferências. Considere o que os destinatários fazem, o que já transportam e as condições em que usarão o objeto. Perguntar por necessidades ou permitir uma escolha entre opções pode ajudar a reduzir suposições.\n\nSe os contextos forem diferentes, avalie variantes: alguém que trabalha em deslocação pode ter necessidades distintas de quem trabalha num posto fixo. Evite atribuir interesses apenas a características gerais de um grupo.",
+              "fontes": []
+            },
+            {
+              "titulo": "Qualidade e valor percebido",
+              "texto": "Qualidade funcional e valor percebido são dimensões relacionadas, mas diferentes. A primeira deve ser verificada no objeto; o segundo corresponde à avaliação que o destinatário faz. Materiais, acabamento, design, conforto e apresentação podem contribuir para essa avaliação.\n\nUma superfície bem acabada não comprova durabilidade, e uma aparência cuidada não substitui a validação da função. O custo também não é uma medida suficiente da relevância para aquela pessoa. Compare a amostra com a utilização e a mensagem pretendidas.",
+              "fontes": []
+            },
+            {
+              "titulo": "Relevância e personalização",
+              "texto": "Uma mensagem ligada à ocasião ou uma identificação pessoal podem acrescentar significado, se fizerem sentido para quem recebe. Confirme nomes, grafia, tom e posição antes de produzir. Nem toda a personalização precisa de ser individual.\n\nUm logótipo ocupa espaço no objeto e participa no seu desenho. Avalie a sua leitura e a forma como convive com a utilidade: uma aplicação muito dominante pode não corresponder ao que o destinatário quer usar. Uma marca discreta também não garante uma melhor reação em todos os casos.",
+              "fontes": []
+            },
+            {
+              "titulo": "Contexto e momento da oferta",
+              "texto": "Receber algo numa feira, no primeiro dia de trabalho ou depois de uma colaboração são experiências diferentes. Considere o motivo da oferta, a relação existente e o tempo disponível para a entrega. Um objeto volumoso pode ser pouco prático para quem ainda vai circular ou viajar.\n\nExplique por que está a oferecer e o que a pessoa pode fazer com o objeto. A entrega pode ser um momento de atenção; pode também parecer impessoal ou inoportuna. A intenção de quem oferece não determina a interpretação de quem recebe.",
+              "fontes": []
+            },
+            {
+              "titulo": "Embalagem, mensagem e experiência de receber",
+              "texto": "A embalagem pode proteger, organizar e apresentar o conjunto. A mensagem ajuda a enquadrar a oferta. Procure coerência entre o que se promete e o que está dentro: uma apresentação muito elaborada não compensa automaticamente um objeto desadequado.\n\nA investigação de Rixom e colegas relacionou a apresentação com expectativas e avaliações que variavam conforme a relação entre as pessoas. Não fornece uma regra de que embrulhar melhor produz sempre maior satisfação. Para um brinde, confirme também facilidade de abertura, transporte e quantidade de embalagem necessária.",
+              "fontes": [
+                "psicoapresentacao"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "marca",
+          "titulo": "A relação entre o brinde e a marca",
+          "texto": "Quando um objeto é utilizado, a identificação nele aplicada pode voltar a ser vista e prolongar o contacto com a marca. Esse contacto é uma oportunidade de exposição, não uma prova de que a mensagem foi compreendida ou de que a atitude mudou.\n\nA associação depende da experiência global: o que foi prometido, a forma de entrega e o funcionamento do artigo. Um objeto pouco útil, de baixa qualidade ou desadequado pode criar uma impressão negativa, sobretudo se contrariar a mensagem que o acompanha. A proposta prática é avaliar o conjunto, em vez de contar apenas as vezes em que o logótipo poderá aparecer.",
+          "fontes": []
+        },
+        {
+          "id": "reconhecimento",
+          "titulo": "Surpresa, reconhecimento e reciprocidade",
+          "texto": "Uma oferta pode ser interpretada como sinal de atenção ou reconhecimento quando se relaciona com uma necessidade ou com uma colaboração concreta. A surpresa pode fazer parte do momento, mas também pode ser indiferente ou pouco conveniente; não é uma medida suficiente do valor da oferta.\n\nReciprocidade designa aqui a possibilidade de alguém querer retribuir um gesto. Num estudo experimental sobre ofertas comerciais a responsáveis de compras, Dorsch e Kelley encontraram relações com o tipo de oferta, o sentimento de obrigação e a perceção de manipulação. O âmbito é específico e trata de intenções; não demonstra que um destinatário vá comprar ou recomendar por ter recebido um brinde.\n\nComo critério editorial, apresente o agradecimento com clareza e deixe espaço para aceitar ou recusar. Uma oferta recebida como pressão pode ser interpretada de forma diferente da intenção inicial.",
+          "fontes": [
+            "psicoreciprocidade"
+          ]
+        },
+        {
+          "id": "exemplos",
+          "titulo": "Exemplos de escolha por objetivo",
+          "texto": "Estes exemplos são ilustrativos. Mostram perguntas de decisão e hipóteses a validar, sem propor um brinde ideal para todas as pessoas ou situações.",
+          "fontes": [],
+          "subseccoes": [
+            {
+              "titulo": "Feira profissional: apoiar o contacto e a circulação",
+              "texto": "Se o objetivo for ajudar a organizar informação durante a visita, um pequeno bloco pode ser uma hipótese a experimentar. Se for transportar materiais, avalie um saco com dimensões adequadas ao conteúdo. Considere o peso acumulado, a viagem de regresso e a possibilidade de o destinatário já ter esses objetos.",
+              "fontes": []
+            },
+            {
+              "titulo": "Integração de colaboradores: facilitar uma tarefa concreta",
+              "texto": "Identifique necessidades do posto e do modo de trabalho antes de preparar um conjunto de boas-vindas. Um caderno pode fazer sentido onde há registos em papel; noutro contexto, pode ser redundante. Uma nota de acolhimento pode explicar os elementos e dar contexto, sem substituir o apoio da equipa.",
+              "fontes": []
+            },
+            {
+              "titulo": "Ação de verão ou ao ar livre: considerar o ambiente",
+              "texto": "Se houver necessidade de transportar uma bebida, um recipiente pode ser uma opção a avaliar quanto a capacidade, peso, limpeza e condições de utilização. Não presuma propriedades térmicas ou de segurança pela aparência. Pense também em como será entregue e transportado durante a atividade.",
+              "fontes": []
+            },
+            {
+              "titulo": "Oferta de agradecimento: tornar o motivo claro",
+              "texto": "Uma mensagem que identifique a colaboração agradecida pode contextualizar um objeto simples e adequado aos interesses conhecidos. Evite pressupor que uma oferta mais dispendiosa exprime melhor reconhecimento. Considere a possibilidade de a pessoa preferir apenas a mensagem ou não querer receber um objeto.",
+              "fontes": []
+            }
+          ]
+        },
+        {
+          "id": "avaliar",
+          "titulo": "Como avaliar a receção",
+          "texto": "Defina antes da ação o que pretende observar e em que momento. Pode registar utilização observada, participação na iniciativa, comentários espontâneos ou respostas a uma pergunta simples: “Este objeto foi útil para si? Em que situação?”. Se recolher opiniões, dê também espaço para críticas e para quem optou por não receber.\n\nDistinga sinais diferentes. Aceitar um artigo não significa utilizá-lo; utilizá-lo não prova preferência pela marca. A participação pode depender do interesse na ação, do local ou de outros incentivos. Uma resposta de satisfação descreve a opinião de quem respondeu, não necessariamente a de todos os destinatários.\n\nEstes indicadores ajudam a identificar melhorias e a comparar o resultado com o objetivo inicial. Por si só, não demonstram que o brinde causou uma venda, fidelização ou mudança de comportamento. Registe o contexto e outras alterações na iniciativa para não atribuir tudo ao objeto.",
+          "fontes": []
+        },
+        {
+          "id": "conclusao",
+          "titulo": "Conclusão",
+          "texto": "A relevância tende a resultar da coerência entre público, utilidade, qualidade, contexto e apresentação. Conheça a utilização provável, verifique a amostra, enquadre a mensagem e avalie a receção. A escolha ganha fundamento quando parte de necessidades concretas e continua aberta ao que os destinatários dizem e fazem.",
+          "fontes": []
+        },
+        {
+          "id": "ambito",
+          "titulo": "Evidência e aplicação prática",
+          "texto": "As fontes apoiam afirmações identificadas no texto, dentro das suas amostras e situações. Estudos de presentes entre pessoas não se transferem automaticamente para uma feira, uma equipa ou todos os contextos culturais. As propostas de escolha e avaliação são orientação editorial e devem ser ajustadas à iniciativa. As imagens são ilustrativas: não documentam um estudo, uma campanha ou a reação efetiva de participantes.",
+          "fontes": []
+        }
+      ],
+      "casos": [],
+      "erros": [
+        {
+          "erro": "Escolher apenas pelo preço ou pela quantidade",
+          "prevencao": {
+            "texto": "Defina primeiro a função, o público e o nível de qualidade necessário. O custo e o número de unidades ajudam a planear, mas não substituem a adequação.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Oferecer o mesmo a necessidades diferentes",
+          "prevencao": {
+            "texto": "Verifique se existe uma utilização comum. Quando não existe, considere variantes ou possibilidade de escolha, sem pressupor preferências iguais.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Dar prioridade ao logótipo em detrimento da utilização",
+          "prevencao": {
+            "texto": "Experimente a aplicação na dimensão real e no contexto de uso. A personalização deve coexistir com a função e o desenho do objeto.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Escolher um formato inadequado ao contexto",
+          "prevencao": {
+            "texto": "Confirme volume, peso, transporte e momento de entrega. Um artigo que é cómodo numa mesa pode não o ser durante uma visita ou deslocação.",
+            "fontes": []
+          }
+        },
+        {
+          "erro": "Fazer alegações de sustentabilidade ou qualidade sem prova",
+          "prevencao": {
+            "texto": "Use apenas características que possam ser documentadas para o artigo concreto. Não deduza composição, durabilidade ou benefício ambiental pela cor, pelo aspeto ou por um símbolo.",
+            "fontes": []
+          }
+        }
+      ],
+      "checklist": [
+        "Quem vai receber o brinde?",
+        "Em que situação será oferecido?",
+        "A que necessidade ou interesse do público pode corresponder?",
+        "Com que frequência poderá ser utilizado?",
+        "A qualidade e a apresentação são coerentes com a mensagem?",
+        "A personalização acrescenta valor ou dificulta a utilização?",
+        "Como se poderá avaliar se foi bem recebido?"
+      ],
+      "perguntas_frequentes": [
+        {
+          "pergunta": "Um brinde útil é sempre bem recebido?",
+          "resposta": {
+            "texto": "Não. A utilidade depende da pessoa e da situação, e não elimina outros fatores, como qualidade, preferências, apresentação ou relação com quem oferece.",
+            "fontes": []
+          }
+        },
+        {
+          "pergunta": "Receber um brinde significa ficar mais fiel à marca?",
+          "resposta": {
+            "texto": "Não é possível concluir isso apenas pela aceitação da oferta. Avalie opiniões e utilização e distinga esses sinais de vendas, preferência e fidelização.",
+            "fontes": []
+          }
+        }
+      ],
+      "esquema": [
+        {
+          "titulo": "Conhecer",
+          "descricao": "Público, hábitos e situação."
+        },
+        {
+          "titulo": "Escolher",
+          "descricao": "Utilidade, qualidade e apresentação."
+        },
+        {
+          "titulo": "Avaliar",
+          "descricao": "Uso e comentários, com contexto."
+        }
+      ],
+      "relacionados": [
+        {
+          "id": "como-escolher-brindes-para-um-evento",
+          "titulo": "Como escolher brindes para um evento",
+          "url": "guias/como-escolher-brindes-para-um-evento.html"
+        },
+        {
+          "id": "como-escolher-o-material",
+          "titulo": "Como escolher o material de um brinde",
+          "url": "guias/como-escolher-o-material.html"
+        },
+        {
+          "id": "produto-standard-ou-a-medida",
+          "titulo": "Produto standard ou à medida?",
+          "url": "guias/produto-standard-ou-a-medida.html"
+        }
+      ],
+      "links_contexto": [
+        {
+          "titulo": "Produtos: comparar famílias e utilizações",
+          "url": "produtos/index.html"
+        },
+        {
+          "titulo": "Para quem: conhecer públicos e necessidades",
+          "url": "publicos/index.html"
+        },
+        {
+          "titulo": "Ocasiões e Sazonalidade: enquadrar o momento",
+          "url": "ocasioes/index.html"
+        }
+      ],
+      "fontes": [
+        {
+          "id": "psicoutilidade",
+          "titulo": "Why Feasibility Matters More to Gift Receivers than to Givers: A Construal-Level Approach to Gift Giving",
+          "entidade": "Baskin, Wakslak, Trope e Novemsky — Journal of Consumer Research, 2014",
+          "url": "https://doi.org/10.1086/675737",
+          "data_consulta": "2026-10-22",
+          "ambito": "Estudos sobre diferenças entre quem oferece e quem recebe na importância atribuída à facilidade prática de usar uma oferta. Não medem frequência de uso, fidelização ou vendas de brindes em Portugal."
+        },
+        {
+          "id": "psicoapresentacao",
+          "titulo": "Presentation Matters: The Effect of Wrapping Neatness on Gift Attitudes",
+          "entidade": "Jessica Rixom, Erick M. Mas e Brett A. Rixom — Journal of Consumer Psychology",
+          "url": "https://doi.org/10.1002/jcpy.1140",
+          "data_consulta": "2026-10-22",
+          "ambito": "Investigação sobre apresentação, expectativas e relação entre quem oferece e quem recebe, publicada online em 2019. Não demonstra que uma embalagem mais elaborada melhora sempre a receção de brindes."
+        },
+        {
+          "id": "psicoreciprocidade",
+          "titulo": "An investigation into the intentions of purchasing executives to reciprocate vendor gifts",
+          "entidade": "Michael J. Dorsch e Scott W. Kelley — Journal of the Academy of Marketing Science, 1994",
+          "url": "https://link.springer.com/article/10.1177/0092070394224001",
+          "data_consulta": "2026-10-22",
+          "ambito": "Resumo de um estudo experimental com responsáveis de compras: tipo de oferta, relação comercial, sentimento de obrigação e perceção de manipulação. Intenções de reciprocidade não equivalem a vendas nem se generalizam a todos os públicos."
+        }
+      ],
+      "data_revisao": "2026-10-22",
+      "imagens": {
+        "cartao": {
+          "url": "assets/guias/visuais/psicologia-cartao.webp",
+          "alt": "Quatro pessoas junto a uma mesa num evento, observando um saco, uma garrafa e um estojo.",
+          "width": 1448,
+          "height": 1086,
+          "funcao": "ilustrativa",
+          "fonte_tecnica": false
+        },
+        "artigo": [
+          {
+            "url": "assets/guias/visuais/psicologia-surpresa.jpg",
+            "alt": "Homem com a boca aberta e as mãos levantadas, atrás de uma garrafa, auscultadores e um ecrã.",
+            "width": 900,
+            "height": 400,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "reconhecimento",
+            "legenda": "Imagem ilustrativa de surpresa perante um conjunto de objetos."
+          },
+          {
+            "url": "assets/guias/visuais/psicologia-entrega.png",
+            "alt": "Duas pessoas num evento, uma delas a entregar um saco claro com um desenho de folhas.",
+            "width": 1654,
+            "height": 832,
+            "funcao": "ilustrativa",
+            "fonte_tecnica": false,
+            "secao": "exemplos",
+            "legenda": "Imagem ilustrativa de uma entrega num evento. O desenho de folhas não comprova a composição ou o desempenho ambiental do saco; a cena não documenta a satisfação de destinatários."
+          }
+        ]
+      }
+    },
     {
       "id": "produto-standard-ou-a-medida",
       "slug": "produto-standard-ou-a-medida",

@@ -549,6 +549,12 @@ FONTES_GUIAS_META.update(FONTES_STANDARD)
 FONTES_GUIAS.update({k: (f['entidade'] + ' — ' + f['titulo'], f['url']) for k, f in FONTES_STANDARD.items()})
 GUIAS.insert(0, GUIA_STANDARD)
 
+from conteudos.guia_psicologia import GUIA as GUIA_PSICOLOGIA, FONTES as FONTES_PSICOLOGIA
+
+FONTES_GUIAS_META.update(FONTES_PSICOLOGIA)
+FONTES_GUIAS.update({k: (f['entidade'] + ' — ' + f['titulo'], f['url']) for k, f in FONTES_PSICOLOGIA.items()})
+GUIAS.insert(0, GUIA_PSICOLOGIA)
+
 GRUPOS_GUIAS = [('escolher', 'Escolher', 'Uso e destinatários primeiro; material e técnica depois.', 'Escolher'),
  ('cor',
   'Preparar ficheiros e cor',

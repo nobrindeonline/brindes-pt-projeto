@@ -14,6 +14,7 @@ from conteudos.industria import (  # noqa: E402
     INDUSTRIA,
     PROCESSOS_INDUSTRIA,
 )
+from conteudos.historia_brindes import HISTORIA, FONTES as FONTES_HISTORIA, GALERIA, CRONOLOGIA
 
 
 class TagsImagem(HTMLParser):
@@ -59,7 +60,10 @@ for nome in esperadas:
     assert re.search(r'<main\s+id="conteudo"', pagina), f"Conteúdo HTML inicial ausente em {nome}"
     assert not proibidos.search(pagina), f"Referência proibida em {nome}"
     assert "industry-review" in pagina, f"Data de revisão ausente em {nome}"
-    assert 'datetime="2026-10-14">14 de outubro de 2026</time>' in pagina, (
+    artigo=next((a for a in INDUSTRIA+AREAS_INDUSTRIA if nome==a['id']+'.html'),None)
+    data=artigo['data_revisao'] if artigo else '2026-10-14'
+    data_texto=artigo['data_revisao_texto'] if artigo else '14 de outubro de 2026'
+    assert f'datetime="{data}">{data_texto}</time>' in pagina, (
         f"Data de revisão incoerente em {nome}"
     )
 
@@ -106,18 +110,33 @@ for rota in {
 assert "assets/Industria/IdeiaAteEntrega/brindes-para-feiras.jpg" in pagina_principal
 assert "assets/Industria/MaquinaseProcessos/images.jpg" in pagina_principal
 assert "assets/Industria/Montagem/images.jpg" in pagina_principal
-assert "assets/Industria/Historiadosbrindes/1557239744369.jpg" in pagina_principal
+assert HISTORIA['imagem_cartao']['src'] in pagina_principal
 cartao_historia = pagina_principal.split('id="historia"', 1)[1].split("</article>", 1)[0]
-assert cartao_historia.count("História dos objetos promocionais e comemorativos") == 1
+assert cartao_historia.count(HISTORIA['titulo']) == 1
 assert "<span>" not in cartao_historia
 
 historia = (ROOT / "industria" / "historia-dos-brindes.html").read_text(encoding="utf-8")
-for url in (
-    "https://ich.unesco.org/en/RL/china-engraved-block-printing-technique-00229",
-    "https://www.ppai.org/media-hub/ppb-empowering-promotional-professionals-for-40-years/",
-    "https://environment.ec.europa.eu/strategy/circular-economy/ecodesign-sustainable-products-regulation_en",
-):
+for url in (f['url'] for f in FONTES_HISTORIA.values()):
     assert url in historia, f"Fonte da cronologia não ligada: {url}"
+
+# A cronologia, a associação imagem/objeto e os destinos antigos sobrevivem à geração.
+for n in range(8):
+    assert f'id="parte-{n}"' in historia
+assert historia.count('class="history-object"')==4
+assert historia.count('class="history-object-image"')==4
+assert [historia.index('id="'+p['id']+'"') for p in GALERIA]==sorted(historia.index('id="'+p['id']+'"') for p in GALERIA)
+for p in CRONOLOGIA:
+    assert 'id="'+p['id']+'"' in historia
+for p in GALERIA:
+    bloco=historia.split('id="'+p['id']+'"',1)[1].split('</article>',1)[0]
+    assert p['ficheiro'] in bloco and p['alt'] in bloco
+    assert all('#fonte-'+key in bloco for key in p['fontes'])
+    assert 'creditos-imagens.html#historia-objetos' in bloco
+reguas=historia.split('id="reguas-publicitarias"',1)[1].split('</article>',1)[0]
+assert 'calendário' not in reguas.casefold() and 'calendários' not in reguas.casefold()
+assert 'datas por confirmar' in reguas
+assert '1557239744369.jpg' not in historia+cartao_historia
+assert 'id="historia-objetos"' in (ROOT/'creditos-imagens.html').read_text(encoding='utf-8')
 
 logistica = (ROOT / "industria" / "montagem-embalagem-expedicao.html").read_text(
     encoding="utf-8"

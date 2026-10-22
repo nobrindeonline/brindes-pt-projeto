@@ -1,5 +1,38 @@
 [
   {
+    "guia": "psicologia-dos-brindes",
+    "uso": "cartao",
+    "original": "assets/guias/PsicologiadosBrindes/brindes-para-ativacoes-de-marca.webp",
+    "publico": "assets/guias/visuais/psicologia-cartao.webp",
+    "sha256": "999cfe84ddb6e279a44ca8aaf074705c1f36ab52b2c332e55940a2b587a04bb4",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Imagens fornecidas para o guia Psicologia dos Brindes, solicitadas em 2026-10-22."
+  },
+  {
+    "guia": "psicologia-dos-brindes",
+    "uso": "artigo",
+    "original": "assets/guias/PsicologiadosBrindes/porque-amamos-um-brinde.jpg",
+    "publico": "assets/guias/visuais/psicologia-surpresa.jpg",
+    "sha256": "0dedf470ad2a17a167e7ea91f0785ee51815a48462f0edf405d6bad57dcf4d03",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Imagens fornecidas para o guia Psicologia dos Brindes, solicitadas em 2026-10-22."
+  },
+  {
+    "guia": "psicologia-dos-brindes",
+    "uso": "artigo",
+    "original": "assets/guias/PsicologiadosBrindes/Novidades-e-tendencias-em-brindes-customizados-para-feiras-e-eventos.png",
+    "publico": "assets/guias/visuais/psicologia-entrega.png",
+    "sha256": "5d10676ae279109c0c2b4304db39a1d47ed48016bdb26edf89c05fe0971159d8",
+    "autoria": null,
+    "licenca": null,
+    "transformacoes": "Cópia binária, sem recorte ou conversão.",
+    "utilizacao_local": "Imagens fornecidas para o guia Psicologia dos Brindes, solicitadas em 2026-10-22."
+  },
+  {
     "guia": "produto-standard-ou-a-medida",
     "uso": "cartao",
     "original": "assets/guias/MedidavsStandard/images.jpg",

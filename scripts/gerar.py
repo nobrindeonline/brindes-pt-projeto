@@ -30,6 +30,8 @@ from conteudos.serigrafia import PASSOS as PASSOS_SERIGRAFIA
 from conteudos.impressao_uv import PASSOS as PASSOS_UV, IMAGENS as IMAGENS_UV
 from conteudos.guias import GRUPOS_GUIAS
 from scripts.render_guias import GUIAS_POR_ID, entrada_guias, artigo_guia, texto_guia, dados_guias
+from scripts.render_historia import corpo_historia
+from conteudos.historia_brindes import FONTES as FONTES_HISTORIA, creditos_historia
 from conteudos.guias_imagens import CREDITOS_GUIAS
 from conteudos.materiais import MATERIAIS
 from conteudos.bordado import IMAGENS_BORDADO
@@ -485,6 +487,8 @@ def page_article(a):
             if t=='Equipamento':
                 extra+='<p>Os equipamentos de grande formato representam outra escala de trabalho, distinta da personalização de pequenos artigos numa mesa. Consulte o <a href="../industria/impressoras-uv.html">guia de impressoras UV</a> para comparar configurações.</p>'
             body+=f'<section id="{i}"><h2>{escape(t)}</h2><p>{prose(p)}</p>{extra}</section>'
+    if a['id']=='historia-dos-brindes':
+        body=corpo_historia(a,prose,link)
     if a.get('passos'):
         caption='Marcos selecionados; fontes e contexto no texto.' if a['tipo']=='historia' else 'Esquema simplificado de leitura; não é uma instrução de operação.'
         body='<figure class="process-diagram"><ol>'+''.join('<li>'+escape(p)+'</li>' for p in a['passos'])+'</ol><figcaption>'+caption+'</figcaption></figure>'+body
@@ -505,7 +509,12 @@ def page_article(a):
     if a['fontes']:
         scope=('As fontes históricas documentam os exemplos identificados; não estabelecem uma origem única.' if a['tipo']=='historia'
                else 'As fontes descrevem processos, equipamentos ou contextos específicos. As explicações gerais e recomendações de validação não são especificações universais.')
-        body+='<section id="fontes"><h2>Fontes e âmbito</h2><p>'+scope+'</p><ul class="sources">'+''.join(f'<li id="fonte-{k}">{link(FONTES[k][1],FONTES[k][0])}</li>' for k in a['fontes'])+'</ul></section>'
+        sources=''
+        for k in a['fontes']:
+            detail=('<p>'+escape(FONTES_HISTORIA[k]['ambito'])+'</p>' if a['tipo']=='historia' and k in FONTES_HISTORIA else '')
+            sources+=f'<li id="fonte-{k}">{link(FONTES[k][1],FONTES[k][0])}{detail}</li>'
+        consulted='<p>Fontes consultadas em 22 de outubro de 2026. As fontes de contexto não são créditos fotográficos.</p>' if a['tipo']=='historia' else ''
+        body+='<section id="fontes"><h2>Fontes e âmbito</h2><p>'+scope+'</p>'+consulted+'<ul class="sources">'+sources+'</ul></section>'
     elif a['sec']=='industria':
         body+='<section id="fontes"><h2>Âmbito deste guia</h2><p>Descrição educativa e critérios editoriais de validação. Não identifica equipamento, serviço ou capacidade de produção de uma entidade específica.</p></section>'
     else:
@@ -588,7 +597,7 @@ def industry_listing(s):
         dict(
             id="historia",
             article=BY_ID["historia-dos-brindes"],
-            description="Distingue objetos oferecidos, comemorativos, de identificação e promocionais sem lhes atribuir uma origem única.",
+            description="Da publicidade impressa à rádio, à televisão e ao digital, com uma galeria de objetos históricos e fontes documentais.",
         ),
         dict(
             id="fluxo",
@@ -615,7 +624,7 @@ def industry_listing(s):
             if not image_path.is_file():
                 raise FileNotFoundError(f"Imagem de cartão da Indústria inexistente: {image_path}")
             visual=(
-                '<div class="industry-card-visual">'
+                ('<div class="industry-card-visual industry-card-integral">' if image.get('integral') else '<div class="industry-card-visual">')+
                 f'<img src="../{escape(image["src"],quote=True)}" width="{image["width"]}" height="{image["height"]}" alt="{escape(image["alt"],quote=True)}" loading="lazy" decoding="async">'
                 '</div>'
             )
@@ -750,9 +759,12 @@ if __name__=='__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--secao', choices=['produtos','guias','publicos','industria','mercado','ocasioes'], help='Regenera a secção indicada e os índices, preservando o conteúdo das outras páginas.')
     parser.add_argument('--preservar-entrada', action='store_true', help='Com --secao mercado, gera os artigos e atualiza a pesquisa da secção, preservando a entrada e as outras páginas.')
+    parser.add_argument('--artigo', help='Com --secao guias, gera apenas este guia, a entrada, a pesquisa, os dados e os créditos; preserva os outros artigos.')
     args = parser.parse_args()
     if args.preservar_entrada and args.secao!='mercado':
         parser.error('--preservar-entrada requer --secao mercado')
+    if args.artigo and (args.secao!='guias' or args.artigo not in GUIAS_POR_ID):
+        parser.error('--artigo requer --secao guias e um identificador de guia existente')
     selected_market = MERCADO if args.preservar_entrada else []
     node = shutil.which('node')
     prettier = ROOT/'node_modules/prettier/bin/prettier.cjs'
@@ -774,15 +786,17 @@ if __name__=='__main__':
     for section in SECCOES:
         if not args.preservar_entrada and (not args.secao or section['id']==args.secao): page_section(section)
     for article in ARTIGOS:
+        if args.artigo and article['id']!=args.artigo: continue
         if args.preservar_entrada and article not in selected_market: continue
         if not args.secao or article['sec']==args.secao: page_article(article)
     if not args.secao: homepage()
     if args.secao in ('produtos','guias'):
         # A correção de identidade é partilhada; o texto alheio à secção
         # permanece como estava, incluindo alterações locais do utilizador.
-        paths = ['index.html', 'pesquisa.html', 'creditos-imagens.html']
-        paths += [s['id']+'/index.html' for s in SECCOES]
-        paths += [url(a) for a in ARTIGOS]
+        paths = ['creditos-imagens.html'] if args.artigo else ['index.html', 'pesquisa.html', 'creditos-imagens.html']
+        if not args.artigo:
+            paths += [s['id']+'/index.html' for s in SECCOES]
+            paths += [url(a) for a in ARTIGOS]
         for path in paths:
             if path.startswith(args.secao+'/'): continue
             target = ROOT/path
@@ -810,7 +824,13 @@ if __name__=='__main__':
     if not args.secao or args.secao=='ocasioes':
         write('assets/ocasioes-conteudos.json', dados_ocasioes())
     if not args.secao:
-        write('creditos-imagens.html',shell('Créditos de imagens','Autores, fontes, licenças e alterações das fotografias utilizadas no brindes.pt.',creditos() + CREDITOS_PRODUTOS + CREDITOS_GUIAS + CREDITOS_PUBLICOS + CREDITOS_OCASIOES))
+        write('creditos-imagens.html',shell('Créditos de imagens','Autores, fontes, licenças e alterações das fotografias utilizadas no brindes.pt.',creditos() + CREDITOS_PRODUTOS + CREDITOS_GUIAS + CREDITOS_PUBLICOS + CREDITOS_OCASIOES + creditos_historia()))
+    elif args.secao=='industria':
+        path=ROOT/'creditos-imagens.html'
+        previous=path.read_text(encoding='utf-8')
+        pattern=r'<section\b[^>]*id="historia-objetos"[^>]*>.*?</section>'
+        updated=re.sub(pattern, lambda _: creditos_historia(), previous, flags=re.S) if re.search(pattern,previous,re.S) else previous.replace('</main>',creditos_historia()+'</main>')
+        write('creditos-imagens.html',updated)
     elif args.secao in ('publicos','ocasioes'):
         path = ROOT/'creditos-imagens.html'
         previous = path.read_text(encoding='utf-8')
@@ -818,14 +838,16 @@ if __name__=='__main__':
         pattern = r'<section\b[^>]*id="'+id+r'"[^>]*>.*?</section>'
         updated = re.sub(pattern, lambda _: credits, previous, flags=re.S) if re.search(pattern, previous, re.S) else previous.replace('</main>', credits + '</main>')
         write('creditos-imagens.html', updated)
-    if args.secao=='mercado':
+    if args.artigo:
+        outputs=['guias/index.html','guias/'+args.artigo+'.html','pesquisa.html','creditos-imagens.html']
+    elif args.secao=='mercado':
         outputs=[url(a) for a in selected_market] if args.preservar_entrada else ['mercado/index.html']+[url(a) for a in MERCADO]
     elif args.secao=='publicos':
         outputs=['publicos/index.html']+['publicos/'+a['id']+'.html' for a in PUBLICOS]+['pesquisa.html','creditos-imagens.html']
     elif args.secao=='ocasioes':
         outputs=['ocasioes/index.html']+[url(a) for a in ARTIGOS if a['sec']=='ocasioes']+['pesquisa.html','creditos-imagens.html']
     elif args.secao=='industria':
-        outputs=['industria/index.html','pesquisa.html']+['industria/'+a['id']+'.html' for a in INDUSTRIA + AREAS_INDUSTRIA]
+        outputs=['industria/index.html','pesquisa.html','creditos-imagens.html']+['industria/'+a['id']+'.html' for a in INDUSTRIA + AREAS_INDUSTRIA]
     else:
         outputs = ['index.html', 'pesquisa.html', 'creditos-imagens.html']
         outputs += [s['id']+'/index.html' for s in SECCOES]

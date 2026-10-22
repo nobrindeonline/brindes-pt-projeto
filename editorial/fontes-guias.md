@@ -100,3 +100,27 @@ a bibliografia e as datas documentais, sem os registos internos de execução.
 - URL: https://www.consilium.europa.eu/en/policies/ecodesign-requirements-for-more-sustainable-products/
 - Consulta: 2026-10-22
 - Âmbito: Durabilidade, reutilização, reparação e reciclagem como dimensões do ecodesign. Não certifica produtos nem demonstra superioridade ambiental de uma opção.
+
+## psicoutilidade
+
+- Título: Why Feasibility Matters More to Gift Receivers than to Givers: A Construal-Level Approach to Gift Giving
+- Entidade: Baskin, Wakslak, Trope e Novemsky — Journal of Consumer Research, 2014
+- URL: https://doi.org/10.1086/675737
+- Consulta: 2026-10-22
+- Âmbito: Estudos sobre diferenças entre quem oferece e quem recebe na importância atribuída à facilidade prática de usar uma oferta. Não medem frequência de uso, fidelização ou vendas de brindes em Portugal.
+
+## psicoapresentacao
+
+- Título: Presentation Matters: The Effect of Wrapping Neatness on Gift Attitudes
+- Entidade: Jessica Rixom, Erick M. Mas e Brett A. Rixom — Journal of Consumer Psychology
+- URL: https://doi.org/10.1002/jcpy.1140
+- Consulta: 2026-10-22
+- Âmbito: Investigação sobre apresentação, expectativas e relação entre quem oferece e quem recebe, publicada online em 2019. Não demonstra que uma embalagem mais elaborada melhora sempre a receção de brindes.
+
+## psicoreciprocidade
+
+- Título: An investigation into the intentions of purchasing executives to reciprocate vendor gifts
+- Entidade: Michael J. Dorsch e Scott W. Kelley — Journal of the Academy of Marketing Science, 1994
+- URL: https://link.springer.com/article/10.1177/0092070394224001
+- Consulta: 2026-10-22
+- Âmbito: Resumo de um estudo experimental com responsáveis de compras: tipo de oferta, relação comercial, sentimento de obrigação e perceção de manipulação. Intenções de reciprocidade não equivalem a vendas nem se generalizam a todos os públicos.

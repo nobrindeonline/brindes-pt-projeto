@@ -1,4 +1,36 @@
 {
+  "psicologia-dos-brindes": {
+    "cartao": {
+      "url": "assets/guias/visuais/psicologia-cartao.webp",
+      "alt": "Quatro pessoas junto a uma mesa num evento, observando um saco, uma garrafa e um estojo.",
+      "width": 1448,
+      "height": 1086,
+      "funcao": "ilustrativa",
+      "fonte_tecnica": false
+    },
+    "artigo": [
+      {
+        "url": "assets/guias/visuais/psicologia-surpresa.jpg",
+        "alt": "Homem com a boca aberta e as mãos levantadas, atrás de uma garrafa, auscultadores e um ecrã.",
+        "width": 900,
+        "height": 400,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "reconhecimento",
+        "legenda": "Imagem ilustrativa de surpresa perante um conjunto de objetos."
+      },
+      {
+        "url": "assets/guias/visuais/psicologia-entrega.png",
+        "alt": "Duas pessoas num evento, uma delas a entregar um saco claro com um desenho de folhas.",
+        "width": 1654,
+        "height": 832,
+        "funcao": "ilustrativa",
+        "fonte_tecnica": false,
+        "secao": "exemplos",
+        "legenda": "Imagem ilustrativa de uma entrega num evento. O desenho de folhas não comprova a composição ou o desempenho ambiental do saco; a cena não documenta a satisfação de destinatários."
+      }
+    ]
+  },
   "produto-standard-ou-a-medida": {
     "cartao": {
       "url": "assets/guias/visuais/standard-medida-cartao.jpg",

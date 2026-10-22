@@ -7,6 +7,20 @@ const context = { window: {} };
 vm.runInNewContext(fs.readFileSync(require.resolve('../assets/pesquisa-dados.js'), 'utf8'), context);
 const entries = context.window.BRINDES_SEARCH;
 
+test('Psicologia dos Brindes indexa fatores, exemplos e limites de avaliação', () => {
+  for (const query of ['psicologia valor percebido', 'reciprocidade manipulação', 'embalagem expectativas', 'integração colaboradores', 'satisfação venda']) {
+    assert.ok(find(entries, query).some(e => e.url === 'guias/psicologia-dos-brindes.html'), query);
+  }
+  assert.equal(entries.filter(e => e.url === 'guias/psicologia-dos-brindes.html').length, 1);
+});
+
+test('História liga meios e objetos ao URL existente', () => {
+  for (const query of ['Washington botão', 'Coshocton saco', 'rádio publicidade 1939', 'televisão 1957', 'Web 1993', 'espelho Coca-Cola', 'réguas madeira']) {
+    assert.ok(find(entries, query).some(e => e.url === 'industria/historia-dos-brindes.html'), query);
+  }
+  assert.equal(entries.filter(e => e.url === 'industria/historia-dos-brindes.html').length, 1);
+});
+
 test('Ocasiões distingue épocas e tradições dos públicos', () => {
   for (const [query, slug] of [
     ['Natal presentes vitoriana', 'natal'],

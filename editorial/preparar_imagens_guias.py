@@ -29,7 +29,7 @@ def preparar(f, guia, uso):
     if f['secao']: data.update(secao=f['secao'],legenda=f['legenda'])
     records.append(dict(guia=guia,uso=uso,original=f['original'],publico=data['url'],sha256=digest,
         autoria=None,licenca=None,transformacoes='Cópia binária, sem recorte ou conversão.',
-        utilizacao_local=('Imagem fornecida para o cartão do guia standard ou à medida, solicitada em 2026-10-22.' if guia=='produto-standard-ou-a-medida' else 'Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12.')))
+        utilizacao_local=('Imagens fornecidas para o guia Psicologia dos Brindes, solicitadas em 2026-10-22.' if guia=='psicologia-dos-brindes' else 'Imagem fornecida para o cartão do guia standard ou à medida, solicitada em 2026-10-22.' if guia=='produto-standard-ou-a-medida' else 'Seleção de imagens das pastas fornecidas para os Guias, solicitada em 2026-10-12.')))
     return data
 
 for id,selection in IMAGENS_GUIAS.items():
