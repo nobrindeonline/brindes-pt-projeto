@@ -10,7 +10,7 @@ from conteudos.catalogo import ARTIGOS,SECCOES
 from conteudos.ideias import IDEIAS
 from conteudos.novidades import NOVIDADES
 from conteudos.publicos import PUBLICOS
-paths=[ROOT/'index.html',ROOT/'pesquisa.html',ROOT/'creditos-imagens.html']
+paths=[ROOT/'index.html',ROOT/'pesquisa.html']
 paths += [ROOT/s['id']/'index.html' for s in SECCOES]
 paths += [ROOT/a['sec']/(a['id']+'.html') for a in ARTIGOS]
 class Images(HTMLParser):

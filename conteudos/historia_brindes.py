@@ -58,7 +58,7 @@ LIGACOES = 'Para acompanhar o percurso contemporâneo de desenvolvimento e produ
 HISTORIA = dict(id='historia-dos-brindes',sec='industria',tipo='historia',
  titulo='História dos brindes e da comunicação promocional',
  resumo='Dos impressos à rádio, à televisão e ao digital: como mudaram os meios e como objetos úteis e comemorativos acompanharam mensagens.',
- imagem_cartao=dict(src=BASE+'images.jpg',alt=GALERIA[1]['alt'],width=333,height=351,integral=True),
+ imagem_cartao=dict(src=BASE+'1557239744369.jpg',alt='Ilustração de um livro aberto com o título A história dos brindes personalizados, desenhos de edifícios e as datas 336 d.C. e 2019.',width=1081,height=720,integral=False),
  data_revisao=DATA,data_revisao_texto='22 de outubro de 2026',
  seccoes=[('Uma história de meios e objetos',INTRODUCAO),('Meios, objetos e finalidades',DISTINCOES),
  ('Cronologia da comunicação promocional','\n\n'.join(p['periodo']+' — '+p['titulo']+'\n'+p['meio']+'\n'+p['objeto'] for p in CRONOLOGIA)),

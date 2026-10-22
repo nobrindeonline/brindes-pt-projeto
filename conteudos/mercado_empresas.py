@@ -44,6 +44,7 @@ for id, data in NOVOS.items():
                        atividade=data['resumo'], fontes=list(dict.fromkeys(key for s in data['seccoes'] for key in s['fontes'])))
 EXEMPLOS.update({id:list(companies) for id,companies in ASSOCIACOES.items()})
 LOGOS.update({
+    'nobrinde': ('Nobrinde/images.jpg',200,200,'Logótipo da Nobrinde'),
     'aodaci': ('AODACI/images.jpg',400,400,'Logótipo da AODACi'),
     'bic-graphic': ('BICGraphic/bicgraphiclogo3_8205b0d5b4.png',294,294,'Logótipo da BIC Graphic'),
     'giving-europe': ('Giving Europe/images.jpg',200,200,'Logótipo da Giving Europe'),

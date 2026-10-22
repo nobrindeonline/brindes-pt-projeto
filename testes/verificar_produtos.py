@@ -98,7 +98,6 @@ for g in PRODUTOS:
     assert {i['src'] for i in page.images} == {'../' + f['url'] for f in expected}
     for img in page.images:
         assert img['alt'] and img['src'].startswith('../assets/produtos/visuais/')
-    if expected: assert '../creditos-imagens.html#produtos-ilustrativos' in page.links
     assert all(k in page.ids for k in ['tipos', 'usos', 'criterios', 'materiais', 'zonas', 'tecnicas', 'limites', 'perguntas', 'faq', 'fontes'])
     assert g['data_revisao'] in html and 'Revisão documental' in html
     for texto in textos_publicos(g):

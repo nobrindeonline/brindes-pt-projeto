@@ -7,6 +7,22 @@ const context = { window: {} };
 vm.runInNewContext(fs.readFileSync(require.resolve('../assets/pesquisa-dados.js'), 'utf8'), context);
 const entries = context.window.BRINDES_SEARCH;
 
+test('Nobrinde tem perfil único e atividades pesquisáveis', () => {
+  for (const query of ['Nobrinde', 'Nobrinde distribuição', 'Nobrinde produção medida', 'Nobrinde personalização interna']) {
+    assert.ok(find(entries, query).some(e => e.url === 'mercado/nobrinde.html'), query);
+  }
+  assert.equal(entries.filter(e => e.url === 'mercado/nobrinde.html').length, 1);
+});
+
+test('Mercado distingue distribuição, fabrico, personalização e atividade mista', () => {
+  for (const [query,slug] of [
+    ['armazenistas distribuidores', 'distribuicao-e-importacao'],
+    ['fabricantes produtores PF Manufactured', 'fabricantes-e-produtores'],
+    ['personalizadores impressão Tela', 'personalizacao-impressao-acabamento'],
+    ['atividade mista Giving', 'empresas-de-atividade-mista'],
+  ]) assert.ok(find(entries,query).some(e => e.url === `mercado/${slug}.html`),query);
+});
+
 test('Psicologia dos Brindes indexa fatores, exemplos e limites de avaliação', () => {
   for (const query of ['psicologia valor percebido', 'reciprocidade manipulação', 'embalagem expectativas', 'integração colaboradores', 'satisfação venda']) {
     assert.ok(find(entries, query).some(e => e.url === 'guias/psicologia-dos-brindes.html'), query);

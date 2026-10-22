@@ -91,7 +91,7 @@ def corrigir_imagens_removidas(documento, path):
 
 def write(path, text):
     if str(path).endswith('.html'):
-        text = pagina_publica(corrigir_imagens_removidas(text, path))
+        text = pagina_publica(corrigir_imagens_removidas(text, path), permitir_empresa=str(path).replace('\\','/').startswith('mercado/'))
     elif str(path) == 'assets/pesquisa-dados.js':
         entries = json.loads(text.split('=', 1)[1].strip().removesuffix(';'))
         for entry in entries:
@@ -109,7 +109,7 @@ def write(path, text):
                 if main:
                     entry['text'] = re.sub(r'\s+', ' ', unescape(re.sub(r'<[^>]+>', ' ', main[1]))).strip()
             for key, value in entry.items():
-                if isinstance(value, str): entry[key] = texto_publico(value)
+                if isinstance(value, str): entry[key] = texto_publico(value, permitir_empresa=entry['url'].startswith('mercado/'))
         text = 'window.BRINDES_SEARCH = ' + json.dumps(entries, ensure_ascii=False).replace('<', '\\u003c') + ';\n'
     target=ROOT/path
     target.parent.mkdir(parents=True,exist_ok=True)
@@ -124,7 +124,7 @@ def header(prefix,active=''):
         nav+=f'<a href="{prefix}{s["id"]}/index.html"{current}>{s["curto"]}</a>'
     return f'''<a class="skip" href="#conteudo">Saltar para o conteúdo</a><div class="top"></div><header class="header"><div class="wrap header-inner"><a href="{prefix}index.html" class="brand" aria-label="brindes.pt — início">brindes<span>.pt</span></a><nav id="nav" class="nav" aria-label="Navegação principal">{nav}<a href="{prefix}pesquisa.html" class="nav-search">Pesquisar</a></nav><button class="hamb" aria-label="Abrir menu" id="menu-toggle" aria-expanded="false" aria-controls="nav">☰</button></div></header>'''
 def footer(prefix):
-    return f'<footer class="footer"><div class="wrap foot-inner"><div class="footer-library"><p>brindes.pt — Biblioteca informativa independente. Informação para compreender, comparar e escolher.</p></div><nav class="footer-links" aria-label="Informação do site"><a href="{prefix}creditos-imagens.html">Créditos de imagens</a></nav></div></footer>'
+    return '<footer class="footer"><div class="wrap foot-inner"><div class="footer-library"><p>brindes.pt — Biblioteca informativa independente. Informação para compreender, comparar e escolher.</p></div></div></footer>'
 def search_form(prefix):
     return f'<form class="search" action="{prefix}pesquisa.html" method="get" role="search"><label class="sr-only" for="q">Pesquisar na biblioteca</label><input id="q" name="q" type="search" maxlength="160" placeholder="Técnica, produto ou dúvida…"><button type="submit">Pesquisar</button></form>'
 def shell(title,description,content,prefix='',active='',extra='',robots='noindex, nofollow'):
@@ -793,7 +793,7 @@ if __name__=='__main__':
     if args.secao in ('produtos','guias'):
         # A correção de identidade é partilhada; o texto alheio à secção
         # permanece como estava, incluindo alterações locais do utilizador.
-        paths = ['creditos-imagens.html'] if args.artigo else ['index.html', 'pesquisa.html', 'creditos-imagens.html']
+        paths = [] if args.artigo else ['index.html', 'pesquisa.html']
         if not args.artigo:
             paths += [s['id']+'/index.html' for s in SECCOES]
             paths += [url(a) for a in ARTIGOS]
@@ -802,14 +802,7 @@ if __name__=='__main__':
             target = ROOT/path
             previous = target.read_text(encoding='utf-8')
             repaired = corrigir_imagens_removidas(previous, path)
-            neutral = pagina_publica(repaired) if 'nobrinde' in repaired.lower() else corrigir_ligacoes(repaired)
-            if path == 'creditos-imagens.html':
-                section_id, credits = ('produtos-ilustrativos', CREDITOS_PRODUTOS) if args.secao=='produtos' else ('guias-ilustrativos', CREDITOS_GUIAS)
-                pattern = r'<section\b[^>]*id="'+section_id+r'"[^>]*>.*?</section>'
-                if re.search(pattern, neutral, re.S):
-                    neutral = re.sub(pattern, lambda _: credits, neutral, flags=re.S)
-                else:
-                    neutral = neutral.replace('</main>', credits + '</main>')
+            neutral = pagina_publica(repaired, permitir_empresa=path.startswith('mercado/')) if 'nobrinde' in repaired.lower() else corrigir_ligacoes(repaired)
             if neutral != previous: target.write_text(neutral, encoding='utf-8')
     if args.secao=='mercado':
         atualizar_pesquisa_mercado(MERCADO, incluir_entrada=not args.preservar_entrada)
@@ -823,33 +816,18 @@ if __name__=='__main__':
         write('assets/para-quem-conteudos.json', dados_publicos())
     if not args.secao or args.secao=='ocasioes':
         write('assets/ocasioes-conteudos.json', dados_ocasioes())
-    if not args.secao:
-        write('creditos-imagens.html',shell('Créditos de imagens','Autores, fontes, licenças e alterações das fotografias utilizadas no brindes.pt.',creditos() + CREDITOS_PRODUTOS + CREDITOS_GUIAS + CREDITOS_PUBLICOS + CREDITOS_OCASIOES + creditos_historia()))
-    elif args.secao=='industria':
-        path=ROOT/'creditos-imagens.html'
-        previous=path.read_text(encoding='utf-8')
-        pattern=r'<section\b[^>]*id="historia-objetos"[^>]*>.*?</section>'
-        updated=re.sub(pattern, lambda _: creditos_historia(), previous, flags=re.S) if re.search(pattern,previous,re.S) else previous.replace('</main>',creditos_historia()+'</main>')
-        write('creditos-imagens.html',updated)
-    elif args.secao in ('publicos','ocasioes'):
-        path = ROOT/'creditos-imagens.html'
-        previous = path.read_text(encoding='utf-8')
-        id, credits = ('para-quem-novos', CREDITOS_PUBLICOS) if args.secao=='publicos' else ('ocasioes-ilustrativas', CREDITOS_OCASIOES)
-        pattern = r'<section\b[^>]*id="'+id+r'"[^>]*>.*?</section>'
-        updated = re.sub(pattern, lambda _: credits, previous, flags=re.S) if re.search(pattern, previous, re.S) else previous.replace('</main>', credits + '</main>')
-        write('creditos-imagens.html', updated)
     if args.artigo:
-        outputs=['guias/index.html','guias/'+args.artigo+'.html','pesquisa.html','creditos-imagens.html']
+        outputs=['guias/index.html','guias/'+args.artigo+'.html','pesquisa.html']
     elif args.secao=='mercado':
         outputs=[url(a) for a in selected_market] if args.preservar_entrada else ['mercado/index.html']+[url(a) for a in MERCADO]
     elif args.secao=='publicos':
-        outputs=['publicos/index.html']+['publicos/'+a['id']+'.html' for a in PUBLICOS]+['pesquisa.html','creditos-imagens.html']
+        outputs=['publicos/index.html']+['publicos/'+a['id']+'.html' for a in PUBLICOS]+['pesquisa.html']
     elif args.secao=='ocasioes':
-        outputs=['ocasioes/index.html']+[url(a) for a in ARTIGOS if a['sec']=='ocasioes']+['pesquisa.html','creditos-imagens.html']
+        outputs=['ocasioes/index.html']+[url(a) for a in ARTIGOS if a['sec']=='ocasioes']+['pesquisa.html']
     elif args.secao=='industria':
-        outputs=['industria/index.html','pesquisa.html','creditos-imagens.html']+['industria/'+a['id']+'.html' for a in INDUSTRIA + AREAS_INDUSTRIA]
+        outputs=['industria/index.html','pesquisa.html']+['industria/'+a['id']+'.html' for a in INDUSTRIA + AREAS_INDUSTRIA]
     else:
-        outputs = ['index.html', 'pesquisa.html', 'creditos-imagens.html']
+        outputs = ['index.html', 'pesquisa.html']
         outputs += [s['id']+'/index.html' for s in SECCOES]
         outputs += [url(a) for a in ARTIGOS]
     subprocess.run([node, str(prettier), '--write', '--log-level', 'warn', *outputs], cwd=ROOT, check=True)

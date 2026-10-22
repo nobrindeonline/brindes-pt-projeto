@@ -82,4 +82,17 @@ aprofundar(PERFIS)
 for profile in PERFIS:
     areas = [a['id'] for a in AREAS if profile['id'] in ASSOCIACOES[a['id']]]
     profile['relacionados'] = areas + [id for id in profile['relacionados'] if id not in areas]
+from conteudos.mercado_modelos import MODELOS, FONTES_MODELOS
+for profile in PERFIS:
+    if profile['id']=='nobrinde':
+        profile['data_consulta']='2026-10-22'
+        profile['data_consulta_texto']='22 de outubro de 2026'
+        profile['relacionados']=[modelo['id'] for modelo in MODELOS]
+FONTES_MERCADO.update(FONTES_MODELOS)
+for modelo in MODELOS:
+    existente=next((a for a in TEMAS if a['id']==modelo['id']),None)
+    if existente is not None:
+        existente.update(modelo)
+    else:
+        TEMAS.append(modelo)
 MERCADO = AREAS + TEMAS + PERFIS

@@ -116,3 +116,7 @@ NOVOS = {
 FONTES_EXTRA = {
  'xd_tecnologia': ('XD Connects — Documentação técnica de carregamento', 'https://static.xdconnects.com/ProductManuals/P309.14%20-%20Manual__f66d2db03cba48ad857548a7553244d7.pdf'),
 }
+
+from conteudos.mercado_nobrinde import PERFIL as PERFIL_NOBRINDE, FONTES as FONTES_NOBRINDE
+NOVOS['nobrinde'] = PERFIL_NOBRINDE
+FONTES_EXTRA.update(FONTES_NOBRINDE)

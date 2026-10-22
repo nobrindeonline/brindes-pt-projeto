@@ -59,7 +59,6 @@ for a in OCASIOES:
     assert 'index.html' in p.links
     nav = re.search(r'<nav\s+id="nav".*?</nav>',html,re.S)
     assert nav and re.search(r'href="../ocasioes/index.html"\s+aria-current="page"',nav[0])
-    assert '../creditos-imagens.html' in p.links
     assert a['relacionados'] and set(a['relacionados']) <= all_ids
     citacoes = set(re.findall(r'\[([a-z]+)\]',json.dumps(a,ensure_ascii=False)))
     assert citacoes <= set(a['fontes']) <= FONTES_OCASIOES.keys()
@@ -73,7 +72,6 @@ for path in [ROOT/'index.html']+[ROOT/a['sec']/(a['id']+'.html') for a in ARTIGO
     nav = re.search(r'<nav\s+id="nav".*?</nav>',html,re.S)
     assert nav and nav[0].count('ocasioes/index.html')==1, path
 assert 'ocasioes/index.html' in (ROOT/'modelos/inicio.html').read_text(encoding='utf-8')
-assert 'ocasioes-ilustrativas' in (ROOT/'creditos-imagens.html').read_text(encoding='utf-8')
 assert (ROOT/'assets/ocasioes-conteudos.json').read_text(encoding='utf-8')==dados()
 registos = json.loads((ROOT/'editorial/ocasioes-exemplos-imagens.json').read_text(encoding='utf-8'))
 assert len(registos)==12

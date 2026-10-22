@@ -36,8 +36,6 @@ for id, selecao in IMAGENS.items():
 assert len(used)==len(set(used))==29, 'Não repetir fotografias entre cartões e artigos'
 records=json.loads((ROOT/'editorial/produtos-imagens.json').read_text(encoding='utf-8'))
 assert len(records)==29 and all(r['autoria'] is None and r['licenca'] is None for r in records)
-credits=(ROOT/'creditos-imagens.html').read_text(encoding='utf-8')
-assert credits.count('id="produtos-ilustrativos"')==1
 for area in AREAS:
     if 'visual' not in area:
         continue

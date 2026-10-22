@@ -21,7 +21,7 @@ class Page(HTMLParser):
         for key in ('href','src','action'):
             if key in attrs: self.links.append(attrs[key])
 
-paths=[ROOT/'index.html',ROOT/'pesquisa.html',ROOT/'creditos-imagens.html']
+paths=[ROOT/'index.html',ROOT/'pesquisa.html']
 paths += [ROOT/s['id']/'index.html' for s in SECCOES]
 paths += [ROOT/a['sec']/(a['id']+'.html') for a in ARTIGOS]
 pages={p:Page(p) for p in paths}

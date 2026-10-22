@@ -228,8 +228,9 @@ sec_produtos['resumo'] = 'Compreenda e compare famílias de brindes pela utiliza
 from conteudos.produtos_areas import AREAS
 sec_produtos['grupos'] = [(a['id'], a['titulo'], a['resumo'], a['titulo']) for a in AREAS] + [(g['ancora'], g['titulo'], g['resumo'], g['titulo']) for g in PRODUTOS if g['ancora'] in ('canetas', 'escritorio', 'premium')]
 
-from conteudos.mercado import MERCADO, AREAS as TEMAS_MERCADO
+from conteudos.mercado import MERCADO
+from conteudos.mercado_modelos import MODELOS as TEMAS_MERCADO
 ARTIGOS.extend(MERCADO)
 sec_mercado = next(s for s in SECCOES if s['id'] == 'mercado')
-sec_mercado['resumo'] = 'Seis áreas editoriais para conhecer empresas de papelaria, tecnologia, casa, têxtil, sazonalidade e informação ambiental de brindes.'
+sec_mercado['resumo'] = 'Empresas, cadeia de fornecimento e quatro modelos de atividade: distribuição, fabrico, personalização e atividade mista.'
 sec_mercado['grupos'] = [(a['id'], a['titulo'], a['resumo'], a['titulo']) for a in TEMAS_MERCADO]

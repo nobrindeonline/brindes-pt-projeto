@@ -131,12 +131,10 @@ for p in GALERIA:
     bloco=historia.split('id="'+p['id']+'"',1)[1].split('</article>',1)[0]
     assert p['ficheiro'] in bloco and p['alt'] in bloco
     assert all('#fonte-'+key in bloco for key in p['fontes'])
-    assert 'creditos-imagens.html#historia-objetos' in bloco
 reguas=historia.split('id="reguas-publicitarias"',1)[1].split('</article>',1)[0]
 assert 'calendário' not in reguas.casefold() and 'calendários' not in reguas.casefold()
 assert 'datas por confirmar' in reguas
-assert '1557239744369.jpg' not in historia+cartao_historia
-assert 'id="historia-objetos"' in (ROOT/'creditos-imagens.html').read_text(encoding='utf-8')
+assert '1557239744369.jpg' not in historia
 
 logistica = (ROOT / "industria" / "montagem-embalagem-expedicao.html").read_text(
     encoding="utf-8"

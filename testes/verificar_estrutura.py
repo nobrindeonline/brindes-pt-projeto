@@ -28,7 +28,7 @@ class Recursos(HTMLParser):
         if tag == 'script' and 'src' in a: self.resources.append(a['src'])
         if tag == 'link' and a.get('rel') == 'stylesheet': self.resources.append(a['href'])
 
-pages = ['index.html', 'pesquisa.html', 'creditos-imagens.html']
+pages = ['index.html', 'pesquisa.html']
 pages += [s['id'] + '/index.html' for s in SECCOES]
 pages += [a['sec'] + '/' + a['id'] + '.html' for a in ARTIGOS]
 for name in pages:

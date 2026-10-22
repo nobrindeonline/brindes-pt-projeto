@@ -5,6 +5,8 @@ from conteudos.mercado import TEMAS, AREAS, DATA, FONTES_MERCADO
 from conteudos.mercado_areas import ASSOCIACOES, NOTAS_FONTES
 from conteudos.mercado_imagens import IMAGENS, LEGENDAS, destino
 from conteudos.mercado_empresas import EMPRESAS, EXEMPLOS, LOGOS
+from conteudos.mercado_modelos import MODELOS_POR_ID
+from scripts.render_mercado_modelos import entrada_modelos, pagina_modelo
 
 def logo_empresa(id):
     if id not in LOGOS:
@@ -50,16 +52,14 @@ def imagem_corpo(a):
     return '<figure class="market-body-image"><img src="../'+destino(a['id'], 'corpo')+'" width="'+str(width)+'" height="'+str(height)+'" alt="'+escape(alt, quote=True)+'" loading="lazy" decoding="async"><figcaption>'+escape(LEGENDAS[a['id']])+'</figcaption></figure>'
 
 def entrada(shell, card):
-    intro = '<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / Mercado</nav><div class="page-intro"><span class="eyebrow">Áreas de produto e empresas</span><h1>Mercado e fornecedores</h1><p>Explore seis áreas para compreender a oferta e conhecer empresas com atividade documentada no setor dos brindes. As categorias são editoriais e podem sobrepor-se: a mesma empresa tem um único perfil e pode surgir em várias áreas. Brindes Ecológicos é um tema transversal, sem certificar toda a oferta dos fornecedores.</p></div>'
-    cards = '<div class="article-grid">' + ''.join(cartao(a, card) for a in AREAS) + '</div>'
-    context = '''<section id="cadeia"><h2>Da escolha à expedição</h2><p>Um pedido pode passar pela confirmação do produto e do stock, aprovação da arte, personalização, controlo, montagem, embalagem e expedição. O percurso depende do projeto e pode envolver várias empresas.</p><div class="context-links"><a href="logistica-e-encomendas.html">Compreender a preparação</a><a href="../industria/da-ideia-a-entrega.html">Da ideia à entrega</a></div></section>
-<section id="regioes"><h2>Portugal, Península Ibérica e Europa</h2><p>A sede, os armazéns, a produção e a personalização podem estar em países diferentes. O âmbito geográfico ajuda a compreender a operação e o percurso da encomenda; não determina, por si só, qualidade ou superioridade.</p><a class="link" href="distribuicao-e-importacao.html">Explorar os modelos de fornecimento →</a></section>
-<aside class="note" id="criterios"><h2>Critérios editoriais</h2><p>As empresas surgem como exemplos das funções descritas, sem ranking ou recomendação comercial. Cada perfil identifica as fontes públicas, a data de consulta e os limites da informação. As descrições institucionais confirmam o que as empresas publicam e não constituem uma avaliação independente do desempenho.</p><p>Fontes consultadas em <time datetime="2026-10-14">14 de outubro de 2026</time>.</p></aside>
-<section><h2>Continue a explorar</h2><div class="context-links"><a href="../materiais/index.html">Materiais</a><a href="../tecnicas/index.html">Técnicas</a><a href="../industria/index.html">Indústria</a></div></section>'''
-    context += '<section><h2>Compreender as funções na cadeia</h2><p>Guias complementares sobre desenvolvimento, distribuição, personalização e preparação de pedidos.</p><div class="context-links">'+''.join('<a href="'+a['id']+'.html">'+escape(a['titulo'])+'</a>' for a in TEMAS)+'</div></section>'
-    return shell('Mercado e fornecedores', 'Papelaria, tecnologia, casa, têxtil, sazonalidade e informação ambiental: áreas editoriais e perfis de empresas do setor dos brindes.', intro + cards + context, '../', 'mercado', robots='index, follow')
+    return entrada_modelos(shell,EMPRESAS,FONTES_MERCADO,logo_empresa,AREAS,TEMAS)
+
 
 def pagina(a, shell, card, by_id, link):
+    if a['id'] in MODELOS_POR_ID:
+        return pagina_modelo(MODELOS_POR_ID[a['id']],shell,EMPRESAS,FONTES_MERCADO,logo_empresa)
+    data_consulta=a.get('data_consulta',DATA)
+    data_texto=a.get('data_consulta_texto','14 de outubro de 2026')
     section_ids = a.get('ids_seccoes', ['parte-'+str(n) for n in range(1,len(a['seccoes'])+1)])
     sections = ''
     for n,(title,text) in enumerate(a['seccoes']):
@@ -72,13 +72,13 @@ def pagina(a, shell, card, by_id, link):
     sections = examples + sections.replace('</section>', '</section>'+imagem_corpo(a), 1)
     toc = (link('#empresas','Empresas neste segmento') if thematic else '') + ''.join(link('#'+id,title) for id,(title,_) in zip(section_ids,a['seccoes'])) + link('#fontes','Fontes e âmbito')
     source_keys = list(dict.fromkeys(a['fontes'] + [key for id in EXEMPLOS.get(a['id'], []) for key in ASSOCIACOES.get(a['id'], {}).get(id, ('',EMPRESAS[id]['fontes']))[1]]))
-    sources = ''.join('<li id="fonte-'+key+'">'+link(FONTES_MERCADO[key][1],FONTES_MERCADO[key][0])+' — consulta: <time datetime="'+DATA+'">14 de outubro de 2026</time>.'+(' '+escape(NOTAS_FONTES[key]) if key in NOTAS_FONTES else '')+'</li>' for key in source_keys)
+    sources = ''.join('<li id="fonte-'+key+'">'+link(FONTES_MERCADO[key][1],FONTES_MERCADO[key][0])+' — consulta: <time datetime="'+data_consulta+'">'+data_texto+'</time>.'+(' '+escape(NOTAS_FONTES[key]) if key in NOTAS_FONTES else '')+'</li>' for key in source_keys)
     website = '<p>'+link(a['site'], 'Visitar o site de '+a['titulo'].split(':')[0])+'</p>' if a.get('site') else ''
     source_body = '<section id="fontes"><h2>Fontes e âmbito</h2><p>Fontes oficiais consultadas para as atividades atribuídas às empresas. As explicações das funções e do percurso são sínteses editoriais; não descrevem um modelo universal nem avaliam o desempenho dos fornecedores.</p><ul class="sources">'+sources+'</ul>'+website+'</section>'
     profile_areas = [area for area in AREAS if a.get('ficha') and a['id'] in ASSOCIACOES[area['id']]]
     parent = link(profile_areas[0]['id']+'.html',profile_areas[0]['titulo'])+' / ' if profile_areas else ''
     area_links = '<nav class="context-links" aria-label="Áreas deste perfil">'+''.join(link(area['id']+'.html',area['titulo']) for area in profile_areas)+'</nav>' if profile_areas else ''
-    intro = '<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Mercado</a> / '+parent+escape(a['titulo'].split(':')[0])+'</nav><div class="page-intro"><span class="eyebrow">'+escape(a.get('categoria','Área de produto' if a['tipo']=='area-mercado' else 'Cadeia de fornecimento'))+'</span><h1>'+escape(a['titulo'])+'</h1><p>'+escape(a['resumo'])+'</p><div class="review">Consulta das fontes: <time datetime="'+DATA+'">14 de outubro de 2026</time></div></div>'+ficha_empresa(a)+area_links
+    intro = '<nav class="crumb" aria-label="Percurso"><a href="../index.html">Início</a> / <a href="index.html">Mercado</a> / '+parent+escape(a['titulo'].split(':')[0])+'</nav><div class="page-intro"><span class="eyebrow">'+escape(a.get('categoria','Área de produto' if a['tipo']=='area-mercado' else 'Cadeia de fornecimento'))+'</span><h1>'+escape(a['titulo'])+'</h1><p>'+escape(a['resumo'])+'</p><div class="review">Consulta das fontes: <time datetime="'+data_consulta+'">'+data_texto+'</time></div></div>'+ficha_empresa(a)+area_links
     body = intro + '<div class="reading-layout"><aside class="contents"><strong>Neste artigo</strong><nav aria-label="Índice do artigo">'+toc+'</nav></aside><article class="reading">'+sections+source_body+'<a class="back-to-ideas" href="index.html">← Voltar a Mercado</a></article></div>'
     related_ids = [id for id in a['relacionados'] if id not in EXEMPLOS.get(a['id'], [])]
     if thematic:

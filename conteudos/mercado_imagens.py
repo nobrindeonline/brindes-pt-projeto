@@ -5,8 +5,8 @@ IMAGENS = {
         'corpo': ('DistribuicaoImportacao/armazem-2.jpg', 426, 320, 'Vista de um espaço de trabalho e armazenamento com caixas e equipamentos.'),
     },
     'desenvolvimento-e-marcas': {
-        'cartao': ('DesenvolvimentoDeProdutoeMarcas/images.jpg', 678, 452, 'Ilustração de uma equipa a trabalhar numa proposta de produto.'),
-        'corpo': ('DesenvolvimentoDeProdutoeMarcas/Blog122_ETAPAS-DO-DESENVOLVIMENTO-DO-PRODUTO-800PX.jpg', 800, 500, 'Esquema com ideia, estudo de viabilidade, desenvolvimento do produto, desenho do processo, plano de marketing e venda.'),
+        'cartao': ('visuais/desenvolvimento-e-marcas-cartao.jpg', 678, 452, 'Ilustração de uma equipa a trabalhar numa proposta de produto.'),
+        'corpo': ('visuais/desenvolvimento-e-marcas-corpo.jpg', 800, 500, 'Esquema com ideia, estudo de viabilidade, desenvolvimento do produto, desenho do processo, plano de marketing e venda.'),
     },
     'vestuario-promocional-profissional': {
         'cartao': ('Vestuario/caroussel_categ_2025_vestuario_2.jpg', 1920, 1079, 'Quatro pessoas com camisas e calças em diferentes combinações.'),

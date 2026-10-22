@@ -77,6 +77,4 @@ for id,selection in IMAGENS_GUIAS.items():
         assert f['original'] not in public and p['fonte_tecnica'] is False
         path=Path(f['original'])
         assert all(part in [p.name for p in (ROOT/Path(*path.parts[:n])).iterdir()] for n,part in enumerate(path.parts[1:],1)),f['original']
-credits=(ROOT/'creditos-imagens.html').read_text(encoding='utf-8')
-assert credits.count('id="guias-ilustrativos"')==1
 print('OK: nove guias no índice e nos dados; '+('guia '+selected+' verificado' if selected else 'artigos verificados')+'; fontes, imagens e pesquisa consistentes.')

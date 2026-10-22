@@ -84,7 +84,6 @@ for audience in PUBLICOS:
         assert {'personalizacao', 'cuidados'} <= page.ids
         assert record['personalizacao'] == audience['personalizacao']
         assert record['cuidados'] == audience['cuidados']
-        assert '../creditos-imagens.html#para-quem-novos' not in page.links
     assert 'Fontes, âmbito e revisão' not in text
     assert 'documentary-date' not in text
     assert not forbidden.search(text), audience['id']
@@ -134,5 +133,4 @@ for image in records:
     original, public = ROOT/image['original'], ROOT/image['publico']
     assert hashlib.sha256(original.read_bytes()).hexdigest() == image['sha256']
     assert original.read_bytes() == public.read_bytes()
-assert 'id="para-quem-novos"' in (ROOT/'creditos-imagens.html').read_text(encoding='utf-8')
 print('OK: onze guias; três novos públicos com cuidados, fontes, imagens íntegras, pesquisa e ligações válidas.')
